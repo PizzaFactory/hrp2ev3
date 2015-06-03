@@ -200,9 +200,9 @@ void hal_uart_dma_send_block(const uint8_t *data, uint16_t len) {
 }
 
 void hal_uart_dma_receive_block(uint8_t *buffer, uint16_t len) {
-#if defined(DEBUG) || 1
     assert(rx_size == 0);
     assert(len > 0);
+#if defined(DEBUG)
     syslog(LOG_DEBUG, "[bluetooth] Prepare to receive a block with %d bytes.", len);
 #endif
     rx_ptr = buffer;
@@ -228,10 +228,6 @@ void bluetooth_uart_isr() {
     // RX
 	if(rx_size > 0) {
 		while (rx_size > 0 && uart_getready(p_uart)) {
-#ifdef DEBUG
-			assert(rx_size > 0);
-			assert(rx_cb != NULL);
-#endif
 			*rx_ptr++ = p_uart->RBR_THR;
 			rx_size--;
 		}
@@ -239,6 +235,7 @@ void bluetooth_uart_isr() {
 #if defined(DEBUG)
 			syslog(LOG_DEBUG, "[bluetooth] Finished receiving a block.");
 #endif
+			assert(rx_cb != NULL);
 			rx_cb();
 		}
 	} else {
@@ -247,16 +244,13 @@ void bluetooth_uart_isr() {
 
     // TX
     while(tx_size > 0 && uart_putready(p_uart)) {
-#ifdef DEBUG
-        assert(tx_size > 0);
-        assert(tx_cb != NULL);
-#endif
         p_uart->RBR_THR = *tx_ptr++;
         if(--tx_size == 0) {
 #if defined(DEBUG)
         	syslog(LOG_DEBUG, "[bluetooth] Finished sending a block.");
 #endif
             p_uart->IER &= ~0x2;
+            assert(tx_cb != NULL);
             tx_cb();
         }
     }
