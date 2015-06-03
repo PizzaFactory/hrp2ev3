@@ -92,16 +92,14 @@ EDMA30ComplIsr(intptr_t unused) {
     volatile unsigned int pendingIrqs;
     volatile unsigned int isIPR = 0;
 
-    unsigned int indexl;
 //    unsigned int Cnt = 0;
-    indexl = 1;
+//    indexl = 1;
 
-    isIPR = HWREG(baseAdd + EDMA3CC_S_IPR(regionNum));
-    if(isIPR)
+    while((isIPR = HWREG(baseAdd + EDMA3CC_S_IPR(regionNum))) != 0)
     {
 //        while ((Cnt < EDMA3CC_COMPL_HANDLER_RETRY_COUNT)&& (indexl != 0u))
 //        {
-            indexl = 0u;
+    		unsigned int indexl = 0u;
             pendingIrqs = HWREG(baseAdd + EDMA3CC_S_IPR(regionNum));
             while (pendingIrqs)
             {
@@ -133,7 +131,7 @@ EDMA30ComplIsr(intptr_t unused) {
 
 void
 EDMA30CCErrIsr(intptr_t unused) {
-	syslog(LOG_ERROR, "EDMA3 Error.");
+	syslog(LOG_ERROR, "%s(): EDMA3_0_CC0_ERRINT", __FUNCTION__);
 	const unsigned int baseAdd = SOC_EDMA30CC_0_REGS;
 
     volatile unsigned int pendingIrqs = 0;
@@ -158,7 +156,7 @@ EDMA30CCErrIsr(intptr_t unused) {
                 /*Process all the pending interrupts*/
                 if((pendingIrqs & 1u)==TRUE)
                 {
-//                	syslog(LOG_ERROR, "EDMA3 Error. EDMA3CC_EMR channel %d", index);
+                	syslog(LOG_ERROR, "EDMA3 Error. EDMA3CC_EMR channel %d", index);
 //                	EDMA3CCPaRAMEntry param;
 //                	EDMA3GetPaRAM(baseAdd, index, &param);
 //                	syslog(LOG_ERROR, "PaRAM.aCnt: %d", param.aCnt);
@@ -224,8 +222,9 @@ EDMA30CCErrIsr(intptr_t unused) {
     }
 //    Cnt++;
 //        }
+    } else {
+    	syslog(LOG_ERROR, "Unknown EDMA3 Error.");
     }
-//    else syslog(LOG_ERROR, "Unknown EDMA3 Error.");
 
     HWREG(baseAdd + EDMA3CC_EEVAL) = (EDMA3CC_EEVAL_EVAL << EDMA3CC_EEVAL_EVAL_SHIFT);
 

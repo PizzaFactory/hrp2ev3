@@ -44,6 +44,10 @@ MMCSDReadWriteCmdSend(mmcsdCtrlInfo *ctrl, void *ptr, unsigned int block, unsign
 	}
 	assert(nblks == 1);
 
+#if 0 // For debug
+	syslog(LOG_ERROR, "%s()", __FUNCTION__);
+#endif
+
 	/**
 	 * Acquire mutex for thread safety.
 	 */

@@ -1,5 +1,5 @@
 /**
- * EV3 Platform (Core Services Layer)
+ * EV3RT Platform (Core Services Layer)
  */
 
 typedef struct ev3_driver_information {
@@ -11,6 +11,12 @@ extern ER platform_register_driver(const ev3_driver_t *p_driver);
 
 ER platform_soft_reset();
 bool_t platform_is_ready();
+
+/**
+ * EV3RT configurations
+ */
+extern const char *ev3rt_bluetooth_local_name; //!< Name for service discovery
+extern const char *ev3rt_bluetooth_pin_code;   //!< Pin code for authentication, up to 16 bytes + '\0'
 
 /**
  * Tasks

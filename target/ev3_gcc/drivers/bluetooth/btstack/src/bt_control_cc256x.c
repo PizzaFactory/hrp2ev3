@@ -54,15 +54,19 @@
  *  
  * Issues with AVR
  *  - Harvard architecture doesn't allow to store init script directly -> use avr-libc helpers
+ *
+ * Documentation for TI VS CC256x commands: http://processors.wiki.ti.com/index.php/CC256x_VS_HCI_Commands
+ *
  */
 
+#include "btstack-config.h"
 #include "bt_control_cc256x.h"
 
 #include <stddef.h>   /* NULL */
 #include <stdio.h> 
 #include <string.h>   /* memcpy */
 
-#if defined(__GNUC__) && (__MSP430X__ > 0)
+#if defined(__GNUC__) && defined(__MSP430X__) && (__MSP430X__ > 0)
 #include "hal_compat.h"
 #endif
 
@@ -138,10 +142,21 @@ static int get_highest_level_for_given_power(int power_db, int recommended_db){
 
 static void update_set_power_vector(uint8_t *hci_cmd_buffer){
     int i;
-    int power_db = get_max_power_for_modulation_type(hci_cmd_buffer[3]);
+    int modulation_type = hci_cmd_buffer[3];
+    int power_db = get_max_power_for_modulation_type(modulation_type);
     int dynamic_range = 0;
+
     // f) don't touch level 0
     for ( i = (NUM_POWER_LEVELS-1) ; i >= 1 ; i--){
+
+#ifdef HAVE_BLE
+        // level 1 is BLE transmit power for GFSK
+        if (i == 1 && modulation_type == 0) {
+            hci_cmd_buffer[4+1] = 2 * get_max_power_for_modulation_type(modulation_type);
+            // as level 0 isn't set, we're done
+            continue;
+        }
+#endif
         hci_cmd_buffer[4+i] = 2 * power_db;
 
         if (dynamic_range + DB_PER_LEVEL > DB_DYNAMIC_RANGE) continue;  // e)
@@ -171,7 +186,8 @@ static void update_sleep_mode_configurations(uint8_t * hci_cmd_buffer){
     }
 }
 
-static void bt_control_cc256x_update_command(uint8_t *hci_cmd_buffer){
+// @returns 1 if command was injected before this one
+static int bt_control_cc256x_update_command(uint8_t *hci_cmd_buffer){
 
     uint16_t opcode = hci_cmd_buffer[0] | (hci_cmd_buffer[1] << 8);
 
@@ -188,6 +204,8 @@ static void bt_control_cc256x_update_command(uint8_t *hci_cmd_buffer){
         default:
             break;
     }
+
+    return 0;
 }
 
 static int bt_control_cc256x_next_cmd(void *config, uint8_t *hci_cmd_buffer){
@@ -196,9 +214,13 @@ static int bt_control_cc256x_next_cmd(void *config, uint8_t *hci_cmd_buffer){
         return 0;
     }
     
-    init_script_offset++;   // extracted init script has 0x01 cmd packet type, but BTstack expects them without
-    
-#if defined(__GNUC__) && (__MSP430X__ > 0)
+    // store current position in case command needs to get expanded
+    uint32_t current_offset = init_script_offset;
+
+    // extracted init script has 0x01 cmd packet type, but BTstack expects them without
+    init_script_offset++;
+
+#if defined(__GNUC__) && defined(__MSP430X__) && (__MSP430X__ > 0)
     
     // workaround: use FlashReadBlock with 32-bit integer and assume init script starts at 0x10000
     uint32_t init_script_addr = 0x10000;
@@ -226,10 +248,15 @@ static int bt_control_cc256x_next_cmd(void *config, uint8_t *hci_cmd_buffer){
 
 #endif
 
-    // support for cc256x power commands and ehcill 
-    bt_control_cc256x_update_command(hci_cmd_buffer);
-
     init_script_offset += payload_len;
+
+    // support for cc256x power commands and ehcill 
+    int command_injected = bt_control_cc256x_update_command(hci_cmd_buffer);
+
+    if (command_injected){
+        // stay at this command
+        init_script_offset = current_offset;
+    }
 
     return 1; 
 }
@@ -247,6 +274,7 @@ static const bt_control_t bt_control_cc256x = {
 	bt_control_cc256x_next_cmd,            // next_cmd
 	NULL,                                  // register_for_power_notifications
     NULL,                                  // hw_error
+    NULL,                                  // set_bd_addr_cmd
 };
 
 static const hci_uart_config_t hci_uart_config_cc256x = {

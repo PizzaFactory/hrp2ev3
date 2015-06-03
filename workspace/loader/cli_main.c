@@ -17,6 +17,7 @@
 #include <t_syslog.h>
 #include "gui.h"
 
+static bool_t load_success;
 
 /**
  * Buffer to store the application module file
@@ -190,7 +191,10 @@ void test_sd_loader(intptr_t unused) {
 				syslog(LOG_NOTICE, "Loading file completed, file size: %d.", filesz);
 
 				ER ercd = load_application(app_binary_buf, filesz);
-				if (ercd != E_OK) {
+				if (ercd == E_OK) {
+					load_success = true;
+					return;
+				} else {
 					syslog(LOG_NOTICE, "Load application failed, ercd: %d.", ercd);
 					show_message_box("Error", "Failed to load application.");
 //					tslp_tsk(500);
@@ -207,7 +211,9 @@ void test_serial_loader(intptr_t portid) {
 	SIZE filesz;
 
 	syslog(LOG_NOTICE, "Start to receive an application file using ZMODEM protocol.");
+	platform_pause_application(false); // Ensure the priority of Bluetooth  task
 	ercd = zmodem_recv_file(portid, app_binary_buf, sizeof(app_binary_buf), &filesz);
+	platform_pause_application(true); // Ensure the priority of Bluetooth  task
 
 	if (ercd != E_OK) {
 		syslog(LOG_NOTICE, "Receiving file failed, ercd: %d.", ercd);
@@ -220,7 +226,9 @@ void test_serial_loader(intptr_t portid) {
 	show_message_box("App Received", "Click the CENTER button to run.");
 
 	ercd = load_application(app_binary_buf, filesz);
-	if (ercd != E_OK) {
+	if (ercd == E_OK) {
+		load_success = true;
+	} else {
 		syslog(LOG_NOTICE, "Load application failed, ercd: %d.", ercd);
 		show_message_box("Error", "Failed to load application.");
 //		tslp_tsk(500);
@@ -229,8 +237,8 @@ void test_serial_loader(intptr_t portid) {
 
 static
 void shutdown(intptr_t unused) {
-	syslog(LOG_NOTICE, "Shutdown EV3...");
-	ext_ker();
+//	syslog(LOG_NOTICE, "Shutdown EV3...");
+//	ext_ker();
 }
 
 static const CliMenuEntry entry_tab[] = {
@@ -238,7 +246,7 @@ static const CliMenuEntry entry_tab[] = {
 	{ .key = '2', .title = "Bluetooth", .handler = test_serial_loader, .exinf = SIO_PORT_BT },
 	{ .key = '3', .title = "Serial port 1", .handler = test_serial_loader, .exinf = SIO_PORT_UART  },
 //	{ .key = 'D', .title = "Download Application", },
-	{ .key = 'Q', .title = "Shutdown", .handler = shutdown },
+	{ .key = 'Q', .title = "Exit to console", .handler = shutdown },
 };
 
 const CliMenu climenu_main = {
@@ -247,3 +255,17 @@ const CliMenu climenu_main = {
 	.entry_tab = entry_tab,
 	.entry_num = sizeof(entry_tab) / sizeof(CliMenuEntry),
 };
+
+ER application_load_menu() {
+	load_success = false;
+	show_cli_menu(&climenu_main);
+	const CliMenuEntry *cme = select_menu_entry(&climenu_main);
+	if(cme != NULL) {
+		assert(cme->handler != NULL);
+		cme->handler(cme->exinf);
+	}
+	if (load_success)
+		return E_OK;
+	else
+		return E_PAR;
+}

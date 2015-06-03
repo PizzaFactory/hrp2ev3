@@ -56,7 +56,9 @@
 #define TPRI_INIT_TASK       (TMIN_TPRI)
 #define TPRI_BLUETOOTH_QOS   (TMIN_TPRI + 1)
 #define TPRI_BLUETOOTH_HIGH  (TMIN_TPRI + 2)
-#define TPRI_EV3_MONITOR     (TMIN_TPRI + 3)
+#define TPRI_EV3_LCD_TASK    (TMIN_TPRI + 3)
+#define TPRI_EV3_MONITOR     (TMIN_TPRI + 4)
+#define TPRI_PLATFORM_BUSY   (TMIN_TPRI + 5)
 #define TPRI_APP_INIT_TASK   (TMIN_TPRI + 6)
 #define TPRI_EV3_CYC         (TMIN_TPRI + 7)
 #define TMIN_APP_TPRI        (TMIN_TPRI + 8)
@@ -83,13 +85,13 @@
 /**
  * Default SIO Port for syslog etc.
  */
-#define SIO_PORT_DEFAULT SIO_PORT_UART
+#define SIO_PORT_DEFAULT SIO_PORT_LCD
 
 /**
  * Bluetooth configuration
  */
-#define BLUETOOTH_LOCAL_NAME   ("Mindstorms EV3") //!< Name for service discovery
-#define BLUETOOTH_PIN_CODE     ("0000")           //!< Pin code for authentication, NULL to use secure simple pairing
+//#define BLUETOOTH_LOCAL_NAME   ("Mindstorms EV3") //!< Name for service discovery
+//#define BLUETOOTH_PIN_CODE     ("0000")           //!< Pin code for authentication, NULL to use secure simple pairing
 #define BT_SND_BUF_SIZE        (2048)             //!< Size of send buffer
 #define BT_HIGH_PRI_TIME_SLICE (1)                //!< Time slice for BT_TSK in high priority mode (mS)
 #define BT_LOW_PRI_TIME_SLICE  (19)               //!< Time slice for BT_TSK in low priority mode (mS)

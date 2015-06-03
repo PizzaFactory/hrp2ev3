@@ -9,7 +9,7 @@
 
 #include "../ff10b/src/ff.h"
 
-extern void initialize_fatfs_dri(intptr_t unused);
+extern void initialize_fatfs_dri();
 
 /**
  * Physical drive number

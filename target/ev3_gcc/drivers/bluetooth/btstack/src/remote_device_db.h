@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009-2012 by Matthias Ringwald
+ * Copyright (C) 2014 BlueKitchen GmbH
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -17,7 +17,7 @@
  *    personal benefit and not for any commercial purpose or for
  *    monetary gain.
  *
- * THIS SOFTWARE IS PROVIDED BY MATTHIAS RINGWALD AND CONTRIBUTORS
+ * THIS SOFTWARE IS PROVIDED BY BLUEKITCHEN GMBH AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
  * FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL MATTHIAS
@@ -30,7 +30,8 @@
  * THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Please inquire about commercial licensing options at btstack@ringwald.ch
+ * Please inquire about commercial licensing options at 
+ * contact@bluekitchen-gmbh.com
  *
  */
 
@@ -55,14 +56,14 @@ typedef struct {
     void (*close)(void);
     
     // link key
-    int  (*get_link_key)(bd_addr_t *bd_addr, link_key_t *link_key, link_key_type_t * type);
-    void (*put_link_key)(bd_addr_t *bd_addr, link_key_t *key, link_key_type_t type);
-    void (*delete_link_key)(bd_addr_t *bd_addr);
+    int  (*get_link_key)(bd_addr_t bd_addr, link_key_t link_key, link_key_type_t * type);
+    void (*put_link_key)(bd_addr_t bd_addr, link_key_t link_key, link_key_type_t   type);
+    void (*delete_link_key)(bd_addr_t bd_addr);
     
     // remote name
-    int  (*get_name)(bd_addr_t *bd_addr, device_name_t *device_name);
-    void (*put_name)(bd_addr_t *bd_addr, device_name_t *device_name);
-    void (*delete_name)(bd_addr_t *bd_addr);
+    int  (*get_name)(bd_addr_t bd_addr, device_name_t *device_name);
+    void (*put_name)(bd_addr_t bd_addr, device_name_t *device_name);
+    void (*delete_name)(bd_addr_t bd_addr);
 
     // persistent rfcomm channel
     uint8_t (*persistent_rfcomm_channel)(char *servicename);
@@ -71,6 +72,7 @@ typedef struct {
 
 extern       remote_device_db_t remote_device_db_iphone;
 extern const remote_device_db_t remote_device_db_memory;
+extern const remote_device_db_t remote_device_db_fs;
 
 // MARK: non-persisten implementation
 #include <btstack/linked_list.h>

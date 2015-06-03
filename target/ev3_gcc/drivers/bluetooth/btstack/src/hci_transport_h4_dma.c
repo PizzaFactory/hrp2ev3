@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009-2012 by Matthias Ringwald
+ * Copyright (C) 2014 BlueKitchen GmbH
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -17,7 +17,7 @@
  *    personal benefit and not for any commercial purpose or for
  *    monetary gain.
  *
- * THIS SOFTWARE IS PROVIDED BY MATTHIAS RINGWALD AND CONTRIBUTORS
+ * THIS SOFTWARE IS PROVIDED BY BLUEKITCHEN GMBH AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
  * FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL MATTHIAS
@@ -30,7 +30,8 @@
  * THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Please inquire about commercial licensing options at btstack@ringwald.ch
+ * Please inquire about commercial licensing options at 
+ * contact@bluekitchen-gmbh.com
  *
  */
 
@@ -47,7 +48,6 @@
 
 #include "debug.h"
 #include "hci.h"
-#include "hci_dump.h"
 #include "hci_transport.h"
 #include <btstack/run_loop.h>
 
@@ -90,7 +90,10 @@ static int h4_can_send_packet_now(uint8_t packet_type);
 static  H4_STATE h4_state;
 static int read_pos;
 static int bytes_to_read;
-static uint8_t hci_packet[HCI_PACKET_BUFFER_SIZE]; // bigger than largest packet
+
+ // bigger than largest packet
+static uint8_t hci_packet_prefixed[HCI_INCOMING_PRE_BUFFER_SIZE + HCI_PACKET_BUFFER_SIZE];
+static uint8_t * hci_packet = &hci_packet_prefixed[HCI_INCOMING_PRE_BUFFER_SIZE];
 
 // tx state
 static TX_STATE tx_state;
@@ -171,7 +174,7 @@ static void h4_block_received(void){
                     bytes_to_read = HCI_EVENT_HEADER_SIZE;
                     break;
                 default:
-                    log_error("h4_process: invalid packet type 0x%02x\r\n", hci_packet[0]);
+                    log_error("h4_process: invalid packet type 0x%02x", hci_packet[0]);
                     read_pos = 0;
                     h4_state = H4_W4_PACKET_TYPE;
                     bytes_to_read = 1;
@@ -236,18 +239,6 @@ static void h4_register_packet_handler(void (*handler)(uint8_t packet_type, uint
     packet_handler = handler;
 }
 
-// #define DUMP
-
-#ifdef DUMP
-static void dump(uint8_t *data, uint16_t len){
-    int i;
-    for (i=0; i<len;i++){
-        printf("%02X ", ((uint8_t *)data)[i]);
-    }
-    printf("\n\r");
-}
-#endif
-
 static int h4_process(struct data_source *ds) {
     
     // notify about packet sent
@@ -259,13 +250,7 @@ static int h4_process(struct data_source *ds) {
     }
 
     if (h4_state != H4_PACKET_RECEIVED) return 0;
-        
-    // log packet
-#ifdef DUMP
-    printf("RX: ");
-    dump(hci_packet, read_pos);
-#endif
-    
+            
     packet_handler(hci_packet[0], &hci_packet[1], read_pos-1);
 
     h4_init_sm();
@@ -281,11 +266,6 @@ static int h4_send_packet(uint8_t packet_type, uint8_t *packet, int size){
         return -1;
     }
     
-#ifdef DUMP
-    printf("TX: %02x ", packet_type);
-    dump(packet, size);
-#endif
-    
     tx_packet_type = packet_type;
     tx_data = packet;
     tx_len  = size;
@@ -297,7 +277,7 @@ static int h4_send_packet(uint8_t packet_type, uint8_t *packet, int size){
 }
 
 static int h4_set_baudrate(uint32_t baudrate){
-//    printf("h4_set_baudrate - set baud %lu\n\r", baudrate);
+    log_info("h4_set_baudrate - set baud %lu", baudrate);
     return hal_uart_dma_set_baud(baudrate);
 }
 

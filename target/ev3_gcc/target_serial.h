@@ -11,7 +11,7 @@
 #define SIO_RDY_SND    1U        /* 送信可能コールバック */
 #define SIO_RDY_RCV    2U        /* 受信通知コールバック */
 
-#define TNUM_PORT 2
+#define TNUM_PORT 3
 
 /**
  * ID of SIO ports

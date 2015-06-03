@@ -93,9 +93,9 @@ typedef struct {
 extern void show_cli_menu(const CliMenu *cm);
 extern const CliMenuEntry* select_menu_entry(const CliMenu *cm);
 
-#define fio_clear_screen() syslog(LOG_NOTICE, "\033[2J\033[;H") //fprintf(fio, "\033[2J\033[;H") // Clear Screen
+#define fio_clear_screen() {} //syslog(LOG_NOTICE, "\033[2J\033[;H") //fprintf(fio, "\033[2J\033[;H") // Clear Screen
 
-#define fio_clear_line() syslog(LOG_NOTICE, "\033[2K\033[255D") //fprintf(fio, "\033[2K\033[255D") // Clear Screen
+#define fio_clear_line() {} //syslog(LOG_NOTICE, "\033[2K\033[255D") //fprintf(fio, "\033[2K\033[255D") // Clear Screen
 
 extern const CliMenu climenu_main;
 

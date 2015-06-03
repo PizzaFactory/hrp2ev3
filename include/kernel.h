@@ -8,50 +8,50 @@
  *  Copyright (C) 2004-2014 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ���(1)��(4)�ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ������
- *  �ѡ������ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
- *      �ޤ����ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���
- *      ͳ�˴�Ť����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ�
- *      ���դ��뤳�ȡ�
+ *  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
+ *  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+ *      また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
+ *      由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
+ *      免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū
- *  ���Ф���Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ���
- *  �������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤��
- *  ����Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
+ *  に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
+ *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
+ *  の責任を負わない．
  * 
  *  $Id: kernel.h 999 2014-04-20 00:15:27Z ertl-hiro $
  */
 
 /*
- *		TOPPERS/HRP�����ͥ� ɸ��إå��ե�����
+ *		TOPPERS/HRPカーネル 標準ヘッダファイル
  *
- *  TOPPERS/HRP�����ͥ뤬���ݡ��Ȥ��륵���ӥ������������ȡ�ɬ�פʥǡ�
- *  ������������ޥ����������ޤ�إå��ե����롥
+ *  TOPPERS/HRPカーネルがサポートするサービスコールの宣言と，必要なデー
+ *  タ型，定数，マクロの定義を含むヘッダファイル．
  *
- *  ������֥����Υ������ե����뤫�餳�Υե�����򥤥󥯥롼�ɤ����
- *  �ϡ�TOPPERS_MACRO_ONLY��������Ƥ���������ˤ�ꡤ�ޥ�������ʳ���
- *  �����褦�ˤʤäƤ��롥
+ *  アセンブリ言語のソースファイルからこのファイルをインクルードする時
+ *  は，TOPPERS_MACRO_ONLYを定義しておく．これにより，マクロ定義以外を
+ *  除くようになっている．
  *
- *  ���Υե�����򥤥󥯥롼�ɤ������˥��󥯥롼�ɤ��Ƥ����٤��ե�����
- *  �Ϥʤ���
+ *  このファイルをインクルードする前にインクルードしておくべきファイル
+ *  はない．
  */
 
 #ifndef TOPPERS_KERNEL_H
@@ -62,33 +62,33 @@ extern "C" {
 #endif
 
 /*
- *	TOPPERS���̤Υǡ�������������ޥ���
+ *	TOPPERS共通のデータ型・定数・マクロ
  */
 #include <t_stddef.h>
 
 /*
- *  �������åȰ�¸��
+ *  ターゲット依存部
  */
 #include "target_kernel.h"
 
 #ifndef TOPPERS_MACRO_ONLY
 
 /*
- *  �ǡ����������
+ *  データ型の定義
  */
 
 /*
- *  �ӥåȥѥ�����䥪�֥��������ֹ�η����
+ *  ビットパターンやオブジェクト番号の型定義
  */
-typedef	uint_t		TEXPTN;		/* �������㳰�װ��Υӥåȥѥ����� */
-typedef	uint_t		FLGPTN;		/* ���٥�ȥե饰�Υӥåȥѥ����� */
-typedef	ulong_t		OVRTIM;		/* �ץ����å����� */
-typedef	uint_t		INTNO;		/* ������ֹ� */
-typedef	uint_t		INHNO;		/* ����ߥϥ�ɥ��ֹ� */
-typedef	uint_t		EXCNO;		/* CPU�㳰�ϥ�ɥ��ֹ� */
+typedef	uint_t		TEXPTN;		/* タスク例外要因のビットパターン */
+typedef	uint_t		FLGPTN;		/* イベントフラグのビットパターン */
+typedef	ulong_t		OVRTIM;		/* プロセッサ時間 */
+typedef	uint_t		INTNO;		/* 割込み番号 */
+typedef	uint_t		INHNO;		/* 割込みハンドラ番号 */
+typedef	uint_t		EXCNO;		/* CPU例外ハンドラ番号 */
 
 /*
- *  ����ñ�̤η����
+ *  処理単位の型定義
  */
 typedef void	(*TASK)(intptr_t exinf);
 typedef void	(*TEXRTN)(TEXPTN texptn, intptr_t exinf);
@@ -104,355 +104,355 @@ typedef void	(*INIRTN)(intptr_t exinf);
 typedef void	(*TERRTN)(intptr_t exinf);
 
 /*
- *  �����ΰ���ݤΤ���η����
+ *  メモリ領域確保のための型定義
  */
 #ifndef TOPPERS_STK_T
 #define TOPPERS_STK_T	intptr_t
 #endif /* TOPPERS_STK_T */
-typedef	TOPPERS_STK_T	STK_T;	/* �����å��ΰ����ݤ��뤿��η� */
+typedef	TOPPERS_STK_T	STK_T;	/* スタック領域を確保するための型 */
 
 #ifndef TOPPERS_MPF_T
 #define TOPPERS_MPF_T	intptr_t
 #endif /* TOPPERS_MPF_T */
-typedef	TOPPERS_MPF_T	MPF_T;	/* ����Ĺ����ס����ΰ����ݤ��뤿��η� */
+typedef	TOPPERS_MPF_T	MPF_T;	/* 固定長メモリプール領域を確保するための型 */
 
 /*
- *  �ѥ��åȷ��������
+ *  パケット形式の定義
  */
 typedef struct t_ctsk {
-	ATR			tskatr;		/* ������°�� */
-	intptr_t	exinf;		/* �������γ�ĥ���� */
-	TASK		task;		/* �������Υᥤ��롼�������Ƭ���� */
-	PRI			itskpri;	/* �������ε�ư��ͥ���� */
-	SIZE		stksz;		/* �������Υ����å��ΰ�Υ����� */
-	STK_T 		*stk;		/* �������Υ����å��ΰ����Ƭ���� */
-	SIZE		sstksz;		/* �������Υ����ƥॹ���å��ΰ�Υ����� */
-	STK_T		*sstk;		/* �������Υ����ƥॹ���å��ΰ����Ƭ���� */
+	ATR			tskatr;		/* タスク属性 */
+	intptr_t	exinf;		/* タスクの拡張情報 */
+	TASK		task;		/* タスクのメインルーチンの先頭番地 */
+	PRI			itskpri;	/* タスクの起動時優先度 */
+	SIZE		stksz;		/* タスクのスタック領域のサイズ */
+	STK_T 		*stk;		/* タスクのスタック領域の先頭番地 */
+	SIZE		sstksz;		/* タスクのシステムスタック領域のサイズ */
+	STK_T		*sstk;		/* タスクのシステムスタック領域の先頭番地 */
 } T_CTSK;
 
 typedef struct t_rtsk {
-	STAT	tskstat;	/* ���������� */
-	PRI		tskpri;		/* �������θ���ͥ���� */
-	PRI		tskbpri;	/* �������Υ١���ͥ���� */
-	STAT	tskwait;	/* �Ԥ��װ� */
-	ID		wobjid;		/* �Ԥ��оݤΥ��֥������Ȥ�ID */
-	TMO		lefttmo;	/* �����ॢ���Ȥ���ޤǤλ��� */
-	uint_t	actcnt;		/* ��ư�׵ᥭ�塼���󥰿� */
-	uint_t	wupcnt;		/* �����׵ᥭ�塼���󥰿� */
-	bool_t	texmsk;		/* �������㳰�ޥ������֤��ݤ� */
-	bool_t	waifbd;		/* �Ԥ��ػ߾��֤��ݤ� */
-	uint_t	svclevel;	/* ��ĥ�����ӥ�������Υͥ��ȥ�٥� */
+	STAT	tskstat;	/* タスク状態 */
+	PRI		tskpri;		/* タスクの現在優先度 */
+	PRI		tskbpri;	/* タスクのベース優先度 */
+	STAT	tskwait;	/* 待ち要因 */
+	ID		wobjid;		/* 待ち対象のオブジェクトのID */
+	TMO		lefttmo;	/* タイムアウトするまでの時間 */
+	uint_t	actcnt;		/* 起動要求キューイング数 */
+	uint_t	wupcnt;		/* 起床要求キューイング数 */
+	bool_t	texmsk;		/* タスク例外マスク状態か否か */
+	bool_t	waifbd;		/* 待ち禁止状態か否か */
+	uint_t	svclevel;	/* 拡張サービスコールのネストレベル */
 } T_RTSK;
 
 typedef struct t_dtex {
-	ATR		texatr;		/* �������㳰�����롼����°�� */
-	TEXRTN	texrtn;		/* �������㳰�����롼�������Ƭ���� */
+	ATR		texatr;		/* タスク例外処理ルーチン属性 */
+	TEXRTN	texrtn;		/* タスク例外処理ルーチンの先頭番地 */
 } T_DTEX;
 
 typedef struct t_rtex {
-	STAT	texstat;	/* �������㳰�����ξ��� */
-	TEXPTN	pndptn;		/* ��α�㳰�װ� */
+	STAT	texstat;	/* タスク例外処理の状態 */
+	TEXPTN	pndptn;		/* 保留例外要因 */
 } T_RTEX;
 
 typedef struct t_csem {
-	ATR		sematr;		/* ���ޥե�°�� */
-	uint_t	isemcnt;	/* ���ޥե��ν���񸻿� */
-	uint_t	maxsem;		/* ���ޥե��κ���񸻿� */
+	ATR		sematr;		/* セマフォ属性 */
+	uint_t	isemcnt;	/* セマフォの初期資源数 */
+	uint_t	maxsem;		/* セマフォの最大資源数 */
 } T_CSEM;
 
 typedef struct t_rsem {
-	ID		wtskid;		/* ���ޥե����Ԥ��������Ƭ�Υ�������ID�ֹ� */
-	uint_t	semcnt;		/* ���ޥե��θ��ߤλ񸻿� */
+	ID		wtskid;		/* セマフォの待ち行列の先頭のタスクのID番号 */
+	uint_t	semcnt;		/* セマフォの現在の資源数 */
 } T_RSEM;
 
 typedef struct t_cflg {
-	ATR		flgatr;		/* ���٥�ȥե饰°�� */
-	FLGPTN	iflgptn;	/* ���٥�ȥե饰�ν���ӥåȥѥ����� */
+	ATR		flgatr;		/* イベントフラグ属性 */
+	FLGPTN	iflgptn;	/* イベントフラグの初期ビットパターン */
 } T_CFLG;
 
 typedef struct t_rflg {
-	ID		wtskid;		/* ���٥�ȥե饰���Ԥ��������Ƭ�Υ�������ID�ֹ� */
-	FLGPTN	flgptn;		/* ���٥�ȥե饰�θ��ߤΥӥåȥѥ����� */
+	ID		wtskid;		/* イベントフラグの待ち行列の先頭のタスクのID番号 */
+	FLGPTN	flgptn;		/* イベントフラグの現在のビットパターン */
 } T_RFLG;
 
 typedef struct t_cdtq {
-	ATR		dtqatr;		/* �ǡ������塼°�� */
-	uint_t	dtqcnt;		/* �ǡ������塼�����ΰ�˳�Ǽ�Ǥ���ǡ����� */
-	void 	*dtqmb;		/* �ǡ������塼�����ΰ����Ƭ���� */
+	ATR		dtqatr;		/* データキュー属性 */
+	uint_t	dtqcnt;		/* データキュー管理領域に格納できるデータ数 */
+	void 	*dtqmb;		/* データキュー管理領域の先頭番地 */
 } T_CDTQ;
 
 typedef struct t_rdtq {
-	ID		stskid;		/* �ǡ������塼�������Ԥ��������Ƭ�Υ�������ID�ֹ� */
-	ID		rtskid;		/* �ǡ������塼�μ����Ԥ��������Ƭ�Υ�������ID�ֹ� */
-	uint_t	sdtqcnt;	/* �ǡ������塼�����ΰ�˳�Ǽ����Ƥ���ǡ����ο� */
+	ID		stskid;		/* データキューの送信待ち行列の先頭のタスクのID番号 */
+	ID		rtskid;		/* データキューの受信待ち行列の先頭のタスクのID番号 */
+	uint_t	sdtqcnt;	/* データキュー管理領域に格納されているデータの数 */
 } T_RDTQ;
 
 typedef struct t_cpdq {
-	ATR		pdqatr;		/* ͥ���٥ǡ������塼°�� */
-	uint_t	pdqcnt;		/* ͥ���٥ǡ������塼�����ΰ�˳�Ǽ�Ǥ���ǡ����� */
-	PRI		maxdpri;	/* ͥ���٥ǡ������塼�������Ǥ���ǡ���ͥ���٤κ�
-						   ���� */
-	void 	*pdqmb;		/* ͥ���٥ǡ������塼�����ΰ����Ƭ���� */
+	ATR		pdqatr;		/* 優先度データキュー属性 */
+	uint_t	pdqcnt;		/* 優先度データキュー管理領域に格納できるデータ数 */
+	PRI		maxdpri;	/* 優先度データキューに送信できるデータ優先度の最
+						   大値 */
+	void 	*pdqmb;		/* 優先度データキュー管理領域の先頭番地 */
 } T_CPDQ;
 
 typedef struct t_rpdq {
-	ID		stskid;		/* ͥ���٥ǡ������塼�������Ԥ��������Ƭ�Υ�����
-						   ��ID�ֹ� */
-	ID		rtskid;		/* ͥ���٥ǡ������塼�μ����Ԥ��������Ƭ�Υ�����
-						   ��ID�ֹ� */
-	uint_t	spdqcnt;	/* ͥ���٥ǡ������塼�����ΰ�˳�Ǽ����Ƥ���ǡ�
-						   ���ο� */
+	ID		stskid;		/* 優先度データキューの送信待ち行列の先頭のタスク
+						   のID番号 */
+	ID		rtskid;		/* 優先度データキューの受信待ち行列の先頭のタスク
+						   のID番号 */
+	uint_t	spdqcnt;	/* 優先度データキュー管理領域に格納されているデー
+						   タの数 */
 } T_RPDQ;
 
 typedef struct t_cmtx {
-	ATR		mtxatr;		/* �ߥ塼�ƥå���°�� */
-	PRI		ceilpri;	/* �ߥ塼�ƥå����ξ��ͥ���� */
+	ATR		mtxatr;		/* ミューテックス属性 */
+	PRI		ceilpri;	/* ミューテックスの上限優先度 */
 } T_CMTX;
 
 typedef struct t_rmtx {
-	ID		htskid;		/* �ߥ塼�ƥå�������å����Ƥ��륿������ID�ֹ� */
-	ID		wtskid;		/* �ߥ塼�ƥå������Ԥ��������Ƭ�Υ�������ID�ֹ� */
+	ID		htskid;		/* ミューテックスをロックしているタスクのID番号 */
+	ID		wtskid;		/* ミューテックスの待ち行列の先頭のタスクのID番号 */
 } T_RMTX;
 
 typedef struct t_cmpf {
-	ATR		mpfatr;		/* ����Ĺ����ס���°�� */
-	uint_t	blkcnt;		/* �����Ǥ������Ĺ����֥��å��ο� */
-	uint_t	blksz;		/* ����Ĺ����֥��å��Υ����� */
-	MPF_T 	*mpf;		/* ����Ĺ����ס����ΰ����Ƭ���� */
-	void 	*mpfmb;		/* ����Ĺ����ס�������ΰ����Ƭ���� */
+	ATR		mpfatr;		/* 固定長メモリプール属性 */
+	uint_t	blkcnt;		/* 獲得できる固定長メモリブロックの数 */
+	uint_t	blksz;		/* 固定長メモリブロックのサイズ */
+	MPF_T 	*mpf;		/* 固定長メモリプール領域の先頭番地 */
+	void 	*mpfmb;		/* 固定長メモリプール管理領域の先頭番地 */
 } T_CMPF;
 
 typedef struct t_rmpf {
-	ID		wtskid;		/* ����Ĺ����ס�����Ԥ��������Ƭ�Υ�������
-						   ID�ֹ� */
-	uint_t	fblkcnt;	/* ����Ĺ����ס����ΰ�ζ��������ΰ�˳��
-						   �դ��뤳�Ȥ��Ǥ������Ĺ����֥��å��ο� */
+	ID		wtskid;		/* 固定長メモリプールの待ち行列の先頭のタスクの
+						   ID番号 */
+	uint_t	fblkcnt;	/* 固定長メモリプール領域の空きメモリ領域に割り
+						   付けることができる固定長メモリブロックの数 */
 } T_RMPF;
 
 typedef struct t_ccyc {
-	ATR			cycatr;		/* �����ϥ�ɥ�°�� */
-	intptr_t	exinf;		/* �����ϥ�ɥ�γ�ĥ���� */
-	CYCHDR		cychdr;		/* �����ϥ�ɥ����Ƭ���� */
-	RELTIM		cyctim;		/* �����ϥ�ɥ�ε�ư���� */
-	RELTIM		cycphs;		/* �����ϥ�ɥ�ε�ư���� */
+	ATR			cycatr;		/* 周期ハンドラ属性 */
+	intptr_t	exinf;		/* 周期ハンドラの拡張情報 */
+	CYCHDR		cychdr;		/* 周期ハンドラの先頭番地 */
+	RELTIM		cyctim;		/* 周期ハンドラの起動周期 */
+	RELTIM		cycphs;		/* 周期ハンドラの起動位相 */
 } T_CCYC;
 
 typedef struct t_rcyc {
-	STAT	cycstat;	/* �����ϥ�ɥ��ư����� */
-	RELTIM	lefttim;	/* ���˼����ϥ�ɥ��ư�������ޤǤ����л��� */
+	STAT	cycstat;	/* 周期ハンドラの動作状態 */
+	RELTIM	lefttim;	/* 次に周期ハンドラを起動する時刻までの相対時間 */
 } T_RCYC;
 
 typedef struct t_calm {
-	ATR			almatr;		/* ���顼��ϥ�ɥ�°�� */
-	intptr_t	exinf;		/* ���顼��ϥ�ɥ�γ�ĥ���� */
-	ALMHDR		almhdr;		/* ���顼��ϥ�ɥ����Ƭ���� */
+	ATR			almatr;		/* アラームハンドラ属性 */
+	intptr_t	exinf;		/* アラームハンドラの拡張情報 */
+	ALMHDR		almhdr;		/* アラームハンドラの先頭番地 */
 } T_CALM;
 
 typedef struct t_ralm {
-	STAT	almstat;	/* ���顼��ϥ�ɥ��ư����� */
-	RELTIM	lefttim;	/* ���顼��ϥ�ɥ��ư�������ޤǤ����л��� */
+	STAT	almstat;	/* アラームハンドラの動作状態 */
+	RELTIM	lefttim;	/* アラームハンドラを起動する時刻までの相対時間 */
 } T_RALM;
 
 typedef struct t_rovr {
-	STAT	ovrstat;	/* �����Х��ϥ�ɥ��ư����� */
-	OVRTIM	leftotm;	/* �Ĥ�ץ����å����� */
+	STAT	ovrstat;	/* オーバランハンドラの動作状態 */
+	OVRTIM	leftotm;	/* 残りプロセッサ時間 */
 } T_ROVR;
 
 typedef struct t_cisr {
-	ATR			isratr;		/* ����ߥ����ӥ��롼����°�� */
-	intptr_t	exinf;		/* ����ߥ����ӥ��롼����γ�ĥ���� */
-	INTNO		intno;		/* ����ߥ����ӥ��롼�������Ͽ���������ֹ� */
-	ISR			isr;		/* ����ߥ����ӥ��롼�������Ƭ���� */
-	PRI			isrpri;		/* ����ߥ����ӥ��롼����ͥ���� */
+	ATR			isratr;		/* 割込みサービスルーチン属性 */
+	intptr_t	exinf;		/* 割込みサービスルーチンの拡張情報 */
+	INTNO		intno;		/* 割込みサービスルーチンを登録する割込み番号 */
+	ISR			isr;		/* 割込みサービスルーチンの先頭番地 */
+	PRI			isrpri;		/* 割込みサービスルーチン優先度 */
 } T_CISR;
 
 #endif /* TOPPERS_MACRO_ONLY */
 
 /*
- *  �����ӥ�������ƽФ��Τ������������
+ *  サービスコール呼出しのための定義と宣言
  */
-#include <kernel_fncode.h>				/* ��ǽ�����ɤ���� */
-#include "target_svc.h"					/* ���եȥ���������ߤˤ��ƽФ� */
-#include <svc_call.h>					/* �ؿ��ƽФ��ˤ��ƽФ� */
+#include <kernel_fncode.h>				/* 機能コードの定義 */
+#include "target_svc.h"					/* ソフトウェア割込みによる呼出し */
+#include <svc_call.h>					/* 関数呼出しによる呼出し */
 
-#define SVC_CALL(svc)	_kernel_##svc	/* �ؿ��ƽФ��ˤ��ƤӽФ�̾�� */
+#define SVC_CALL(svc)	_kernel_##svc	/* 関数呼出しによる呼び出す名称 */
 
 /*
- *  ���֥�������°�������
+ *  オブジェクト属性の定義
  */
 #define TA_DOM(domid)	((((uint_t) domid) & 0xffU) << 16)
-										/* °�����ݸ�ɥᥤ��λ��� */
+										/* 属する保護ドメインの指定 */
 
-#define TA_ACT			UINT_C(0x02)	/* ��������ư���줿���֤����� */
+#define TA_ACT			UINT_C(0x02)	/* タスクを起動された状態で生成 */
 
-#define TA_TPRI			UINT_C(0x01)	/* ���������Ԥ������ͥ���ٽ�� */
+#define TA_TPRI			UINT_C(0x01)	/* タスクの待ち行列を優先度順に */
 
-#define TA_WMUL			UINT_C(0x02)	/* ʣ�����Ԥ������� */
-#define TA_CLR			UINT_C(0x04)	/* ���٥�ȥե饰�Υ��ꥢ���� */
+#define TA_WMUL			UINT_C(0x02)	/* 複数の待ちタスク */
+#define TA_CLR			UINT_C(0x04)	/* イベントフラグのクリア指定 */
 
-#define TA_CEILING		UINT_C(0x03)	/* ͥ���پ�¥ץ��ȥ��� */
+#define TA_CEILING		UINT_C(0x03)	/* 優先度上限プロトコル */
 
-#define TA_STA			UINT_C(0x02)	/* �����ϥ�ɥ��ư����֤����� */
+#define TA_STA			UINT_C(0x02)	/* 周期ハンドラを動作状態で生成 */
 
-#define	TA_NOWRITE		UINT_C(0x01)	/* ����ߥ��������ػ� */
-#define	TA_NOREAD		UINT_C(0x02)	/* �ɽФ����������ػ� */
-#define	TA_EXEC			UINT_C(0x04)	/* �¹ԥ����������� */
-#define	TA_MEMINI		UINT_C(0x08)	/* ����ν������Ԥ� */
-#define	TA_MEMPRSV		UINT_C(0x10)	/* ����ν������Ԥ�ʤ� */
-#define	TA_SDATA		UINT_C(0x20)	/* ���硼�ȥǡ����ΰ������ */
-#define	TA_UNCACHE		UINT_C(0x40)	/* ����å����Բ� */
-#define	TA_IODEV		UINT_C(0x80)	/* ���եǥХ������ΰ� */
+#define	TA_NOWRITE		UINT_C(0x01)	/* 書込みアクセス禁止 */
+#define	TA_NOREAD		UINT_C(0x02)	/* 読出しアクセス禁止 */
+#define	TA_EXEC			UINT_C(0x04)	/* 実行アクセス許可 */
+#define	TA_MEMINI		UINT_C(0x08)	/* メモリの初期化を行う */
+#define	TA_MEMPRSV		UINT_C(0x10)	/* メモリの初期化を行わない */
+#define	TA_SDATA		UINT_C(0x20)	/* ショートデータ領域に配置 */
+#define	TA_UNCACHE		UINT_C(0x40)	/* キャッシュ不可 */
+#define	TA_IODEV		UINT_C(0x80)	/* 周辺デバイスの領域 */
 
-#define TA_NONKERNEL	UINT_C(0x02)	/* �����ͥ�������γ���� */
+#define TA_NONKERNEL	UINT_C(0x02)	/* カーネル管理外の割込み */
 
-#define TA_ENAINT		UINT_C(0x01)	/* ������׵�ػߥե饰�򥯥ꥢ */
-#define TA_EDGE			UINT_C(0x02)	/* ���å��ȥꥬ */
+#define TA_ENAINT		UINT_C(0x01)	/* 割込み要求禁止フラグをクリア */
+#define TA_EDGE			UINT_C(0x02)	/* エッジトリガ */
 
 /*
- *  �����ӥ��������ư��⡼�ɤ����
+ *  サービスコールの動作モードの定義
  */
-#define TWF_ORW			UINT_C(0x01)	/* ���٥�ȥե饰��OR�Ԥ� */
-#define TWF_ANDW		UINT_C(0x02)	/* ���٥�ȥե饰��AND�Ԥ� */
+#define TWF_ORW			UINT_C(0x01)	/* イベントフラグのOR待ち */
+#define TWF_ANDW		UINT_C(0x02)	/* イベントフラグのAND待ち */
 
-#define	TPM_WRITE		UINT_C(0x01)	/* ����ߥ����������Υ����å� */
-#define	TPM_READ		UINT_C(0x02)	/* �ɽФ������������Υ����å� */
-#define	TPM_EXEC		UINT_C(0x04)	/* �¹ԥ����������Υ����å� */
+#define	TPM_WRITE		UINT_C(0x01)	/* 書込みアクセス権のチェック */
+#define	TPM_READ		UINT_C(0x02)	/* 読出しアクセス権のチェック */
+#define	TPM_EXEC		UINT_C(0x04)	/* 実行アクセス権のチェック */
 
 /*
- *  ���֥������Ȥξ��֤����
+ *  オブジェクトの状態の定義
  */
-#define TTS_RUN			UINT_C(0x01)	/* �¹Ծ��� */
-#define TTS_RDY			UINT_C(0x02)	/* �¹Բ�ǽ���� */
-#define TTS_WAI			UINT_C(0x04)	/* �Ԥ����� */
-#define TTS_SUS			UINT_C(0x08)	/* �����Ԥ����� */
-#define TTS_WAS			UINT_C(0x0c)	/* ����Ԥ����� */
-#define TTS_DMT			UINT_C(0x10)	/* �ٻ߾��� */
+#define TTS_RUN			UINT_C(0x01)	/* 実行状態 */
+#define TTS_RDY			UINT_C(0x02)	/* 実行可能状態 */
+#define TTS_WAI			UINT_C(0x04)	/* 待ち状態 */
+#define TTS_SUS			UINT_C(0x08)	/* 強制待ち状態 */
+#define TTS_WAS			UINT_C(0x0c)	/* 二重待ち状態 */
+#define TTS_DMT			UINT_C(0x10)	/* 休止状態 */
 
-#define TTW_SLP			UINT_C(0x0001)	/* �����Ԥ� */
-#define TTW_DLY			UINT_C(0x0002)	/* ���ַв��Ԥ� */
-#define TTW_SEM			UINT_C(0x0004)	/* ���ޥե��λ񸻳����Ԥ� */
-#define TTW_FLG			UINT_C(0x0008)	/* ���٥�ȥե饰�Ԥ� */
-#define TTW_SDTQ		UINT_C(0x0010)	/* �ǡ������塼�ؤ������Ԥ� */
-#define TTW_RDTQ		UINT_C(0x0020)	/* �ǡ������塼����μ����Ԥ� */
-#define TTW_SPDQ		UINT_C(0x0100)	/* ͥ���٥ǡ������塼�ؤ������Ԥ� */
-#define TTW_RPDQ		UINT_C(0x0200)	/* ͥ���٥ǡ������塼����μ����Ԥ� */
-#define TTW_MTX			UINT_C(0x0080)	/* �ߥ塼�ƥå����Υ��å��Ԥ����� */
-#define TTW_MPF			UINT_C(0x2000)	/* ����Ĺ����֥��å��γ����Ԥ� */
+#define TTW_SLP			UINT_C(0x0001)	/* 起床待ち */
+#define TTW_DLY			UINT_C(0x0002)	/* 時間経過待ち */
+#define TTW_SEM			UINT_C(0x0004)	/* セマフォの資源獲得待ち */
+#define TTW_FLG			UINT_C(0x0008)	/* イベントフラグ待ち */
+#define TTW_SDTQ		UINT_C(0x0010)	/* データキューへの送信待ち */
+#define TTW_RDTQ		UINT_C(0x0020)	/* データキューからの受信待ち */
+#define TTW_SPDQ		UINT_C(0x0100)	/* 優先度データキューへの送信待ち */
+#define TTW_RPDQ		UINT_C(0x0200)	/* 優先度データキューからの受信待ち */
+#define TTW_MTX			UINT_C(0x0080)	/* ミューテックスのロック待ち状態 */
+#define TTW_MPF			UINT_C(0x2000)	/* 固定長メモリブロックの獲得待ち */
 
-#define TTEX_ENA		UINT_C(0x01)	/* �������㳰�������ľ��� */
-#define TTEX_DIS		UINT_C(0x02)	/* �������㳰�����ػ߾��� */
+#define TTEX_ENA		UINT_C(0x01)	/* タスク例外処理許可状態 */
+#define TTEX_DIS		UINT_C(0x02)	/* タスク例外処理禁止状態 */
 
-#define TCYC_STP		UINT_C(0x01)	/* �����ϥ�ɥ餬ư��Ƥ��ʤ� */
-#define TCYC_STA		UINT_C(0x02)	/* �����ϥ�ɥ餬ư��Ƥ��� */
+#define TCYC_STP		UINT_C(0x01)	/* 周期ハンドラが動作していない */
+#define TCYC_STA		UINT_C(0x02)	/* 周期ハンドラが動作している */
 
-#define TALM_STP		UINT_C(0x01)	/* ���顼��ϥ�ɥ餬ư��Ƥ��ʤ� */
-#define TALM_STA		UINT_C(0x02)	/* ���顼��ϥ�ɥ餬ư��Ƥ��� */
+#define TALM_STP		UINT_C(0x01)	/* アラームハンドラが動作していない */
+#define TALM_STA		UINT_C(0x02)	/* アラームハンドラが動作している */
 
-#define TOVR_STP		UINT_C(0x01)	/* �����Х��ϥ�ɥ餬ư��Ƥ��ʤ�*/
-#define TOVR_STA		UINT_C(0x02)	/* �����Х��ϥ�ɥ餬ư��Ƥ��� */
+#define TOVR_STP		UINT_C(0x01)	/* オーバランハンドラが動作していない*/
+#define TOVR_STA		UINT_C(0x02)	/* オーバランハンドラが動作している */
 
 /*
- *  �ݸ�ɥᥤ��ID
+ *  保護ドメインID
  */
-#define TDOM_SELF		0				/* ����������°�����ݸ�ɥᥤ�� */
-#define TDOM_KERNEL		(-1)			/* �����ͥ�ɥᥤ�� */
-#define TDOM_NONE		(-2)			/* ̵��°���ݸ�ɥᥤ���°���ʤ���*/
+#define TDOM_SELF		0				/* 自タスクの属する保護ドメイン */
+#define TDOM_KERNEL		(-1)			/* カーネルドメイン */
+#define TDOM_NONE		(-2)			/* 無所属（保護ドメインに属さない）*/
 
 /*
- *  ����¾����������
+ *  その他の定数の定義
  */
-#define TSK_SELF		0			/* ������������ */
-#define TSK_NONE		0			/* �������륿�������ʤ� */
+#define TSK_SELF		0			/* 自タスク指定 */
+#define TSK_NONE		0			/* 該当するタスクがない */
 
-#define TPRI_SELF		0			/* ���������Υ١���ͥ���� */
-#define TPRI_INI		0			/* �������ε�ư��ͥ���� */
+#define TPRI_SELF		0			/* 自タスクのベース優先度 */
+#define TPRI_INI		0			/* タスクの起動時優先度 */
 
-#define TIPM_ENAALL		0			/* �����ͥ���٥ޥ�������� */
+#define TIPM_ENAALL		0			/* 割込み優先度マスク全解除 */
 
 /*
- *  ��������ȥޥ���
+ *  構成定数とマクロ
  */
 
 /*
- *  ���ݡ��Ȥ��뵡ǽ
+ *  サポートする機能
  */
 #ifdef TOPPERS_TARGET_SUPPORT_DIS_INT
-#define TOPPERS_SUPPORT_DIS_INT			/* dis_int�����ݡ��Ȥ���Ƥ��� */
+#define TOPPERS_SUPPORT_DIS_INT			/* dis_intがサポートされている */
 #endif /* TOPPERS_TARGET_SUPPORT_DIS_INT */
 
 #ifdef TOPPERS_TARGET_SUPPORT_ENA_INT
-#define TOPPERS_SUPPORT_ENA_INT			/* ena_int�����ݡ��Ȥ���Ƥ��� */
+#define TOPPERS_SUPPORT_ENA_INT			/* ena_intがサポートされている */
 #endif /* TOPPERS_TARGET_SUPPORT_ENA_INT */
 
 #ifdef TOPPERS_TARGET_SUPPORT_GET_UTM
-#define TOPPERS_SUPPORT_GET_UTM			/* get_utm�����ݡ��Ȥ���Ƥ��� */
+#define TOPPERS_SUPPORT_GET_UTM			/* get_utmがサポートされている */
 #endif /* TOPPERS_TARGET_SUPPORT_GET_UTM */
 
-#define TOPPERS_SUPPORT_MUTEX			/* �ߥ塼�ƥå�����ǽ��ĥ */
+#define TOPPERS_SUPPORT_MUTEX			/* ミューテックス機能拡張 */
 
 #ifdef TOPPERS_TARGET_SUPPORT_OVRHDR
-#define TOPPERS_SUPPORT_OVRHDR			/* �����Х��ϥ�ɥ鵡ǽ��ĥ */
+#define TOPPERS_SUPPORT_OVRHDR			/* オーバランハンドラ機能拡張 */
 #endif /* TOPPERS_TARGET_SUPPORT_OVRHDR */
 
-#define TOPPERS_SUPPORT_PROTECT			/* �ݸǽ�б��Υ����ͥ� */
+#define TOPPERS_SUPPORT_PROTECT			/* 保護機能対応のカーネル */
 
 #ifdef TOPPERS_TARGET_SUPPORT_ATT_MOD
-#define TOPPERS_SUPPORT_ATT_MOD			/* ATT_MOD�����ݡ��Ȥ���Ƥ��� */
+#define TOPPERS_SUPPORT_ATT_MOD			/* ATT_MODがサポートされている */
 #endif /* TOPPERS_TARGET_SUPPORT_ATT_MOD */
 
 #ifdef TOPPERS_TARGET_SUPPORT_ATT_PMA
-#define TOPPERS_SUPPORT_ATT_PMA			/* ATT_PMA�����ݡ��Ȥ���Ƥ��� */
+#define TOPPERS_SUPPORT_ATT_PMA			/* ATT_PMAがサポートされている */
 #endif /* TOPPERS_TARGET_SUPPORT_ATT_PMA */
 
-#define TOPPERS_SUPPORT_DYNAMIC_CRE		/* ưŪ������ǽ��ĥ */
+#define TOPPERS_SUPPORT_DYNAMIC_CRE		/* 動的生成機能拡張 */
 
 /*
- *  ͥ���٤��ϰ�
+ *  優先度の範囲
  */
-#define TMIN_TPRI		1			/* ������ͥ���٤κǾ��͡ʺǹ��͡�*/
-#define TMAX_TPRI		16			/* ������ͥ���٤κ����͡ʺ����͡�*/
-#define TMIN_DPRI		1			/* �ǡ���ͥ���٤κǾ��͡ʺǹ��͡�*/
-#define TMAX_DPRI		16			/* �ǡ���ͥ���٤κ����͡ʺ����͡�*/
-#define TMIN_ISRPRI		1			/* ����ߥ����ӥ��롼����ͥ���٤κǾ��� */
-#define TMAX_ISRPRI		16			/* ����ߥ����ӥ��롼����ͥ���٤κ����� */
+#define TMIN_TPRI		1			/* タスク優先度の最小値（最高値）*/
+#define TMAX_TPRI		16			/* タスク優先度の最大値（最低値）*/
+#define TMIN_DPRI		1			/* データ優先度の最小値（最高値）*/
+#define TMAX_DPRI		16			/* データ優先度の最大値（最低値）*/
+#define TMIN_ISRPRI		1			/* 割込みサービスルーチン優先度の最小値 */
+#define TMAX_ISRPRI		16			/* 割込みサービスルーチン優先度の最大値 */
 
 /*
- *  �С���������
+ *  バージョン情報
  */
-#define TKERNEL_MAKER	UINT_C(0x0118)	/* �����ͥ�Υ᡼���������� */
-#define TKERNEL_PRID	UINT_C(0x0006)	/* �����ͥ�μ����ֹ� */
-#define TKERNEL_SPVER	UINT_C(0xf517)	/* �����ͥ���ͤΥС�������ֹ� */
-#define TKERNEL_PRVER	UINT_C(0x2020)	/* �����ͥ�ΥС�������ֹ� */
+#define TKERNEL_MAKER	UINT_C(0x0118)	/* カーネルのメーカーコード */
+#define TKERNEL_PRID	UINT_C(0x0006)	/* カーネルの識別番号 */
+#define TKERNEL_SPVER	UINT_C(0xf517)	/* カーネル仕様のバージョン番号 */
+#define TKERNEL_PRVER	UINT_C(0x2020)	/* カーネルのバージョン番号 */
 
 /*
- *  ���塼���󥰲���κ�����
+ *  キューイング回数の最大値
  */
-#define TMAX_ACTCNT		UINT_C(1)		/* ��ư�׵ᥭ�塼���󥰿��κ����� */
-#define TMAX_WUPCNT		UINT_C(1)		/* �����׵ᥭ�塼���󥰿��κ����� */
+#define TMAX_ACTCNT		UINT_C(1)		/* 起動要求キューイング数の最大値 */
+#define TMAX_WUPCNT		UINT_C(1)		/* 起床要求キューイング数の最大値 */
 
 /*
- *  �ӥåȥѥ�����Υӥåȿ�
+ *  ビットパターンのビット数
  */
-#ifndef TBIT_TEXPTN					/* �������㳰�װ��Υӥåȿ� */
+#ifndef TBIT_TEXPTN					/* タスク例外要因のビット数 */
 #define TBIT_TEXPTN		(sizeof(TEXPTN) * CHAR_BIT)
 #endif /* TBIT_TEXPTN */
 
-#ifndef TBIT_FLGPTN					/* ���٥�ȥե饰�Υӥåȿ� */
+#ifndef TBIT_FLGPTN					/* イベントフラグのビット数 */
 #define TBIT_FLGPTN		(sizeof(FLGPTN) * CHAR_BIT)
 #endif /* TBIT_FLGPTN */
 
 /*
- *  �ץ����å����֡�OVRTIM�ˤκ�����
+ *  プロセッサ時間（OVRTIM）の最大値
  */
 #ifndef TMAX_OVRTIM
 #define TMAX_OVRTIM		ULONG_MAX
 #endif /* TMAX_OVRTIM */
 
 /*
- *  �����ΰ���ݤΤ���Υޥ���
+ *  メモリ領域確保のためのマクロ
  *
- *  �ʲ���TOPPERS_COUNT_SZ��TOPPERS_ROUND_SZ������ϡ�unit��2�ζҾ�Ǥ�
- *  �뤳�Ȥ��ꤷ�Ƥ��롥
+ *  以下のTOPPERS_COUNT_SZとTOPPERS_ROUND_SZの定義は，unitが2の巾乗であ
+ *  ることを仮定している．
  */
 #ifndef TOPPERS_COUNT_SZ
 #define TOPPERS_COUNT_SZ(sz, unit)	(((sz) + (unit) - 1) / (unit))
@@ -479,12 +479,12 @@ typedef struct t_cisr {
 #define TCNT_MPFMB(blkcnt)	TOPPERS_COUNT_SZ(TSZ_MPFMB(blkcnt), sizeof(MB_T))
 
 /*
- *  ����¾�ι������
+ *  その他の構成定数
  */
-#define TMAX_MAXSEM		UINT_MAX	/* ���ޥե��κ���񸻿��κ����� */
+#define TMAX_MAXSEM		UINT_MAX	/* セマフォの最大資源数の最大値 */
 
 /*
- *  ���ꥢ���������Υ����å��Τ���Υޥ���
+ *  メモリアクセス権のチェックのためのマクロ
  */
 #ifndef PROBE_MEM_WRITE_SIZE
 #define PROBE_MEM_WRITE_SIZE(p_var, size) \

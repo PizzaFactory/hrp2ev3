@@ -28,6 +28,8 @@ OBJNAME = app
 
 OBJFILE = $(OBJNAME)
 
+all: $(OBJFILE)
+
 MODOBJS += t_perror.o strerror.o vasyslog.o tlsf.o
 
 MODCFG = @(APPLDIR)/app.cfg
@@ -39,6 +41,9 @@ OMIT_DEBUG_INFO = 1
 #
 # Include common part
 #
+BUILD_LOADABLE_MODULE = 1
+CONFIG_EV3RT_APPLICATION = 1
+WORKSPACE_LIB_DIR := ../common/lib
 include @(APPLDIR)/Makefile.inc
 ifeq ($(SRCLANG),c++)
   USE_CXX = true

@@ -381,6 +381,7 @@ static unsigned int MMCSDXferStatusGet(mmcsdCtrlInfo *ctrl)
 #endif
     status = 1; /* Ignore!! */
 //    dataCRCError = 0;
+    assert(false);
   }
 
   /*TODO: How to stop DMA if timeout? Should I wait? */
@@ -392,6 +393,25 @@ static unsigned int MMCSDXferStatusGet(mmcsdCtrlInfo *ctrl)
   waiptn = MMCSD_ISR_FLGPTN_DMACOMP;
   ercd = twai_flg(MMCSD_ISR_FLG, waiptn, TWF_ORW, &flgptn, timeOut);
   assert(ercd == E_OK);
+  if (ercd != E_OK) { // For debug
+	  syslog(LOG_ERROR, "Wait MMCSD_ISR_FLGPTN_DMACOMP failed.");
+	  while(1) {
+		  syslog(LOG_ERROR, "AINTC.SRSR1: 0x%08x", AINTC.SRSR1);
+		  syslog(LOG_ERROR, "AINTC.SECR1: 0x%08x", AINTC.SECR1);
+		  syslog(LOG_ERROR, "AINTC.ESR1: 0x%08x", AINTC.ESR1);
+		  syslog(LOG_ERROR, "EDMA3_CC0.IPR: 0x%08x", EDMA3_CC0.IPR);
+		  syslog(LOG_ERROR, "EDMA3_CC0.IER: 0x%08x", EDMA3_CC0.IER);
+		  syslog(LOG_ERROR, "EDMA3_CC0.IEVAL: 0x%08x", EDMA3_CC0.IEVAL);
+		  syslog(LOG_ERROR, "EDMA3_CC0.EEVAL: 0x%08x", EDMA3_CC0.EEVAL);
+		  syslog(LOG_ERROR, "EDMA3_CC0.CCERR: 0x%08x", EDMA3_CC0.CCERR);
+		  //syslog(LOG_ERROR, "EDMA3_TC0.ERRSTAT: 0x%08x", EDMA3_TC0.ERRSTAT);
+		  //syslog(LOG_ERROR, "EDMA3_TC1.ERRSTAT: 0x%08x", EDMA3_TC1.ERRSTAT);
+		  //syslog(LOG_ERROR, "EDMA3_TC2.ERRSTAT: 0x%08x", EDMA3_TC2.ERRSTAT);
+		  syslog(LOG_ERROR, "MMCST0: 0x%08x", MMCSDIntrStatusGetAndClr(ctrlInfo.memBase));
+		  syslog(LOG_ERROR, "MMCST1: 0x%08x", MMCSD0.MMCST1);
+		  tslp_tsk(1000);
+	  }
+  }
 #if defined(DEBUG) && 0
   syslog(LOG_ERROR, "%s(): clr_flg(MMCSD_ISR_FLG, ~0x%x)", __FUNCTION__, waiptn & flgptn);
 #endif
@@ -754,7 +774,7 @@ void MMCSDIsr(intptr_t unused)
   {
 //    cmdTimeout = 1;
 	  iset_flg(MMCSD_ISR_FLG, MMCSD_ISR_FLGPTN_CMDTIMEOUT);
-#if defined(DEBUG) || 0
+#if defined(DEBUG) || 1
     syslog(LOG_ERROR, "%s(): cmdTimeout!!", __FUNCTION__);
 #endif
   }

@@ -307,6 +307,21 @@ ER _dmloader_rmv_ldm(ID ldm_can_id) {
             ercd = del_tsk(tskid);
             assert(ercd == E_OK);
             break; }
+
+        case TSFN_CRE_SEM: {
+        	syslog(LOG_DEBUG, "%s(): RMV MOD_CFG_ENTRY TSFN_CRE_SEM", __FUNCTION__);
+        	ID semid = *(ID*)ent->retvalptr;
+        	ercd = del_sem(semid);
+        	assert(ercd == E_OK);
+        	break; }
+
+        case TSFN_CRE_FLG: {
+        	syslog(LOG_DEBUG, "%s(): RMV MOD_CFG_ENTRY TSFN_CRE_FLG", __FUNCTION__);
+        	ID flgid = *(ID*)ent->retvalptr;
+        	ercd = del_flg(flgid);
+        	assert(ercd == E_OK);
+        	break; }
+
         default:
             syslog(LOG_ERROR, "%s(): Unsupported static function code %d.", __FUNCTION__, ent->sfncd);
             ercd = E_OBJ;

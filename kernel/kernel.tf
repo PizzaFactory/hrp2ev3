@@ -8,56 +8,56 @@ $   Copyright (C) 2007 by TAKAGI Nobuhisa
 $   Copyright (C) 2007-2014 by Embedded and Real-Time Systems Laboratory
 $               Graduate School of Information Science, Nagoya Univ., JAPAN
 $  
-$   �嵭����Ԥϡ��ʲ���(1)��(4)�ξ������������˸¤ꡤ�ܥ��եȥ���
-$   �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ������
-$   �ѡ������ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
-$   (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
-$       ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
-$       ����������˴ޤޤ�Ƥ��뤳�ȡ�
-$   (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
-$       �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
-$       �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
-$       ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
-$   (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
-$       �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
-$       �ȡ�
-$     (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
-$         �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
-$     (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
-$         ��𤹤뤳�ȡ�
-$   (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
-$       ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
-$       �ޤ����ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���
-$       ͳ�˴�Ť����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ�
-$       ���դ��뤳�ȡ�
+$   上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
+$   ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
+$   変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
+$   (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+$       権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+$       スコード中に含まれていること．
+$   (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+$       用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+$       者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+$       の無保証規定を掲載すること．
+$   (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+$       用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+$       と．
+$     (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+$         作権表示，この利用条件および下記の無保証規定を掲載すること．
+$     (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+$         報告すること．
+$   (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+$       害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+$       また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
+$       由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
+$       免責すること．
 $  
-$   �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
-$   ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū
-$   ���Ф���Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ���
-$   �������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤��
-$   ����Ǥ�����ʤ���
+$   本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+$   よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
+$   に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
+$   アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
+$   の責任を負わない．
 $
 $   $Id: kernel.tf 1003 2014-04-23 11:58:48Z ertl-hiro $
 $
 $ =====================================================================
 
 $
-$  ���������ɹ���
+$  共通部の読込み
 $
 $INCLUDE "kernel/kernel_lib.tf"$
 
 $ =====================================================================
-$ AID_YYY�ν���
+$ AID_YYYの処理
 $ =====================================================================
 
 $num_atskid = 0$
 $FOREACH i ATSK.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(ATSK.DOMAIN[i])$
 		$ERROR ATSK.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_TSK")$$END$
 	$END$
 
-$	// notsk����ξ���E_PAR��
+$	// notskが負の場合（E_PAR）
 	$IF ATSK.NOTSK[i] < 0$
 		$ERROR ATSK.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "notsk", ATSK.NOTSK[i], "AID_TSK")$$END$
 	$END$
@@ -67,12 +67,12 @@ $num_tskid = LENGTH(TSK.ID_LIST) + num_atskid$
 
 $num_asemid = 0$
 $FOREACH i ASEM.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(ASEM.DOMAIN[i])$
 		$ERROR ASEM.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_SEM")$$END$
 	$END$
 
-$	// nosem����ξ���E_PAR��
+$	// nosemが負の場合（E_PAR）
 	$IF ASEM.NOSEM[i] < 0$
 		$ERROR ASEM.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "nosem", ASEM.NOSEM[i], "AID_SEM")$$END$
 	$END$
@@ -82,12 +82,12 @@ $num_semid = LENGTH(SEM.ID_LIST) + num_asemid$
 
 $num_aflgid = 0$
 $FOREACH i AFLG.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(AFLG.DOMAIN[i])$
 		$ERROR AFLG.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_FLG")$$END$
 	$END$
 
-$	// noflg����ξ���E_PAR��
+$	// noflgが負の場合（E_PAR）
 	$IF AFLG.NOFLG[i] < 0$
 		$ERROR AFLG.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "noflg", AFLG.NOFLG[i], "AID_FLG")$$END$
 	$END$
@@ -97,12 +97,12 @@ $num_flgid = LENGTH(FLG.ID_LIST) + num_aflgid$
 
 $num_adtqid = 0$
 $FOREACH i ADTQ.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(ADTQ.DOMAIN[i])$
 		$ERROR ADTQ.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_DTQ")$$END$
 	$END$
 
-$	// nodtq����ξ���E_PAR��
+$	// nodtqが負の場合（E_PAR）
 	$IF ADTQ.NODTQ[i] < 0$
 		$ERROR ADTQ.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "nodtq", ADTQ.NODTQ[i], "AID_DTQ")$$END$
 	$END$
@@ -112,12 +112,12 @@ $num_dtqid = LENGTH(DTQ.ID_LIST) + num_adtqid$
 
 $num_apdqid = 0$
 $FOREACH i APDQ.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(APDQ.DOMAIN[i])$
 		$ERROR APDQ.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_PDQ")$$END$
 	$END$
 
-$	// nopdq����ξ���E_PAR��
+$	// nopdqが負の場合（E_PAR）
 	$IF APDQ.NOPDQ[i] < 0$
 		$ERROR APDQ.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "nopdq", APDQ.NOPDQ[i], "AID_PDQ")$$END$
 	$END$
@@ -127,12 +127,12 @@ $num_pdqid = LENGTH(PDQ.ID_LIST) + num_apdqid$
 
 $num_amtxid = 0$
 $FOREACH i AMTX.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(AMTX.DOMAIN[i])$
 		$ERROR AMTX.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_MTX")$$END$
 	$END$
 
-$	// nomtx����ξ���E_PAR��
+$	// nomtxが負の場合（E_PAR）
 	$IF AMTX.NOMTX[i] < 0$
 		$ERROR AMTX.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "nomtx", AMTX.NOMTX[i], "AID_MTX")$$END$
 	$END$
@@ -142,12 +142,12 @@ $num_mtxid = LENGTH(MTX.ID_LIST) + num_amtxid$
 
 $num_ampfid = 0$
 $FOREACH i AMPF.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(AMPF.DOMAIN[i])$
 		$ERROR AMPF.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_MPF")$$END$
 	$END$
 
-$	// nompf����ξ���E_PAR��
+$	// nompfが負の場合（E_PAR）
 	$IF AMPF.NOMPF[i] < 0$
 		$ERROR AMPF.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "nompf", AMPF.NOMPF[i], "AID_MPF")$$END$
 	$END$
@@ -157,12 +157,12 @@ $num_mpfid = LENGTH(MPF.ID_LIST) + num_ampfid$
 
 $num_acycid = 0$
 $FOREACH i ACYC.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(ACYC.DOMAIN[i])$
 		$ERROR ACYC.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_CYC")$$END$
 	$END$
 
-$	// nocyc����ξ���E_PAR��
+$	// nocycが負の場合（E_PAR）
 	$IF ACYC.NOCYC[i] < 0$
 		$ERROR ACYC.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "nocyc", ACYC.NOCYC[i], "AID_CYC")$$END$
 	$END$
@@ -172,12 +172,12 @@ $num_cycid = LENGTH(CYC.ID_LIST) + num_acycid$
 
 $num_aalmid = 0$
 $FOREACH i AALM.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(AALM.DOMAIN[i])$
 		$ERROR AALM.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_ALM")$$END$
 	$END$
 
-$	// noalm����ξ���E_PAR��
+$	// noalmが負の場合（E_PAR）
 	$IF AALM.NOALM[i] < 0$
 		$ERROR AALM.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "noalm", AALM.NOALM[i], "AID_ALM")$$END$
 	$END$
@@ -187,12 +187,12 @@ $num_almid = LENGTH(ALM.ID_LIST) + num_aalmid$
 
 $num_aisrid = 0$
 $FOREACH i AISR.ORDER_LIST$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ����E_RSATR��
+$	// 保護ドメインの囲みの中に記述されている（E_RSATR）
 	$IF LENGTH(AISR.DOMAIN[i])$
 		$ERROR AISR.TEXT_LINE[i]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "AID_ISR")$$END$
 	$END$
 
-$	// noisr����ξ���E_PAR��
+$	// noisrが負の場合（E_PAR）
 	$IF AISR.NOISR[i] < 0$
 		$ERROR AISR.TEXT_LINE[i]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "noisr", AISR.NOISR[i], "AID_ISR")$$END$
 	$END$
@@ -202,10 +202,10 @@ $num_isrid = num_aisrid$
 $num_isr = LENGTH(ISR.ORDER_LIST) + num_aisrid$
 
 $ =====================================================================
-$ kernel_cfg.h������
+$ kernel_cfg.hの生成
 $ =====================================================================
 
-$ ��ĥ�����ӥ��������ֹ�κ����ͤ�tmax_fncd�˵���
+$ 拡張サービスコール番号の最大値をtmax_fncdに求める
 $tmax_fncd = 0$
 $FOREACH order SVC.ORDER_LIST$
 	$IF SVC.FNCD[order] > tmax_fncd$
@@ -266,13 +266,13 @@ $NL$
 #endif /* TOPPERS_KERNEL_CFG_H */$NL$
 
 $ =====================================================================
-$ �ݸ�ɥᥤ��˴ؤ���������
+$ 保護ドメインに関する前処理
 $ =====================================================================
 
 $
-$  �ݸ�ɥᥤ��ꥹ�Ȥκ���
-$	DOMLIST���桼���ɥᥤ��Υꥹ��
-$	DOMLIST_ALL�������ͥ�ɥᥤ�󡤥桼���ɥᥤ��̵��°�Υꥹ��
+$  保護ドメインリストの作成
+$	DOMLIST：ユーザドメインのリスト
+$	DOMLIST_ALL：カーネルドメイン，ユーザドメイン，無所属のリスト
 $
 $FOREACH domid DOM.ID_LIST$
 	$DOMLIST = APPEND(DOMLIST, domid)$
@@ -280,7 +280,7 @@ $END$
 $DOMLIST_ALL = APPEND(TDOM_KERNEL, DOMLIST, TDOM_NONE)$
 
 $
-$  �ݸ�ɥᥤ����Υǥե���ȤΥ����������ĥѥ�����κ���
+$  保護ドメイン毎のデフォルトのアクセス許可パターンの作成
 $
 $DEFAULT_ACPTN[TDOM_KERNEL] = VALUE("TACP_KERNEL", TACP_KERNEL)$
 $FOREACH domid DOM.ID_LIST$
@@ -289,7 +289,7 @@ $END$
 $DEFAULT_ACPTN[TDOM_NONE] = VALUE("TACP_SHARED", TACP_SHARED)$
 
 $
-$  �ݸ�ɥᥤ����Υǥե���ȤΥ����������ĥ٥�����ʸ����ˤκ���
+$  保護ドメイン毎のデフォルトのアクセス許可ベクタ（文字列）の作成
 $
 $FOREACH domid DOMLIST_ALL$
 	$DEFAULT_ACVCT[domid] = FORMAT(" { %1%, %1%, %1%, %1% }",
@@ -297,8 +297,8 @@ $FOREACH domid DOMLIST_ALL$
 $END$
 
 $
-$  �ݸ�ɥᥤ��Υ�٥�κ���
-$	DOM.LABEL[domid]���ݸ�ɥᥤ��Υ�٥�
+$  保護ドメインのラベルの作成
+$	DOM.LABEL[domid]：保護ドメインのラベル
 $
 $DOM.LABEL[TDOM_KERNEL] = "kernel"$
 $FOREACH domid DOM.ID_LIST$
@@ -307,24 +307,24 @@ $END$
 $DOM.LABEL[TDOM_NONE] = "shared"$
 
 $
-$  LMT_DOM�ν���
+$  LMT_DOMの処理
 $
 $FOREACH i LDOM.ORDER_LIST$
 	$domid = LDOM.DOMAIN[i]$
 
-$	// LDM_DOM���桼���ɥᥤ����ˤʤ�����E_RSATR��
+$	// LDM_DOMがユーザドメイン中にない場合（E_RSATR）
 	$IF !LENGTH(domid) || domid == TDOM_KERNEL$
 		$ERROR LDOM.TEXT_LINE[i]$E_RSATR:$SPC$
 			$FORMAT(_("%1% must belong to a user domain"), "LMT_DOM")$
 		$END$
 
-$	// �桼���ɥᥤ�����ʣ����LMT_DOM���������E_OBJ��
+$	// ユーザドメイン中に複数のLMT_DOMがある場合（E_OBJ）
 	$ELIF LENGTH(MINPRIORITY[domid])$
 		$ERROR LDOM.TEXT_LINE[i]$E_OBJ:$SPC$
 			$FORMAT(_("%1% is duplicated in a user domain"), "LMT_DOM")$
 		$END$
 
-$	// (TMIN_TPRI <= mintpri && mintpri <= TMAX_TPRI)�Ǥʤ�����E_PAR��
+$	// (TMIN_TPRI <= mintpri && mintpri <= TMAX_TPRI)でない場合（E_PAR）
 	$ELIF !(TMIN_TPRI <= LDOM.MINTPRI[i] && LDOM.MINTPRI[i] <= TMAX_TPRI)$
 		$ERROR LDOM.TEXT_LINE[i]$E_PAR:$SPC$
 			$FORMAT(_("illegal %1% `%2%\' in %3%"),
@@ -337,42 +337,42 @@ $	// (TMIN_TPRI <= mintpri && mintpri <= TMAX_TPRI)�Ǥʤ�����E_PAR��
 $END$
 
 $ =====================================================================
-$ ���ꥪ�֥������Ȥ˴ؤ���������
+$ メモリオブジェクトに関する前処理
 $
-$ �������Υ��ꥪ�֥������Ȥξ����MO.XXXX[moid]���������롥
+$ 統合前のメモリオブジェクトの情報をMO.XXXX[moid]に生成する．
 $
-$ nummo���������Υ��ꥪ�֥������Ȥο�
-$ MO.TYPE[moid]�����ꥪ�֥������ȤΥ�����
-$	TOPPERS_ATTMOD��ATT_MOD��ATA_MOD����Ͽ���줿���������
-$					�⥸�塼��̾��MO.MODULE[moid]������
-$	TOPPERS_ATTSEC��ATT_SEC��ATA_SEC����Ͽ���줿���������
-$	TOPPERS_ATTMEM��ATT_MEM��ATA_MEM��ATT_PMA��ATA_PMA����Ͽ���줿���������
-$					��Ƭ���Ϥ�MO.BASE[moid]������
-$					��������MO.SIZE[moid]������
-$					ʪ�����ɥ쥹��MO.PADDR[moid]�������ATT_PMA��ATA_PMA�λ���
-$	TOPPERS_USTACK���������Υ桼�������å��ΰ�ʥ�åɥ����������ξ��Υ�
-$					�ߡ������å��ΰ�⤳�Υ����ס�
-$					�桼�������å��ΰ�����֤�������MO.STKORDER[moid]
-$					�����ꡥ��åɥ����������Ǥʤ����ϥ�����ID�ˡʥ桼��
-$					�����å��ΰ�򥳥�ե�����졼��������դ�����Τߡ�
-$					��Ƭ���Ϥ�MO.BASE[moid]������ʥ桼�������å��ΰ��
-$					�ץꥱ������󤬻��ꤷ�����Τߡ�
-$					��������MO.SIZE[moid]������
-$	TOPPERS_MPFAREA������Ĺ����ס����ΰ�ʥ���ե�����졼��������դ�
-$					 ����Τߡ�
-$					 ����Ĺ����ס���ID��MO.MPFID[moid]������
-$ MO.LINKER[moid]����󥫤����֤�����ꥪ�֥������Ȥ���
-$ MO.DOMAIN[moid]��°����ɥᥤ���̵��°�ξ���TDOM_NONE��
-$ MO.MEMREG[moid]������꡼������ֹ�ʥ�󥫤����֤�����Τߡ�
-$ MO.SECTION[moid]�����������̾�ʥ�󥫤����֤�����Τߡ�
-$ MO.MEMATR[moid]�����ꥪ�֥�������°��
-$ MO.ACPTN1[moid]���̾����1�ʽ���ߡˤΥ����������ĥѥ�����
-$ MO.ACPTN2[moid]���̾����2���ɽФ����¹ԡˤΥ����������ĥѥ�����
-$ MO.ACPTN4[moid]���������Υ����������ĥѥ�����
-$ MO.TEXT_LINE[moid]�����ꥪ�֥������Ȥ���Ͽ������ŪAPI�ι��ֹ�
-$ MO.APINAME[moid]�����ꥪ�֥������Ȥ���Ͽ������ŪAPI��̾��
-$ MO_USTACK_LIST1������ե�����졼��������դ���桼�������å��ΰ�Υꥹ��
-$ MO_USTACK_LIST2����Ƭ���Ϥ���ꤵ�줿�桼�������å��ΰ�Υꥹ��
+$ nummo：統合前のメモリオブジェクトの数
+$ MO.TYPE[moid]：メモリオブジェクトのタイプ
+$	TOPPERS_ATTMOD：ATT_MOD／ATA_MODで登録されたセクション
+$					モジュール名をMO.MODULE[moid]に設定
+$	TOPPERS_ATTSEC：ATT_SEC／ATA_SECで登録されたセクション
+$	TOPPERS_ATTMEM：ATT_MEM／ATA_MEM／ATT_PMA／ATA_PMAで登録されたセクション
+$					先頭番地をMO.BASE[moid]に設定
+$					サイズをMO.SIZE[moid]に設定
+$					物理アドレスをMO.PADDR[moid]に設定（ATT_PMA／ATA_PMAの時）
+$	TOPPERS_USTACK：タスクのユーザスタック領域（レッドゾーン方式の場合のダ
+$					ミースタック領域もこのタイプ）
+$					ユーザスタック領域を配置する順序を，MO.STKORDER[moid]
+$					に設定．レッドゾーン方式でない場合はタスクIDに（ユーザ
+$					スタック領域をコンフィギュレータが割り付ける場合のみ）
+$					先頭番地をMO.BASE[moid]に設定（ユーザスタック領域をア
+$					プリケーションが指定した場合のみ）
+$					サイズをMO.SIZE[moid]に設定
+$	TOPPERS_MPFAREA：固定長メモリプール領域（コンフィギュレータが割り付け
+$					 る場合のみ）
+$					 固定長メモリプールIDをMO.MPFID[moid]に設定
+$ MO.LINKER[moid]：リンカが配置するメモリオブジェクトか？
+$ MO.DOMAIN[moid]：属するドメイン（無所属の場合はTDOM_NONE）
+$ MO.MEMREG[moid]：メモリリージョン番号（リンカが配置する場合のみ）
+$ MO.SECTION[moid]：セクション名（リンカが配置する場合のみ）
+$ MO.MEMATR[moid]：メモリオブジェクト属性
+$ MO.ACPTN1[moid]：通常操作1（書込み）のアクセス許可パターン
+$ MO.ACPTN2[moid]：通常操作2（読出し，実行）のアクセス許可パターン
+$ MO.ACPTN4[moid]：参照操作のアクセス許可パターン
+$ MO.TEXT_LINE[moid]：メモリオブジェクトを登録した静的APIの行番号
+$ MO.APINAME[moid]：メモリオブジェクトを登録した静的APIの名称
+$ MO_USTACK_LIST1：コンフィギュレータが割り付けるユーザスタック領域のリスト
+$ MO_USTACK_LIST2：先頭番地を指定されたユーザスタック領域のリスト
 $ =====================================================================
 
 $TOPPERS_ATTMOD = TOPPERS_ATTSEC + 1$
@@ -382,56 +382,56 @@ $MO_USTACK_LIST1 = {}$
 $MO_USTACK_LIST2 = {}$
 
 $
-$  ���֤��륻�������˴ؤ���������
+$  配置するセクションに関する前処理
 $
-$ LNK_SEC�����֤��륻�������ʥ��ꥪ�֥������ȤȤ�����Ͽ���ʤ��ˤξ�
-$ ���LNKSEC[lsid]���������롥
+$ LNK_SECで配置するセクション（メモリオブジェクトとして登録しない）の情
+$ 報を，LNKSEC[lsid]に生成する．
 $
-$ numls�����֤��륻�������ο�
-$ LNKSEC.MEMREG[lsid]������꡼������ֹ�
-$ LNKSEC.SECTION[lsid]�����������̾
+$ numls：配置するセクションの数
+$ LNKSEC.MEMREG[lsid]：メモリリージョン番号
+$ LNKSEC.SECTION[lsid]：セクション名
 
 $numls = 0$
 
 $
-$  ATT_REG����Ͽ���줿�꡼�����˴ؤ��륨�顼�����å���������
+$  ATT_REGで登録されたリージョンに関するエラーチェックと前処理
 $
-$ REG_LIST�������ѤߤΥ���꡼�����Υꥹ��
-$ REG.REGNAME[reg]������꡼�����̾�ʡ�UNESCSTR(MO.REGION[reg])��
+$ REG_LIST：処理済みのメモリリージョンのリスト
+$ REG.REGNAME[reg]：メモリリージョン名（＝UNESCSTR(MO.REGION[reg])）
 $
 $FOREACH reg REG.ORDER_LIST$
-$	// REG.REGNAME[reg]�κ���
+$	// REG.REGNAME[reg]の作成
 	$REG.REGNAME[reg] = UNESCSTR(REG.REGION[reg])$
 
-$	// ����꡼�����̾����Ͽ�Ѥߤξ���E_OBJ��
+$	// メモリリージョン名が登録済みの場合（E_OBJ）
 	$FOREACH reg2 REG_LIST$
 		$IF EQ(REG.REGNAME[reg], REG.REGNAME[reg2])$
 			$ERROR REG.TEXT_LINE[reg]$E_OBJ: $FORMAT(_("%1% `%2%\' in %3% is duplicated"), "memory region", REG.REGNAME[reg], "ATT_REG")$$END$
 		$END$
 	$END$
 
-$	// regatr���ʡ�TA_NOWRITE�ϡˤǤʤ�����E_RSATR��
+$	// regatrが（［TA_NOWRITE］）でない場合（E_RSATR）
 	$IF (REG.REGATR[reg] & ~(TA_NOWRITE|TARGET_REGATR)) != 0$
 		$ERROR REG.TEXT_LINE[reg]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "regatr", REG.REGATR[reg], "ATT_REG")$$END$
 	$END$
 
-$	// �ݸ�ɥᥤ��˽�°���Ƥ������E_RSATR��
+$	// 保護ドメインに所属している場合（E_RSATR）
 	$IF LENGTH(REG.DOMAIN[reg])$
 		$ERROR REG.TEXT_LINE[reg]$E_RSATR: $FORMAT(_("%1% `%2%\' belongs to a protection domain in %3%"), "memory region", REG.REGNAME[reg], "ATT_REG")$$END$
 	$END$
 
-$	// size��0�ʲ��ξ���E_PAR��
+$	// sizeが0以下の場合（E_PAR）
 	$IF REG.SIZE[reg] <= 0$
 		$ERROR REG.TEXT_LINE[reg]$E_PAR: $FORMAT(_("%1% `%2%\' is zero in %3%"), "size", REG.SIZE[reg], "ATT_REG")$$END$
 	$END$
 
-$	// base+size�����祢�ɥ쥹��ۤ������E_PAR��
+$	// base+sizeが最大アドレスを越える場合（E_PAR）
 	$limit = (REG.BASE[reg] + REG.SIZE[reg]) & ((1 << sizeof_void_ptr * 8) - 1)$
 	$IF limit < REG.BASE[reg] && limit != 0$
 		$ERROR REG.TEXT_LINE[reg]$E_PAR: $FORMAT(_("%1% `%2%\' is too large in %3%"), "size", REG.SIZE[reg], "ATT_REG")$$END$
 	$END$
 
-$	// ��Ͽ�ѤߤΥ���꡼�������ΰ褬�Ťʤ����E_OBJ��
+$	// 登録済みのメモリリージョンと領域が重なる場合（E_OBJ）
 	$FOREACH reg2 REG_LIST$
 		$IF ((REG.BASE[reg] <= REG.BASE[reg2]
 						&& REG.BASE[reg] + REG.SIZE[reg] > REG.BASE[reg2])
@@ -441,39 +441,39 @@ $	// ��Ͽ�ѤߤΥ���꡼�������ΰ褬�Ťʤ����E_OBJ��
 		$END$
 	$END$
 
-$	// �������åȰ�¸�Υ��顼�����å�
+$	// ターゲット依存のエラーチェック
 	$IF ISFUNCTION("HOOK_ERRORCHECK_REG")$
 		$HOOK_ERRORCHECK_REG(reg)$
 	$END$
 	$REG_LIST = APPEND(REG_LIST, reg)$
 $END$
 
-$ REG_ORDER������
+$ REG_ORDERの生成
 $REG_ORDER = SORT(REG.ORDER_LIST, "REG.BASE")$
 
 $
-$  DEF_SRG��������줿ɸ�����꡼�����˴ؤ��륨�顼�����å���������
+$  DEF_SRGで定義された標準メモリリージョンに関するエラーチェックと前処理
 $
-$ STANDARD_ROM��ɸ��ROM�꡼�����Υ���꡼������ֹ�
-$ STANDARD_RAM��ɸ��RAM�꡼�����Υ���꡼������ֹ�
+$ STANDARD_ROM：標準ROMリージョンのメモリリージョン番号
+$ STANDARD_RAM：標準RAMリージョンのメモリリージョン番号
 $
 $IF !LENGTH(SRG.ORDER_LIST)$
-$	// DEF_SRG���ʤ����ϡ������ǽ�����ߤ��ʰʹߤΥ��顼���޻ߡ�
-$	//��NGKI3259��
+$	// DEF_SRGがない場合は，ここで処理を止める（以降のエラーの抑止）
+$	//［NGKI3259］
 	$ERROR$$FORMAT(_("no standard memory region is defined"))$$END$
 	$DIE()$
 $ELSE$
-$	// �ݸ�ɥᥤ��ΰϤߤ���˵��Ҥ���Ƥ������E_RSATR�ˡ�NGKI3262�� 
+$	// 保護ドメインの囲みの中に記述されている場合（E_RSATR）［NGKI3262］ 
 	$IF LENGTH(SRG.DOMAIN[1])$
 		$ERROR SEG.TEXT_LINE[1]$E_RSATR: $FORMAT(_("%1% must be outside of protection domains"), "DEF_SRG")$$END$
 	$END$
 
-$	// ��ŪAPI��DEF_SRG�פ�ʣ�������E_OBJ�ˡ�NGKI3263��
+$	// 静的API「DEF_SRG」が複数ある（E_OBJ）［NGKI3263］
 	$IF LENGTH(SRG.ORDER_LIST) > 1$
 		$ERROR$E_OBJ: $FORMAT(_("too many %1%"), "DEF_SRG")$$END$
 	$END$
 
-$	// stdrom����Ͽ����Ƥ��뤫�Υ����å���E_OBJ�ˡ�NGKI3264��
+$	// stdromが登録されているかのチェック（E_OBJ）［NGKI3264］
 	$STANDARD_ROM = 0$
 	$FOREACH reg REG.ORDER_LIST$
 		$IF EQ(UNESCSTR(SRG.STDROM[1]), REG.REGNAME[reg])$
@@ -486,12 +486,12 @@ $	// stdrom����Ͽ����Ƥ��뤫�Υ����å���E_OBJ�ˡ�NGKI3264��
 		$END$
 	$END$
 
-$	// stdrom��TA_NOWRITE°�����Υ����å���E_OBJ�ˡ�NGKI3268��
+$	// stdromがTA_NOWRITE属性かのチェック（E_OBJ）［NGKI3268］
 	$IF (REG.REGATR[STANDARD_ROM] & TA_NOWRITE) == 0$
 		$ERROR SRG.TEXT_LINE[1]$E_OBJ: $FORMAT(_("standard ROM region must have TA_NOWRITE attribute"))$$END$
 	$END$
 
-$	// stdram����Ͽ����Ƥ��뤫�Υ����å���E_OBJ�ˡ�NGKI3272��
+$	// stdramが登録されているかのチェック（E_OBJ）［NGKI3272］
 	$STANDARD_RAM = 0$
 	$FOREACH reg REG.ORDER_LIST$
 		$IF EQ(UNESCSTR(SRG.STDRAM[1]), REG.REGNAME[reg])$
@@ -504,21 +504,21 @@ $	// stdram����Ͽ����Ƥ��뤫�Υ����å���E_OBJ�ˡ�NGKI3272��
 		$END$
 	$END$
 
-$	// stdram��TA_NOWRITE°���Ǥʤ����Υ����å���E_OBJ�ˡ�NGKI3270��
+$	// stdramがTA_NOWRITE属性でないかのチェック（E_OBJ）［NGKI3270］
 	$IF (REG.REGATR[STANDARD_RAM] & TA_NOWRITE) != 0$
 		$ERROR SRG.TEXT_LINE[1]$E_OBJ: $FORMAT(_("standard RAM region must not have TA_NOWRITE attribute"))$$END$
 	$END$
 
-$	// �ɤ��餫�����顼�ξ��ϡ������ǽ�����ߤ��ʰʹߤΥ��顼���޻ߡ�
+$	// どちらかがエラーの場合は，ここで処理を止める（以降のエラーの抑止）
 	$IF STANDARD_ROM==0 || STANDARD_RAM==0$
 		$DIE()$
 	$END$
 $END$
 
 $
-$  ɸ��Υ��������������ɸ�ॻ�������Υꥹ�Ȥκ���
+$  標準のセクションの定義と標準セクションのリストの作成
 $
-$ DSEC_SECTION_LIST��ɸ��Υ����������ݸ�ɥᥤ����ɸ�ॻ�������Υꥹ��
+$ DSEC_SECTION_LIST：標準のセクションと保護ドメイン毎標準セクションのリスト
 $
 $FOREACH dsec DSEC.ORDER_LIST$
 	$DSEC_SECTION_LIST = APPEND(DSEC_SECTION_LIST, DSEC.SECTION[dsec])$
@@ -531,10 +531,10 @@ $FOREACH domid DOMLIST_ALL$
 $END$
 
 $
-$  ATT_MOD�����Τ�Ʊ���˰����⥸�塼��ν���
+$  ATT_MODしたのと同等に扱うモジュールの処理
 $
-$ ��Ƭ��ATT_MOD�����Τ�Ʊ����START_OBJS, libkernel.o, kernel_mem.o, libkernel.a
-$ ������ATT_MOD�����Τ�Ʊ����*, END_OBJS
+$ 先頭でATT_MODしたのと同等：START_OBJS, libkernel.o, kernel_mem.o, libkernel.a
+$ 末尾でATT_MODしたのと同等：*, END_OBJS
 $
 $IF TOPPERS_SUPPORT_ATT_MOD$
 	$nummod = LENGTH(MOD.ORDER_LIST)$
@@ -567,29 +567,29 @@ $IF TOPPERS_SUPPORT_ATT_MOD$
 $END$
 
 $
-$  ATT_MOD��ATA_MOD����Ͽ���줿�⥸�塼��˴ؤ�����������
+$  ATT_MOD／ATA_MODで登録されたモジュールに関する情報の生成
 $
-$ MOD_LIST�������ѤߤΥ⥸�塼��Υꥹ��
+$ MOD_LIST：処理済みのモジュールのリスト
 $
 $FOREACH mod MOD.ORDER_LIST$
-$	// ATT_MOD/ATA_MOD�����ݡ��Ȥ���Ƥ��ʤ�����E_NOSPT��
+$	// ATT_MOD/ATA_MODがサポートされていない場合（E_NOSPT）
 	$IF !TOPPERS_SUPPORT_ATT_MOD$
 		$ERROR MOD.TEXT_LINE[mod]$E_NOSPT: $FORMAT(_("%1% is not supported on this target"), MOD.APINAME[mod])$$END$
 	$END$
 
-$	// module����Ͽ�Ѥߤξ���E_OBJ��
+$	// moduleが登録済みの場合（E_OBJ）
 	$FOREACH mod2 MOD_LIST$
 		$IF EQ(MOD.MODULE[mod], MOD.MODULE[mod2])$
 			$ERROR MOD.TEXT_LINE[mod]$E_OBJ: $FORMAT(_("%1% `%2%\' in %3% is duplicated"), "module", UNESCSTR(MOD.MODULE[mod]), MOD.APINAME[mod])$$END$
 		$END$
 	$END$
 
-$	// �������åȰ�¸�Υ��顼�����å�
+$	// ターゲット依存のエラーチェック
 	$IF ISFUNCTION("HOOK_ERRORCHECK_MOD")$
 		$HOOK_ERRORCHECK_MOD(mod)$
 	$END$
 
-$	// ���ꥪ�֥������Ⱦ��������
+$	// メモリオブジェクト情報の生成
 	$FOREACH dsec DSEC.ORDER_LIST$
 		$nummo = nummo + 1$
 		$MO.TYPE[nummo] = TOPPERS_ATTMOD$
@@ -619,12 +619,12 @@ $	// ���ꥪ�֥������Ⱦ��������
 $END$
 
 $
-$  ATT_SEC��ATA_SEC��LNK_SEC����Ͽ���줿���������˴ؤ�����������
+$  ATT_SEC／ATA_SEC／LNK_SECで登録されたセクションに関する情報の生成
 $
-$ SEC_LIST�������ѤߤΥ��������Υꥹ��
+$ SEC_LIST：処理済みのセクションのリスト
 $
 $FOREACH sec SEC.ORDER_LIST$
-$	// section��ɸ��Υ��������ξ���E_PAR��
+$	// sectionが標準のセクションの場合（E_PAR）
 	$IF TOPPERS_SUPPORT_ATT_MOD || !LENGTH(SEC.MEMATR[sec])$
 		$IF LENGTH(FIND(DSEC_SECTION_LIST, UNESCSTR(SEC.SECTION[sec])))$
 			$ERROR SEC.TEXT_LINE[sec]$E_PAR: 
@@ -633,7 +633,7 @@ $	// section��ɸ��Υ��������ξ���E_PAR��
 		$END$
 	$END$
 
-$	// section����Ͽ�Ѥߤξ���E_OBJ��
+$	// sectionが登録済みの場合（E_OBJ）
 	$FOREACH sec2 SEC_LIST$
 		$IF EQ(SEC.SECTION[sec], SEC.SECTION[sec2])$
 			$ERROR SEC.TEXT_LINE[sec]$E_OBJ: 
@@ -642,7 +642,7 @@ $	// section����Ͽ�Ѥߤξ���E_OBJ��
 		$END$
 	$END$
 
-$	// memreg�Υ����å���E_OBJ��
+$	// memregのチェック（E_OBJ）
 	$memreg = 0$
 	$FOREACH reg REG.ORDER_LIST$
 		$IF EQ(UNESCSTR(SEC.MEMREG[sec]), REG.REGNAME[reg])$
@@ -653,28 +653,28 @@ $	// memreg�Υ����å���E_OBJ��
 		$ERROR SEC.TEXT_LINE[sec]$E_OBJ: 
 			$FORMAT(_("illegal %1% `%2%\' in %3%"), "region name", UNESCSTR(SEC.MEMREG[sec]), SEC.APINAME[sec])$
 		$END$
-$		// �ʹߤΥ��顼���޻�
+$		// 以降のエラーの抑止
 		$memreg = STANDARD_RAM$
 	$END$
 
 	$IF LENGTH(SEC.MEMATR[sec])$
-$		// ATT_SEC��ATA_SEC�ξ��
+$		// ATT_SEC／ATA_SECの場合
 
-$		// mematr���ʡ�TA_NOWRITE|TA_NOREAD|TA_EXEC|TA_MEMINI|TA_MEMPRSV
-$		//			|TA_SDATA|TA_UNCACHE|TA_IODEV�ϡˤǤʤ�����E_RSATR��
-$		// mematr��TA_MEMINI��TA_MEMPRSV��ξ������ꤷ������TA_RSATR��
+$		// mematrが（［TA_NOWRITE|TA_NOREAD|TA_EXEC|TA_MEMINI|TA_MEMPRSV
+$		//			|TA_SDATA|TA_UNCACHE|TA_IODEV］）でない場合（E_RSATR）
+$		// mematrにTA_MEMINIとTA_MEMPRSVの両方を指定した場合（TA_RSATR）
 		$IF (SEC.MEMATR[sec] & ~(TA_NOWRITE|TA_NOREAD|TA_EXEC|TA_MEMINI
 				|TA_MEMPRSV|TA_SDATA|TA_UNCACHE|TA_IODEV|TARGET_MEMATR)) != 0
 			|| (SEC.MEMATR[sec] & (TA_MEMINI|TA_MEMPRSV)) == (TA_MEMINI|TA_MEMPRSV)$
 			$ERROR SEC.TEXT_LINE[sec]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "mematr", SEC.MEMATR[sec], SEC.APINAME[sec])$$END$
 		$END$
 
-$		// �������åȰ�¸�Υ��顼�����å�
+$		// ターゲット依存のエラーチェック
 		$IF ISFUNCTION("HOOK_ERRORCHECK_SEC")$
 			$HOOK_ERRORCHECK_SEC(sec)$
 		$END$
 
-$		// ���ꥪ�֥������Ⱦ��������
+$		// メモリオブジェクト情報の生成
 		$nummo = nummo + 1$
 		$MO.TYPE[nummo] = TOPPERS_ATTSEC$
 		$MO.LINKER[nummo] = 1$
@@ -686,8 +686,8 @@ $		// ���ꥪ�֥������Ⱦ��������
 		$MO.MEMREG[nummo] = memreg$
 		$MO.SECTION[nummo] = UNESCSTR(SEC.SECTION[sec])$
 		$IF (REG.REGATR[memreg] & TA_NOWRITE) != 0$
-$			// ����꡼�����°����TA_NOWRITE�����ꤵ��Ƥ�����ϡ�
-$			// ���ꥪ�֥�������°����TA_NOWRITE�����ꤹ�롥
+$			// メモリリージョン属性にTA_NOWRITEが設定されている時は，
+$			// メモリオブジェクト属性にTA_NOWRITEを設定する．
 			$MO.MEMATR[nummo] = SEC.MEMATR[sec] | TA_NOWRITE$
 		$ELSE$
 			$MO.MEMATR[nummo] = SEC.MEMATR[sec]$
@@ -700,9 +700,9 @@ $			// ���ꥪ�֥�������°����TA_NOWRITE�����ꤹ�롥
 		$MO.TEXT_LINE[nummo] = SEC.TEXT_LINE[sec]$
 		$MO.APINAME[nummo] = SEC.APINAME[sec]$
 	$ELSE$
-$		// LNK_SEC�ξ��
+$		// LNK_SECの場合
 
-$		// ���֤��륻���������������
+$		// 配置するセクション情報の生成
 		$numls = numls + 1$
 		$LNKSEC.MEMREG[numls] = memreg$
 		$LNKSEC.SECTION[numls] = UNESCSTR(SEC.SECTION[sec])$
@@ -711,11 +711,11 @@ $		// ���֤��륻���������������
 $END$
 
 $
-$  �ݸ�ɥᥤ�����ɸ�ॻ�������˴ؤ�����������
+$  保護ドメイン毎の標準セクションに関する情報の生成
 $
 $FOREACH domid DOMLIST_ALL$
 	$FOREACH dsec DSEC.ORDER_LIST$
-$		// ���ꥪ�֥������Ⱦ��������
+$		// メモリオブジェクト情報の生成
 		$nummo = nummo + 1$
 		$MO.TYPE[nummo] = TOPPERS_ATTSEC$
 		$MO.LINKER[nummo] = 1$
@@ -736,37 +736,37 @@ $		// ���ꥪ�֥������Ⱦ��������
 $END$
 
 $
-$  ATT_MEM��ATA_MEM��ATT_PMA��ATA_PMA����Ͽ���줿���������˴ؤ�����������
+$  ATT_MEM／ATA_MEM／ATT_PMA／ATA_PMAで登録されたセクションに関する情報の生成
 $
 $FOREACH mem MEM.ORDER_LIST$
-$	// ��ŪAPI��̾�Τ�����
+$	// 静的APIの名称の設定
 	$IF LENGTH(MEM.PADDR[mem])$
-$		// ATT_PMA��ATA_PMA����Ѥ������Υ��顼�����å���E_NOSPT��
+$		// ATT_PMA／ATA_PMAを使用した場合のエラーチェック（E_NOSPT）
 		$IF !TOPPERS_SUPPORT_ATT_PMA$
 			$ERROR MEM.TEXT_LINE[mem]$E_NOSPT: $FORMAT(_("%1% is not supported on this target"), MEM.APINAME[mem])$$END$
 		$END$
 	$END$
 
-$	// mematr���ʡ�TA_NOWRITE|TA_NOREAD|TA_EXEC|TA_MEMINI|TA_MEMPRSV
-$	//				|TA_UNCACHE|TA_IODEV�ϡˤǤʤ�����E_RSATR��
-$	// mematr��TA_MEMPRSV����ꤷ�ʤ���TA_MEMINI����ꤷ������TA_RSATR��
+$	// mematrが（［TA_NOWRITE|TA_NOREAD|TA_EXEC|TA_MEMINI|TA_MEMPRSV
+$	//				|TA_UNCACHE|TA_IODEV］）でない場合（E_RSATR）
+$	// mematrにTA_MEMPRSVを指定しないかTA_MEMINIを指定した場合（TA_RSATR）
 	$IF (MEM.MEMATR[mem] & ~(TA_NOWRITE|TA_NOREAD|TA_EXEC|TA_MEMINI
 				|TA_MEMPRSV|TA_UNCACHE|TA_IODEV|TARGET_MEMATR)) != 0
 		|| (MEM.MEMATR[mem] & (TA_MEMINI|TA_MEMPRSV)) != TA_MEMPRSV$
 		$ERROR MEM.TEXT_LINE[mem]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "mematr", MEM.MEMATR[mem], MEM.APINAME[mem])$$END$
 	$END$
 
-$	// size��0�ʲ��ξ��
+$	// sizeが0以下の場合
 	$IF MEM.SIZE[mem] <= 0$
 		$ERROR MEM.TEXT_LINE[mem]$E_PAR: $FORMAT(_("%1% `%2%\' is zero in %3%"), "size", MEM.SIZE[mem], MEM.APINAME[mem])$$END$
 	$END$
 
-$	// �������åȰ�¸�Υ��顼�����å�
+$	// ターゲット依存のエラーチェック
 	$IF ISFUNCTION("HOOK_ERRORCHECK_MEM")$
 		$HOOK_ERRORCHECK_MEM(mem)$
 	$END$
 
-$	// ���ꥪ�֥������Ⱦ��������
+$	// メモリオブジェクト情報の生成
 	$nummo = nummo + 1$
 	$MO.TYPE[nummo] = TOPPERS_ATTMEM$
 	$MO.BASE[nummo] = MEM.BASE[mem]$
@@ -789,14 +789,14 @@ $	// ���ꥪ�֥������Ⱦ��������
 $END$
 
 $
-$  �������åȰ�¸�Υ��ꥪ�֥������Ⱦ�������
+$  ターゲット依存のメモリオブジェクト情報の操作
 $
 $IF ISFUNCTION("HOOK_ADDITIONAL_MO")$
 	$HOOK_ADDITIONAL_MO()$
 $END$
 
 $ =====================================================================
-$ kernel_mem2.c�ζ�����ʬ������
+$ kernel_mem2.cの共通部分の生成
 $ =====================================================================
 
 $FILE "kernel_mem2.c"$
@@ -804,7 +804,7 @@ $FILE "kernel_mem2.c"$
 $GENERATE_CFILE_HEADER()$
 
 $ =====================================================================
-$ kernel_cfg.c������
+$ kernel_cfg.cの生成
 $ =====================================================================
 
 $FILE "kernel_cfg.c"$
@@ -812,7 +812,7 @@ $FILE "kernel_cfg.c"$
 $GENERATE_CFILE_HEADER()$
 
 $
-$  ���֥������Ȥ�ID�ֹ���ݻ������ѿ�
+$  オブジェクトのID番号を保持する変数
 $
 $IF USE_EXTERNAL_ID$
 	/*$NL$
@@ -852,14 +852,14 @@ $IF USE_EXTERNAL_ID$
 $END$
 
 $
-$  �ݸ�ɥᥤ��
+$  保護ドメイン
 $
 $IF !USE_LATERPASS_DOMINIB$
 	$GENERATE_DOMINIB()$
 $END$
 
 $
-$  �����ƥॹ���å��ΰ�γ��ݴؿ�
+$  システムスタック領域の確保関数
 $
 $IF !ISFUNCTION("ALLOC_SSTACK")$
 $FUNCTION ALLOC_SSTACK$
@@ -868,126 +868,126 @@ $END$
 $END$
 
 $
-$  ������
+$  タスク
 $
 /*$NL$
 $SPC$*  Task Management Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿��������1�İʾ�¸�ߤ��뤳�ȤΥ����å�
+$ 静的に生成されたタスクが1個以上存在することのチェック
 $IF !LENGTH(TSK.ID_LIST)$
 	$ERROR$$FORMAT(_("no task is registered"))$$END$
 $END$
 
-$ ��Ū���������줿�������ο�
+$ 静的に生成されたタスクの数
 #define TNUM_STSKID	$LENGTH(TSK.ID_LIST)$$NL$
 $NL$
 
-$ ������ID�ֹ�κ�����
+$ タスクID番号の最大値
 const ID _kernel_tmax_tskid = (TMIN_TSKID + TNUM_TSKID - 1);$NL$
 const ID _kernel_tmax_stskid = (TMIN_TSKID + TNUM_STSKID - 1);$NL$
 $NL$
 
-$ ���顼�����å�
+$ エラーチェック
 $FOREACH tskid TSK.ID_LIST$
-$	// �ݸ�ɥᥤ��˽�°���Ƥ��ʤ�����E_RSATR��
+$	// 保護ドメインに所属していない場合（E_RSATR）
 	$IF !LENGTH(TSK.DOMAIN[tskid])$
 		$ERROR TSK.TEXT_LINE[tskid]$E_RSATR: $FORMAT(_("%1% `%2%\' must belong to a protection domain in %3%"), "task", tskid, "CRE_TSK")$$END$
-$		// �ʹߤΥ��顼���޻�
+$		// 以降のエラーの抑止
 		$TSK.DOMAIN[tskid] = TDOM_KERNEL$
 	$END$
 
-$	// tskatr���ʡ�TA_ACT�ϡˤǤʤ�����E_RSATR��
+$	// tskatrが（［TA_ACT］）でない場合（E_RSATR）
 	$IF (TSK.TSKATR[tskid] & ~(TA_ACT|TARGET_TSKATR)) != 0$
 		$ERROR TSK.TEXT_LINE[tskid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "tskatr", TSK.TSKATR[tskid], tskid, "CRE_TSK")$$END$
 	$END$
 
-$	// (TMIN_TPRI <= itskpri && itskpri <= TMAX_TPRI)�Ǥʤ�����E_PAR��
+$	// (TMIN_TPRI <= itskpri && itskpri <= TMAX_TPRI)でない場合（E_PAR）
 	$IF !(TMIN_TPRI <= TSK.ITSKPRI[tskid] && TSK.ITSKPRI[tskid] <= TMAX_TPRI)$
 		$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "itskpri", TSK.ITSKPRI[tskid], tskid, "CRE_TSK")$$END$
 	$END$
 
-$ 	// texatr����TA_NULL�ˤǤʤ�����E_RSATR��
+$ 	// texatrが（TA_NULL）でない場合（E_RSATR）
 	$IF LENGTH(TSK.TEXATR[tskid]) && TSK.TEXATR[tskid] != 0$
 		$ERROR DEF_TEX.TEXT_LINE[tskid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "texatr", TSK.TEXATR[tskid], tskid, "DEF_TEX")$$END$
 	$END$
 
-$	// DEF_TEX��CRE_TSK�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$	// DEF_TEXがCRE_TSKと異なる保護ドメインに属する場合（E_RSATR）
 	$IF LENGTH(TSK.TEXATR[tskid]) && ALT(DEF_TEX.DOMAIN[tskid], TDOM_NONE) != TSK.DOMAIN[tskid]$
 		$ERROR DEF_TEX.TEXT_LINE[tskid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "DEF_TEX", tskid, "CRE_TSK")$$END$
 	$END$
 
-$	// SAC_TSK��CRE_TSK�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$	// SAC_TSKがCRE_TSKと異なる保護ドメインに属する場合（E_RSATR）
 	$IF LENGTH(TSK.ACPTN1[tskid]) && ALT(SAC_TSK.DOMAIN[tskid], TDOM_NONE) != TSK.DOMAIN[tskid]$
 		$ERROR SAC_TSK.TEXT_LINE[tskid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_TSK", tskid, "CRE_TSK")$$END$
 	$END$
 $END$
 
-$  �����ƥॹ���å�����������0�ʲ��Ǥ��뤫���������å�����κǾ���
-$  ��TARGET_MIN_SSTKSZ�ˤ��⾮�������Υ��顼�����å��ؿ���E_PAR��
+$  システムスタックサイズが，0以下であるか，ターゲット定義の最小値
+$  （TARGET_MIN_SSTKSZ）よりも小さい場合のエラーチェック関数（E_PAR）
 $FUNCTION CHECK_MIN_SSTKSZ$
 	$IF ARGV[1] <= 0 || (TARGET_MIN_SSTKSZ && ARGV[1] < TARGET_MIN_SSTKSZ)$
 		$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("%1% `%2%\' of `%3%\' in %4% is too small"), ARGV[2], ARGV[1], tskid, "CRE_TSK")$$END$
 	$END$
 $END$
 
-$ �����ƥॹ���å��ΰ�������Ȥ���˴ؤ��륨�顼�����å�
+$ システムスタック領域の生成とそれに関するエラーチェック
 $FOREACH tskid TSK.ID_LIST$
 	$IF TSK.DOMAIN[tskid] == TDOM_KERNEL$
-$		// �����ƥॿ�����ξ��ν���
+$		// システムタスクの場合の処理
 
-$		// sstk����ά����Ƥ��餺��NULL�Ǥʤ�����E_PAR��
+$		// sstkが省略されておらず，NULLでない場合（E_PAR）
 		$IF LENGTH(TSK.SSTK[tskid]) && !EQ(TSK.SSTK[tskid],"NULL")$
 			$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "sstk", TSK.SSTK[tskid], tskid, "CRE_TSK")$$END$
 		$END$
 
-$		// stksz��0�ʲ��ξ���E_PAR��
+$		// stkszが0以下の場合（E_PAR）
 		$IF TSK.STKSZ[tskid] <= 0$
 			$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("%1% `%2%\' of `%3%\' in %4% is zero"), "stksz", TSK.STKSZ[tskid], tskid, "CRE_TSK")$$END$
 		$END$
 
 		$IF EQ(TSK.STK[tskid],"NULL")$
-$			// stk��NULL�ξ��ν���
+$			// stkがNULLの場合の処理
 
 			$IF LENGTH(TSK.SSTKSZ[tskid])$
-$				// sstksz����ά����Ƥ��ʤ����ν���
+$				// sstkszが省略されていない場合の処理
 
-$				// �����ƥॹ���å��ΰ�Υ����������ʥ��顼�����å���
-$				// �Ȥ����ᡤ���顼�����å������˵��Ƥ�����
+$				// システムスタック領域のサイズを求める（エラーチェックに
+$				// 使うため，エラーチェックの前に求めておく）
 				$sstksz = VALUE(FORMAT("(%1%) + (%2%)",
 									TSK.STKSZ[tskid], TSK.SSTKSZ[tskid]),
 								TSK.STKSZ[tskid]+TSK.SSTKSZ[tskid])$
 
-$				// stksz+sstksz���������å�����κǾ��ͤ��⾮��������E_PAR��
+$				// stksz+sstkszがターゲット定義の最小値よりも小さい場合（E_PAR）
 				$CHECK_MIN_SSTKSZ(sstksz, "stksz+sstksz")$
 			$ELSE$
-$				// sstksz����ά����Ƥ�����ν���
+$				// sstkszが省略されている場合の処理
 
-$				// stksz���������å�����κǾ��ͤ��⾮��������E_PAR��
+$				// stkszがターゲット定義の最小値よりも小さい場合（E_PAR）
 				$CHECK_MIN_SSTKSZ(TSK.STKSZ[tskid], "stksz")$
 
-$				// �����ƥॹ���å��ΰ�Υ����������
+$				// システムスタック領域のサイズを求める
 				$sstksz = TSK.STKSZ[tskid]$
 			$END$
 
-$			// �����ƥॹ���å��ΰ�γ���
+$			// システムスタック領域の確保
 			$ALLOC_SSTACK(CONCAT("_kernel_sstack_", tskid), sstksz)$
 			$TSK.TINIB_SSTKSZ[tskid] = FORMAT("ROUND_STK_T(%1%)", sstksz)$
 			$TSK.TINIB_SSTK[tskid] = CONCAT("_kernel_sstack_", tskid)$
 		$ELSE$
-$			// stk��NULL�Ǥʤ����ν���
+$			// stkがNULLでない場合の処理
 
-$			// stksz���������å�����κǾ��ͤ��⾮��������E_PAR��
+$			// stkszがターゲット定義の最小値よりも小さい場合（E_PAR）
 			$CHECK_MIN_SSTKSZ(TSK.STKSZ[tskid], "stksz")$
 
-$			// stksz�������å��ΰ�Υ�������������������Ƥ��ʤ�����E_PAR��
+$			// stkszがスタック領域のサイズの制約を満たしていない場合（E_PAR）
 			$IF CHECK_STKSZ_ALIGN
 							&& (TSK.STKSZ[tskid] & (CHECK_STKSZ_ALIGN - 1))$
 				$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("%1% `%2%\' of `%3%\' in %4% is not aligned"), "stksz", TSK.STKSZ[tskid], tskid, "CRE_TSK")$$END$
 			$END$
 
-$			// sstksz����ά����Ƥ��餺��0�Ǥʤ�����E_PAR��
+$			// sstkszが省略されておらず，0でない場合（E_PAR）
 			$IF LENGTH(TSK.SSTKSZ[tskid]) && (TSK.SSTKSZ[tskid] != 0)$
 				$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("%1% `%2%\' of `%3%\' in %4% must be zero"), "sstksz", TSK.SSTKSZ[tskid], tskid, "CRE_TSK")$$END$
 			$END$
@@ -996,37 +996,37 @@ $			// sstksz����ά����Ƥ��餺��0�Ǥʤ�����E_PAR��
 			$TSK.TINIB_STK[tskid] = FORMAT("(void *)(%1%)", TSK.STK[tskid])$
 		$END$
 	$ELSE$
-$		// �桼���������ξ��
+$		// ユーザタスクの場合
 		$IF !LENGTH(TSK.SSTK[tskid]) || EQ(TSK.SSTK[tskid],"NULL")$
-$			// sstk����ά����Ƥ��뤫��NULL�ξ��ν���
+$			// sstkが省略されているか，NULLの場合の処理
 
 			$IF LENGTH(TSK.SSTKSZ[tskid])$
-$				// sstksz����ά����Ƥ��ʤ����ν���
+$				// sstkszが省略されていない場合の処理
 
-$				// sstksz��0�ʲ������������å�����κǾ��ͤ���
-$				// ����������E_PAR��
+$				// sstkszが0以下か，ターゲット定義の最小値よりも
+$				// 小さい場合（E_PAR）
 				$CHECK_MIN_SSTKSZ(TSK.SSTKSZ[tskid], "sstksz")$
 
-$				// �����ƥॹ���å��ΰ�Υ����������
+$				// システムスタック領域のサイズを求める
 				$sstksz = TSK.SSTKSZ[tskid]$
 			$ELSE$
-$				// sstksz����ά����Ƥ�����ν���
+$				// sstkszが省略されている場合の処理
 
-$				// �����ƥॹ���å��ΰ�Υ����������
+$				// システムスタック領域のサイズを求める
 				$sstksz = "DEFAULT_SSTKSZ"$
 			$END$
 
-$			// �����ƥॹ���å��ΰ�γ���
+$			// システムスタック領域の確保
 			$ALLOC_SSTACK(CONCAT("_kernel_sstack_", tskid), sstksz)$
 			$TSK.TINIB_SSTKSZ[tskid] = FORMAT("ROUND_STK_T(%1%)", sstksz)$
 			$TSK.TINIB_SSTK[tskid] = CONCAT("_kernel_sstack_", tskid)$
 		$ELSE$
-$			// sstk����ά����Ƥ��餺��NULL�Ǥʤ����ν���
+$			// sstkが省略されておらず，NULLでない場合の処理
 
-$			// sstksz��0�ʲ������������å�����κǾ��ͤ��⾮��������E_PAR��
+$			// sstkszが0以下か，ターゲット定義の最小値よりも小さい場合（E_PAR）
 			$CHECK_MIN_SSTKSZ(TSK.SSTKSZ[tskid], "sstksz")$
 
-$			// sstksz�������å��ΰ�Υ�������������������Ƥ��ʤ�����E_PAR��
+$			// sstkszがスタック領域のサイズの制約を満たしていない場合（E_PAR）
 			$IF CHECK_STKSZ_ALIGN
 							&& (TSK.SSTKSZ[tskid] & (CHECK_STKSZ_ALIGN - 1))$
 				$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("%1% `%2%\' of `%3%\' in %4% is not aligned"), "sstksz", TSK.SSTKSZ[tskid], tskid, "CRE_TSK")$$END$
@@ -1039,32 +1039,32 @@ $			// sstksz�������å��ΰ�Υ�������������������Ƥ��ʤ�����E_PAR��
 $END$
 $NL$
 
-$ �桼�������å��ΰ�������Ȥ���˴ؤ��륨�顼�����å�
+$ ユーザスタック領域の生成とそれに関するエラーチェック
 $FOREACH tskid TSK.ID_LIST$
 	$IF TSK.DOMAIN[tskid] == TDOM_KERNEL$
-$		// �����ƥॿ�����ξ��ν���
+$		// システムタスクの場合の処理
 		$TSK.TINIB_USTKSZ[tskid] = 0$
 		$TSK.TINIB_USTK[tskid] = "NULL"$
 	$ELSE$
-$		// �桼���������ξ��ν���
+$		// ユーザタスクの場合の処理
 
-$		// stksz��0�ʲ������������å�����κǾ��͡�TARGET_MIN_USTKSZ�ˤ���
-$		// ����������E_PAR��
+$		// stkszが0以下か，ターゲット定義の最小値（TARGET_MIN_USTKSZ）よりも
+$		// 小さい場合（E_PAR）
 		$IF TSK.STKSZ[tskid] <= 0 || (TARGET_MIN_USTKSZ
 							&& TSK.STKSZ[tskid] < TARGET_MIN_USTKSZ)$
 			$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("%1% `%2%\' of `%3%\' in %4% is too small"), "stksz", TSK.STKSZ[tskid], tskid, "CRE_TSK")$$END$
 		$END$
 
 		$IF EQ(TSK.STK[tskid],"NULL")$
-$			// stk��NULL�ξ��ν���
+$			// stkがNULLの場合の処理
 
-$			// �桼�������å��ΰ�γ���
+$			// ユーザスタック領域の確保
 			$ALLOC_USTACK(tskid, TSK.STKSZ[tskid])$
 			$shared = 0$
 		$ELSE$
-$			// stk��NULL�Ǥʤ��ξ��ν���
+$			// stkがNULLでないの場合の処理
 
-$			// stksz�������å��ΰ�Υ�������������������Ƥ��ʤ�����E_PAR��
+$			// stkszがスタック領域のサイズの制約を満たしていない場合（E_PAR）
 			$IF CHECK_USTKSZ_ALIGN
 							&& (TSK.STKSZ[tskid] & (CHECK_USTKSZ_ALIGN - 1))$
 				$ERROR TSK.TEXT_LINE[tskid]$E_PAR: $FORMAT(_("%1% `%2%\' of `%3%\' in %4% is not aligned"), "stksz", TSK.STKSZ[tskid], tskid, "CRE_TSK")$$END$
@@ -1073,7 +1073,7 @@ $			// stksz�������å��ΰ�Υ�������������������Ƥ��ʤ�����E_PAR��
 			$TSK.TINIB_USTKSZ[tskid] = TSK.STKSZ[tskid]$
 			$TSK.TINIB_USTK[tskid] = FORMAT("(void *)(%1%)", TSK.STK[tskid])$
 
-$			// ��ͭ����桼�������å��ΰ�θ���
+$			// 共有するユーザスタック領域の検出
 			$shared = 0$
 			$IF OMIT_CHECK_USTACK_OVERLAP$
 				$FOREACH moid MO_USTACK_LIST2$
@@ -1086,7 +1086,7 @@ $			// ��ͭ����桼�������å��ΰ�θ���
 			$END$
 		$END$
 
-$		// ���ꥪ�֥������Ⱦ��������
+$		// メモリオブジェクト情報の生成
 		$IF !shared$
 			$nummo = nummo + 1$
 			$MO.TYPE[nummo] = TOPPERS_USTACK$
@@ -1116,10 +1116,10 @@ $		// ���ꥪ�֥������Ⱦ��������
 $END$
 $NL$
 
-$ ������������֥��å��������ʥ�������1�İʾ�¸�ߤ����
+$ タスク初期化ブロックの生成（タスクは1個以上存在する）
 const TINIB _kernel_tinib_table[TNUM_STSKID] = {$NL$
 $JOINEACH tskid TSK.ID_LIST ",\n"$
-$	// �ݸ�ɥᥤ�������֥��å��ؤΥݥ���
+$	// 保護ドメイン初期化ブロックへのポインタ
 	$TAB${
 	$IF TSK.DOMAIN[tskid] == TDOM_KERNEL$
 		$SPC$&_kernel_dominib_kernel,
@@ -1127,11 +1127,11 @@ $	// �ݸ�ɥᥤ�������֥��å��ؤΥݥ���
 		$SPC$&_kernel_dominib_table[INDEX_DOM($TSK.DOMAIN[tskid]$)],
 	$END$
 
-$	// ������°������ĥ���󡤵�ư���ϡ���ư��ͥ����
+$	// タスク属性，拡張情報，起動番地，起動時優先度
 	$SPC$($TSK.TSKATR[tskid]$), (intptr_t)($TSK.EXINF[tskid]$),
 	$SPC$((TASK)($TSK.TASK[tskid]$)), INT_PRIORITY($TSK.ITSKPRI[tskid]$),
 
-$	// ���������������ƥ����ȥ֥��å��������å��ΰ�
+$	// タスク初期化コンテキストブロック，スタック領域
 	$IF USE_TSKINICTXB$
 		$GENERATE_TSKINICTXB(tskid)$
 	$ELSE$
@@ -1139,10 +1139,10 @@ $	// ���������������ƥ����ȥ֥��å��������å��ΰ�
 		$SPC$$TSK.TINIB_USTKSZ[tskid]$, $TSK.TINIB_USTK[tskid]$,
 	$END$
 
-$	// �������㳰�����롼�����°���ȵ�ư����
+$	// タスク例外処理ルーチンの属性と起動番地
 	$SPC$($ALT(TSK.TEXATR[tskid],"TA_NULL")$), ($ALT(TSK.TEXRTN[tskid],"NULL")$),
 
-$	// �����������ĥ٥���
+$	// アクセス許可ベクタ
 	$IF LENGTH(TSK.ACPTN1[tskid])$
 		$SPC${ $TSK.ACPTN1[tskid]$, $TSK.ACPTN2[tskid]$, $TSK.ACPTN3[tskid]$, $TSK.ACPTN4[tskid]$ }
 	$ELSE$
@@ -1153,70 +1153,70 @@ $END$$NL$
 };$NL$
 $NL$
 
-$ ưŪ�����������ѤΥ�����������֥��å�������
+$ 動的生成タスク用のタスク初期化ブロックの生成
 $IF num_atskid > 0$
 	TINIB _kernel_atinib_table[$num_atskid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(TINIB, _kernel_atinib_table);$NL$
 $END$$NL$
 
-$ �����������֥��å�������
+$ タスク管理ブロックの生成
 TCB _kernel_tcb_table[TNUM_TSKID];$NL$
 $NL$
 
-$ ��������������ơ��֥������
+$ タスク生成順序テーブルの生成
 const ID _kernel_torder_table[TNUM_STSKID] = {$NL$
 $TAB$$JOINEACH tskid TSK.ORDER_LIST ", "$$tskid$$END$$NL$
 };$NL$
 $NL$
 
 $
-$  ���ޥե�
+$  セマフォ
 $
 /*$NL$
 $SPC$*  Semaphore Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿���ޥե��ο�
+$ 静的に生成されたセマフォの数
 #define TNUM_SSEMID	$LENGTH(SEM.ID_LIST)$$NL$
 $NL$
 
-$ ���ޥե�ID�ֹ�κ�����
+$ セマフォID番号の最大値
 const ID _kernel_tmax_semid = (TMIN_SEMID + TNUM_SEMID - 1);$NL$
 const ID _kernel_tmax_ssemid = (TMIN_SEMID + TNUM_SSEMID - 1);$NL$
 $NL$
 
 $IF LENGTH(SEM.ID_LIST)$
-$	// ���顼�����å�
+$	// エラーチェック
 	$FOREACH semid SEM.ID_LIST$
-$		// �ݸ�ɥᥤ��˽�°���Ƥ��ʤ�����̵��°�Ȥ���
+$		// 保護ドメインに所属していない場合は無所属とする
 		$IF !LENGTH(SEM.DOMAIN[semid])$
 			$SEM.DOMAIN[semid] = TDOM_NONE$
 		$END$
 
-$		// sematr���ʡ�TA_TPRI�ϡˤǤʤ�����E_RSATR��
+$		// sematrが（［TA_TPRI］）でない場合（E_RSATR）
 		$IF (SEM.SEMATR[semid] & ~TA_TPRI) != 0$
 			$ERROR SEM.TEXT_LINE[semid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "sematr", SEM.SEMATR[semid], semid, "CRE_SEM")$$END$
 		$END$
 
-$		// (0 <= isemcnt && isemcnt <= maxsem)�Ǥʤ�����E_PAR��
+$		// (0 <= isemcnt && isemcnt <= maxsem)でない場合（E_PAR）
 		$IF !(0 <= SEM.ISEMCNT[semid] && SEM.ISEMCNT[semid] <= SEM.MAXSEM[semid])$
 			$ERROR SEM.TEXT_LINE[semid]$E_PAR: $FORMAT(_("too large %1% `%2%\' of `%3%\' in %4%"), "isemcnt", SEM.ISEMCNT[semid], semid, "CRE_SEM")$$END$
 		$END$
 
-$		// (1 <= maxsem && maxsem <= TMAX_MAXSEM)�Ǥʤ�����E_PAR��
+$		// (1 <= maxsem && maxsem <= TMAX_MAXSEM)でない場合（E_PAR）
 		$IF !(1 <= SEM.MAXSEM[semid] && SEM.MAXSEM[semid] <= TMAX_MAXSEM)$
 			$ERROR SEM.TEXT_LINE[semid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "maxsem", SEM.MAXSEM[semid], semid, "CRE_SEM")$$END$
 		$END$
 
-$		// SAC_SEM��CRE_SEM�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$		// SAC_SEMがCRE_SEMと異なる保護ドメインに属する場合（E_RSATR）
 		$IF LENGTH(SEM.ACPTN1[semid]) && ALT(SAC_SEM.DOMAIN[semid], TDOM_NONE) != SEM.DOMAIN[semid]$
 			$ERROR SAC_SEM.TEXT_LINE[semid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_SEM", semid, "CRE_SEM")$$END$
 		$END$
 	$END$	
 
-$	// ���ޥե�������֥��å�������
+$	// セマフォ初期化ブロックの生成
 	const SEMINIB _kernel_seminib_table[TNUM_SSEMID] = {$NL$
 	$JOINEACH semid SEM.ID_LIST ",\n"$
 		$TAB${ ($SEM.SEMATR[semid]$), ($SEM.ISEMCNT[semid]$), ($SEM.MAXSEM[semid]$),
@@ -1232,14 +1232,14 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(const SEMINIB, _kernel_seminib_table);$NL$
 $END$$NL$
 
-$ ưŪ�������ޥե��ѤΥ��ޥե�������֥��å�������
+$ 動的生成セマフォ用のセマフォ初期化ブロックの生成
 $IF num_asemid > 0$
 	SEMINIB _kernel_aseminib_table[$num_asemid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(SEMINIB, _kernel_aseminib_table);$NL$
 $END$$NL$
 
-$ ���ޥե������֥��å�������
+$ セマフォ管理ブロックの生成
 $IF num_semid$
 	SEMCB _kernel_semcb_table[TNUM_SEMID];$NL$
 $ELSE$
@@ -1247,47 +1247,47 @@ $ELSE$
 $END$$NL$
 
 $
-$  ���٥�ȥե饰
+$  イベントフラグ
 $
 /*$NL$
 $SPC$*  Eventflag Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿���٥�ȥե饰�ο�
+$ 静的に生成されたイベントフラグの数
 #define TNUM_SFLGID	$LENGTH(FLG.ID_LIST)$$NL$
 $NL$
 
-$ ���٥�ȥե饰ID�ֹ�κ�����
+$ イベントフラグID番号の最大値
 const ID _kernel_tmax_flgid = (TMIN_FLGID + TNUM_FLGID - 1);$NL$
 const ID _kernel_tmax_sflgid = (TMIN_FLGID + TNUM_SFLGID - 1);$NL$
 $NL$
 
 $IF LENGTH(FLG.ID_LIST)$
-$	// ���顼�����å�
+$	// エラーチェック
 	$FOREACH flgid FLG.ID_LIST$
-$		// �ݸ�ɥᥤ��˽�°���Ƥ��ʤ�����̵��°�Ȥ���
+$		// 保護ドメインに所属していない場合は無所属とする
 		$IF !LENGTH(FLG.DOMAIN[flgid])$
 			$FLG.DOMAIN[flgid] = TDOM_NONE$
 		$END$
 
-$		// flgatr���ʡ�TA_TPRI�ϡá�TA_WMUL�ϡá�TA_CLR�ϡˤǤʤ�����E_RSATR��
+$		// flgatrが（［TA_TPRI］｜［TA_WMUL］｜［TA_CLR］）でない場合（E_RSATR）
 		$IF (FLG.FLGATR[flgid] & ~(TA_TPRI|TA_WMUL|TA_CLR)) != 0$
 			$ERROR FLG.TEXT_LINE[flgid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "flgatr", FLG.FLGATR[flgid], flgid, "CRE_FLG")$$END$
 		$END$
 
-$		// iflgptn��FLGPTN�˳�Ǽ�Ǥ��ʤ�����E_PAR��
+$		// iflgptnがFLGPTNに格納できない場合（E_PAR）
 		$IF (FLG.IFLGPTN[flgid] & ~((1 << TBIT_FLGPTN) - 1)) != 0$
 			$ERROR FLG.TEXT_LINE[flgid]$E_PAR: $FORMAT(_("too large %1% `%2%\' of `%3%\' in %4%"), "iflgptn", FLG.IFLGPTN[flgid], flgid, "CRE_FLG")$$END$
 		$END$
 
-$		// SAC_FLG��CRE_FLG�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$		// SAC_FLGがCRE_FLGと異なる保護ドメインに属する場合（E_RSATR）
 		$IF LENGTH(FLG.ACPTN1[flgid]) && ALT(SAC_FLG.DOMAIN[flgid], TDOM_NONE) != FLG.DOMAIN[flgid]$
 			$ERROR SAC_FLG.TEXT_LINE[flgid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_FLG", flgid, "CRE_FLG")$$END$
 		$END$
 	$END$
 
-$	// ���٥�ȥե饰������֥��å�������
+$	// イベントフラグ初期化ブロックの生成
 	const FLGINIB _kernel_flginib_table[TNUM_SFLGID] = {$NL$
 	$JOINEACH flgid FLG.ID_LIST ",\n"$
 		$TAB${ ($FLG.FLGATR[flgid]$), ($FLG.IFLGPTN[flgid]$),
@@ -1303,14 +1303,14 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(const FLGINIB, _kernel_flginib_table);$NL$
 $END$$NL$
 
-$ ưŪ�������٥�ȥե饰�ѤΥ��٥�ȥե饰������֥��å�������
+$ 動的生成イベントフラグ用のイベントフラグ初期化ブロックの生成
 $IF num_aflgid > 0$
 	FLGINIB _kernel_aflginib_table[$num_aflgid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(FLGINIB, _kernel_aflginib_table);$NL$
 $END$$NL$
 
-$ ���٥�ȥե饰�����֥��å�������
+$ イベントフラグ管理ブロックの生成
 $IF num_flgid$
 	FLGCB _kernel_flgcb_table[TNUM_FLGID];$NL$
 $ELSE$
@@ -1318,57 +1318,57 @@ $ELSE$
 $END$$NL$
 
 $
-$  �ǡ������塼
+$  データキュー
 $
 /*$NL$
 $SPC$*  Dataqueue Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿�ǡ������塼�ο�
+$ 静的に生成されたデータキューの数
 #define TNUM_SDTQID	$LENGTH(DTQ.ID_LIST)$$NL$
 $NL$
 
-$ �ǡ������塼ID�ֹ�κ�����
+$ データキューID番号の最大値
 const ID _kernel_tmax_dtqid = (TMIN_DTQID + TNUM_DTQID - 1);$NL$
 const ID _kernel_tmax_sdtqid = (TMIN_DTQID + TNUM_SDTQID - 1);$NL$
 $NL$
 
 $IF LENGTH(DTQ.ID_LIST)$
-$	// ���顼�����å�
+$	// エラーチェック
 	$FOREACH dtqid DTQ.ID_LIST$
-$		// �ݸ�ɥᥤ��˽�°���Ƥ��ʤ�����̵��°�Ȥ���
+$		// 保護ドメインに所属していない場合は無所属とする
 		$IF !LENGTH(DTQ.DOMAIN[dtqid])$
 			$DTQ.DOMAIN[dtqid] = TDOM_NONE$
 		$END$
 
-$		// dtqatr���ʡ�TA_TPRI�ϡˤǤʤ�����E_RSATR��
+$		// dtqatrが（［TA_TPRI］）でない場合（E_RSATR）
 		$IF (DTQ.DTQATR[dtqid] & ~TA_TPRI) != 0$
 			$ERROR DTQ.TEXT_LINE[dtqid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "dtqatr", DTQ.DTQATR[dtqid], dtqid, "CRE_DTQ")$$END$
 		$END$
 
-$		// dtqcnt����ξ���E_PAR��
+$		// dtqcntが負の場合（E_PAR）
 		$IF DTQ.DTQCNT[dtqid] < 0$
 			$ERROR DTQ.TEXT_LINE[dtqid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "dtqcnt", DTQ.DTQCNT[dtqid], dtqid, "CRE_DTQ")$$END$
 		$END$
 
-$		// dtqmb��NULL�Ǥʤ�����E_NOSPT��
+$		// dtqmbがNULLでない場合（E_NOSPT）
 		$IF !EQ(DTQ.DTQMB[dtqid], "NULL")$
 			$ERROR DTQ.TEXT_LINE[dtqid]$E_NOSPT: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "dtqmb", DTQ.DTQMB[dtqid], dtqid, "CRE_DTQ")$$END$
 		$END$
 
-$		// SAC_DTQ��CRE_DTQ�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$		// SAC_DTQがCRE_DTQと異なる保護ドメインに属する場合（E_RSATR）
 		$IF LENGTH(DTQ.ACPTN1[dtqid]) && ALT(SAC_DTQ.DOMAIN[dtqid], TDOM_NONE) != DTQ.DOMAIN[dtqid]$
 			$ERROR SAC_DTQ.TEXT_LINE[dtqid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_DTQ", dtqid, "CRE_DTQ")$$END$
 		$END$
 
-$		// �ǡ������塼�����ΰ�
+$		// データキュー管理領域
 		$IF DTQ.DTQCNT[dtqid]$
 			static DTQMB _kernel_dtqmb_$dtqid$[$DTQ.DTQCNT[dtqid]$];$NL$
 		$END$
 	$END$
 
-$	// �ǡ������塼������֥��å�������
+$	// データキュー初期化ブロックの生成
 	const DTQINIB _kernel_dtqinib_table[TNUM_SDTQID] = {$NL$
 	$JOINEACH dtqid DTQ.ID_LIST ",\n"$
 		$TAB${ ($DTQ.DTQATR[dtqid]$), ($DTQ.DTQCNT[dtqid]$),
@@ -1389,14 +1389,14 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(const DTQINIB, _kernel_dtqinib_table);$NL$
 $END$$NL$
 
-$ ưŪ�����ǡ������塼�ѤΥǡ������塼������֥��å�������
+$ 動的生成データキュー用のデータキュー初期化ブロックの生成
 $IF num_adtqid > 0$
 	DTQINIB _kernel_adtqinib_table[$num_adtqid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(DTQINIB, _kernel_adtqinib_table);$NL$
 $END$$NL$
 
-$ �ǡ������塼�����֥��å�������
+$ データキュー管理ブロックの生成
 $IF num_dtqid$
 	DTQCB _kernel_dtqcb_table[TNUM_DTQID];$NL$
 $ELSE$
@@ -1404,62 +1404,62 @@ $ELSE$
 $END$$NL$
 
 $
-$  ͥ���٥ǡ������塼
+$  優先度データキュー
 $
 /*$NL$
 $SPC$*  Priority Dataqueue Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿ͥ���٥ǡ������塼�ο�
+$ 静的に生成された優先度データキューの数
 #define TNUM_SPDQID	$LENGTH(PDQ.ID_LIST)$$NL$
 $NL$
 
-$ ͥ���٥ǡ������塼ID�ֹ�κ�����
+$ 優先度データキューID番号の最大値
 const ID _kernel_tmax_pdqid = (TMIN_PDQID + TNUM_PDQID - 1);$NL$
 const ID _kernel_tmax_spdqid = (TMIN_PDQID + TNUM_SPDQID - 1);$NL$
 $NL$
 
 $IF LENGTH(PDQ.ID_LIST)$
-$	// ���顼�����å�
+$	// エラーチェック
 	$FOREACH pdqid PDQ.ID_LIST$
-$		// �ݸ�ɥᥤ��˽�°���Ƥ��ʤ�����̵��°�Ȥ���
+$		// 保護ドメインに所属していない場合は無所属とする
 		$IF !LENGTH(PDQ.DOMAIN[pdqid])$
 			$PDQ.DOMAIN[pdqid] = TDOM_NONE$
 		$END$
 
-$		// pdqatr���ʡ�TA_TPRI�ϡˤǤʤ�����E_RSATR��
+$		// pdqatrが（［TA_TPRI］）でない場合（E_RSATR）
 		$IF (PDQ.PDQATR[pdqid] & ~TA_TPRI) != 0$
 			$ERROR PDQ.TEXT_LINE[pdqid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "pdqatr", PDQ.PDQATR[pdqid], pdqid, "CRE_PDQ")$$END$
 		$END$
 
-$		// pdqcnt����ξ���E_PAR��
+$		// pdqcntが負の場合（E_PAR）
 		$IF PDQ.PDQCNT[pdqid] < 0$
 			$ERROR PDQ.TEXT_LINE[pdqid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "pdqcnt", PDQ.PDQCNT[pdqid], pdqid, "CRE_PDQ")$$END$
 		$END$
 
-$		// (TMIN_DPRI <= maxdpri && maxdpri <= TMAX_DPRI)�Ǥʤ�����E_PAR��
+$		// (TMIN_DPRI <= maxdpri && maxdpri <= TMAX_DPRI)でない場合（E_PAR）
 		$IF !(TMIN_DPRI <= PDQ.MAXDPRI[pdqid] && PDQ.MAXDPRI[pdqid] <= TMAX_DPRI)$
 			$ERROR PDQ.TEXT_LINE[pdqid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "maxdpri", PDQ.MAXDPRI[pdqid], pdqid, "CRE_PDQ")$$END$
 		$END$
 
-$		// pdqmb��NULL�Ǥʤ�����E_NOSPT��
+$		// pdqmbがNULLでない場合（E_NOSPT）
 		$IF !EQ(PDQ.PDQMB[pdqid], "NULL")$
 			$ERROR PDQ.TEXT_LINE[pdqid]$E_NOSPT: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "pdqmb", PDQ.PDQMB[pdqid], pdqid, "CRE_PDQ")$$END$
 		$END$
 
-$		// SAC_PDQ��CRE_PDQ�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$		// SAC_PDQがCRE_PDQと異なる保護ドメインに属する場合（E_RSATR）
 		$IF LENGTH(PDQ.ACPTN1[pdqid]) && ALT(SAC_PDQ.DOMAIN[pdqid], TDOM_NONE) != PDQ.DOMAIN[pdqid]$
 			$ERROR SAC_PDQ.TEXT_LINE[pdqid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_PDQ", pdqid, "CRE_PDQ")$$END$
 		$END$
 
-$		// ͥ���٥ǡ������塼�����ΰ�
+$		// 優先度データキュー管理領域
 		$IF PDQ.PDQCNT[pdqid]$
 			static PDQMB _kernel_pdqmb_$pdqid$[$PDQ.PDQCNT[pdqid]$];$NL$
 		$END$
 	$END$
 
-$	// ͥ���٥ǡ������塼������֥��å�������
+$	// 優先度データキュー初期化ブロックの生成
 	const PDQINIB _kernel_pdqinib_table[TNUM_SPDQID] = {$NL$
 	$JOINEACH pdqid PDQ.ID_LIST ",\n"$
 		$TAB${ ($PDQ.PDQATR[pdqid]$), ($PDQ.PDQCNT[pdqid]$), ($PDQ.MAXDPRI[pdqid]$),
@@ -1480,14 +1480,14 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(const PDQINIB, _kernel_pdqinib_table);$NL$
 $END$$NL$
 
-$ ưŪ����ͥ���٥ǡ������塼�Ѥ�ͥ���٥ǡ������塼������֥��å�������
+$ 動的生成優先度データキュー用の優先度データキュー初期化ブロックの生成
 $IF num_apdqid > 0$
 	PDQINIB _kernel_apdqinib_table[$num_apdqid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(PDQINIB, _kernel_apdqinib_table);$NL$
 $END$$NL$
 
-$ ͥ���٥ǡ������塼�����֥��å�������
+$ 優先度データキュー管理ブロックの生成
 $IF num_pdqid$
 	PDQCB _kernel_pdqcb_table[TNUM_PDQID];$NL$
 $ELSE$
@@ -1495,52 +1495,52 @@ $ELSE$
 $END$$NL$
 
 $
-$  �ߥ塼�ƥå���
+$  ミューテックス
 $
 /*$NL$
 $SPC$*  Mutex Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿�ߥ塼�ƥå����ο�
+$ 静的に生成されたミューテックスの数
 #define TNUM_SMTXID	$LENGTH(MTX.ID_LIST)$$NL$
 $NL$
 
-$ �ߥ塼�ƥå���ID�ֹ�κ�����
+$ ミューテックスID番号の最大値
 const ID _kernel_tmax_mtxid = (TMIN_MTXID + TNUM_MTXID - 1);$NL$
 const ID _kernel_tmax_smtxid = (TMIN_MTXID + TNUM_SMTXID - 1);$NL$
 $NL$
 
 $IF LENGTH(MTX.ID_LIST)$
-$	// ���顼�����å�
+$	// エラーチェック
 	$FOREACH mtxid MTX.ID_LIST$
-$		// �ݸ�ɥᥤ��˽�°���Ƥ��ʤ�����̵��°�Ȥ���
+$		// 保護ドメインに所属していない場合は無所属とする
 		$IF !LENGTH(MTX.DOMAIN[mtxid])$
 			$MTX.DOMAIN[mtxid] = TDOM_NONE$
 		$END$
 
-$		// mtxatr���ʡ�TA_TPRI��TA_CEILING�ϡˤǤʤ�����E_RSATR��
+$		// mtxatrが（［TA_TPRI｜TA_CEILING］）でない場合（E_RSATR）
 		$IF !(MTX.MTXATR[mtxid] == 0 || MTX.MTXATR[mtxid] == TA_TPRI || MTX.MTXATR[mtxid] == TA_CEILING)$
 			$ERROR MTX.TEXT_LINE[mtxid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "mtxatr", MTX.MTXATR[mtxid], mtxid, "CRE_MTX")$$END$
 		$END$
 
-$		// ceilpri��̤����ξ���0�ȸ��ʤ�
+$		// ceilpriが未指定の場合は0と見なす
 		$IF !LENGTH(MTX.CEILPRI[mtxid])$
 			$MTX.CEILPRI[mtxid] = 0$
 		$END$
 
-$		// (TMIN_TPRI <= ceilpri && ceilpri <= TMAX_TPRI)�Ǥʤ�����E_PAR��
+$		// (TMIN_TPRI <= ceilpri && ceilpri <= TMAX_TPRI)でない場合（E_PAR）
 		$IF MTX.MTXATR[mtxid] == TA_CEILING && (MTX.CEILPRI[mtxid] < TMIN_TPRI || TMAX_TPRI < MTX.CEILPRI[mtxid])$
 			$ERROR MTX.TEXT_LINE[mtxid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "ceilpri", MTX.CEILPRI[mtxid], mtxid, "CRE_MTX")$$END$
 		$END$
 
-$		// SAC_MTX��CRE_MTX�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$		// SAC_MTXがCRE_MTXと異なる保護ドメインに属する場合（E_RSATR）
 		$IF LENGTH(MTX.ACPTN1[mtxid]) && ALT(SAC_MTX.DOMAIN[mtxid], TDOM_NONE) != MTX.DOMAIN[mtxid]$
 			$ERROR SAC_MTX.TEXT_LINE[mtxid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_MTX", mtxid, "CRE_MTX")$$END$
 		$END$
 	$END$
 
-$	// �ߥ塼�ƥå���������֥��å�������
+$	// ミューテックス初期化ブロックの生成
 	const MTXINIB _kernel_mtxinib_table[TNUM_SMTXID] = {$NL$
 	$JOINEACH mtxid MTX.ID_LIST ",\n"$
 		$TAB${ ($MTX.MTXATR[mtxid]$), INT_PRIORITY($MTX.CEILPRI[mtxid]$),
@@ -1556,14 +1556,14 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(const MTXINIB, _kernel_mtxinib_table);$NL$
 $END$$NL$
 
-$ ưŪ�����ߥ塼�ƥå����ѤΥߥ塼�ƥå���������֥��å�������
+$ 動的生成ミューテックス用のミューテックス初期化ブロックの生成
 $IF num_amtxid > 0$
 	MTXINIB _kernel_amtxinib_table[$num_amtxid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(MTXINIB, _kernel_amtxinib_table);$NL$
 $END$$NL$
 
-$ �ߥ塼�ƥå��������֥��å�������
+$ ミューテックス管理ブロックの生成
 $IF num_mtxid$
 	MTXCB _kernel_mtxcb_table[TNUM_MTXID];$NL$
 $ELSE$
@@ -1571,65 +1571,65 @@ $ELSE$
 $END$$NL$
 
 $
-$  ����Ĺ����ס���
+$  固定長メモリプール
 $
 /*$NL$
 $SPC$*  Fixed-sized Memorypool Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿����Ĺ����ס���ο�
+$ 静的に生成された固定長メモリプールの数
 #define TNUM_SMPFID	$LENGTH(MPF.ID_LIST)$$NL$
 $NL$
 
-$ ����Ĺ����ס���ID�ֹ�κ�����
+$ 固定長メモリプールID番号の最大値
 const ID _kernel_tmax_mpfid = (TMIN_MPFID + TNUM_MPFID - 1);$NL$
 const ID _kernel_tmax_smpfid = (TMIN_MPFID + TNUM_SMPFID - 1);$NL$
 $NL$
 
 $IF LENGTH(MPF.ID_LIST)$
-$	// ���顼�����å�
+$	// エラーチェック
 	$FOREACH mpfid MPF.ID_LIST$
-$		// �ݸ�ɥᥤ��˽�°���Ƥ��ʤ�����̵��°�Ȥ���
+$		// 保護ドメインに所属していない場合は無所属とする
 		$IF !LENGTH(MPF.DOMAIN[mpfid])$
 			$MPF.DOMAIN[mpfid] = TDOM_NONE$
 		$END$
 
-$		// mpfatr���ʡ�TA_TPRI�ϡˤǤʤ�����E_RSATR��
+$		// mpfatrが（［TA_TPRI］）でない場合（E_RSATR）
 		$IF (MPF.MPFATR[mpfid] & ~TA_TPRI) != 0$
 			$ERROR MPF.TEXT_LINE[mpfid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "mpfatr", MPF.MPFATR[mpfid], mpfid, "CRE_MPF")$$END$
 		$END$
 
-$		// blkcnt��0�ʲ��ξ���E_PAR��
+$		// blkcntが0以下の場合（E_PAR）
 		$IF MPF.BLKCNT[mpfid] <= 0$
 			$ERROR MPF.TEXT_LINE[mpfid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "blkcnt", MPF.BLKCNT[mpfid], mpfid, "CRE_MPF")$$END$
 		$END$
 
-$		// blksz��0�ʲ��ξ���E_PAR��
+$		// blkszが0以下の場合（E_PAR）
 		$IF MPF.BLKSZ[mpfid] <= 0$
 			$ERROR MPF.TEXT_LINE[mpfid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "blksz", MPF.BLKSZ[mpfid], mpfid, "CRE_MPF")$$END$
 		$END$
 
-$		// SAC_MPF��CRE_MPF�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$		// SAC_MPFがCRE_MPFと異なる保護ドメインに属する場合（E_RSATR）
 		$IF LENGTH(MPF.ACPTN1[mpfid]) && ALT(SAC_MPF.DOMAIN[mpfid], TDOM_NONE) != MPF.DOMAIN[mpfid]$
 			$ERROR SAC_MPF.TEXT_LINE[mpfid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_MPF", mpfid, "CRE_MPF")$$END$
 		$END$
 
-$		// ����Ĺ����ס����ΰ�
+$		// 固定長メモリプール領域
 		$IF EQ(MPF.MPF[mpfid], "NULL")$
 			$IF MPF.DOMAIN[mpfid] == TDOM_KERNEL
 					&& (!LENGTH(MPF.ACPTN1[mpfid]) || 
 							(MPF.ACPTN1[mpfid] == TACP_KERNEL
 								&& MPF.ACPTN2[mpfid] == TACP_KERNEL
 								&& MPF.ACPTN4[mpfid] == TACP_KERNEL))$
-$				// �����ͥ�ɥᥤ���°���������������ĥ٥�����ɸ���
-$				// ����Ĺ����ס���ξ��
+$				// カーネルドメインに属し，アクセス許可ベクタが標準の
+$				// 固定長メモリプールの場合
 				static MPF_T _kernel_mpf_$mpfid$[($MPF.BLKCNT[mpfid]$) * COUNT_MPF_T($MPF.BLKSZ[mpfid]$)];$NL$
 			$ELSE$
-$				// �嵭�ʳ��θ���Ĺ����ס���ξ��
+$				// 上記以外の固定長メモリプールの場合
 				$ALLOC_UMPF(mpfid, MPF.DOMAIN[mpfid], MPF.BLKCNT[mpfid], MPF.BLKSZ[mpfid])$
 
-$				// ���ꥪ�֥������Ⱦ��������
+$				// メモリオブジェクト情報の生成
 				$nummo = nummo + 1$
 				$MO.TYPE[nummo] = TOPPERS_MPFAREA$
 				$MO.MPFID[nummo] = mpfid$
@@ -1648,16 +1648,16 @@ $				// ���ꥪ�֥������Ⱦ��������
 			$END$
 		$END$
 
-$		// mpfmb��NULL�Ǥʤ�����E_NOSPT��
+$		// mpfmbがNULLでない場合（E_NOSPT）
 		$IF !EQ(MPF.MPFMB[mpfid], "NULL")$
 			$ERROR MPF.TEXT_LINE[mpfid]$E_NOSPT: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "mpfmb", MPF.MPFMB[mpfid], mpfid, "CRE_MPF")$$END$
 		$END$
 
-$		// ����Ĺ����ס�������ΰ�
+$		// 固定長メモリプール管理領域
 		static MPFMB _kernel_mpfmb_$mpfid$[$MPF.BLKCNT[mpfid]$];$NL$
 	$END$
 
-$	// ����Ĺ����ס��������֥��å�������
+$	// 固定長メモリプール初期化ブロックの生成
 	const MPFINIB _kernel_mpfinib_table[TNUM_SMPFID] = {$NL$
 	$JOINEACH mpfid MPF.ID_LIST ",\n"$
 		$TAB${ ($MPF.MPFATR[mpfid]$), ($MPF.BLKCNT[mpfid]$), ROUND_MPF_T($MPF.BLKSZ[mpfid]$),
@@ -1679,14 +1679,14 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(const MPFINIB, _kernel_mpfinib_table);$NL$
 $END$$NL$
 
-$ ưŪ��������Ĺ����ס����Ѥθ���Ĺ����ס��������֥��å�������
+$ 動的生成固定長メモリプール用の固定長メモリプール初期化ブロックの生成
 $IF num_ampfid > 0$
 	MPFINIB _kernel_ampfinib_table[$num_ampfid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(MPFINIB, _kernel_ampfinib_table);$NL$
 $END$$NL$
 
-$ ����Ĺ����ס�������֥��å�������
+$ 固定長メモリプール管理ブロックの生成
 $IF num_mpfid$
 	MPFCB _kernel_mpfcb_table[TNUM_MPFID];$NL$
 $ELSE$
@@ -1694,59 +1694,59 @@ $ELSE$
 $END$$NL$
 
 $
-$  �����ϥ�ɥ�
+$  周期ハンドラ
 $
 /*$NL$
 $SPC$*  Cyclic Handler Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿�����ϥ�ɥ�ο�
+$ 静的に生成された周期ハンドラの数
 #define TNUM_SCYCID	$LENGTH(CYC.ID_LIST)$$NL$
 $NL$
 
-$ �����ϥ�ɥ�ID�ֹ�κ�����
+$ 周期ハンドラID番号の最大値
 const ID _kernel_tmax_cycid = (TMIN_CYCID + TNUM_CYCID - 1);$NL$
 const ID _kernel_tmax_scycid = (TMIN_CYCID + TNUM_SCYCID - 1);$NL$
 $NL$
 
 $IF LENGTH(CYC.ID_LIST)$
-$	// ���顼�����å�
+$	// エラーチェック
 	$FOREACH cycid CYC.ID_LIST$
-$		// �����ͥ�ɥᥤ��˽�°���Ƥ��ʤ�����E_RSATR��
+$		// カーネルドメインに所属していない場合（E_RSATR）
 		$IF !LENGTH(CYC.DOMAIN[cycid]) || CYC.DOMAIN[cycid] != TDOM_KERNEL$
 			$ERROR CYC.TEXT_LINE[cycid]$E_RSATR: $FORMAT(_("%1% `%2%\' must belong to the kernel domain in %3%"), "cyclic handler", cycid, "CRE_CYC")$$END$
-$			// �ʹߤΥ��顼���޻�
+$			// 以降のエラーの抑止
 			$CYC.DOMAIN[cycid] = TDOM_KERNEL$
 		$END$
 
-$		// cycatr���ʡ�TA_STA�ϡˤǤʤ�����E_RSATR��
+$		// cycatrが（［TA_STA］）でない場合（E_RSATR）
 		$IF (CYC.CYCATR[cycid] & ~TA_STA) != 0$
 			$ERROR CYC.TEXT_LINE[cycid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "cycatr", CYC.CYCATR[cycid], cycid, "CRE_CYC")$$END$
 		$END$
 
-$		// (0 < cyctim && cyctim <= TMAX_RELTIM)�Ǥʤ�����E_PAR��
+$		// (0 < cyctim && cyctim <= TMAX_RELTIM)でない場合（E_PAR）
 		$IF !(0 < CYC.CYCTIM[cycid] && CYC.CYCTIM[cycid] <= TMAX_RELTIM)$
 			$ERROR CYC.TEXT_LINE[cycid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "cyctim", CYC.CYCTIM[cycid], cycid, "CRE_CYC")$$END$
 		$END$
 
-$		// (0 <= cycphs && cycphs <= TMAX_RELTIM)�Ǥʤ�����E_PAR��
+$		// (0 <= cycphs && cycphs <= TMAX_RELTIM)でない場合（E_PAR）
 		$IF !(0 <= CYC.CYCPHS[cycid] && CYC.CYCPHS[cycid] <= TMAX_RELTIM)$
 			$ERROR CYC.TEXT_LINE[cycid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "cycphs", CYC.CYCPHS[cycid], cycid, "CRE_CYC")$$END$
 		$END$
 
-$		// �ٹ�cycatr��TA_STA�����ꤵ��Ƥ��ơ�(cycphs == 0)�ξ��
+$		// 警告：cycatrにTA_STAが設定されていて，(cycphs == 0)の場合
 		$IF (CYC.CYCATR[cycid] & TA_STA) != 0 && CYC.CYCPHS[cycid] == 0$
 			$WARNING CYC.TEXT_LINE[cycid]$$FORMAT(_("%1% is not recommended when %2% is set to %3% in %4%"), "cycphs==0", "TA_STA", "cycatr", "CRE_CYC")$$END$
 		$END$
 
-$		// SAC_CYC��CRE_CYC�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$		// SAC_CYCがCRE_CYCと異なる保護ドメインに属する場合（E_RSATR）
 		$IF LENGTH(CYC.ACPTN1[cycid]) && ALT(SAC_CYC.DOMAIN[cycid], TDOM_KERNEL) != CYC.DOMAIN[cycid]$
 			$ERROR SAC_CYC.TEXT_LINE[cycid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_CYC", cycid, "CRE_CYC")$$END$
 		$END$
 	$END$
 
-$	// �����ϥ�ɥ������֥��å�������
+$	// 周期ハンドラ初期化ブロックの生成
 	const CYCINIB _kernel_cycinib_table[TNUM_SCYCID] = {$NL$
 	$JOINEACH cycid CYC.ID_LIST ",\n"$
 		$TAB${ ($CYC.CYCATR[cycid]$), (intptr_t)($CYC.EXINF[cycid]$), ($CYC.CYCHDR[cycid]$), ($CYC.CYCTIM[cycid]$), ($CYC.CYCPHS[cycid]$),
@@ -1762,14 +1762,14 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(const CYCINIB, _kernel_cycinib_table);$NL$
 $END$$NL$
 
-$ ưŪ���������ϥ�ɥ��Ѥμ����ϥ�ɥ������֥��å�������
+$ 動的生成周期ハンドラ用の周期ハンドラ初期化ブロックの生成
 $IF num_acycid > 0$
 	CYCINIB _kernel_acycinib_table[$num_acycid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(CYCINIB, _kernel_acycinib_table);$NL$
 $END$$NL$
 
-$ �����ϥ�ɥ�����֥��å�������
+$ 周期ハンドラ管理ブロックの生成
 $IF num_cycid$
 	CYCCB _kernel_cyccb_table[TNUM_CYCID];$NL$
 $ELSE$
@@ -1777,44 +1777,44 @@ $ELSE$
 $END$$NL$
 
 $
-$  ���顼��ϥ�ɥ�
+$  アラームハンドラ
 $
 /*$NL$
 $SPC$*  Alarm Handler Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��Ū���������줿���顼��ϥ�ɥ�ο�
+$ 静的に生成されたアラームハンドラの数
 #define TNUM_SALMID	$LENGTH(ALM.ID_LIST)$$NL$
 $NL$
 
-$ ���顼��ϥ�ɥ�ID�ֹ�κ�����
+$ アラームハンドラID番号の最大値
 const ID _kernel_tmax_almid = (TMIN_ALMID + TNUM_ALMID - 1);$NL$
 const ID _kernel_tmax_salmid = (TMIN_ALMID + TNUM_SALMID - 1);$NL$
 $NL$
 
 $IF LENGTH(ALM.ID_LIST)$
-$	// ���顼�����å�
+$	// エラーチェック
 	$FOREACH almid ALM.ID_LIST$
-$		// �����ͥ�ɥᥤ��˽�°���Ƥ��ʤ�����E_RSATR��
+$		// カーネルドメインに所属していない場合（E_RSATR）
 		$IF !LENGTH(ALM.DOMAIN[almid]) || ALM.DOMAIN[almid] != TDOM_KERNEL$
 			$ERROR ALM.TEXT_LINE[almid]$E_RSATR: $FORMAT(_("%1% `%2%\' must belong to the kernel domain in %3%"), "alarm handler", almid, "CRE_ALM")$$END$
-$			// �ʹߤΥ��顼���޻�
+$			// 以降のエラーの抑止
 			$ALM.DOMAIN[almid] = TDOM_KERNEL$
 		$END$
 
-$		// almatr����TA_NULL�ˤǤʤ�����E_RSATR��
+$		// almatrが（TA_NULL）でない場合（E_RSATR）
 		$IF ALM.ALMATR[almid] != 0$
 			$ERROR ALM.TEXT_LINE[almid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "almatr", ALM.ALMATR[almid], almid, "CRE_ALM")$$END$
 		$END$
 
-$		// SAC_ALM��CRE_ALM�Ȱۤʤ��ݸ�ɥᥤ���°�������E_RSATR��
+$		// SAC_ALMがCRE_ALMと異なる保護ドメインに属する場合（E_RSATR）
 		$IF LENGTH(ALM.ACPTN1[almid]) && ALT(SAC_ALM.DOMAIN[almid], TDOM_KERNEL) != ALM.DOMAIN[almid]$
 			$ERROR SAC_ALM.TEXT_LINE[almid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_ALM", almid, "CRE_ALM")$$END$
 		$END$
 	$END$
 
-$	// ���顼��ϥ�ɥ������֥��å�������
+$	// アラームハンドラ初期化ブロックの生成
 	const ALMINIB _kernel_alminib_table[TNUM_SALMID] = {$NL$
 	$JOINEACH almid ALM.ID_LIST ",\n"$
 		$TAB${ ($ALM.ALMATR[almid]$), (intptr_t)($ALM.EXINF[almid]$), ($ALM.ALMHDR[almid]$),
@@ -1830,14 +1830,14 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(const ALMINIB, _kernel_alminib_table);$NL$
 $END$$NL$
 
-$ ưŪ�������顼��ϥ�ɥ��ѤΥ��顼��ϥ�ɥ������֥��å�������
+$ 動的生成アラームハンドラ用のアラームハンドラ初期化ブロックの生成
 $IF num_aalmid > 0$
 	ALMINIB _kernel_aalminib_table[$num_aalmid$];$NL$
 $ELSE$
 	TOPPERS_EMPTY_LABEL(ALMINIB, _kernel_aalminib_table);$NL$
 $END$$NL$
 
-$ ���顼��ϥ�ɥ�����֥��å�������
+$ アラームハンドラ管理ブロックの生成
 $IF num_almid$
 	ALMCB _kernel_almcb_table[TNUM_ALMID];$NL$
 $ELSE$
@@ -1845,10 +1845,10 @@ $ELSE$
 $END$$NL$
 
 $
-$  �����Х��ϥ�ɥ�
+$  オーバランハンドラ
 $
 $IF !TOPPERS_SUPPORT_OVRHDR$
-$	// �����Х��ϥ�ɥ餬���ݡ��Ȥ���Ƥ��ʤ����
+$	// オーバランハンドラがサポートされていない場合
 	$IF LENGTH(OVR.ORDER_LIST)$
 		$ERROR$E_NOSPT: $FORMAT(_("%1% is not supported on this target"), "DEF_OVR")$$END$
 	$END$
@@ -1858,20 +1858,20 @@ $ELSE$
 	$SPC$*/$NL$
 	$NL$
 
-$	// ���顼�����å�
+$	// エラーチェック
 	$IF LENGTH(OVR.ORDER_LIST)$
-$		// ��ŪAPI��DEF_OVR�פ�ʣ�������E_OBJ��
+$		// 静的API「DEF_OVR」が複数ある（E_OBJ）
 		$IF LENGTH(OVR.ORDER_LIST) > 1$
 			$ERROR$E_OBJ: $FORMAT(_("too many %1%"), "DEF_OVR")$$END$
 		$END$
 
-$		// �����ͥ�ɥᥤ��˽�°���Ƥ��ʤ�����E_RSATR��
+$		// カーネルドメインに所属していない場合（E_RSATR）
 		$IF !LENGTH(OVR.DOMAIN[1]) || OVR.DOMAIN[1] != TDOM_KERNEL$
 			$ERROR OVR.TEXT_LINE[1]$E_RSATR: $FORMAT(_("%1% must belong to the kernel domain in %2%"), "overrun handler", "DEF_OVR")$$END$
 		$END$
 	$END$
 
-$	// �����Х��ϥ�ɥ������֥��å�������
+$	// オーバランハンドラ初期化ブロックの生成
 	const OVRINIB _kernel_ovrinib = {$NL$
 	$IF LENGTH(OVR.ORDER_LIST)$
 		$TAB$($OVR.OVRATR[1]$), ($OVR.OVRHDR[1]$)$NL$
@@ -1882,7 +1882,7 @@ $	// �����Х��ϥ�ɥ������֥��å�������
 $END$
 
 $
-$  �����ƥ���ִ�����ǽ
+$  システム状態管理機能
 $
 /*$NL$
 $SPC$*  System State Management Functions$NL$
@@ -1891,16 +1891,16 @@ $NL$
 
 const ACVCT _kernel_sysstat_acvct =
 $IF !LENGTH(SYS.ORDER_LIST)$
-$	// SAC_SYS���ʤ����Υǥե�����ͤ�����
+$	// SAC_SYSがない場合のデフォルト値の設定
 	$SPC${ TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }
 $ELSE$
-$	// SAC_SYS��������
-$	// ��ŪAPI��SAC_SYS�פ�ʣ�������E_OBJ��
+$	// SAC_SYSがある場合
+$	// 静的API「SAC_SYS」が複数ある（E_OBJ）
 	$IF LENGTH(SYS.ORDER_LIST) > 1$
 		$ERROR$E_OBJ: $FORMAT(_("too many %1%"), "SAC_SYS")$$END$
 	$END$
 
-$	// �����ͥ�ɥᥤ��ΰϤߤ���ˤʤ�����E_RSATR��
+$	// カーネルドメインの囲みの中にない場合（E_RSATR）
 	$IF !LENGTH(SYS.DOMAIN[1]) || SYS.DOMAIN[1] != TDOM_KERNEL$
 		$ERROR SYS.TEXT_LINE[1]$E_RSATR: $FORMAT(_("%1% must be within the kernel domain"), "SAC_SYS")$$END$
 	$END$
@@ -1911,14 +1911,14 @@ $END$
 $NL$
 
 $
-$  ����ߴ�����ǽ
+$  割込み管理機能
 $
 /*$NL$
 $SPC$*  Interrupt Management Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ������ֹ�ȳ���ߥϥ�ɥ��ֹ���Ѵ��ơ��֥�κ���
+$ 割込み番号と割込みハンドラ番号の変換テーブルの作成
 $IF LENGTH(INTNO_ATTISR_VALID) != LENGTH(INHNO_ATTISR_VALID)$
 	$ERROR$length of `INTNO_ATTISR_VALID' is different from length of `INHNO_ATTISR_VALID'$END$
 $END$
@@ -1930,20 +1930,20 @@ $FOREACH intno INTNO_ATTISR_VALID$
 	$i = i + 1$
 $END$
 
-$ ������׵�饤��˴ؤ��륨�顼�����å�
+$ 割込み要求ラインに関するエラーチェック
 $i = 0$
 $FOREACH intno INT.ORDER_LIST$
-$	// �����ͥ�ɥᥤ��ΰϤߤ���ˤʤ�����E_RSATR��
+$	// カーネルドメインの囲みの中にない場合（E_RSATR）
 	$IF !LENGTH(INT.DOMAIN[intno]) || INT.DOMAIN[intno] != TDOM_KERNEL$
 		$ERROR INT.TEXT_LINE[intno]$E_RSATR: $FORMAT(_("%1% must be within the kernel domain"), "CFG_INT")$$END$
 	$END$
 
-$	// intno��CFG_INT���Ф��������ֹ�Ȥ����������ʤ�����E_PAR��
+$	// intnoがCFG_INTに対する割込み番号として正しくない場合（E_PAR）
 	$IF !LENGTH(FIND(INTNO_CFGINT_VALID, INT.INTNO[intno]))$
 		$ERROR INT.TEXT_LINE[intno]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "intno", INT.INTNO[intno], "CFG_INT")$$END$
 	$END$
 
-$	// intno��CFG_INT�ˤ�ä�����Ѥߤξ���E_OBJ��
+$	// intnoがCFG_INTによって設定済みの場合（E_OBJ）
 	$j = 0$
 	$FOREACH intno2 INT.ORDER_LIST$
 		$IF j < i && INT.INTNO[intno] == INT.INTNO[intno2]$
@@ -1952,26 +1952,26 @@ $	// intno��CFG_INT�ˤ�ä�����Ѥߤξ���E_OBJ��
 		$j = j + 1$
 	$END$
 
-$	// intatr���ʡ�TA_ENAINT�ϡá�TA_EDGE�ϡˤǤʤ�����E_RSATR��
+$	// intatrが（［TA_ENAINT］｜［TA_EDGE］）でない場合（E_RSATR）
 	$IF (INT.INTATR[intno] & ~(TA_ENAINT|TA_EDGE|TARGET_INTATR)) != 0$
 		$ERROR INT.TEXT_LINE[intno]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of %3% `%4%\' in %5%"), "intatr", INT.INTATR[intno], "intno", INT.INTNO[intno], "CFG_INT")$$END$
 	$END$
 
-$	// intpri��CFG_INT���Ф�������ͥ���٤Ȥ����������ʤ�����E_PAR��
+$	// intpriがCFG_INTに対する割込み優先度として正しくない場合（E_PAR）
 	$IF !LENGTH(FIND(INTPRI_CFGINT_VALID, INT.INTPRI[intno]))$
 		$ERROR INT.TEXT_LINE[intno]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "intpri", INT.INTPRI[intno], "CFG_INT")$$END$
 	$END$
 
-$	// �����ͥ�����˸��ꤵ��Ƥ���intno���Ф��ơ�intpri��TMIN_INTPRI
-$	// ���⾮�����ͤ����ꤵ�줿����E_OBJ��
+$	// カーネル管理に固定されているintnoに対して，intpriにTMIN_INTPRI
+$	// よりも小さい値が指定された場合（E_OBJ）
 	$IF LENGTH(FIND(INTNO_FIX_KERNEL, intno))$
 		$IF INT.INTPRI[intno] < TMIN_INTPRI$
 			$ERROR INT.TEXT_LINE[intno]$E_OBJ: $FORMAT(_("%1% `%2%\' must not have higher priority than %3%"), "intno", INT.INTNO[intno], "TMIN_INTPRI")$$END$
 		$END$
 	$END$
 
-$	// �����ͥ�������˸��ꤵ��Ƥ���intno���Ф��ơ�intpri��TMIN_INTPRI
-$	// ���⾮�����ͤ����ꤵ��ʤ��ä�����E_OBJ��
+$	// カーネル管理外に固定されているintnoに対して，intpriにTMIN_INTPRI
+$	// よりも小さい値が指定されなかった場合（E_OBJ）
 	$IF LENGTH(FIND(INTNO_FIX_NONKERNEL, intno))$
 		$IF INT.INTPRI[intno] >= TMIN_INTPRI$
 			$ERROR INT.TEXT_LINE[intno]$E_OBJ: $FORMAT(_("%1% `%2%\' must have higher priority than %3%"), "intno", INT.INTNO[intno], "TMIN_INTPRI")$$END$
@@ -1980,20 +1980,20 @@ $	// ���⾮�����ͤ����ꤵ��ʤ��ä�����E_OBJ��
 	$i = i + 1$
 $END$
 
-$ ����ߥϥ�ɥ�˴ؤ��륨�顼�����å�
+$ 割込みハンドラに関するエラーチェック
 $i = 0$
 $FOREACH inhno INH.ORDER_LIST$
-$	// �����ͥ�ɥᥤ��˽�°���Ƥ��ʤ�����E_RSATR��
+$	// カーネルドメインに所属していない場合（E_RSATR）
 	$IF !LENGTH(INH.DOMAIN[inhno]) || INH.DOMAIN[inhno] != TDOM_KERNEL$
 		$ERROR INH.TEXT_LINE[inhno]$E_RSATR: $FORMAT(_("%1% `%2%\' must belong to the kernel domain in %3%"), "interrupt handler", INH.INHNO[inhno], "DEF_INH")$$END$
 	$END$
 
-$	// inhno��DEF_INH���Ф������ߥϥ�ɥ��ֹ�Ȥ����������ʤ�����E_PAR��
+$	// inhnoがDEF_INHに対する割込みハンドラ番号として正しくない場合（E_PAR）
 	$IF !LENGTH(FIND(INHNO_DEFINH_VALID, INH.INHNO[inhno]))$
 		$ERROR INH.TEXT_LINE[inhno]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "inhno", INH.INHNO[inhno], "DEF_INH")$$END$
 	$END$
 
-$	// inhno��DEF_INH�ˤ�ä�����Ѥߤξ���E_OBJ��
+$	// inhnoがDEF_INHによって設定済みの場合（E_OBJ）
 	$j = 0$
 	$FOREACH inhno2 INH.ORDER_LIST$
 		$IF j < i && INH.INHNO[inhno] == INH.INHNO[inhno2]$
@@ -2002,21 +2002,21 @@ $	// inhno��DEF_INH�ˤ�ä�����Ѥߤξ���E_OBJ��
 		$j = j + 1$
 	$END$
 
-$	// inhatr����TA_NULL�ˤǤʤ�����E_RSATR��
+$	// inhatrが（TA_NULL）でない場合（E_RSATR）
 	$IF (INH.INHATR[inhno] & ~TARGET_INHATR) != 0$
 		$ERROR INH.TEXT_LINE[inhno]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of %3% `%4%\' in %5%"), "inhatr", INH.INHATR[inhno], "inhno", INH.INHNO[inhno], "DEF_INH")$$END$
 	$END$
 
-$	// �����ͥ�����˸��ꤵ��Ƥ���inhno���Ф��ơ�inhatr��TA_NONKERNEL
-$	//�������ꤵ��Ƥ������E_RSATR��
+$	// カーネル管理に固定されているinhnoに対して，inhatrにTA_NONKERNEL
+$	//　が指定されている場合（E_RSATR）
 	$IF LENGTH(FIND(INHNO_FIX_KERNEL, inhno))$
 		$IF (INH.INHATR[inhno] & TA_NONKERNEL) != 0$
 			$ERROR INH.TEXT_LINE[inhno]$E_RSATR: $FORMAT(_("%1% `%2%\' must not be non-kernel interrupt"), "inhno", INH.INHNO[inhno])$$END$
 		$END$
 	$END$
 
-$	// �����ͥ�������˸��ꤵ��Ƥ���inhno���Ф��ơ�inhatr��TA_NONKERNEL
-$	// �����ꤵ��Ƥ��ʤ�����E_RSATR��
+$	// カーネル管理外に固定されているinhnoに対して，inhatrにTA_NONKERNEL
+$	// が指定されていない場合（E_RSATR）
 	$IF LENGTH(FIND(INHNO_FIX_NONKERNEL, inhno))$
 		$IF (INH.INHATR[inhno] & TA_NONKERNEL) == 0$
 			$ERROR INH.TEXT_LINE[inhno]$E_RSATR: $FORMAT(_("%1% `%2%\' must be non-kernel interrupt"), "inhno", INH.INHNO[inhno])$$END$
@@ -2026,21 +2026,21 @@ $	// �����ꤵ��Ƥ��ʤ�����E_RSATR��
 	$IF LENGTH(INTNO[INH.INHNO[inhno]])$
 		$intno = INTNO[INH.INHNO[inhno]]$
 		$IF LENGTH(FIND(INTNO_CFGINT_VALID, intno))$
-$			// inhno���б�����intno���Ф���CFG_INT���ʤ�����E_OBJ��
+$			// inhnoに対応するintnoに対するCFG_INTがない場合（E_OBJ）
 			$IF !LENGTH(INT.INTNO[intno])$
 				$ERROR INH.TEXT_LINE[inhno]$E_OBJ: $FORMAT(_("%1% `%2%\' corresponding to %3% `%4%\' is not configured with %5%"), "intno", INT.INTNO[intno], "inhno", INH.INHNO[inhno], "CFG_INT")$$END$
 			$ELSE$
 				$IF (INH.INHATR[inhno] & TA_NONKERNEL) == 0$
-$					// inhatr��TA_NONKERNEL�����ꤵ��Ƥ��餺��inhno���б�
-$					// ����intno���Ф���CFG_INT�����ꤵ�줿�����ͥ���٤�
-$					// TMIN_INTPRI���⾮��������E_OBJ��
+$					// inhatrにTA_NONKERNELが指定されておらず，inhnoに対応
+$					// するintnoに対してCFG_INTで設定された割込み優先度が
+$					// TMIN_INTPRIよりも小さい場合（E_OBJ）
 					$IF INT.INTPRI[intno] < TMIN_INTPRI$
 						$ERROR INT.TEXT_LINE[intno]$E_OBJ: $FORMAT(_("%1% `%2%\' configured for %3% `%4%\' is higher than %5%"), "intpri", INT.INTPRI[intno], "inhno", INH.INHNO[inhno], "TMIN_INTPRI")$$END$
 					$END$
 				$ELSE$
-$					// inhatr��TA_NONKERNEL�����ꤵ��Ƥ��ꡤinhno���б�
-$					// ����intno���Ф���CFG_INT�����ꤵ�줿�����ͥ���٤�
-$					// TMIN_INTPRI�ʾ�Ǥ������E_OBJ��
+$					// inhatrにTA_NONKERNELが指定されており，inhnoに対応
+$					// するintnoに対してCFG_INTで設定された割込み優先度が
+$					// TMIN_INTPRI以上である場合（E_OBJ）
 					$IF INT.INTPRI[intno] >= TMIN_INTPRI$
 						$ERROR INT.TEXT_LINE[intno]$E_OBJ: $FORMAT(_("%1% `%2%\' configured for %3% `%4%\' is lower than or equal to %5%"), "intpri", INT.INTPRI[intno], "inhno", INH.INHNO[inhno], "TMIN_INTPRI")$$END$
 					$END$
@@ -2051,24 +2051,24 @@ $					// TMIN_INTPRI�ʾ�Ǥ������E_OBJ��
 	$i = i + 1$
 $END$
 
-$ ����ߥ����ӥ��롼�����ISR�ˤ˴ؤ��륨�顼�����å�
+$ 割込みサービスルーチン（ISR）に関するエラーチェック
 $FOREACH order ISR.ORDER_LIST$
-$	// �����ͥ�ɥᥤ��˽�°���Ƥ��ʤ�����E_RSATR��
+$	// カーネルドメインに所属していない場合（E_RSATR）
 	$IF !LENGTH(ISR.DOMAIN[order]) || ISR.DOMAIN[order] != TDOM_KERNEL$
 		$ERROR ISR.TEXT_LINE[order]$E_RSATR: $FORMAT(_("%1% must belong to the kernel domain in %2%"), "interrupt service routine", "ATT_ISR")$$END$
 	$END$
 
-$	// isratr����TA_NULL�ˤǤʤ�����E_RSATR��
+$	// isratrが（TA_NULL）でない場合（E_RSATR）
 	$IF (ISR.ISRATR[order] & ~TARGET_ISRATR) != 0$
 		$ERROR ISR.TEXT_LINE[order]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "isratr", ISR.ISRATR[order], "ATT_ISR")$$END$
 	$END$
 
-$	// intno��ATT_ISR���Ф��������ֹ�Ȥ����������ʤ�����E_PAR��
+$	// intnoがATT_ISRに対する割込み番号として正しくない場合（E_PAR）
 	$IF !LENGTH(FIND(INTNO_ATTISR_VALID, ISR.INTNO[order]))$
 		$ERROR ISR.TEXT_LINE[order]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "intno", ISR.INTNO[order], "ATT_ISR")$$END$
 	$END$
 
-$	// (TMIN_ISRPRI <= isrpri && isrpri <= TMAX_ISRPRI)�Ǥʤ�����E_PAR��
+$	// (TMIN_ISRPRI <= isrpri && isrpri <= TMAX_ISRPRI)でない場合（E_PAR）
 	$IF !(TMIN_ISRPRI <= ISR.ISRPRI[order] && ISR.ISRPRI[order] <= TMAX_ISRPRI)$
 		$ERROR ISR.TEXT_LINE[order]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "isrpri", ISR.ISRPRI[order], "ATT_ISR")$$END$
 	$END$
@@ -2077,7 +2077,7 @@ $END$
 $FOREACH intno INTNO_ATTISR_VALID$
 	$inhno = INHNO[intno]$
 
-$	// ������ֹ�intno���Ф�����Ͽ���줿ISR�Υꥹ�Ȥκ���
+$	// 割込み番号intnoに対して登録されたISRのリストの作成
 	$isr_order_list = {}$
 	$FOREACH order ISR.ORDER_LIST$
 		$IF ISR.INTNO[order] == intno$
@@ -2086,19 +2086,19 @@ $	// ������ֹ�intno���Ф�����Ͽ���줿ISR�Υꥹ�Ȥκ���
 		$END$
 	$END$
 
-$	// ������ֹ�intno���Ф�����Ͽ���줿ISR��¸�ߤ�����
+$	// 割込み番号intnoに対して登録されたISRが存在する場合
 	$IF LENGTH(isr_order_list) > 0$
-$		// intno���б�����inhno���Ф���DEF_INH���������E_OBJ��
+$		// intnoに対応するinhnoに対してDEF_INHがある場合（E_OBJ）
 		$IF LENGTH(INH.INHNO[inhno])$
 			$ERROR ISR.TEXT_LINE[order_for_error]$E_OBJ: $FORMAT(_("%1% `%2%\' in %3% is duplicated with %4% `%5%\'"), "intno", ISR.INTNO[order_for_error], "ATT_ISR", "inhno", INH.INHNO[inhno])$$END$
 		$END$
 
-$		// intno���Ф���CFG_INT���ʤ�����E_OBJ��
+$		// intnoに対するCFG_INTがない場合（E_OBJ）
 		$IF !LENGTH(INT.INTNO[intno])$
 			$ERROR ISR.TEXT_LINE[order_for_error]$E_OBJ: $FORMAT(_("%1% `%2%\' is not configured with %3%"), "intno", ISR.INTNO[order_for_error], "CFG_INT")$$END$
 		$ELSE$
-$			// intno���Ф���CFG_INT�����ꤵ�줿�����ͥ���٤�TMIN_INTPRI
-$			// ���⾮��������E_OBJ��
+$			// intnoに対してCFG_INTで設定された割込み優先度がTMIN_INTPRI
+$			// よりも小さい場合（E_OBJ）
 			$IF INT.INTPRI[intno] < TMIN_INTPRI$
 				$ERROR INT.TEXT_LINE[intno]$E_OBJ: $FORMAT(_("%1% `%2%\' configured for %3% `%4%\' is higher than %5%"), "intpri", INT.INTPRI[intno], "intno", ISR.INTNO[order_for_error], "TMIN_INTPRI")$$END$
 			$END$
@@ -2106,7 +2106,7 @@ $			// ���⾮��������E_OBJ��
 	$END$
 $END$
 
-$ ����ߥ����ӥ��롼�����ISR�˴����Υǡ�����¤
+$ 割込みサービスルーチン（ISR）管理のデータ構造
 $intno_isr_list = {}$
 $FOREACH intno INTNO_ATTISR_VALID$
 	$inhno = INHNO[intno]$
@@ -2142,7 +2142,7 @@ $ELSE$
 	TOPPERS_EMPTY_LABEL(QUEUE, _kernel_isr_queue_table);$NL$
 $END$$NL$
 
-$ ����ߥ����ӥ��롼�����ISR�˸ƽФ��Τ���γ���ߥϥ�ɥ������
+$ 割込みサービスルーチン（ISR）呼出しのための割込みハンドラの生成
 $FOREACH intno INTNO_ISR$
 	$inhno = INHNO[intno]$
 
@@ -2152,7 +2152,7 @@ $	// DEF_INH(inhno, { TA_NULL, _kernel_inthdr_<intno> } );
 	$INH.INTHDR[inhno] = CONCAT("_kernel_inthdr_", intno)$
 	$INH.ORDER_LIST = APPEND(INH.ORDER_LIST, inhno)$
 
-$	// ISR�Ѥγ���ߥϥ�ɥ�
+$	// ISR用の割込みハンドラ
 	void$NL$
 	_kernel_inthdr_$intno$(void)$NL$
 	{$NL$
@@ -2163,17 +2163,17 @@ $	// ISR�Ѥγ���ߥϥ�ɥ�
 	$NL$
 $END$
 
-$ ��Ū���������줿����ߥ����ӥ��롼����ο�
+$ 静的に生成された割込みサービスルーチンの数
 #define TNUM_SISR	$LENGTH(ISR.ORDER_LIST)$$NL$
 #define TNUM_ISR	$LENGTH(ISR.ORDER_LIST) + num_aisrid$$NL$
 $NL$
 
-$ ����ߥ����ӥ��롼����ID�ֹ�κ�����
+$ 割込みサービスルーチンID番号の最大値
 const ID _kernel_tmax_isrid = (TMIN_ISRID + TNUM_ISRID - 1);$NL$
 const uint_t _kernel_tnum_sisr = TNUM_SISR;$NL$
 $NL$
 
-$ ����ߥ����ӥ��롼���������֥��å�������
+$ 割込みサービスルーチン初期化ブロックの生成
 $IF LENGTH(ISR.ORDER_LIST)$
 	const ISRINIB _kernel_sisrinib_table[TNUM_SISR] = {$NL$
 	$JOINEACH order ISR.ORDER_LIST ",\n"$
@@ -2185,8 +2185,8 @@ $ELSE$
 $END$
 $NL$
 
-$ ưŪ��������ߥ����ӥ��롼�����Ѥγ���ߥ����ӥ��롼���������֥���
-$ ��������
+$ 動的生成割込みサービスルーチン用の割込みサービスルーチン初期化ブロッ
+$ クの生成
 $IF num_aisrid > 0$
 	ISRINIB _kernel_aisrinib_table[$num_aisrid$];$NL$
 $ELSE$
@@ -2194,7 +2194,7 @@ $ELSE$
 $END$
 $NL$
 
-$ ����ߥ����ӥ��롼��������֥��å�������
+$ 割込みサービスルーチン管理ブロックの生成
 $IF LENGTH(ISR.ORDER_LIST) || num_aisrid > 0$
 	ISRCB _kernel_isrcb_table[TNUM_ISR];$NL$
 $ELSE$
@@ -2203,12 +2203,12 @@ $END$
 $NL$
 
 $
-$  ����ߴ�����ǽ�Τ����ɸ��Ū�ʽ�������������
+$  割込み管理機能のための標準的な初期化情報の生成
 $
-$ ����ߥϥ�ɥ�ν������ɬ�פʾ���
+$ 割込みハンドラの初期化に必要な情報
 $IF !OMIT_INITIALIZE_INTERRUPT || ALT(USE_INHINIB_TABLE,0)$
 
-$ ����ߥϥ�ɥ��
+$ 割込みハンドラ数
 #define TNUM_INHNO	$LENGTH(INH.ORDER_LIST)$$NL$
 const uint_t _kernel_tnum_inhno = TNUM_INHNO;$NL$
 $NL$
@@ -2219,7 +2219,7 @@ $FOREACH inhno INH.ORDER_LIST$
 $END$
 $NL$
 
-$ ����ߥϥ�ɥ������ơ��֥�
+$ 割込みハンドラ初期化テーブル
 $IF LENGTH(INH.ORDER_LIST)$
 	const INHINIB _kernel_inhinib_table[TNUM_INHNO] = {$NL$
 	$JOINEACH inhno INH.ORDER_LIST ",\n"$
@@ -2235,15 +2235,15 @@ $ELSE$
 $END$$NL$
 $END$
 
-$ ������׵�饤��ν������ɬ�פʾ���
+$ 割込み要求ラインの初期化に必要な情報
 $IF !OMIT_INITIALIZE_INTERRUPT || ALT(USE_INTINTB_TABLE,0)$
 
-$ ������׵�饤���
+$ 割込み要求ライン数
 #define TNUM_INTNO	$LENGTH(INT.ORDER_LIST)$$NL$
 const uint_t _kernel_tnum_intno = TNUM_INTNO;$NL$
 $NL$
 
-$ ������׵�饤�������ơ��֥�
+$ 割込み要求ライン初期化テーブル
 $IF LENGTH(INT.ORDER_LIST)$
 	const INTINIB _kernel_intinib_table[TNUM_INTNO] = {$NL$
 	$JOINEACH intno INT.ORDER_LIST ",\n"$
@@ -2256,27 +2256,27 @@ $END$$NL$
 $END$
 
 $
-$  CPU�㳰������ǽ
+$  CPU例外管理機能
 $
 /*$NL$
 $SPC$*  CPU Exception Management Functions$NL$
 $SPC$*/$NL$
 $NL$
 
-$ CPU�㳰�ϥ�ɥ�˴ؤ��륨�顼�����å�
+$ CPU例外ハンドラに関するエラーチェック
 $i = 0$
 $FOREACH excno EXC.ORDER_LIST$
-$	// �����ͥ�ɥᥤ��˽�°���Ƥ��ʤ�����E_RSATR��
+$	// カーネルドメインに所属していない場合（E_RSATR）
 	$IF !LENGTH(EXC.DOMAIN[excno]) || EXC.DOMAIN[excno] != TDOM_KERNEL$
 		$ERROR EXC.TEXT_LINE[excno]$E_RSATR: $FORMAT(_("%1% `%2%\' must belong to the kernel domain in %3%"), "CPU exception handler", EXC.EXCNO[excno], "DEF_EXC")$$END$
 	$END$
 
-$	// excno��DEF_EXC���Ф���CPU�㳰�ϥ�ɥ��ֹ�Ȥ����������ʤ�����E_PAR��
+$	// excnoがDEF_EXCに対するCPU例外ハンドラ番号として正しくない場合（E_PAR）
 	$IF !LENGTH(FIND(EXCNO_DEFEXC_VALID, EXC.EXCNO[excno]))$
 		$ERROR EXC.TEXT_LINE[excno]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "excno", EXC.EXCNO[excno], "DEF_EXC")$$END$
 	$END$
 
-$	// excno��DEF_EXC�ˤ�ä�����Ѥߤξ���E_OBJ��
+$	// excnoがDEF_EXCによって設定済みの場合（E_OBJ）
 	$j = 0$
 	$FOREACH excno2 EXC.ORDER_LIST$
 		$IF j < i && EXC.EXCNO[excno] == EXC.EXCNO[excno2]$
@@ -2285,17 +2285,17 @@ $	// excno��DEF_EXC�ˤ�ä�����Ѥߤξ���E_OBJ��
 		$j = j + 1$
 	$END$
 
-$	// excatr����TA_NULL�ˤǤʤ�����E_RSATR��
+$	// excatrが（TA_NULL）でない場合（E_RSATR）
 	$IF (EXC.EXCATR[excno] & ~TARGET_EXCATR) != 0$
 		$ERROR EXC.TEXT_LINE[excno]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of %3% `%4%\' in %5%"), "excatr", EXC.EXCATR[excno], "excno", EXC.EXCNO[excno], "DEF_EXC")$$END$
 	$END$
 	$i = i + 1$
 $END$
 
-$ CPU�㳰�ϥ�ɥ�Τ����ɸ��Ū�ʽ�������������
+$ CPU例外ハンドラのための標準的な初期化情報の生成
 $IF !OMIT_INITIALIZE_EXCEPTION$
 
-$ CPU�㳰�ϥ�ɥ��
+$ CPU例外ハンドラ数
 #define TNUM_EXCNO	$LENGTH(EXC.ORDER_LIST)$$NL$
 const uint_t _kernel_tnum_excno = TNUM_EXCNO;$NL$
 $NL$
@@ -2304,7 +2304,7 @@ $FOREACH excno EXC.ORDER_LIST$
 $END$
 $NL$
 
-$ CPU�㳰�ϥ�ɥ������ơ��֥�
+$ CPU例外ハンドラ初期化テーブル
 $IF LENGTH(EXC.ORDER_LIST)$
 	const EXCINIB _kernel_excinib_table[TNUM_EXCNO] = {$NL$
 	$JOINEACH excno EXC.ORDER_LIST ",\n"$
@@ -2317,40 +2317,40 @@ $END$$NL$
 $END$
 
 $
-$  ��ĥ�����ӥ�������
+$  拡張サービスコール
 $
 /*$NL$
 $SPC$*  Extended Service Calls$NL$
 $SPC$*/$NL$
 $NL$
 
-$ ��ĥ�����ӥ�������˴ؤ��륨�顼�����å�
-$ SVC_LIST�������Ѥߤγ�ĥ�����ӥ�������Υꥹ��
+$ 拡張サービスコールに関するエラーチェック
+$ SVC_LIST：処理済みの拡張サービスコールのリスト
 $
 $FOREACH order SVC.ORDER_LIST$
-$	// �����ͥ�ɥᥤ��˽�°���Ƥ��ʤ�����E_RSATR��
+$	// カーネルドメインに所属していない場合（E_RSATR）
 	$IF !LENGTH(SVC.DOMAIN[order]) || SVC.DOMAIN[order] != TDOM_KERNEL$
 		$ERROR SVC.TEXT_LINE[order]$E_RSATR: $FORMAT(_("%1% `%2%\' must belong to the kernel domain in %3%"), "extended service call", SVC.FNCD[order], "DEF_SVC")$$END$
 	$END$
 
-$	// fncd��DEF_SVC���Ф��뵡ǽ�����ɤȤ����������ʤ�����E_PAR��
+$	// fncdがDEF_SVCに対する機能コードとして正しくない場合（E_PAR）
 	$IF SVC.FNCD[order] <= 0$
 		$ERROR SVC.TEXT_LINE[order]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "fncd", SVC.FNCD[order], "DEF_SVC")$$END$
 	$END$
 
-$	// fncd��DEF_SVC�ˤ�ä�����Ѥߤξ���E_OBJ��
+$	// fncdがDEF_SVCによって設定済みの場合（E_OBJ）
 	$FOREACH order2 SVC_LIST$
 		$IF SVC.FNCD[order] == SVC.FNCD[order2]$
 			$ERROR SVC.TEXT_LINE[order]$E_OBJ: $FORMAT(_("%1% `%2%\' in %3% is duplicated"), "fncd", SVC.FNCD[order], "DEF_SVC")$$END$
 		$END$
 	$END$
 
-$	// svcatr����TA_NULL�ˤǤʤ�����E_RSATR��
+$	// svcatrが（TA_NULL）でない場合（E_RSATR）
 	$IF (SVC.SVCATR[order] & ~TARGET_SVCATR) != 0$
 		$ERROR SVC.TEXT_LINE[order]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of %3% `%4%\' in %5%"), "svcatr", SVC.SVCATR[order], "fncd", SVC.FNCD[order], "DEF_SVC")$$END$
 	$END$
 
-$	// stksz����ξ���E_PAR��
+$	// stkszが負の場合（E_PAR）
 	$IF SVC.STKSZ[order] < 0$
 		$ERROR SVC.TEXT_LINE[order]$E_PAR: $FORMAT(_("illegal %1% `%2%\' in %3%"), "stksz", SVC.STKSZ[order], "DEF_SVC")$$END$
 	$END$
@@ -2359,11 +2359,11 @@ $	// stksz����ξ���E_PAR��
 	$SVC_LIST = APPEND(SVC_LIST, order)$
 $END$
 
-$ ��ǽ�ֹ�κ�����
+$ 機能番号の最大値
 const FN _kernel_tmax_fncd = TMAX_FNCD;$NL$
 $NL$
 
-$ ��ĥ�����ӥ�������ʬ���ơ��֥������
+$ 拡張サービスコール分岐テーブルの生成
 $IF LENGTH(SVC.ORDER_LIST)$
 	const SVCINIB _kernel_svcinib_table[TMAX_FNCD] = {$NL$
 	$JOINEACH fncd RANGE(1, tmax_fncd) ",\n"$
@@ -2380,7 +2380,7 @@ $ELSE$
 $END$$NL$
 
 $
-$  �󥿥�������ƥ������ѤΥ����å��ΰ�
+$  非タスクコンテキスト用のスタック領域
 $
 /*$NL$
 $SPC$*  Stack Area for Non-task Context$NL$
@@ -2388,7 +2388,7 @@ $SPC$*/$NL$
 $NL$
 
 $IF !LENGTH(ICS.ORDER_LIST)$
-$	// DEF_ICS���ʤ����Υǥե�����ͤ�����
+$	// DEF_ICSがない場合のデフォルト値の設定
 	#ifdef DEFAULT_ISTK$NL$
 	$NL$
 	#define TOPPERS_ISTKSZ		DEFAULT_ISTKSZ$NL$
@@ -2402,31 +2402,31 @@ $	// DEF_ICS���ʤ����Υǥե�����ͤ�����
 	$NL$
 	#endif /* DEAULT_ISTK */$NL$
 $ELSE$
-$	// �����ͥ�ɥᥤ��ΰϤߤ���ˤʤ�����E_RSATR��
+$	// カーネルドメインの囲みの中にない場合（E_RSATR）
 	$IF !LENGTH(ICS.DOMAIN[1]) || ICS.DOMAIN[1] != TDOM_KERNEL$
 		$ERROR ICS.TEXT_LINE[1]$E_RSATR: $FORMAT(_("%1% must be within the kernel domain"), "DEF_ICS")$$END$
 	$END$
 
-$	// ��ŪAPI��DEF_ICS�פ�ʣ�������E_OBJ��
+$	// 静的API「DEF_ICS」が複数ある（E_OBJ）
 	$IF LENGTH(ICS.ORDER_LIST) > 1$
 		$ERROR$E_OBJ: $FORMAT(_("too many %1%"), "DEF_ICS")$$END$
 	$END$
 
-$	// istksz��0�ʲ������������å�����κǾ��͡�TARGET_MIN_ISTKSZ�ˤ���
-$	// ����������E_PAR��
+$	// istkszが0以下か，ターゲット定義の最小値（TARGET_MIN_ISTKSZ）よりも
+$	// 小さい場合（E_PAR）
 	$IF ICS.ISTKSZ[1] <= 0 || (TARGET_MIN_ISTKSZ
 									&& ICS.ISTKSZ[1] < TARGET_MIN_ISTKSZ)$
 		$ERROR ICS.TEXT_LINE[1]$E_PAR: $FORMAT(_("%1% `%2%\' in %3% is too small"), "istksz", ICS.ISTKSZ[1], "DEF_ICS")$$END$
 	$END$
 
-$ 	// istksz�������å��ΰ�Υ������Ȥ����������ʤ�����E_PAR��
+$ 	// istkszがスタック領域のサイズとして正しくない場合（E_PAR）
 	$IF !EQ(ICS.ISTK[1], "NULL") && CHECK_STKSZ_ALIGN
 							&& (ICS.ISTKSZ[1] & (CHECK_STKSZ_ALIGN - 1))$
 		$ERROR ICS.TEXT_LINE[1]$E_PAR: $FORMAT(_("%1% `%2%\' in %3% is not aligned"), "istksz", ICS.ISTKSZ[1], "DEF_ICS")$$END$
 	$END$
 
 	$IF EQ(ICS.ISTK[1], "NULL")$
-$		// �����å��ΰ�μ�ư���դ�
+$		// スタック領域の自動割付け
 		$ALLOC_SSTACK("_kernel_istack", ICS.ISTKSZ[1])$
 		#define TOPPERS_ISTKSZ		ROUND_STK_T($ICS.ISTKSZ[1]$)$NL$
 		#define TOPPERS_ISTK		_kernel_istack$NL$
@@ -2437,7 +2437,7 @@ $		// �����å��ΰ�μ�ư���դ�
 $END$
 $NL$
 
-$ �󥿥�������ƥ������ѤΥ����å��ΰ�
+$ 非タスクコンテキスト用のスタック領域
 const SIZE		_kernel_istksz = TOPPERS_ISTKSZ;$NL$
 STK_T *const	_kernel_istk = TOPPERS_ISTK;$NL$
 $NL$
@@ -2447,7 +2447,7 @@ STK_T *const	_kernel_istkpt = TOPPERS_ISTKPT(TOPPERS_ISTK, TOPPERS_ISTKSZ);$NL$
 $NL$
 
 $
-$  �����ͥ뤬����դ�������ΰ�
+$  カーネルが割り付けるメモリ領域
 $
 /*$NL$
 $SPC$*  Memory Area Allocated by Kernel$NL$
@@ -2455,33 +2455,33 @@ $SPC$*/$NL$
 $NL$
 
 $IF !LENGTH(KMM.ORDER_LIST)$
-$	// DEF_KMM���ʤ����Υǥե�����ͤ�����
+$	// DEF_KMMがない場合のデフォルト値の設定
 	#define TOPPERS_KMMSZ		0$NL$
 	#define TOPPERS_KMM			NULL$NL$
 $ELSE$
-$	// �����ͥ�ɥᥤ��ΰϤߤ���ˤʤ�����E_RSATR��
+$	// カーネルドメインの囲みの中にない場合（E_RSATR）
 	$IF !LENGTH(KMM.DOMAIN[1]) || KMM.DOMAIN[1] != TDOM_KERNEL$
 		$ERROR KMM.TEXT_LINE[1]$E_RSATR: $FORMAT(_("%1% must be within the kernel domain"), "DEF_KMM")$$END$
 	$END$
 
-$	// ��ŪAPI��DEF_KMM�פ�ʣ�������E_OBJ��
+$	// 静的API「DEF_KMM」が複数ある（E_OBJ）
 	$IF LENGTH(KMM.ORDER_LIST) > 1$
 		$ERROR$E_OBJ: $FORMAT(_("too many %1%"), "DEF_KMM")$$END$
 	$END$
 
-$	// kmmsz��0�ʲ��ξ���E_PAR��
+$	// kmmszが0以下の場合（E_PAR）
 	$IF KMM.KMMSZ[1] <= 0$
 		$ERROR KMM.TEXT_LINE[1]$E_PAR: $FORMAT(_("%1% `%2%\' is zero in %3%"), "kmmsz", KMM.KMMSZ[1], "DEF_KMM")$$END$
 	$END$
 
-$ 	// kmmsz�������ͥ뤬����դ�������ΰ�Υ������Ȥ����������ʤ�����E_PAR��
+$ 	// kmmszがカーネルが割り付けるメモリ領域のサイズとして正しくない場合（E_PAR）
 	$IF !EQ(KMM.KMM[1], "NULL") && CHECK_MB_ALIGN
 							&& (KMM.KMMSZ[1] & (CHECK_MB_ALIGN - 1))$
 		$ERROR KMM.TEXT_LINE[1]$E_PAR: $FORMAT(_("%1% `%2%\' in %3% is not aligned"), "kmmsz", KMM.KMMSZ[1], "DEF_KMM")$$END$
 	$END$
 
 	$IF EQ(KMM.KMM[1], "NULL")$
-$		// �����ͥ뤬����դ�������ΰ�μ�ư���դ�
+$		// カーネルが割り付けるメモリ領域の自動割付け
 		static MB_T					_kernel_memory[TOPPERS_COUNT_SZ($KMM.KMMSZ[1]$, sizeof(MB_T))];$NL$
 		#define TOPPERS_KMMSZ		TOPPERS_ROUND_SZ($KMM.KMMSZ[1]$, sizeof(MB_T))$NL$
 		#define TOPPERS_KMM			_kernel_memory$NL$
@@ -2492,13 +2492,13 @@ $		// �����ͥ뤬����դ�������ΰ�μ�ư���դ�
 $END$
 $NL$
 
-$ �����ͥ뤬����դ�������ΰ�
+$ カーネルが割り付けるメモリ領域
 const SIZE		_kernel_kmmsz = TOPPERS_KMMSZ;$NL$
 MB_T *const		_kernel_kmm = TOPPERS_KMM;$NL$
 $NL$
 
 $
-$  �����।�٥�ȴ���
+$  タイムイベント管理
 $
 /*$NL$
 $SPC$*  Time Event Management$NL$
@@ -2508,7 +2508,7 @@ TMEVTN   _kernel_tmevt_heap[TNUM_TSKID + TNUM_CYCID + TNUM_ALMID];$NL$
 $NL$
 
 $
-$  �ƥ⥸�塼��ν�����ؿ�
+$  各モジュールの初期化関数
 $
 /*$NL$
 $SPC$*  Module Initialization Function$NL$
@@ -2534,7 +2534,7 @@ $TAB$_kernel_initialize_exception();$NL$
 $NL$
 
 $
-$  ������롼����μ¹Դؿ�
+$  初期化ルーチンの実行関数
 $
 /*$NL$
 $SPC$*  Initialization Routine$NL$
@@ -2544,12 +2544,12 @@ void$NL$
 _kernel_call_inirtn(void)$NL$
 {$NL$
 $FOREACH order INI.ORDER_LIST$
-$	// �����ͥ�ɥᥤ��ΰϤߤ���ˤʤ�����E_RSATR��
+$	// カーネルドメインの囲みの中にない場合（E_RSATR）
 	$IF !LENGTH(INI.DOMAIN[order]) || INI.DOMAIN[order] != TDOM_KERNEL$
 		$ERROR INI.TEXT_LINE[order]$E_RSATR: $FORMAT(_("%1% must be within the kernel domain"), "ATT_INI")$$END$
 	$END$
 
-$ 	// iniatr����TA_NULL�ˤǤʤ�����E_RSATR��
+$ 	// iniatrが（TA_NULL）でない場合（E_RSATR）
 	$IF INI.INIATR[order] != 0$
 		$ERROR INI.TEXT_LINE[order]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of %3% `%4%\' in %5%"), "iniatr", INI.INIATR[order], "inirtn", INI.INIRTN[order], "ATT_INI")$$END$
 	$END$
@@ -2559,7 +2559,7 @@ $END$
 $NL$
 
 $
-$  ��λ�����롼����μ¹Դؿ�
+$  終了処理ルーチンの実行関数
 $
 /*$NL$
 $SPC$*  Termination Routine$NL$
@@ -2569,12 +2569,12 @@ void$NL$
 _kernel_call_terrtn(void)$NL$
 {$NL$
 $FOREACH rorder TER.RORDER_LIST$
-$	// �����ͥ�ɥᥤ��ΰϤߤ���ˤʤ�����E_RSATR��
+$	// カーネルドメインの囲みの中にない場合（E_RSATR）
 	$IF !LENGTH(TER.DOMAIN[rorder]) || TER.DOMAIN[rorder] != TDOM_KERNEL$
 		$ERROR TER.TEXT_LINE[rorder]$E_RSATR: $FORMAT(_("%1% must be within the kernel domain"), "ATT_TER")$$END$
 	$END$
 
-$ 	// teratr����TA_NULL�ˤǤʤ�����E_RSATR��
+$ 	// teratrが（TA_NULL）でない場合（E_RSATR）
 	$IF TER.TERATR[rorder] != 0$
 		$ERROR TER.TEXT_LINE[rorder]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of %3% `%4%\' in %5%"), "teratr", TER.TERATR[rorder], "terrtn", TER.TERRTN[rorder], "ATT_TER")$$END$
 	$END$
@@ -2584,7 +2584,7 @@ $END$
 $NL$
 
 $
-$  ���ꥪ�֥������ȴ�����ǽ
+$  メモリオブジェクト管理機能
 $
 /*$NL$
 $SPC$*  Memory Object Management Functions$NL$
@@ -2592,32 +2592,32 @@ $SPC$*/$NL$
 $NL$
 
 $
-$  ��åɥ����������ˤ�����桼�������å��ΰ�����ֽ���η���
+$  レッドゾーン方式におけるユーザスタック領域の配置順序の決定
 $
 $IF USE_REDZONE && LENGTH(MO_USTACK_LIST1)$
 	$INCLUDE "kernel/redzone.tf"$
 $END$
 
 $
-$  �������Υ��ꥪ�֥������Ȥξ���βù�
+$  統合前のメモリオブジェクトの情報の加工
 $
-$ �������Υ��ꥪ�֥������Ȥξ���ˡ��ʲ��ξ�����ɲäʤ����Ͻ������
-$ ���롥
+$ 統合前のメモリオブジェクトの情報に，以下の情報を追加ないしは修正を加
+$ える．
 $
-$ MO.MEMATR[moid]�����ꥪ�֥�������°��
-$	TA_NOWRITE°���Υ���꡼���������֤������ϡ�TA_MEMINI��
-$	TA_MEMPRSV�򥯥ꥢ���롥
-$ MO.ACPTN1[moid]���̾����1�ʽ���ߡˤΥ����������ĥѥ�����
-$	MO.MEMATR[moid]��TA_NOWRITE�����ꤵ��Ƥ������0�ˤ��롥
-$ MO.CLASS[moid]�����ꥪ�֥������Ȥ����֤��뤿���ʬ���ɸ�ʥ�󥫤�
-$				  ���֤�����Τߡ�
-$	0��ɸ��Υ��ꥪ�֥�������°����ACPTN1��ACPTN2��ɸ��
-$	  �ʥ������Υ桼�������å��ΰ�⤳���˴ޤ���
-$	1��ɸ��Υ��ꥪ�֥�������°����ACPTN1�ޤ���ACPTN2��ɸ��Ǥʤ�
-$	2��ɸ��Ǥʤ����ꥪ�֥�������°��
-$ MO.SRPW[moid]����ͭ�꡼����ͭ�饤���ΰ褫���ʥ�󥫤����֤�����Τߡ�
-$ MO.STDACPTN4[moid]��MO.ACPTN4[moid]��ɸ�फ����ɸ��ʤ�1��
-$ MEMATR_MASK�����ꥪ�֥�������°����ɸ��Ǥ��뤫��Ƚ�ꤹ����Υޥ���
+$ MO.MEMATR[moid]：メモリオブジェクト属性
+$	TA_NOWRITE属性のメモリリージョンに配置される場合は，TA_MEMINIと
+$	TA_MEMPRSVをクリアする．
+$ MO.ACPTN1[moid]：通常操作1（書込み）のアクセス許可パターン
+$	MO.MEMATR[moid]にTA_NOWRITEが設定されている場合は0にする．
+$ MO.CLASS[moid]：メモリオブジェクトを配置するための分類指標（リンカが
+$				  配置する場合のみ）
+$	0：標準のメモリオブジェクト属性，ACPTN1とACPTN2が標準
+$	  （タスクのユーザスタック領域もここに含める）
+$	1：標準のメモリオブジェクト属性，ACPTN1またはACPTN2が標準でない
+$	2：標準でないメモリオブジェクト属性
+$ MO.SRPW[moid]：共有リード専有ライト領域か？（リンカが配置する場合のみ）
+$ MO.STDACPTN4[moid]：MO.ACPTN4[moid]が標準か？（標準なら1）
+$ MEMATR_MASK：メモリオブジェクト属性が標準であるかを判定する時のマスク
 $
 $IF !LENGTH(MEMATR_MASK)$
 	$MEMATR_MASK = ~TA_SDATA$
@@ -2674,15 +2674,15 @@ $FOREACH moid RANGE(1, nummo)$
 $END$
 
 $
-$  �������Υ��ꥪ�֥������Ȥ򥽡��Ȥ��뤿����������
+$  統合前のメモリオブジェクトをソートするための配列を作る
 $
-$ MO.ORDER[moid]�����ꥪ�֥������Ȥ򥽡��Ȥ��뤿���1����ɸ
-$ MO.MEMATR1[moid]�������Ȥ���ݤˡ�ACPTN1��ACPTN2�������Ѥ���°��
-$ MO.MEMATR2[moid]�������Ȥ���ݤˡ�ACPTN1��ACPTN2������Ѥ���°��
+$ MO.ORDER[moid]：メモリオブジェクトをソートするための1次指標
+$ MO.MEMATR1[moid]：ソートする際に，ACPTN1，ACPTN2より先に用いる属性
+$ MO.MEMATR2[moid]：ソートする際に，ACPTN1，ACPTN2より後に用いる属性
 $
 $FOREACH moid RANGE(1, nummo)$
-$	// �ޤ���STANDARD_ROM��ǽ�ˤ������θ�ϥ���꡼������ֹ�ν��
-$	// �����Ȥ��롥
+$	// まず，STANDARD_ROMを最初にし，その後はメモリリージョン番号の順に
+$	// ソートする．
 	$IF MO.LINKER[moid]$
 		$IF MO.MEMREG[moid] == STANDARD_ROM$
 			$memreg = 0$
@@ -2690,36 +2690,36 @@ $	// �����Ȥ��롥
 			$memreg = MO.MEMREG[moid]$
 		$END$
 	$ELSE$
-$		// ��󥫤����֤��ʤ���Τϡ��Ǹ�ˤ��롥
+$		// リンカが配置しないものは，最後にする．
 		$memreg = LENGTH(REG.ORDER_LIST) + 1$
 	$END$
 	$order = memreg$
 
-$	// ���ˡ����֥����פˤ�äƥ����Ȥ��롥
+$	// 次に，配置タイプによってソートする．
 	$IF MO.TYPE[moid] == TOPPERS_USTACK$
-$		// �桼�������å��ΰ�����֥����פη��ꡥ
+$		// ユーザスタック領域の配置タイプの決定．
 		$type = 1$
 	$ELIF MO.ACPTN1[moid] == 0 && MO.ACPTN2[moid] == TACP_SHARED
 									&& (MO.MEMATR[moid] & TA_SDATA) != 0$
-$		// ��ͭ�꡼�ɡ��饤���ԲĤΥ��硼�ȥǡ����ΰ�����֥����פη��ꡥ
-$		// �����ͥ�ɥᥤ��ζ�ͭ�꡼����ͭ�饤���ΰ�⤳���˴ޤޤ�롥
+$		// 共有リード・ライト不可のショートデータ領域の配置タイプの決定．
+$		// カーネルドメインの共有リード専有ライト領域もここに含まれる．
 		$type = 4$
 	$ELIF MO.LINKER[moid] && MO.SRPW[moid]$
-$		// ��ͭ�꡼����ͭ�饤���ΰ�����֥����פη��ꡥ
+$		// 共有リード専有ライト領域の配置タイプの決定．
 		$IF (MO.MEMATR[moid] & TA_SDATA) != 0$
 			$type = 5$
 		$ELSE$
 			$type = 3$
 		$END$
 	$ELIF MO.DOMAIN[moid] == TDOM_KERNEL$
-$		// �����ͥ�ɥᥤ������֥����פη��ꡥ
+$		// カーネルドメインの配置タイプの決定．
 		$IF (MO.MEMATR[moid] & TA_SDATA) != 0$
 			$type = 6$
 		$ELSE$
 			$type = 0$
 		$END$
 	$ELIF MO.DOMAIN[moid] == TDOM_NONE$
-$		// ̵��°�����֥����פη��ꡥ
+$		// 無所属の配置タイプの決定．
 		$IF MO.LINKER[moid] && MO.CLASS[moid] == 0$
 			$IF (MO.MEMATR[moid] & TA_SDATA) != 0$
 				$type = 7$
@@ -2734,7 +2734,7 @@ $		// ̵��°�����֥����פη��ꡥ
 			$END$
 		$END$
 	$ELSE$
-$		// �桼���ɥᥤ������֥����פη��ꡥ
+$		// ユーザドメインの配置タイプの決定．
 		$IF (MO.MEMATR[moid] & TA_SDATA) != 0$
 			$type = 6$
 		$ELSE$
@@ -2743,11 +2743,11 @@ $		// �桼���ɥᥤ������֥����פη��ꡥ
 	$END$
 	$order = (order << 4) + type$
 
-$	// ���ˡ��ݸ�ɥᥤ��ˤ�äƥ����Ȥ��롥
-$	// �桼���ɥᥤ��ο���32�İʲ��Ǥ��뤳�Ȥ��ꤷ�Ƥ��롥
+$	// 次に，保護ドメインによってソートする．
+$	// ユーザドメインの数が32個以下であることを仮定している．
 	$IF MO.TYPE[moid] == TOPPERS_USTACK && USE_REDZONE$
-$		// ��åɥ����������ξ�硤�桼�������å��ΰ���ݸ�ɥᥤ����
-$		// �����Ȥ��ʤ���
+$		// レッドゾーン方式の場合，ユーザスタック領域は保護ドメイン順に
+$		// ソートしない．
 		$domain = 0$
 	$ELIF MO.DOMAIN[moid] == TDOM_KERNEL$
 		$domain = 0$
@@ -2758,98 +2758,98 @@ $		// �����Ȥ��ʤ���
 	$END$
 	$order = (order << 6) + domain$
 
-$	// ���ˡ����ꥪ�֥������Ȥ����֤��뤿���ʬ���ɸ�ˤ�ä����֤��롥
+$	// 次に，メモリオブジェクトを配置するための分類指標によって配置する．
 	$class = 0$
 	$IF MO.LINKER[moid] && MO.TYPE[moid] != TOPPERS_USTACK$
 		$IF (REG.REGATR[MO.MEMREG[moid]] & TA_NOWRITE) != 0$
 			$IF MO.DOMAIN[moid] == TDOM_NONE$
-$				// TA_NOWRITE°���Υ���꡼������̵��°�ϡ�CLASS�εս�
-$				// �����֤��롥
+$				// TA_NOWRITE属性のメモリリージョンの無所属は，CLASSの逆順
+$				// に配置する．
 				$class = 2 - MO.CLASS[moid]$
 			$ELSE$
-$				// �����ͥ�ɥᥤ��ȥ桼���ɥᥤ��ϡ�CLASS�ν�����֤��롥
+$				// カーネルドメインとユーザドメインは，CLASSの順に配置する．
 				$class = MO.CLASS[moid]$
 			$END$
 		$ELSE$
 			$IF MO.DOMAIN[moid] == TDOM_KERNEL || MO.DOMAIN[moid] == TDOM_NONE$
-$				// TA_NOWRITE°���Ǥʤ�����꡼�����Υ����ͥ�ɥᥤ��
-$				// ��̵��°�ϡ�CLASS�εս�����֤��롥
+$				// TA_NOWRITE属性でないメモリリージョンのカーネルドメイン
+$				// と無所属は，CLASSの逆順に配置する．
 				$class = 2 - MO.CLASS[moid]$
 			$ELSE$
-$				// �桼���ɥᥤ��ϡ�CLASS�ν�����֤��롥
+$				// ユーザドメインは，CLASSの順に配置する．
 				$class = MO.CLASS[moid]$
 			$END$
 		$END$
 	$END$
 	$order = (order << 2) + class$
 
-$	// ��̤�MO.ORDER[moid]�˳�Ǽ����
+$	// 結果をMO.ORDER[moid]に格納する
 	$MO.ORDER[moid] = order$
 
-$	// MO.MEMATR1[moid]��MO.MEMATR2[moid]�����ꤹ��
+$	// MO.MEMATR1[moid]とMO.MEMATR2[moid]を設定する
 	$IF MO.LINKER[moid]$
 		$IF (REG.REGATR[MO.MEMREG[moid]] & TA_NOWRITE) != 0$
 			$MO.MEMATR1[moid] = MO.MEMATR[moid] & ~TA_EXEC$
 			$MO.MEMATR2[moid] = MO.MEMATR[moid] & TA_EXEC$
-$			// TA_EXEC�����ꤵ��Ƥ��������������֤���
+$			// TA_EXECが設定されている方を前に配置する
 			$MO.MEMATR2[moid] = MO.MEMATR2[moid] ^ TA_EXEC$
 		$ELSE$
 			$MO.MEMATR1[moid] = MO.MEMATR[moid] & ~(TA_MEMINI|TA_MEMPRSV)$
 			$MO.MEMATR2[moid] = MO.MEMATR[moid] & (TA_MEMINI|TA_MEMPRSV)$
-$			// TA_MEMINI�����ꤵ��Ƥ��������������֤���
+$			// TA_MEMINIが設定されている方を前に配置する
 			$MO.MEMATR2[moid] = MO.MEMATR2[moid] ^ TA_MEMINI$
 		$END$
 	$END$
 $END$
 
 $
-$  ���ꥪ�֥������Ȥ򥽡��Ȥ��뤿�����Ӵؿ�
+$  メモリオブジェクトをソートするための比較関数
 $
 $IF !ISFUNCTION("MO_COMPARE")$
 $FUNCTION MO_COMPARE$
-$	// �ޤ��ϡ�MO.ORDER����Ӥ��롥
+$	// まずは，MO.ORDERで比較する．
 	$RESULT = MO.ORDER[ARGV[1]] - MO.ORDER[ARGV[2]]$
 	$IF (RESULT == 0) && MO.LINKER[ARGV[1]]$
-$		// MO.ORDER��Ʊ���ǡ���󥫤������оݤξ��ϡ�����˥����Ȥ��롥
+$		// MO.ORDERが同じで，リンカの配置対象の場合は、さらにソートする．
 		$_moid1 = ARGV[1]$
 		$_moid2 = ARGV[2]$
 		$IF MO.TYPE[_moid1] == TOPPERS_USTACK$
-$			// �桼�������å��ΰ�ξ��
-$			// MO.STKORDER�ǥ����Ȥ��롥
+$			// ユーザスタック領域の場合
+$			// MO.STKORDERでソートする．
 			$RESULT = MO.STKORDER[_moid1] - MO.STKORDER[_moid2]$
 		$ELIF MO.MEMATR1[_moid1] != MO.MEMATR1[_moid2]$
-$			// MO.MEMATR1���ۤʤ�С�����ǥ����Ȥ��롥
+$			// MO.MEMATR1が異なれば，それでソートする．
 			$RESULT = MO.MEMATR1[_moid1] - MO.MEMATR1[_moid2]$
 		$ELIF MO.ACPTN1[_moid1] != MO.ACPTN1[_moid2]$
-$			// MO.ACPTN1���ۤʤ�С�����ǥ����Ȥ��롥
+$			// MO.ACPTN1が異なれば，それでソートする．
 			$RESULT = MO.ACPTN1[_moid1] - MO.ACPTN1[_moid2]$
 		$ELIF MO.ACPTN2[_moid1] != MO.ACPTN2[_moid2]$
-$			// MO.ACPTN2���ۤʤ�С�����ǥ����Ȥ��롥
+$			// MO.ACPTN2が異なれば，それでソートする．
 			$RESULT = MO.ACPTN2[_moid1] - MO.ACPTN2[_moid2]$
 		$ELIF MO.MEMATR2[_moid1] != MO.MEMATR2[_moid2]$
-$			// MO.MEMATR2���ۤʤ�С�����ǥ����Ȥ��롥
+$			// MO.MEMATR2が異なれば，それでソートする．
 			$RESULT = MO.MEMATR2[_moid1] - MO.MEMATR2[_moid2]$
 		$ELIF MO.ACPTN4[_moid1] == MO.ACPTN4[_moid2]$
-$			// MO.ACPTN4��Ʊ���Ǥ���С�����ǰʾ好���Ȥ��ʤ���
+$			// MO.ACPTN4が同じであれば，それで以上ソートしない．
 			$RESULT = 0$
 		$ELIF MO.STDACPTN4[_moid1]$
 			$IF MO.DOMAIN[_moid1] != TDOM_NONE$
-$				// ̵��°�ʳ��Ǥϡ�ɸ���ACPTN4����Ĥ�Τ�������֤��롥
+$				// 無所属以外では，標準のACPTN4を持つものを先に配置する．
 				$RESULT = -1$
 			$ELSE$
-$				// ̵��°�Ǥϡ�ɸ���ACPTN4����Ĥ�Τ������֤��롥
+$				// 無所属では，標準のACPTN4を持つものを後に配置する．
 				$RESULT = 1$
 			$END$
 		$ELIF MO.STDACPTN4[_moid2]$
 			$IF MO.DOMAIN[_moid1] != TDOM_NONE$
-$				// ̵��°�ʳ��Ǥϡ�ɸ���ACPTN4����Ĥ�Τ�������֤��롥
+$				// 無所属以外では，標準のACPTN4を持つものを先に配置する．
 				$RESULT = 1$
 			$ELSE$
-$				// ̵��°�Ǥϡ�ɸ���ACPTN4����Ĥ�Τ������֤��롥
+$				// 無所属では，標準のACPTN4を持つものを後に配置する．
 				$RESULT = -1$
 			$END$
 		$ELSE$
-$			// �ɤ����ɸ��Ǥʤ����ϡ�MO.MEMATR4�ǥ����Ȥ��롥
+$			// どちらも標準でない場合は，MO.MEMATR4でソートする．
 			$RESULT = MO.ACPTN4[_moid1] - MO.ACPTN4[_moid2]$
 		$END$
 	$END$
@@ -2857,35 +2857,35 @@ $END$
 $END$
 
 $
-$  ���ꥪ�֥������ȤΥ�����
+$  メモリオブジェクトのソート
 $
-$ �ǽ��MO.ORDER�ǥ����Ȥ��Ƥ������Ȥǡ�MO_COMPARE��Ȥä������Ȥ���Ψ
-$ ������뤳�Ȥ���Ԥ��Ƥ��롥
+$ 最初にMO.ORDERでソートしておくことで，MO_COMPAREを使ったソートが効率
+$ 化されることを期待している．
 $
 $MO_ORDER = SORT(RANGE(1, nummo), "MO.ORDER")$
 $MO_ORDER = LSORT(MO_ORDER, "MO_COMPARE")$
 
 $
-$  ���ꥪ�֥������Ȥ��������
+$  メモリオブジェクトの統合処理
 $
-$ MO.SEFLAG[moid]���ʲ��ΥӥåȤΥӥå��������¤����ꤹ�롥
-$	0x01��������������Ƭ
-$	0x02�����������κǸ�
-$	0x04�����ꥪ�֥������Ȥ���Ƭ
-$	0x08�����ꥪ�֥������ȤκǸ�
-$	0x10�������ݸ�ñ�̤���Ƭ
-$	0x20�������ݸ�ñ�̤κǸ�
-$	0x40������꡼��������Ƭ
-$	0x80������꡼�����κǸ�
-$	0x100����ͭ�꡼�����ѥ饤���ΰ����Τ���Ƭ
-$	0x200����ͭ�꡼�����ѥ饤���ΰ����ΤκǸ�
-$	0x400�����硼�ȥǡ���������������Ƭ
-$ MO.MOEND[moid]�������Υ��ꥪ�֥������ȤκǸ��moid��������
-$							���ꥪ�֥������Ȥ���Ƭ��moid���Ф��������
-$ MO_SECTION_LIST��������������Ƭ�Υꥹ��
-$ MO_START_LIST�����ꥪ�֥������Ȥ���Ƭ�Υꥹ��
-$ MO_START_LIST_NOLINKER����󥫤����֤��ʤ����ꥪ�֥������Ȥ���Ƭ�Υꥹ��
-$ MO_MPROTECT_LIST�������ݸ�ñ�̤���Ƭ�Υꥹ��
+$ MO.SEFLAG[moid]：以下のビットのビット毎論理和に設定する．
+$	0x01：セクションの先頭
+$	0x02：セクションの最後
+$	0x04：メモリオブジェクトの先頭
+$	0x08：メモリオブジェクトの最後
+$	0x10：メモリ保護単位の先頭
+$	0x20：メモリ保護単位の最後
+$	0x40：メモリリージョンの先頭
+$	0x80：メモリリージョンの最後
+$	0x100：共有リード専用ライト領域全体の先頭
+$	0x200：共有リード専用ライト領域全体の最後
+$	0x400：ショートデータセクションの先頭
+$ MO.MOEND[moid]：統合後のメモリオブジェクトの最後のmoid（統合後の
+$							メモリオブジェクトの先頭のmoidに対して設定）
+$ MO_SECTION_LIST：セクションの先頭のリスト
+$ MO_START_LIST：メモリオブジェクトの先頭のリスト
+$ MO_START_LIST_NOLINKER：リンカが配置しないメモリオブジェクトの先頭のリスト
+$ MO_MPROTECT_LIST：メモリ保護単位の先頭のリスト
 $
 $MO_SECTION_LIST = {}$
 $MO_START_LIST = {}$
@@ -2947,7 +2947,7 @@ $FOREACH moid MO_ORDER$
 		$END$
 	$END$
 
-$	// MO_SECTION_LIST��MO_START_LIST��MO_MPROTECT_LIST�ؤ��ɲ�
+$	// MO_SECTION_LIST，MO_START_LIST，MO_MPROTECT_LISTへの追加
 	$IF (MO.SEFLAG[moid] & 0x01) != 0$
 		$MO_SECTION_LIST = APPEND(MO_SECTION_LIST, moid)$
 	$END$
@@ -2974,14 +2974,14 @@ $IF MO.LINKER[prev_moid] && MO.SRPW[prev_moid]$
 $END$
 
 $
-$  ���ꥪ�֥������ȤΥ�٥������
+$  メモリオブジェクトのラベルの生成
 $
-$ MO.SLABEL[moid]�����������Υ�٥�
-$ MO.ILABEL[moid]��������ǡ����ΰ�Υ�٥�
-$ MO.MLABEL[moid]�����ꥪ�֥������ȤΥ�٥�
-$ MO.PLABEL[moid]�������ݸ�ñ�̤Υ�٥�
-$ DATASEC_LIST��data���������Υꥹ��
-$ BSSSEC_LIST��bss���������Υꥹ��
+$ MO.SLABEL[moid]：セクションのラベル
+$ MO.ILABEL[moid]：初期化データ領域のラベル
+$ MO.MLABEL[moid]：メモリオブジェクトのラベル
+$ MO.PLABEL[moid]：メモリ保護単位のラベル
+$ DATASEC_LIST：dataセクションのリスト
+$ BSSSEC_LIST：bssセクションのリスト
 $
 $DATASEC_LIST = {}$
 $BSSSEC_LIST = {}$
@@ -3084,36 +3084,36 @@ $FOREACH moid MO_ORDER$
 $END$
 
 $ =====================================================================
-$ ���Υ��깽����������ե����������
+$ 仮のメモリ構成・初期化ファイルの生成
 $ =====================================================================
 $FILE "kernel_mem2.c"$
 
 $
-$  �ݸ�ɥᥤ��
+$  保護ドメイン
 $
 $IF USE_LATERPASS_DOMINIB$
 	$GENERATE_DOMINIB()$
 $END$
 
 $
-$  �����ꥪ�֥������Ƚ�����֥��å�������
+$  仮メモリオブジェクト初期化ブロックの生成
 $
 $IF !OMIT_STANDARD_MEMINIB$
-$	// ���ɥ쥹0���֤��ΰ�
+$	// アドレス0を置く領域
 	$tsize_meminib = 1$
 	$FOREACH moid MO_START_LIST$
-$		// ���ꥪ�֥������Ȥ���Ƭ���Ϥ��֤��ΰ�
+$		// メモリオブジェクトの先頭番地を置く領域
 		$tsize_meminib = tsize_meminib + 1$
 		$IF !MO.LINKER[moid]$
-$			// ��󥫤����֤��ʤ����ꥪ�֥������ȤϺǽ����Ϥ�ɬ��
+$			// リンカが配置しないメモリオブジェクトは最終番地も必要
 			$tsize_meminib = tsize_meminib + 1$
 		$ELIF (MO.SEFLAG[MO.MOEND[moid]] & 0x80) != 0$
-$			// ����꡼�����κǸ�Υ��ꥪ�֥������ȤϺǽ����Ϥ�ɬ��
+$			// メモリリージョンの最後のメモリオブジェクトは最終番地も必要
 			$tsize_meminib = tsize_meminib + 1$
 		$END$
 	$END$
 
-$	// �������åȰ�¸��tsize_meminib������������
+$	// ターゲット依存でtsize_meminibを補正する場合
 	$IF ISFUNCTION("CALC_TSIZE_MEMINIB")$
 		$CALC_TSIZE_MEMINIB()$
 	$END$
@@ -3139,7 +3139,7 @@ $	// �������åȰ�¸��tsize_meminib������������
 $END$
 
 $
-$  ��data��������������֥��å�������
+$  仮dataセクション初期化ブロックの生成
 $
 $IF !OMIT_STANDARD_DATASECINIB$
 	$IF !OMIT_IDATA && LENGTH(DATASEC_LIST)$
@@ -3154,7 +3154,7 @@ $IF !OMIT_STANDARD_DATASECINIB$
 $END$
 
 $
-$  ��bss��������������֥��å�������
+$  仮bssセクション初期化ブロックの生成
 $
 $IF !OMIT_STANDARD_BSSSECINIB$
 	$IF LENGTH(BSSSEC_LIST)$
@@ -3169,23 +3169,23 @@ $IF !OMIT_STANDARD_BSSSECINIB$
 $END$
 
 $ =====================================================================
-$  �ѥ�3�ʹߤ��Ϥ����������
+$  パス3以降に渡す情報の生成
 $ =====================================================================
 
 $FILE "cfg2_out.tf"$
 $$ cfg2_out.tf$NL$
 $NL$
 
-$ STANDARD_ROM��STANDARD_RAM�ν���
+$ STANDARD_ROM，STANDARD_RAMの出力
 $$STANDARD_ROM = $STANDARD_ROM$$$$NL$
 $$STANDARD_RAM = $STANDARD_RAM$$$$NL$
 $NL$
 
-$ REG_ORDER�ν���
+$ REG_ORDERの出力
 $$REG_ORDER = { $REG_ORDER$ }$$$NL$
 $NL$
 
-$ REG.*�ν���
+$ REG.*の出力
 $FOREACH reg REG.ORDER_LIST$
 	$$REG.REGNAME[$reg$] = $REG.REGION[reg]$$$$NL$
 	$$REG.REGATR[$reg$] = VALUE($ESCSTR(REG.REGATR[reg])$,
@@ -3197,8 +3197,8 @@ $FOREACH reg REG.ORDER_LIST$
 	$NL$
 $END$
 
-$ MO_ORDER��MO_SECTION_LIST��MO_START_LIST��MO_START_LIST_NOLINKER��
-$ MO_MPROTECT_LIST�ν���
+$ MO_ORDER，MO_SECTION_LIST，MO_START_LIST，MO_START_LIST_NOLINKER，
+$ MO_MPROTECT_LISTの出力
 $$MO_ORDER = { $MO_ORDER$ }$$$NL$
 $NL$
 $$MO_SECTION_LIST = { $MO_SECTION_LIST$ }$$$NL$
@@ -3210,13 +3210,13 @@ $NL$
 $$MO_MPROTECT_LIST = { $MO_MPROTECT_LIST$ }$$$NL$
 $NL$
 
-$ tsize_meminib�ν���
+$ tsize_meminibの出力
 $IF !OMIT_STANDARD_MEMINIB$
 	$$tsize_meminib = $tsize_meminib$$$$NL$
 	$NL$
 $END$
 
-$ MO.*�ν���
+$ MO.*の出力
 $FOREACH moid MO_ORDER$
 	$$MO.TYPE[$moid$] = $MO.TYPE[moid]$$$$NL$
 	$IF MO.TYPE[moid] == TOPPERS_ATTMOD$
@@ -3281,7 +3281,7 @@ $FOREACH moid MO_ORDER$
 	$NL$
 $END$
 
-$ LNKSEC.*�ν���
+$ LNKSEC.*の出力
 $$numls = $numls$$$$NL$
 $NL$
 $FOREACH lsid RANGE(1, numls)$
@@ -3290,7 +3290,7 @@ $FOREACH lsid RANGE(1, numls)$
 	$NL$
 $END$
 
-$ DATASEC_LIST��BSSSEC_LIST�ν���
+$ DATASEC_LIST，BSSSEC_LISTの出力
 $$DATASEC_LIST = { $DATASEC_LIST$ }$$$NL$
 $$BSSSEC_LIST = { $BSSSEC_LIST$ }$$$NL$
 $NL$

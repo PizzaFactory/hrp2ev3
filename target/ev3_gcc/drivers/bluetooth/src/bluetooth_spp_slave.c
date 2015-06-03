@@ -22,6 +22,8 @@
 
 #include "driver_common.h"
 #include "kernel_cfg.h"
+#include "syssvc/serial.h"
+#include "platform.h"
 
 #define RFCOMM_SERVER_CHANNEL 1
 #define HEARTBEAT_PERIOD_MS 10
@@ -74,7 +76,7 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 		case BTSTACK_EVENT_STATE:
 			// bt stack activated, get started - set local name
 			if (packet[2] == HCI_STATE_WORKING) {
-				hci_send_cmd(&hci_write_local_name, BLUETOOTH_LOCAL_NAME);
+				hci_send_cmd(&hci_write_local_name, ev3rt_bluetooth_local_name);
 			}
 			break;
 
@@ -93,22 +95,19 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 			printf("Please enter PIN %s on remote device\n", BLUETOOTH_PIN_CODE);
 #endif
 			bt_flip_addr(event_addr, &packet[2]);
-			hci_send_cmd(&hci_pin_code_request_reply, &event_addr, strlen(BLUETOOTH_PIN_CODE), BLUETOOTH_PIN_CODE);
+			hci_send_cmd(&hci_pin_code_request_reply, &event_addr, strlen(ev3rt_bluetooth_pin_code), ev3rt_bluetooth_pin_code);
 			break;
 
 		case HCI_EVENT_COMMAND_COMPLETE:
-			if (COMMAND_COMPLETE_EVENT(packet, hci_read_bd_addr)) {
-				bt_flip_addr(event_addr, &packet[6]);
+			// Print MAC address of EV3's Bluetooth device
 #if defined(DEBUG)
+			if (COMMAND_COMPLETE_EVENT(packet, hci_read_bd_addr)) {
+
+				bt_flip_addr(event_addr, &packet[6]);
 				printf("BD-ADDR: %s\n\r", bd_addr_to_str(event_addr));
-#endif
 				break;
 			}
-//                    if (COMMAND_COMPLETE_EVENT(packet, hci_write_local_name)){
-//                        hci_send_cmd(&hci_write_class_of_device, 0x38010c);
-//                        hci_discoverable_control(1);
-//                        break;
-//                    }
+#endif
 			break;
 
 		case RFCOMM_EVENT_INCOMING_CONNECTION:
@@ -141,12 +140,24 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 				syslog(LOG_NOTICE, "RFCOMM channel open succeeded. New RFCOMM Channel ID %u, max frame size %u.", rfcomm_channel_id, mtu);
 #endif
 				send_mtu = mtu;
+
+				/**
+				 * Open Bluetooth SIO port
+				 */
+			    SVC_PERROR(serial_opn_por(SIO_PORT_BT));
+			    SVC_PERROR(serial_ctl_por(SIO_PORT_BT, (IOCTL_NULL)));
 			}
 			break;
 
 		case RFCOMM_EVENT_CHANNEL_CLOSED:
+			/**
+			 * Close Bluetooth SIO port
+			 */
+			SVC_PERROR(serial_cls_por(SIO_PORT_BT));
+
 			send_mtu = 0;
 			rfcomm_channel_id = 0;
+			send_buffer_sz = 0;
 			break;
 
 		default:
@@ -169,8 +180,8 @@ void bluetooth_spp_initialize(void){
 //    hci_ssp_set_enable(1);
 //    hci_ssp_set_io_capability(SSP_IO_CAPABILITY_NO_INPUT_NO_OUTPUT);
 //    hci_ssp_set_auto_accept(1);
-    if(BLUETOOTH_PIN_CODE != NULL)
-    	hci_ssp_set_enable(false);
+//    if(BLUETOOTH_PIN_CODE != NULL)
+    hci_ssp_set_enable(false);
 
     l2cap_init();
     l2cap_register_packet_handler(packet_handler);
@@ -189,6 +200,6 @@ void bluetooth_spp_initialize(void){
     memset(spp_service_buffer, 0, sizeof(spp_service_buffer));
     service_record_item_t * service_record_item = (service_record_item_t *) spp_service_buffer;
     sdp_create_spp_service( (uint8_t*) &service_record_item->service_record, RFCOMM_SERVER_CHANNEL, "Serial Port Profile");
-    printf("SDP service buffer size: %u\n\r", (uint16_t) (sizeof(service_record_item_t) + de_get_len((uint8_t*) &service_record_item->service_record)));
+//    printf("SDP service buffer size: %u\n\r", (uint16_t) (sizeof(service_record_item_t) + de_get_len((uint8_t*) &service_record_item->service_record)));
     sdp_register_service_internal(NULL, service_record_item);
 }

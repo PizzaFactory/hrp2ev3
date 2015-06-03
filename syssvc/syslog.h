@@ -8,40 +8,40 @@
  *  Copyright (C) 2005-2014 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ���(1)��(4)�ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ������
- *  �ѡ������ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
- *      �ޤ����ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���
- *      ͳ�˴�Ť����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ�
- *      ���դ��뤳�ȡ�
+ *  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
+ *  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+ *      また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
+ *      由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
+ *      免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū
- *  ���Ф���Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ���
- *  �������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤��
- *  ����Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
+ *  に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
+ *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
+ *  の責任を負わない．
  * 
  *  $Id: syslog.h 970 2014-01-12 08:57:42Z ertl-hiro $
  */
 
 /*
- *		�����ƥ������ǽ
+ *		システムログ機能
  */
 
 #ifndef TOPPERS_SYSLOG_H
@@ -52,21 +52,21 @@ extern "C" {
 #endif
 
 /*
- *  �����ƥ�������Ϥ�Ԥ���������
+ *  システムログ出力を行うための定義
  */
 #include <t_syslog.h>
 #include <extsvc_fncode.h>
 #include "target_syssvc.h"
 
 /*
- *  �����Хåե��Ȥ���˥����������뤿��Υݥ���
+ *  ログバッファとそれにアクセスするためのポインタ
  */
 #ifndef TCNT_SYSLOG_BUFFER
-#define TCNT_SYSLOG_BUFFER	32		/* �����Хåե��Υ����� */
+#define TCNT_SYSLOG_BUFFER	32		/* ログバッファのサイズ */
 #endif /* TCNT_SYSLOG_BUFFER */
 
 /*
- *  �����ƥ������ǽ�γ�ĥ�����ӥ�������Υ����å�������
+ *  システムログ機能の拡張サービスコールのスタックサイズ
  */ 
 #ifndef SSZ_SYSLOG_WRI_LOG
 #define SSZ_SYSLOG_WRI_LOG	1024
@@ -85,20 +85,20 @@ extern "C" {
 #endif /* SSZ_SYSLOG_REF_LOG */
 
 /*
- *  �����ƥ������ǽ�ν����
+ *  システムログ機能の初期化
  */
 extern void	syslog_initialize(intptr_t exinf) throw();
 
 /*
- *  �����ƥ������ǽ�γ�ĥ�����ӥ�������ˤ��ƽФ����󥿥ե�����
+ *  システムログ機能の拡張サービスコールによる呼出しインタフェース
  */
 #ifndef TOPPERS_SVC_CALL
 
 /*
- *  ��������ν���
+ *  ログ情報の出力
  *
- *  TOPPERS_OMIT_SYSLOG���������Ƥ��ʤ���硤syslog_wri_log��
- *  syslog_fwri_log�ϡ�t_syslog.h���������뤿�ᡤ�����Ǥ�������ʤ���
+ *  TOPPERS_OMIT_SYSLOGが定義されていない場合，syslog_wri_logと
+ *  syslog_fwri_logは，t_syslog.hで定義されるため，ここでは定義しない．
  */
 #ifdef TOPPERS_OMIT_SYSLOG
 
@@ -119,7 +119,7 @@ syslog_fwri_log(ER ercd, const SYSLOG *p_syslog)
 #endif /* TOPPERS_OMIT_SYSLOG */
 
 /*
- *  �����Хåե�����Υ���������ɽФ�
+ *  ログバッファからのログ情報の読出し
  */
 Inline ER_UINT
 syslog_rea_log(SYSLOG *p_syslog)
@@ -128,7 +128,7 @@ syslog_rea_log(SYSLOG *p_syslog)
 }
 
 /* 
- *  ���Ϥ��٤���������ν����٤�����
+ *  出力すべきログ情報の重要度の設定
  */
 Inline ER_UINT
 syslog_msk_log(intptr_t logmask, intptr_t lowmask)
@@ -138,7 +138,7 @@ syslog_msk_log(intptr_t logmask, intptr_t lowmask)
 }
 
 /* 
- *  �����Хåե��ξ��ֻ���
+ *  ログバッファの状態参照
  */
 Inline ER_UINT
 syslog_ref_log(intptr_t pk_rlog)
@@ -149,7 +149,7 @@ syslog_ref_log(intptr_t pk_rlog)
 #endif /* TOPPERS_SVC_CALL */
 
 /*
- *  �����ƥ������ǽ�δؿ��ƽФ��ˤ��ƽФ����󥿥ե�����
+ *  システムログ機能の関数呼出しによる呼出しインタフェース
  */
 extern ER		_syslog_wri_log(uint_t prio, const SYSLOG *p_syslog,\
 														ID cdmid) throw();
@@ -174,7 +174,7 @@ extern ER		_syslog_ref_log(T_SYSLOG_RLOG *pk_rlog, ID cdmid) throw();
 #endif /* TOPPERS_SVC_CALL */
 
 /*
- *  �����ƥ������ǽ���ĥ�����ӥ�������Ȥ�����Ͽ���뤿������
+ *  システムログ機能を拡張サービスコールとして登録するための定義
  */
 extern ER_UINT	extsvc_syslog_wri_log(intptr_t prio, intptr_t p_syslog,
 									intptr_t par3, intptr_t par4,

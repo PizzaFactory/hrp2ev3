@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009-2012 by Matthias Ringwald
+ * Copyright (C) 2014 BlueKitchen GmbH
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -17,7 +17,7 @@
  *    personal benefit and not for any commercial purpose or for
  *    monetary gain.
  *
- * THIS SOFTWARE IS PROVIDED BY MATTHIAS RINGWALD AND CONTRIBUTORS
+ * THIS SOFTWARE IS PROVIDED BY BLUEKITCHEN GMBH AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
  * FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL MATTHIAS
@@ -30,7 +30,8 @@
  * THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Please inquire about commercial licensing options at btstack@ringwald.ch
+ * Please inquire about commercial licensing options at 
+ * contact@bluekitchen-gmbh.com
  *
  */
 
@@ -63,10 +64,10 @@ extern run_loop_t run_loop_cocoa;
 #endif
 
 // assert run loop initialized
-void run_loop_assert(void){
+static void run_loop_assert(void){
 #ifndef EMBEDDED
     if (!the_run_loop){
-        log_error("ERROR: run_loop function called before run_loop_init!\n");
+        log_error("ERROR: run_loop function called before run_loop_init!");
         exit(10);
     }
 #endif
@@ -136,7 +137,7 @@ void run_loop_execute() {
 void run_loop_init(RUN_LOOP_TYPE type){
 #ifndef EMBEDDED
     if (the_run_loop){
-        log_error("ERROR: run loop initialized twice!\n");
+        log_error("ERROR: run loop initialized twice!");
         exit(10);
     }
 #endif
@@ -158,7 +159,7 @@ void run_loop_init(RUN_LOOP_TYPE type){
 #endif
         default:
 #ifndef EMBEDDED
-            log_error("ERROR: invalid run loop type %u selected!\n", type);
+            log_error("ERROR: invalid run loop type %u selected!", type);
             exit(10);
 #endif
             break;

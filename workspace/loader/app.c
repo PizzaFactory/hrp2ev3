@@ -128,6 +128,7 @@ const CliMenuEntry* select_menu_entry(const CliMenu *cm) {
 #endif
 }
 
+#if 0 // Legacy code (Loader cannot use API anymore)
 void main_task(intptr_t unused) {
     while(!platform_is_ready());
     brick_misc_command(MISCCMD_SET_LED, TA_LED_GREEN);
@@ -146,7 +147,6 @@ void main_task(intptr_t unused) {
 	}
 }
 
-#if 0 // Legacy code (Loader cannot use API anymore)
 void main_task(intptr_t unused) {
 	ev3_sensors_init(NONE_SENSOR, NONE_SENSOR, NONE_SENSOR, NONE_SENSOR);
 	ev3_motors_init(NONE_MOTOR, NONE_MOTOR, NONE_MOTOR, NONE_MOTOR);

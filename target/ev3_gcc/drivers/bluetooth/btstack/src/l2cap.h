@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009-2012 by Matthias Ringwald
+ * Copyright (C) 2014 BlueKitchen GmbH
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -17,7 +17,7 @@
  *    personal benefit and not for any commercial purpose or for
  *    monetary gain.
  *
- * THIS SOFTWARE IS PROVIDED BY MATTHIAS RINGWALD AND CONTRIBUTORS
+ * THIS SOFTWARE IS PROVIDED BY BLUEKITCHEN GMBH AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
  * FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL MATTHIAS
@@ -30,7 +30,8 @@
  * THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Please inquire about commercial licensing options at btstack@ringwald.ch
+ * Please inquire about commercial licensing options at 
+ * contact@bluekitchen-gmbh.com
  *
  */
 
@@ -65,6 +66,9 @@ extern "C" {
 #define L2CAP_MINIMAL_MTU 48
 #define L2CAP_DEFAULT_MTU 672
     
+// Minimum/default MTU
+#define L2CAP_LE_DEFAULT_MTU  23
+
 // check L2CAP MTU
 #if (L2CAP_MINIMAL_MTU + L2CAP_HEADER_SIZE) > HCI_ACL_PAYLOAD_SIZE
 #error "HCI_ACL_PAYLOAD_SIZE too small for minimal L2CAP MTU of 48 bytes"
@@ -84,7 +88,7 @@ extern "C" {
 #define L2CAP_REJ_CMD_UNKNOWN               0x0000
     
 // Response Timeout eXpired
-#define L2CAP_RTX_TIMEOUT_MS 2000
+#define L2CAP_RTX_TIMEOUT_MS   10000
 
 // Extended Response Timeout eXpired
 #define L2CAP_ERTX_TIMEOUT_MS 120000
@@ -199,6 +203,9 @@ void l2cap_block_new_credits(uint8_t blocked);
 
 int  l2cap_can_send_packet_now(uint16_t local_cid);    // non-blocking UART write
 
+int  l2cap_can_send_fixed_channel_packet_now(uint16_t handle);
+
+// @deprecated use l2cap_can_send_fixed_channel_packet_now instead
 int  l2cap_can_send_connectionless_packet_now(void);
 
 int  l2cap_reserve_packet_buffer(void);
@@ -215,14 +222,13 @@ int l2cap_send_prepared_connectionless(uint16_t handle, uint16_t cid, uint16_t l
 void l2cap_register_fixed_channel(btstack_packet_handler_t packet_handler, uint16_t channel_id);
 
 uint16_t l2cap_max_mtu(void);
+uint16_t l2cap_max_le_mtu(void);
 
 int  l2cap_send_connectionless(uint16_t handle, uint16_t cid, uint8_t *data, uint16_t len);
 
-void l2cap_close_connection(void *connection);
-
 int l2cap_send_echo_request(uint16_t handle, uint8_t *data, uint16_t len);
 
-void l2cap_require_security_level_2_for_outgoing_sdp();  // testing
+void l2cap_require_security_level_2_for_outgoing_sdp(void);  // testing
 
 /** Embedded API **/
 
