@@ -216,7 +216,7 @@ handle_module_cfg_tab(T_LDM_CAN *ldm_can) {
 }
 
 
-ER _dmloader_ins_ldm(const uint8_t *mod_data, uint32_t mod_data_sz, ID ldm_can_id) {
+static ER _dmloader_ins_ldm(const uint8_t *mod_data, uint32_t mod_data_sz, ID ldm_can_id) {
 	if (ldm_can_id != 1) return E_ID;
 	T_LDM_CAN *ldm_can = &ldm_cans[ldm_can_id - 1];
 
@@ -274,7 +274,7 @@ error_exit:
     return ercd;
 }
 
-ER _dmloader_rmv_ldm(ID ldm_can_id) {
+static ER _dmloader_rmv_ldm(ID ldm_can_id) {
     // TODO: hard coded & should check ldm_can status
 	if (ldm_can_id != 1) return E_ID;
 	T_LDM_CAN *ldm_can = &ldm_cans[ldm_can_id - 1];
