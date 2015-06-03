@@ -272,6 +272,7 @@ endif
 INCLUDES += $(foreach dir,$(shell find $(APPLDIR) -type d -name include),-I$(dir))
 APPL_DIR += $(foreach dir,$(shell find $(APPLDIR) -type d -name src),$(dir))
 vpath %.c $(KERNEL_DIR) $(SYSSVC_DIR) $(APPL_DIR)
+vpath %.cpp $(KERNEL_DIR) $(SYSSVC_DIR) $(APPL_DIR)
 vpath %.S $(KERNEL_DIR) $(SYSSVC_DIR) $(APPL_DIR)
 vpath %.cfg $(APPL_DIR)
 
