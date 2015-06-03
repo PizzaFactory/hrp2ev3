@@ -1,0 +1,22 @@
+#
+#  Makefile for the application loader
+#
+
+REALCLEAN_FILES += \
+	apploader.c \
+	apploader.c.bak \
+   	apploader.cfg \
+   	apploader.cfg.bak \
+	apploader.h \
+	apploader.h.bak \
+	Makefile \
+	Makefile.bak
+   
+# Add all 'include' and 'src' in $(APPLDIR)
+INCLUDES += $(foreach dir,$(shell find $(APPLDIR) -type d -name include),-I$(dir))
+KERNEL_DIR += $(foreach dir,$(shell find $(APPLDIR) -type d -name src),$(dir))
+
+include $(APPLDIR)/loader/Makefile
+include $(APPLDIR)/zmodem/Makefile
+
+include $(TARGETDIR)/Makefile.ev3
