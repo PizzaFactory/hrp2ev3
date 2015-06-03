@@ -84,7 +84,7 @@ void initialize_bluetooth_dri(intptr_t unused) {
 }
 
 void bluetooth_task(intptr_t unused) {
-#ifdef DEBUG
+#if defined(DEBUG)
 	syslog(LOG_DEBUG, "[bluetooth] Start main task.");
 #endif
 
@@ -189,9 +189,9 @@ int hal_uart_dma_set_baud(uint32_t baud_rate) {
 }
 
 void hal_uart_dma_send_block(const uint8_t *data, uint16_t len) {
-#ifdef DEBUG
     assert(tx_size == 0);
     assert(len > 0);
+#if defined(DEBUG)
     syslog(LOG_DEBUG, "[bluetooth] Prepare to send a block with %d bytes.", len);
 #endif
     tx_ptr = data;
@@ -236,7 +236,7 @@ void bluetooth_uart_isr() {
 			rx_size--;
 		}
 		if (rx_size == 0) {
-#ifdef DEBUG
+#if defined(DEBUG)
 			syslog(LOG_DEBUG, "[bluetooth] Finished receiving a block.");
 #endif
 			rx_cb();
@@ -253,7 +253,7 @@ void bluetooth_uart_isr() {
 #endif
         p_uart->RBR_THR = *tx_ptr++;
         if(--tx_size == 0) {
-#ifdef DEBUG
+#if defined(DEBUG)
         	syslog(LOG_DEBUG, "[bluetooth] Finished sending a block.");
 #endif
             p_uart->IER &= ~0x2;
