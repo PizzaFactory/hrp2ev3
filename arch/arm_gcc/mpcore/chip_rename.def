@@ -1,0 +1,15 @@
+# chip_config.c
+inh_tbl
+default_int_handler
+x_config_int
+chip_exit
+chip_initialize
+
+# mpcore.c
+mpcore_smp_mode_enable
+
+
+# kernel_cfg.c 
+cfgint_tbl
+
+INCLUDE "arm_gcc/common/core"

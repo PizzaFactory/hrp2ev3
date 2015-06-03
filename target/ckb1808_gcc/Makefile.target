@@ -1,0 +1,10 @@
+#
+#		Makefile のターゲット依存部（CKB-1808用）
+#
+
+#
+# Include EV3's Makefile
+#
+include $(TARGETDIR)/../ev3_gcc/Makefile.target
+
+BOARD = CKB-1808

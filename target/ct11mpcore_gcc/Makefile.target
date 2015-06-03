@@ -1,0 +1,109 @@
+#
+#		Makefileのターゲット依存部（CT11MPcore用）
+#
+#  $Id: Makefile.target 686 2012-07-08 14:23:40Z ertl-hiro $
+# 
+
+
+#
+#  ボード名の定義
+#
+BOARD = ct11mpcore
+
+#
+#  コアの種類の定義
+#
+MPCORE_TYPE = ARM11
+
+#
+#  コアの指定
+#  
+CORE = CORE0
+
+#
+#  コンパイルオプション
+#
+INCLUDES := $(INCLUDES) -I$(TARGETDIR)
+COPTS := $(COPTS) -mlittle-endian -D$(CORE)
+LDFLAGS := $(LDFLAGS) -mlittle-endian
+CFG1_OUT_LDFLAGS := $(CFG1_OUT_LDFLAGS) -mlittle-endian
+CFG2_OUT_LDFLAGS := $(CFG2_OUT_LDFLAGS) -mlittle-endian
+CFG3_OUT_LDFLAGS := $(CFG3_OUT_LDFLAGS) -mlittle-endian
+
+#
+#  カーネルに関する定義
+#
+KERNEL_DIR := $(KERNEL_DIR) $(TARGETDIR)
+KERNEL_COBJS := $(KERNEL_COBJS) ct11mpcore.o target_config.o
+
+#
+#  システムサービスに関する定義
+#
+SYSSVC_DIR := $(SYSSVC_DIR) $(SRCDIR)/pdic/arm_primecell_uart
+SYSSVC_COBJS := $(SYSSVC_COBJS) target_serial.o arm_primecell_uart.o
+
+#
+#  コンフィギュレータ関係の変数の定義
+#
+CFG_TABS := $(CFG_TABS) --cfg1-def-table $(TARGETDIR)/target_def.csv
+
+#
+#  トレースログ記録のサンプルコードに関する定義
+#
+ifeq ($(ENABLE_TRACE),true)
+      COPTS := $(COPTS) -DTOPPERS_ENABLE_TRACE
+      KERNEL_DIR := $(KERNEL_DIR) $(SRCDIR)/arch/logtrace
+      KERNEL_COBJS := $(KERNEL_COBJS) trace_config.o trace_dump.o
+endif
+
+#
+#  GNU開発環境のターゲットアーキテクチャの定義
+#
+GCC_TARGET = arm-none-eabi
+
+#
+#  各セグメントの開始アドレスの定義
+#
+#  HRP2カーネルでは，target_mem.cfgで定義する．
+#
+
+#
+#  リンカスクリプトの定義
+#
+CFG1_OUT_LDSCRIPT = $(SRCDIR)/arch/arm_gcc/common/cfg1_out.ld
+CFG2_OUT_LDSCRIPT = cfg2_out.ld
+CFG3_OUT_LDSCRIPT = cfg3_out.ld
+LDSCRIPT = ldscript.ld
+CLEAN_FILES := $(CLEAN_FILES) $(CFG2_OUT_LDSCRIPT) $(CFG3_OUT_LDSCRIPT) $(LDSCRIPT)
+
+#
+#  スタートアップモジュールに関する定義
+#
+#  START_OBJSをstart.oに設定し，LDFLAGSに-nostdlibを追加する．
+#
+START_OBJS = start.o
+
+$(START_OBJS): %.o: %.S
+	$(CC) -c $(CFLAGS) $(KERNEL_CFLAGS) $<
+
+$(START_OBJS:.o=.d): %.d: %.S
+	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) \
+		-O "$(CFLAGS) $(KERNEL_CFLAGS)" $< >> Makefile.depend
+
+LDFLAGS := -nostdlib $(LDFLAGS)
+CFG1_OUT_LDFLAGS := -nostdlib $(CFG1_OUT_LDFLAGS)
+CFG2_OUT_LDFLAGS := -nostdlib $(CFG2_OUT_LDFLAGS)
+CFG3_OUT_LDFLAGS := -nostdlib $(CFG3_OUT_LDFLAGS)
+
+#
+#  依存関係の定義
+#
+cfg1_out.c: $(TARGETDIR)/target_def.csv
+kernel_cfg.timestamp: $(TARGETDIR)/target.tf
+kernel_mem3.c: $(TARGETDIR)/target_opt.tf
+kernel_mem.c: $(TARGETDIR)/target_mem.tf
+
+#
+#  チップ依存部のインクルード
+#
+include $(SRCDIR)/arch/arm_gcc/mpcore/Makefile.chip

@@ -1,0 +1,5 @@
+APPL_COBJS += 
+
+APPL_CXXOBJ +=
+
+SRCLANG := c++
