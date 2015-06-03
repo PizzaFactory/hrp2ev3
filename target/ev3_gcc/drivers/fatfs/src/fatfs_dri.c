@@ -16,11 +16,11 @@
 extern void initialize_mmcsd(); // TODO: Should be somewhere else. -- ertl-liyixiao
 
 static void initialize(intptr_t unused) {
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
     syslog(LOG_NOTICE, "[fatfs_dri] start initialization.");
 #endif
 	initialize_mmcsd();
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
     syslog(LOG_NOTICE, "[fatfs_dri] initialized.");
 #endif
 }

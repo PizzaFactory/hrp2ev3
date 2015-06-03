@@ -316,7 +316,7 @@ ER_UINT extsvc_newlib_write_r(intptr_t ptr, intptr_t fd, intptr_t buf, intptr_t 
 
 		UINT br;
 		FRESULT res = f_write(&fcb->fil, _buf, cnt, &br);
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
 		syslog(LOG_ERROR, "%s(): Write %d bytes from file (fd=%d)", __FUNCTION__, br, fd);
 #endif
 

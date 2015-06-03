@@ -167,7 +167,7 @@ static void initialize(intptr_t unused) {
     }
     global_brick_info.motor_data = driver_data_motor;
     global_brick_info.motor_ready = &ReadyStatus;
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
     syslog(LOG_NOTICE, "motor_dri initialized.");
 #endif
 }

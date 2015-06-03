@@ -70,7 +70,7 @@ static void initialize(intptr_t unused) {
     hardware_initialize();
     SVC_PERROR(act_tsk(BT_TSK));
     SVC_PERROR(act_tsk(BT_QOS_TSK));
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
     syslog(LOG_NOTICE, "bluetooth_dri initialized.");
 #endif
 }

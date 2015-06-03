@@ -808,7 +808,7 @@ static void initialize(intptr_t unused) {
 	    driver_data_uart_sensor[i].status = &(pUart->Status[i]);
 	}
 	global_brick_info.uart_sensors = driver_data_uart_sensor;
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
     syslog(LOG_NOTICE, "uart_dri initialized.");
 #endif
 }

@@ -774,7 +774,7 @@ void MMCSDIsr(intptr_t unused)
   {
 //    cmdTimeout = 1;
 	  iset_flg(MMCSD_ISR_FLG, MMCSD_ISR_FLGPTN_CMDTIMEOUT);
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
     syslog(LOG_ERROR, "%s(): cmdTimeout!!", __FUNCTION__);
 #endif
   }

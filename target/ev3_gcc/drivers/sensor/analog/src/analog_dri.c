@@ -49,7 +49,7 @@ static void initialize(intptr_t unused) {
     global_brick_info.battery_temp = &(pAnalog->BatteryTemp);
     global_brick_info.battery_voltage = &(pAnalog->Cell123456);
 
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
     syslog(LOG_NOTICE, "analog_dri initialized.");
 #endif
 }

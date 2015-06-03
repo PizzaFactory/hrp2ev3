@@ -137,7 +137,7 @@ handle_module_cfg_tab(T_LDM_CAN *ldm_can) {
 			    dtex.texrtn = app_tex_rtn;
 			    ercd = def_tex(ercd, &dtex);
 			    assert(ercd == E_OK);
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
 			    syslog(LOG_NOTICE, "%s(): Task (tid = %d) created.", __FUNCTION__, *(ID*)ent->retvalptr);
 #endif
 
@@ -157,7 +157,7 @@ handle_module_cfg_tab(T_LDM_CAN *ldm_can) {
                 // Store ID
                 *(ID*)ent->retvalptr = ercd;
 
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
                 syslog(LOG_NOTICE, "%s(): Semaphore (id = %d) is created.", __FUNCTION__, *(ID*)ent->retvalptr);
 #endif
 
@@ -177,7 +177,7 @@ handle_module_cfg_tab(T_LDM_CAN *ldm_can) {
                 // Store ID
                 *(ID*)ent->retvalptr = ercd;
 
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
                 syslog(LOG_NOTICE, "%s(): Event flag (id = %d) is created.", __FUNCTION__, *(ID*)ent->retvalptr);
 #endif
 

@@ -496,8 +496,8 @@ void MMCSDCommandSend(unsigned int baseAddr, unsigned int cmd,
 		cmd |= MMCSD_MMCCMD_DMATRIG;
 
 		/* Set the command */
-#if defined(DEBUG) || 1
-  syslog(LOG_ERROR, "%s(): Send CMD%d, MMCSD_MMCCMD: 0x%x", __FUNCTION__, cmd & 0x3F, cmd);
+#if defined(DEBUG)
+		syslog(LOG_ERROR, "%s(): Send CMD%d, MMCSD_MMCCMD: 0x%x", __FUNCTION__, cmd & 0x3F, cmd);
 #endif
 		HWREG(baseAddr + MMCSD_MMCCMD) = cmd;
 

@@ -131,7 +131,7 @@ static void initialize(intptr_t unused) {
 	global_brick_info.app_heap = appheap;
 	global_brick_info.button_pressed = button_pressed;
 	current_button_flag = user_button_flag;
-#if defined(DEBUG) || 1
+#if defined(DEBUG)
     syslog(LOG_NOTICE, "brick_dri initialized.");
 #endif
 }

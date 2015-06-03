@@ -25,8 +25,8 @@ static void prepare_next_sound_chunk();
 static void initialize(intptr_t unused) {
 	ModuleInit();
 	Level = 10;
-#if defined(DEBUG) || 1
-    syslog(LOG_NOTICE, "sound_dri initialized.");
+#if defined(DEBUG)
+	syslog(LOG_NOTICE, "sound_dri initialized.");
 #endif
 }
 
