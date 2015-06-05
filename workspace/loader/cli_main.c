@@ -78,7 +78,7 @@ void load_bootapp() {
 
 static
 void test_sd_loader(intptr_t unused) {
-#define TMAX_FILE_NUM (9)
+#define TMAX_FILE_NUM (100)
 
 	static FILINFO fileinfos[TMAX_FILE_NUM];
 	static char    filenames[TMAX_FILE_NUM][_MAX_LFN + 1];
@@ -107,6 +107,20 @@ void test_sd_loader(intptr_t unused) {
 		else if (!(fileinfos[filenos].fattrib & AM_DIR)) { // Normal file
 			if (fileinfos[filenos].lfname[0] == '\0')
 				strcpy(fileinfos[filenos].lfname, fileinfos[filenos].fname);
+
+            // Check extension (hard-coded)
+            static const char *non_app_exts[] = { ".rb", ".wav", NULL };
+            const char *ext = strrchr(fileinfos[filenos].lfname, '.');
+            if (ext != NULL) {
+                bool_t not_app = false;
+                for (const char **non_app_ext = non_app_exts; *non_app_ext != NULL; non_app_ext++)
+                    if (strcasecmp(*non_app_ext, ext) == 0) {
+                        not_app = true;
+                        break;
+                    }
+                if (not_app) continue; // ignore this file
+            }
+
 			filenos++;
 		}
 	}
