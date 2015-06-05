@@ -5,7 +5,7 @@ $       Toyohashi Open Platform for Embedded Real-Time Systems/
 $       High Reliable system Profile Kernel
 $
 $   Copyright (C) 2007 by TAKAGI Nobuhisa
-$   Copyright (C) 2007-2014 by Embedded and Real-Time Systems Laboratory
+$   Copyright (C) 2007-2015 by Embedded and Real-Time Systems Laboratory
 $               Graduate School of Information Science, Nagoya Univ., JAPAN
 $  
 $   上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
@@ -37,7 +37,7 @@ $   に対する適合性も含めて，いかなる保証も行わない．ま�
 $   アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
 $   の責任を負わない．
 $
-$   $Id: kernel.tf 1019 2014-11-24 00:25:32Z ertl-hiro $
+$   $Id$
 $
 $ =====================================================================
 
@@ -70,7 +70,6 @@ $NL$
 #define TNUM_DTQID	$LENGTH(DTQ.ID_LIST)$$NL$
 #define TNUM_PDQID	$LENGTH(PDQ.ID_LIST)$$NL$
 #define TNUM_MTXID	$LENGTH(MTX.ID_LIST)$$NL$
-#define TNUM_MBFID	$LENGTH(MBF.ID_LIST)$$NL$
 #define TNUM_MPFID	$LENGTH(MPF.ID_LIST)$$NL$
 #define TNUM_CYCID	$LENGTH(CYC.ID_LIST)$$NL$
 #define TNUM_ALMID	$LENGTH(ALM.ID_LIST)$$NL$
@@ -96,9 +95,6 @@ $FOREACH id PDQ.ID_LIST$
 	#define $id$	$+id$$NL$
 $END$
 $FOREACH id MTX.ID_LIST$
-	#define $id$	$+id$$NL$
-$END$
-$FOREACH id MBF.ID_LIST$
 	#define $id$	$+id$$NL$
 $END$
 $FOREACH id MPF.ID_LIST$
@@ -550,6 +546,11 @@ $			// メモリオブジェクト属性にTA_NOWRITEを設定する．
 	$ELSE$
 $		// LNK_SECの場合
 
+$		// 保護ドメインに所属している場合（E_RSATR）
+		$IF LENGTH(SEC.DOMAIN[sec])$
+			$ERROR SEC.TEXT_LINE[sec]$E_RSATR: $FORMAT(_("%1% `%2%\' belongs to a protection domain in %3%"), "section", UNESCSTR(SEC.SECTION[sec]), "LNK_SEC")$$END$
+		$END$
+
 $		// 配置するセクション情報の生成
 		$numls = numls + 1$
 		$LNKSEC.MEMREG[numls] = memreg$
@@ -686,9 +687,6 @@ $IF USE_EXTERNAL_ID$
 		const ID $id$_id$SPC$=$SPC$$+id$;$NL$
 	$END$
 	$FOREACH id MTX.ID_LIST$
-		const ID $id$_id$SPC$=$SPC$$+id$;$NL$
-	$END$
-	$FOREACH id MBF.ID_LIST$
 		const ID $id$_id$SPC$=$SPC$$+id$;$NL$
 	$END$
 	$FOREACH id MPF.ID_LIST$
@@ -1355,84 +1353,6 @@ $	// ミューテックス管理ブロック
 $ELSE$
 	TOPPERS_EMPTY_LABEL(const MTXINIB, _kernel_mtxinib_table);$NL$
 	TOPPERS_EMPTY_LABEL(MTXCB, _kernel_mtxcb_table);$NL$
-$END$$NL$
-
-$
-$  メッセージバッファ
-$
-/*$NL$
-$SPC$*  Message Buffer Functions$NL$
-$SPC$*/$NL$
-$NL$
-
-$ メッセージバッファID番号の最大値
-const ID _kernel_tmax_mbfid = (TMIN_MBFID + TNUM_MBFID - 1);$NL$
-$NL$
-
-$IF LENGTH(MBF.ID_LIST)$
-$	// エラーチェック
-	$FOREACH mbfid MBF.ID_LIST$
-$		// 保護ドメインに所属していない場合は無所属とする
-		$IF !LENGTH(MBF.DOMAIN[mbfid])$
-			$MBF.DOMAIN[mbfid] = TDOM_NONE$
-		$END$
-
-$		// mbfatrが（［TA_TPRI］）でない場合（E_RSATR）
-		$IF (MBF.MBFATR[mbfid] & ~TA_TPRI) != 0$
-			$ERROR MBF.TEXT_LINE[mbfid]$E_RSATR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "mbfatr", MBF.MBFATR[mbfid], mbfid, "CRE_MBF")$$END$
-		$END$
-
-$		// maxmszが0以下の場合（E_PAR）
-		$IF MBF.MAXMSZ[mbfid] <= 0$
-			$ERROR MBF.TEXT_LINE[mbfid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "maxmsz", MBF.MAXMSZ[mbfid], mbfid, "CRE_MBF")$$END$
-		$END$
-
-$		// mbfszが負の場合（E_PAR）
-		$IF MBF.MBFSZ[mbfid] < 0$
-			$ERROR MBF.TEXT_LINE[mbfid]$E_PAR: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "mbfsz", MBF.MBFSZ[mbfid], mbfid, "CRE_MBF")$$END$
-		$END$
-
-$		// mbfmbがNULLでない場合（E_NOSPT）
-		$IF !EQ(MBF.MBFMB[mbfid], "NULL")$
-			$ERROR MBF.TEXT_LINE[mbfid]$E_NOSPT: $FORMAT(_("illegal %1% `%2%\' of `%3%\' in %4%"), "mbfmb", MBF.MBFMB[mbfid], mbfid, "CRE_MBF")$$END$
-		$END$
-
-$		// SAC_MBFがCRE_MBFと異なる保護ドメインに属する場合（E_RSATR）
-		$IF LENGTH(MBF.ACPTN1[mbfid]) && ALT(SAC_MBF.DOMAIN[mbfid], TDOM_NONE) != MBF.DOMAIN[mbfid]$
-			$ERROR SAC_MBF.TEXT_LINE[mbfid]$E_RSATR: $FORMAT(_("%1% for `%2%\' must belong to the same protection domain with %3%"), "SAC_MBF", mbfid, "CRE_MBF")$$END$
-		$END$
-
-$		// メッセージバッファ管理領域
-		$IF MBF.MBFSZ[mbfid]$
-			static uint_t _kernel_mbfmb_$mbfid$[TOPPERS_COUNT_SZ($MBF.MBFSZ[mbfid]$, sizeof(uint_t))];$NL$
-		$END$
-	$END$
-
-$	// メッセージバッファ初期化ブロックの生成
-	const MBFINIB _kernel_mbfinib_table[TNUM_MBFID] = {$NL$
-	$JOINEACH mbfid MBF.ID_LIST ",\n"$
-		$TAB${ ($MBF.MBFATR[mbfid]$), ($MBF.MAXMSZ[mbfid]$),
-		$SPC$TOPPERS_ROUND_SZ($MBF.MBFSZ[mbfid]$, sizeof(uint_t)),
-		$IF MBF.MBFSZ[mbfid]$
-			$SPC$(_kernel_mbfmb_$mbfid$),
-		$ELSE$
-			$SPC$NULL,
-		$END$
-		$IF LENGTH(MBF.ACPTN1[mbfid])$
-			$SPC${ $MBF.ACPTN1[mbfid]$, $MBF.ACPTN2[mbfid]$, $MBF.ACPTN3[mbfid]$, $MBF.ACPTN4[mbfid]$ }
-		$ELSE$
-			$DEFAULT_ACVCT[MBF.DOMAIN[mbfid]]$
-		$END$
-		}
-	$END$$NL$
-	};$NL$
-	$NL$
-
-$	// メッセージバッファ管理ブロック
-	MBFCB _kernel_mbfcb_table[TNUM_MBFID];$NL$
-$ELSE$
-	TOPPERS_EMPTY_LABEL(const MBFINIB, _kernel_mbfinib_table);$NL$
-	TOPPERS_EMPTY_LABEL(MBFCB, _kernel_mbfcb_table);$NL$
 $END$$NL$
 
 $
@@ -2227,7 +2147,6 @@ $IF LENGTH(FLG.ID_LIST)$$TAB$_kernel_initialize_eventflag();$NL$$END$
 $IF LENGTH(DTQ.ID_LIST)$$TAB$_kernel_initialize_dataqueue();$NL$$END$
 $IF LENGTH(PDQ.ID_LIST)$$TAB$_kernel_initialize_pridataq();$NL$$END$
 $IF LENGTH(MTX.ID_LIST)$$TAB$_kernel_initialize_mutex();$NL$$END$
-$IF LENGTH(MBF.ID_LIST)$$TAB$_kernel_initialize_messagebuf();$NL$$END$
 $IF LENGTH(MPF.ID_LIST)$$TAB$_kernel_initialize_mempfix();$NL$$END$
 $IF LENGTH(CYC.ID_LIST)$$TAB$_kernel_initialize_cyclic();$NL$$END$
 $IF LENGTH(ALM.ID_LIST)$$TAB$_kernel_initialize_alarm();$NL$$END$

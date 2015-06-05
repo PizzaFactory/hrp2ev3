@@ -1,5 +1,5 @@
 
-	TOPPERS/HRP2 Kernel（Release 2.2.0）
+	TOPPERS/HRP2 Kernel（Release 2.2.1）
 		Toyohashi Open Platform for Embedded Real-Time Systems/
 		Advanced Standard Profile Kernel
 
