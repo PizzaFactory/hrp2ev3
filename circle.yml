@@ -4,4 +4,4 @@ machine:
 
 test:
   override:
-    - docker run --rm -t pizzafactory/hrp2ev3
+    - docker run -t pizzafactory/hrp2ev3
