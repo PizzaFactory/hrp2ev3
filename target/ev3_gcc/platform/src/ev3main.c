@@ -9,7 +9,7 @@
 #include "motor_dri.h"
 #include "uart_dri.h"
 #include "analog_dri.h"
-#include "ev3api.h"
+//#include "ev3api.h"
 
 #include <kernel.h>
 #include <t_stdlib.h>
@@ -18,7 +18,7 @@
 #include "target_syssvc.h"
 #include "target_serial.h"
 #include "kernel_cfg.h"
-#include "platform.h"
+#include "csl.h"
 
 #define TMAX_DRI_NUM (16)
 static ev3_driver_t drivers[TMAX_DRI_NUM];
@@ -40,7 +40,20 @@ void ev3_main_task(intptr_t exinf) {
     /**
      * Load configurations
      */
+    extern void ev3rt_load_configuration(); // TODO: extern from ev3rt_config.c
     ev3rt_load_configuration();
+
+    if ((*ev3rt_sensor_port_1_disabled)) {
+        T_CISR port1_isr;
+        port1_isr.isratr = TA_NULL;
+        port1_isr.exinf  = INTNO_UART_PORT1;
+        port1_isr.intno  = INTNO_UART_PORT1;
+        port1_isr.isr    = uart_sio_isr;
+        port1_isr.isrpri = TMIN_ISRPRI;
+        ercd = acre_isr(&port1_isr);
+        assert(ercd > 0);
+    }
+    serial_opn_por(SIO_PORT_UART);
 
     /**
      * Initialize LCD
@@ -78,7 +91,7 @@ void ev3_main_task(intptr_t exinf) {
 	syslog(LOG_NOTICE, "");
 	syslog(LOG_NOTICE, "");
 	syslog(LOG_NOTICE, "   _____   ______ ___  ______");
-	syslog(LOG_NOTICE, "  / __/ | / /_  // _ \/_  __/");
+	syslog(LOG_NOTICE, "  / __/ | / /_  // _ \\/_  __/");
 	syslog(LOG_NOTICE, " / _/ | |/ //_ </ , _/ / /");
 	syslog(LOG_NOTICE, "/___/ |___/____/_/|_| /_/");
 	syslog(LOG_NOTICE, "=============================");

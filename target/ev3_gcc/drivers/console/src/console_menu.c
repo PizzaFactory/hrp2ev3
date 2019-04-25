@@ -14,12 +14,21 @@ typedef struct {
     intptr_t    exinf;
 } MenuEntry;
 
+static inline
+void ev3rt_console_start_app() {
+	ev3rt_console_set_visibility(false);
+	platform_pause_application(false);
+}
+
 #if defined(BUILD_LOADER)
+#include "apploader.h"
+
 static void load_app(intptr_t unused) {
 	ER ercd;
 
 	on_display_fb = lcd_screen_fb;
-	application_unload();
+	application_terminate_request();
+	application_terminate_wait();
 	platform_pause_application(true);
 	ercd = application_load_menu();
 	memset(lcd_screen_fb->pixels, 0, BITMAP_PIXELS_SIZE(lcd_screen_fb->width, lcd_screen_fb->height));

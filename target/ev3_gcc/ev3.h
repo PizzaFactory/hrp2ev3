@@ -38,15 +38,18 @@
 #define INTNO_UART_PORT2 (UART0_INT)
 #define INTNO_UART_PORT3 (SUART2_INT)
 #define INTNO_UART_PORT4 (SUART1_INT)
+#define INTNO_I2C_TIMER  (T64P1_TINT12)
 
 /**
  * Interrupt priority
  */
 //#define INTPRI_UART_SIO   (TMIN_INTPRI + 1)
+#define INTPRI_I2C_TIMER   (TMIN_INTPRI)
 #define INTPRI_UART_PORT1 (TMIN_INTPRI)
 #define INTPRI_UART_PORT2 (TMIN_INTPRI)
 #define INTPRI_UART_PORT3 (TMIN_INTPRI)
 #define INTPRI_UART_PORT4 (TMIN_INTPRI)
+#define INTPRI_USBMSC     (TMIN_INTPRI + 1)
 #define INTPRI_BLUETOOTH  (TMIN_INTPRI + 1)
 #define INTPRI_LCD_SPI    (TMIN_INTPRI + 1)
 
@@ -54,8 +57,10 @@
  * Task priority
  */
 #define TPRI_INIT_TASK       (TMIN_TPRI)
+#define TPRI_USBMSC          (TMIN_TPRI + 1)
 #define TPRI_BLUETOOTH_QOS   (TMIN_TPRI + 1)
 #define TPRI_BLUETOOTH_HIGH  (TMIN_TPRI + 2)
+#define TPRI_APP_TERM_TASK   (TMIN_TPRI + 3)
 #define TPRI_EV3_LCD_TASK    (TMIN_TPRI + 3)
 #define TPRI_EV3_MONITOR     (TMIN_TPRI + 4)
 #define TPRI_PLATFORM_BUSY   (TMIN_TPRI + 5)
@@ -78,11 +83,6 @@
 #define APP_HEAP_SIZE    (1024 * 1024) //!< Heap size for dynamic memory allocation in TDOM_APP
 
 /**
- * Whether use UART1 (i.e. Port1) as a sensor port
- */
-#define ENABLE_UART1_SENSOR (false)
-
-/**
  * Default SIO Port for syslog etc.
  */
 #define SIO_PORT_DEFAULT SIO_PORT_LCD
@@ -103,6 +103,9 @@
 #define TMAX_APP_TSK_NUM     (32)          //!< Maximum number of tasks in a loadable application module
 #define TMAX_APP_SEM_NUM     (16)          //!< Maximum number of semaphores in a loadable application module
 #define TMAX_APP_FLG_NUM     (16)          //!< Maximum number of event flags in a loadable application module
+#define TMAX_APP_DTQ_NUM     (16)          //!< Maximum number of data queues in a loadable application module
+#define TMAX_APP_PDQ_NUM     (16)          //!< Maximum number of priority data queues in a loadable application module
+#define TMAX_APP_MTX_NUM     (16)          //!< Maximum number of mutexes in a loadable application module
 #define TMAX_APP_TEXT_SIZE   (1024 * 1024) //!< Maximum size of the text section in a loadable application module
 #define TMAX_APP_DATA_SIZE   (1024 * 1024) //!< Maximum size of the data section in a loadable application module
 #define TMAX_APP_BINARY_SIZE (1024 * 1024) //!< Maximum size of a loadable application module's binary file
