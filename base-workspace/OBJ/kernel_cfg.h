@@ -10,7 +10,7 @@
 #define TNUM_PDQID	16
 #define TNUM_MTXID	21
 #define TNUM_MPFID	4
-#define TNUM_CYCID	20
+#define TNUM_CYCID	21
 #define TNUM_ALMID	1
 #define TNUM_ISRID	1
 
@@ -56,6 +56,7 @@
 #define DBSIO_TEST_SPP_MASTER_SIO_CYC	2
 #define BRICK_BTN_CYC	3
 #define BT_DMA_CYC	4
+#define EV3_BATTERY_MONITOR_CYC	5
 #define SND_STOP_ALM	1
 
 #endif /* TOPPERS_KERNEL_CFG_H */

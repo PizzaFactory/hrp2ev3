@@ -200,7 +200,7 @@ MPFCB _kernel_mpfcb_table[TNUM_MPFID];
  *  Cyclic Handler Functions
  */
 
-#define TNUM_SCYCID	4
+#define TNUM_SCYCID	5
 
 const ID _kernel_tmax_cycid = (TMIN_CYCID + TNUM_CYCID - 1);
 const ID _kernel_tmax_scycid = (TMIN_CYCID + TNUM_SCYCID - 1);
@@ -209,7 +209,8 @@ const CYCINIB _kernel_cycinib_table[TNUM_SCYCID] = {
 	{ (TA_STA), (intptr_t)(NULL), (bt_sio_cyc), (5), (1), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
 	{ (TA_STA), (intptr_t)(&dbsio_spp_master_test), (dbsio_cyc), (5), (1), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
 	{ (TA_NULL), (intptr_t)(0), (brick_button_cyc), (10), (0), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
-	{ (TA_NULL), (intptr_t)(0), (bluetooth_dma_cyc), (1), (0), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }}
+	{ (TA_NULL), (intptr_t)(0), (bluetooth_dma_cyc), (1), (0), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
+	{ (TA_NULL), (intptr_t)(NULL), (ev3_battery_monitor_cyc), (5000), (0), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }}
 };
 
 CYCINIB _kernel_acycinib_table[16];
