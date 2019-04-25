@@ -12,7 +12,7 @@
 
 #include "app.h"
 #include "csl.h"
-#include "chip_timer.h"
+#include "target_timer.h"
 #include "syssvc/syslog.h"
 #include "syssvc/banner.h"
 #include "target_serial.h"

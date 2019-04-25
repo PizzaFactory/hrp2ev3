@@ -12,7 +12,7 @@
 
 #include "app.h"
 #include "csl.h"
-#include "chip_timer.h"
+#include "target_timer.h"
 #include "syssvc/syslog.h"
 #include "syssvc/banner.h"
 #include "target_serial.h"
@@ -473,22 +473,22 @@ const uint_t _kernel_tnum_intno = TNUM_INTNO;
 
 const INTINIB _kernel_intinib_table[TNUM_INTNO] = {
 	{ (INTNO_TIMER), (TA_ENAINT|INTATR_TIMER), (INTPRI_TIMER) },
-	{ (GPIO_B0INT), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (GPIO_B1INT), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (GPIO_B2INT), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (GPIO_B3INT), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (GPIO_B4INT), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (GPIO_B5INT), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (GPIO_B6INT), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (GPIO_B7INT), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (GPIO_B8INT), (TA_ENAINT), (TMIN_INTPRI) },
+	{ (GPIO_B0INT), (TA_ENAINT), (INTPRI_GPIO) },
+	{ (GPIO_B1INT), (TA_ENAINT), (INTPRI_GPIO) },
+	{ (GPIO_B2INT), (TA_ENAINT), (INTPRI_GPIO) },
+	{ (GPIO_B3INT), (TA_ENAINT), (INTPRI_GPIO) },
+	{ (GPIO_B4INT), (TA_ENAINT), (INTPRI_GPIO) },
+	{ (GPIO_B5INT), (TA_ENAINT), (INTPRI_GPIO) },
+	{ (GPIO_B6INT), (TA_ENAINT), (INTPRI_GPIO) },
+	{ (GPIO_B7INT), (TA_ENAINT), (INTPRI_GPIO) },
+	{ (GPIO_B8INT), (TA_ENAINT), (INTPRI_GPIO) },
 	{ (INTNO_I2C_TIMER), (TA_ENAINT), (INTPRI_I2C_TIMER) },
 	{ (INTNO_UART_PORT1), (TA_NULL), (INTPRI_UART_PORT1) },
 	{ (INTNO_UART_PORT2), (TA_NULL), (INTPRI_UART_PORT2) },
 	{ (INTNO_UART_PORT3), (TA_NULL), (INTPRI_UART_PORT3) },
 	{ (INTNO_UART_PORT4), (TA_NULL), (INTPRI_UART_PORT4) },
-	{ (SYS_INT_CCINT0), (TA_ENAINT), (TMIN_INTPRI) },
-	{ (SYS_INT_CCERRINT), (TA_ENAINT), (TMIN_INTPRI) },
+	{ (SYS_INT_CCINT0), (TA_ENAINT), (INTPRI_EDMA3) },
+	{ (SYS_INT_CCERRINT), (TA_ENAINT), (INTPRI_EDMA3) },
 	{ (SYS_INT_USB0), (TA_ENAINT), (INTPRI_USBMSC) }
 };
 

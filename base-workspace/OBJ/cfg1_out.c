@@ -3,7 +3,7 @@
 #include "kernel/kernel_int.h"
 #include "app.h"
 #include "csl.h"
-#include "chip_timer.h"
+#include "target_timer.h"
 #include "syssvc/syslog.h"
 #include "syssvc/banner.h"
 #include "target_serial.h"
@@ -744,7 +744,7 @@ const unsigned_t TOPPERS_cfg_valueof_mematr_37 = ( unsigned_t )( TA_IODEV|TA_MEM
 #if 0 
 
 #endif
-/* #include "chip_timer.h" */
+/* #include "target_timer.h" */
 
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
@@ -1220,31 +1220,31 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 const unsigned_t TOPPERS_cfg_valueof_DOMAIN_102 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_102 = 102;
-const unsigned_t TOPPERS_cfg_valueof_intno_102 = ( unsigned_t )( GPIO_B0INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_102 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_102 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_103 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_102 = ( unsigned_t )( GPIO_B0INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_102 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_102 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_103 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 9 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_103 = 103;
-const unsigned_t TOPPERS_cfg_valueof_intno_103 = ( unsigned_t )( GPIO_B1INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_103 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_103 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_104 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_103 = ( unsigned_t )( GPIO_B1INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_103 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_103 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_104 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_104 = 104;
-const unsigned_t TOPPERS_cfg_valueof_intno_104 = ( unsigned_t )( GPIO_B2INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_104 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_104 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_105 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_104 = ( unsigned_t )( GPIO_B2INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_104 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_104 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_105 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_105 = 105;
-const unsigned_t TOPPERS_cfg_valueof_intno_105 = ( unsigned_t )( GPIO_B3INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_105 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_105 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_106 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_105 = ( unsigned_t )( GPIO_B3INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_105 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_105 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_106 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 12 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_106 = 106;
-const unsigned_t TOPPERS_cfg_valueof_intno_106 = ( unsigned_t )( GPIO_B4INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_106 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_106 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_107 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_106 = ( unsigned_t )( GPIO_B4INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_106 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_106 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_107 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 13 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_107 = 107;
-const unsigned_t TOPPERS_cfg_valueof_intno_107 = ( unsigned_t )( GPIO_B5INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_107 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_107 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_108 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_107 = ( unsigned_t )( GPIO_B5INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_107 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_107 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_108 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_108 = 108;
-const unsigned_t TOPPERS_cfg_valueof_intno_108 = ( unsigned_t )( GPIO_B6INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_108 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_108 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_109 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_108 = ( unsigned_t )( GPIO_B6INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_108 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_108 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_109 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 15 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_109 = 109;
-const unsigned_t TOPPERS_cfg_valueof_intno_109 = ( unsigned_t )( GPIO_B7INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_109 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_109 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_110 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_109 = ( unsigned_t )( GPIO_B7INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_109 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_109 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_110 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_110 = 110;
-const unsigned_t TOPPERS_cfg_valueof_intno_110 = ( unsigned_t )( GPIO_B8INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_110 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_110 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_111 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_110 = ( unsigned_t )( GPIO_B8INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_110 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_110 = ( signed_t )( INTPRI_GPIO ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_111 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
 const unsigned_t TOPPERS_cfg_static_api_111 = 111;
 const unsigned_t TOPPERS_cfg_valueof_isratr_111 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_111 = ( unsigned_t )( GPIO_B0INT ); const signed_t TOPPERS_cfg_valueof_isrpri_111 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_112 = ( unsigned_t ) ( TDOM_KERNEL );
@@ -1576,10 +1576,10 @@ const unsigned_t TOPPERS_cfg_static_api_166 = 166;
 const unsigned_t TOPPERS_cfg_valueof_iniatr_166 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_167 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/drivers/soc/soc.cfg"
 const unsigned_t TOPPERS_cfg_static_api_167 = 167;
-const unsigned_t TOPPERS_cfg_valueof_intno_167 = ( unsigned_t )( SYS_INT_CCINT0 ); const unsigned_t TOPPERS_cfg_valueof_intatr_167 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_167 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_168 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_167 = ( unsigned_t )( SYS_INT_CCINT0 ); const unsigned_t TOPPERS_cfg_valueof_intatr_167 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_167 = ( signed_t )( INTPRI_EDMA3 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_168 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 15 "../../target/ev3_gcc/drivers/soc/soc.cfg"
 const unsigned_t TOPPERS_cfg_static_api_168 = 168;
-const unsigned_t TOPPERS_cfg_valueof_intno_168 = ( unsigned_t )( SYS_INT_CCERRINT ); const unsigned_t TOPPERS_cfg_valueof_intatr_168 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_168 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_169 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_intno_168 = ( unsigned_t )( SYS_INT_CCERRINT ); const unsigned_t TOPPERS_cfg_valueof_intatr_168 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_168 = ( signed_t )( INTPRI_EDMA3 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_169 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/drivers/soc/soc.cfg"
 const unsigned_t TOPPERS_cfg_static_api_169 = 169;
 const unsigned_t TOPPERS_cfg_valueof_isratr_169 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_169 = ( unsigned_t )( SYS_INT_CCINT0 ); const signed_t TOPPERS_cfg_valueof_isrpri_169 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_170 = ( unsigned_t ) ( TDOM_KERNEL );
