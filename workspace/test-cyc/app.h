@@ -83,7 +83,7 @@
 
 extern void	task(intptr_t exinf);
 extern void	main_task(intptr_t exinf);
-extern void balance_task(intptr_t exinf);
+extern void wait_task(intptr_t exinf);
 extern void test_ev3_cychdr(intptr_t exinf);
 //extern void	tex_routine(TEXPTN texptn, intptr_t exinf);
 //#ifdef CPUEXC1

@@ -26,7 +26,24 @@ void test_ev3_cychdr(intptr_t idx) {
     ev3_lcd_draw_string(buf, 0, fonth * idx);
 }
 
+void wait_task(intptr_t unused) {
+    if (wai_sem(SEM1) == E_OK) {
+        syslog(LOG_NOTICE, "wai_sem() success.");
+    }
+    FLGPTN flgptn;
+    if (wai_flg(FLG1, 0x1, TWF_ORW, &flgptn) == E_OK) {
+        syslog(LOG_NOTICE, "wai_flg() success.");
+    }
+}
+
 void main_task(intptr_t unused) {
+    // Check access rights of SEM1 and FLG1
+    ER ercd;
+    ercd = sig_sem(SEM1);
+    assert(ercd == E_OK);
+    ercd = set_flg(FLG1, 0x1);
+    assert(ercd == E_OK);
+        
     ev3_lcd_set_font(EV3_FONT_MEDIUM);
     ev3_font_get_size(EV3_FONT_MEDIUM, &fontw, &fonth);
 
