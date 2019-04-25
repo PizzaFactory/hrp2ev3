@@ -51,6 +51,7 @@ SOURCE=${USBLIB_SRC}/usbbuffer.c             \
 # Uncomment this line to disable high speed USB (i.e. use full speed instead)
 #
 #CFLAGS+= -DUSB_MODE_HS_DISABLE
+#CFLAGS += -DDEBUG_USBLIB
 
 #
 # Rules for building the source files

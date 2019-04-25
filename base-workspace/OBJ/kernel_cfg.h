@@ -8,7 +8,7 @@
 #define TNUM_FLGID	20
 #define TNUM_DTQID	16
 #define TNUM_PDQID	16
-#define TNUM_MTXID	20
+#define TNUM_MTXID	21
 #define TNUM_MPFID	0
 #define TNUM_CYCID	18
 #define TNUM_ALMID	2
@@ -48,7 +48,8 @@
 #define DISKIO_MTX	1
 #define EV3RT_CONSOLE_MTX	2
 #define EV3RT_CONSOLE_LOG_MTX	3
-#define DMLOADER_MTX	4
+#define BT_DB_MTX	4
+#define DMLOADER_MTX	5
 #define BT_SIO_CYC	1
 #define BRICK_BTN_CYC	2
 #define BT_RCV_ALM	1

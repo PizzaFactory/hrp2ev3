@@ -35,6 +35,7 @@ void ev3_main_task(intptr_t exinf) {
     /**
      * Initialize FatFS
      */
+    sus_tsk(LOGTASK);
     initialize_fatfs_dri();
 
     /**
@@ -54,6 +55,7 @@ void ev3_main_task(intptr_t exinf) {
         assert(ercd > 0);
     }
     serial_opn_por(SIO_PORT_UART);
+    rsm_tsk(LOGTASK);
 
     /**
      * Initialize LCD
@@ -86,15 +88,13 @@ void ev3_main_task(intptr_t exinf) {
 	platform_soft_reset();
 
 	// Banner
-	syslog(LOG_NOTICE, "");
-	syslog(LOG_NOTICE, "");
-	syslog(LOG_NOTICE, "");
-	syslog(LOG_NOTICE, "");
 	syslog(LOG_NOTICE, "   _____   ______ ___  ______");
 	syslog(LOG_NOTICE, "  / __/ | / /_  // _ \\/_  __/");
 	syslog(LOG_NOTICE, " / _/ | |/ //_ </ , _/ / /");
 	syslog(LOG_NOTICE, "/___/ |___/____/_/|_| /_/");
-	syslog(LOG_NOTICE, "=============================");
+	syslog(LOG_NOTICE, " ");
+	syslog(LOG_NOTICE, "==================>Beta-6-1<=");
+	syslog(LOG_NOTICE, " ");
 	syslog(LOG_NOTICE, "Powered by TOPPERS/HRP2 RTOS");
 	syslog(LOG_NOTICE, "Initialization is completed..");
 

@@ -48,7 +48,7 @@ include @(APPLDIR)/Makefile.inc
 ifeq ($(SRCLANG),c++)
   USE_CXX = true
   APPL_CXXOBJS += app.o @(APPLOBJS)
-  CXXLIBS = -lstdc++ -lc -lm -lgcc  
+  CXXLIBS = -lstdc++ -lc -lm -lgcc
   #CXXRTS = crtbegin.o crtend.o
   #CXXRTS = cxxrt.o newlibrt.o
 else

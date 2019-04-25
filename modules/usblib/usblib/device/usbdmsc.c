@@ -39,7 +39,8 @@
 /**
  * Use syslog for debug
  */
-#define LOG_EMERG (0)
+#define LOG_EMERG  (0)
+#define LOG_NOTICE (5)
 extern void syslog(unsigned int prio, const char *format, ...);
 
 //*****************************************************************************
@@ -54,7 +55,7 @@ extern void syslog(unsigned int prio, const char *format, ...);
 // DMA configuration Parameters
 //
 //*****************************************************************************
-#define DMA_TX_MAX_CHUNK_SIZE	512 * 8 // 512 blocks size, 8 blocks
+#define DMA_TX_MAX_CHUNK_SIZE	512 * 128 // 512 blocks size, 128 blocks
 #define DMA_RX_MAX_CHUNK_SIZE	512  // 1 block
 
 //*****************************************************************************
@@ -544,7 +545,7 @@ HandleEndpoints(void *pvInstance, unsigned int ulStatus)
     //
     psInst = psDevice->psPrivateData;
 
-#if defined(DEBUG_USBMSC_USBLIB) && 0
+#if defined(DEBUG_USBLIB) && 0
 	if (ulStatus)
     syslog(LOG_NOTICE, "%s(ulStatus=0x%x): ucSCSIState 0x%x", __FUNCTION__, ulStatus, psInst->ucSCSIState);
 #endif
@@ -825,7 +826,6 @@ HandleEndpoints(void *pvInstance, unsigned int ulStatus)
 					//
 					doDmaRxTransfer(USB_INSTANCE, MAX_TRANSFER_SIZE, 
 						(unsigned char *)rxBuffer, psInst->ucOUTEndpoint);
-						
 #endif
 					if(g_bytesWritten == DEVICE_BLOCK_SIZE)					
 
@@ -863,6 +863,10 @@ HandleEndpoints(void *pvInstance, unsigned int ulStatus)
 					disableCoreRxDMA(USB_INSTANCE, psInst->ucOUTEndpoint);
 					disableCoreTxDMA(USB_INSTANCE, psInst->ucINEndpoint);
 #endif
+
+                    // Flush write buffer of block media
+					psDevice->sMediaFunctions.BlockWrite(psInst->pvMedia, NULL, 0, 0);
+
 					//
                     // Indicate success and no extra data coming.
                     //
@@ -1602,6 +1606,9 @@ USBDSCSIReadCapacity(const tUSBDMSCDevice *psDevice)
 
     ulBlocks = psDevice->sMediaFunctions.NumBlocks(psInst->pvMedia);
 
+#if defined(DEBUG_USBLIB)
+    syslog(LOG_NOTICE, "%s(): ulBlocks %d", __FUNCTION__, ulBlocks);
+#endif
     //
     // Only decrement if any blocks were found.
     //
@@ -1963,6 +1970,9 @@ USBDSCSIWrite10(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         // More bytes to read.
         //
         usNumBlocks = (pSCSICBW->CBWCB[7] << 8) | pSCSICBW->CBWCB[8];
+#if defined(DEBUG_USBLIB)
+        syslog(LOG_NOTICE, "%s(): write %d blocks", __FUNCTION__, usNumBlocks);
+#endif
 
         psInst->ulBytesToTransfer = DEVICE_BLOCK_SIZE * usNumBlocks;
 
@@ -2160,8 +2170,8 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         //
         case SCSI_INQUIRY_CMD:
         {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI_INQUIRY_CMD command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI_INQUIRY_CMD command", __FUNCTION__);
 #endif
             USBDSCSIInquiry(psDevice);
 
@@ -2173,8 +2183,8 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         //
         case SCSI_TEST_UNIT_READY:
         {
-#if defined(DEBUG_USBMSC_USBLIB) && 0
-				syslog(LOG_EMERG, "%s(): SCSI_TEST_UNIT_READY command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI_TEST_UNIT_READY command", __FUNCTION__);
 #endif
             g_sSCSICSW.dCSWDataResidue = 0;
 
@@ -2213,8 +2223,8 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         //
         case SCSI_READ_CAPACITIES:
         {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI_READ_CAPACITIES command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI_READ_CAPACITIES command", __FUNCTION__);
 #endif
             USBDSCSIReadCapacities(psDevice);
 
@@ -2226,8 +2236,8 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         //
         case SCSI_READ_CAPACITY:
         {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI_READ_CAPACITY command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI_READ_CAPACITY command", __FUNCTION__);
 #endif
             USBDSCSIReadCapacity(psDevice);
 
@@ -2239,8 +2249,8 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         //
         case SCSI_REQUEST_SENSE:
         {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI_REQUEST_SENSE command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI_REQUEST_SENSE command", __FUNCTION__);
 #endif
             USBDSCSIRequestSense(psDevice);
 
@@ -2252,7 +2262,7 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         //
         case SCSI_READ_10:
         {
-#if defined(DEBUG_USBMSC_USBLIB)
+#if defined(DEBUG_USBLIB)
         	syslog(LOG_NOTICE, "%s(): SCSI_READ_10 command", __FUNCTION__);
 #endif
             USBDSCSIRead10(psDevice, pSCSICBW);
@@ -2265,7 +2275,7 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         //
         case SCSI_WRITE_10:
         {
-#if defined(DEBUG_USBMSC_USBLIB)
+#if defined(DEBUG_USBLIB)
         	syslog(LOG_NOTICE, "%s(): SCSI_WRITE_10 command", __FUNCTION__);
 #endif
 			USBDSCSIWrite10(psDevice, pSCSICBW);
@@ -2279,8 +2289,8 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
         //
         case SCSI_MODE_SENSE_6:
         {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI_MODE_SENSE command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI_MODE_SENSE command", __FUNCTION__);
 #endif
             USBDSCSIModeSense6(psDevice, pSCSICBW);
 
@@ -2289,8 +2299,8 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
 
 		case SCSI_VERIFY_10:
 		{
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI_VERIFY_10 command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI_VERIFY_10 command", __FUNCTION__);
 #endif
 			psInst->ucSCSIState = STATE_SCSI_IDLE;
             g_sSCSICSW.bCSWStatus = 0;
@@ -2302,13 +2312,13 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
 		{
 			psInst->ucSCSIState = STATE_SCSI_IDLE;
 			if (pSCSICBW->CBWCB[4] & 0x1) {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI PREVENT_MEDIUM_REMOVAL command, unsupported yet", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI PREVENT_MEDIUM_REMOVAL command, unsupported yet", __FUNCTION__);
 #endif
 				g_sSCSICSW.bCSWStatus = 0; // Lock media, unsupported yet
 			} else {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI ALLOW_MEDIUM_REMOVAL command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI ALLOW_MEDIUM_REMOVAL command", __FUNCTION__);
 #endif
 				g_sSCSICSW.bCSWStatus = 0; // Support Linux's eject command -- ertl-liyixiao
 			}
@@ -2319,20 +2329,16 @@ USBDSCSICommand(const tUSBDMSCDevice *psDevice, tMSCCBW *pSCSICBW)
 		{
 			psInst->ucSCSIState = STATE_SCSI_IDLE;
 			if (pSCSICBW->CBWCB[4] & 0x1) {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI LOAD command, unsupported yet", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI LOAD command, unsupported yet", __FUNCTION__);
 #endif
 				g_sSCSICSW.bCSWStatus = 0; // Load media, unsupported yet (return success to omit this command)
 			} else {
-#if defined(DEBUG_USBMSC_USBLIB)
-				syslog(LOG_EMERG, "%s(): SCSI UNLOAD command", __FUNCTION__);
+#if defined(DEBUG_USBLIB)
+				syslog(LOG_NOTICE, "%s(): SCSI UNLOAD command", __FUNCTION__);
 #endif
-				// From 'usb_msc_structs.c'
-				extern tUSBDMSCDevice g_sMSCDevice;
-				// From 'usbmsc_media_functions.c'
-				extern const tMSCDMedia usbmsc_media_functions_dummy;
-				g_sMSCDevice.sMediaFunctions = usbmsc_media_functions_dummy;
-				g_sMSCDevice.psPrivateData->pvMedia = NULL;
+                // Disconnect USB virtually
+                psDevice->pfnEventCallback(NULL, USB_EVENT_DISCONNECTED, 0, 0);
 				g_sSCSICSW.bCSWStatus = 0; // Support Linux's eject command -- ertl-liyixiao
 			}
 			break;
