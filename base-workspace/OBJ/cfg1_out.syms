@@ -1299,8 +1299,8 @@ c000aba4 R TCB_enatex
 c000abd4 R MAGIC_4
 c000abd8 R MAGIC_2
 c000abda R MAGIC_1
-c000abe0 B __idata_end
-c000abe0 B __idata_start
+c000abdc A __idata_end
+c000abdc B __idata_start
 c0108000 B _DOM1_bss_start
 c0108000 B _DOM2_bss_start
 c0108000 T __data_start
