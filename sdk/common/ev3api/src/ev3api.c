@@ -45,3 +45,18 @@ void _app_init_task(intptr_t unused) {
 	// Initialize EV3_CYC_HDR
 	_initialize_ev3api_cyc();
 }
+
+/**
+ * TODO:
+ * C++ destructors are not supported currently.
+ * This workaround can suppress compiler errors.
+ */
+void *__dso_handle __attribute__((weak))=0;
+
+/**
+ * TODO:
+ * This is a dummy function to workaround a potential bug in 'gcc-arm-none-eabi-6-2017-q1-update',
+ * since the global destructors are not supported currently.
+ * See 'http://wiki.osdev.org/Calling_Global_Constructors' for details of '.fini_array' and '_fini' in ARM.
+ */
+void __attribute__((weak)) _fini() {}

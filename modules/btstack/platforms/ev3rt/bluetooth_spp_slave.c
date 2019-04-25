@@ -45,6 +45,11 @@ static uint8_t  *send_buffer;
 static uint32_t send_buffer_sz = 0;
 static uint32_t send_mtu = 0; // Max frame size for sending, > 0 to indicate that RFCOMM channel open succeeded.
 
+static uint8_t  *spp_master_test_send_buffer;
+static uint32_t spp_master_test_send_buffer_sz = 0;
+
+#include "bluetooth_spp_master.c"
+
 static void send_timer_handler(timer_source_t *ts){
 	// Fetch when necessary
 	if(send_buffer_sz == 0)
@@ -59,10 +64,18 @@ static void send_timer_handler(timer_source_t *ts){
 		}
 	}
 
+	if (spp_master_test_send_buffer_sz == 0) rfcomm_channel_rdysend_callback(RFCOMM_CHANNEL_SPP_MASTER_TEST, &spp_master_test_send_buffer, &spp_master_test_send_buffer_sz);
+	if (spp_master_test_channel_mtu > 0 && spp_master_test_send_buffer_sz > 0) {
+		uint16_t send_bytes = (spp_master_test_channel_mtu < spp_master_test_send_buffer_sz) ? spp_master_test_channel_mtu : spp_master_test_send_buffer_sz;
+		if(!hci_is_packet_buffer_reserved() && rfcomm_send_internal(spp_master_test_channel_id, spp_master_test_send_buffer, send_bytes) == 0) { // Succeed
+			spp_master_test_send_buffer    += send_bytes;
+			spp_master_test_send_buffer_sz -= send_bytes;
+		}
+	}
+
 	run_loop_set_timer(ts, HEARTBEAT_PERIOD_MS);
 	run_loop_add_timer(&heartbeat);
 }
-
 
 static void packet_handler (void * connection, uint8_t packet_type, uint16_t channel, uint8_t *packet, uint16_t size){
     bd_addr_t event_addr;
@@ -71,8 +84,12 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 
     switch (packet_type) {
     case RFCOMM_DATA_PACKET:
+		if (connection == SPP_MASTER_TEST_CONNECTION) {
+			rfcomm_channel_receive_callback(RFCOMM_CHANNEL_SPP_MASTER_TEST, packet, size);
+		} else {
 //    	syslog(LOG_NOTICE, "RFCOMM_DATA_PACKET size: %d", size);
     	bt_rcv_handler(packet, size);
+		}
     	break;
 
 	case HCI_EVENT_PACKET:
@@ -100,19 +117,24 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 			log_info("Please enter PIN %s on remote device\n", BLUETOOTH_PIN_CODE);
 #endif
 			bt_flip_addr(event_addr, &packet[2]);
-			hci_send_cmd(&hci_pin_code_request_reply, &event_addr, strlen(ev3rt_bluetooth_pin_code), ev3rt_bluetooth_pin_code);
+            if (memcmp(spp_master_remote, event_addr, BD_ADDR_LEN) == 0) // SPP_MASTER_TEST
+                hci_send_cmd(&hci_pin_code_request_reply, &event_addr, strlen(spp_master_pincode), spp_master_pincode);
+            else 
+                hci_send_cmd(&hci_pin_code_request_reply, &event_addr, strlen(ev3rt_bluetooth_pin_code), ev3rt_bluetooth_pin_code);
 			break;
 
 		case HCI_EVENT_COMMAND_COMPLETE:
 			// Print MAC address of EV3's Bluetooth device
-#if defined(DEBUG)
 			if (COMMAND_COMPLETE_EVENT(packet, hci_read_bd_addr)) {
-
 				bt_flip_addr(event_addr, &packet[6]);
-				log_info("BD-ADDR: %s\n\r", bd_addr_to_str(event_addr));
+                static char bd_addr_str[6*3];
+                memcpy(bd_addr_str, bd_addr_to_str(event_addr), 6 * 3);
+                bd_addr_str[6*3-1] = '\0';
+				log_error("BT Addr: %s", bd_addr_str);
+                spp_master_setup(); // init SPP master service
 				break;
 			}
-#endif
+
             // Select initialization script by Link Manager Protocol (LMP) subversion
             if (COMMAND_COMPLETE_EVENT(packet, hci_read_local_version_information)) {
                 // Reference: st_kim.c in ev3dev
@@ -162,7 +184,15 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 
 		case RFCOMM_EVENT_OPEN_CHANNEL_COMPLETE:
 			// data: event(8), len(8), status (8), address (48), server channel(8), rfcomm_cid(16), max frame size(16)
-			if (packet[2]) {
+            log_error("RFCOMM_EVENT_OPEN_CHANNEL_COMPLETE connection %p", connection);
+            if (connection == SPP_MASTER_TEST_CONNECTION) {
+                if(packet[2]) log_error("RFCOMM channel open failed, status %u. WHEN SPP_MASTER_TEST_CONNECTION", packet[2]);
+                spp_master_test_channel_id  = READ_BT_16(packet, 12);
+				spp_master_test_channel_mtu = READ_BT_16(packet, 14);
+                spp_master_state = SPP_MASTER_DONE;
+				rfcomm_channel_open_callback(RFCOMM_CHANNEL_SPP_MASTER_TEST);
+            }
+            else if (packet[2]) {
 				log_error("RFCOMM channel open failed, status %u.", packet[2]);
 			} else {
 				rfcomm_channel_id = READ_BT_16(packet, 12);
@@ -172,31 +202,22 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 #endif
 				send_mtu = mtu;
 
-#if 1
-                rfcomm_channel_open_callback();
-#else
-				/**
-				 * Open Bluetooth SIO port
-				 */
-			    SVC_PERROR(serial_opn_por(SIO_PORT_BT));
-			    SVC_PERROR(serial_ctl_por(SIO_PORT_BT, (IOCTL_NULL)));
-#endif
+                rfcomm_channel_open_callback(RFCOMM_CHANNEL_SPP_SERVER);
 			}
 			break;
 
 		case RFCOMM_EVENT_CHANNEL_CLOSED:
-#if 1
-            rfcomm_channel_close_callback();
-#else
-			/**
-			 * Close Bluetooth SIO port
-			 */
-			SVC_PERROR(serial_cls_por(SIO_PORT_BT));
-#endif
-
-			send_mtu = 0;
-			rfcomm_channel_id = 0;
-			send_buffer_sz = 0;
+			if (connection == SPP_MASTER_TEST_CONNECTION) {
+	            rfcomm_channel_close_callback(RFCOMM_CHANNEL_SPP_MASTER_TEST);
+				spp_master_test_channel_id = 0;
+				spp_master_test_channel_mtu = 0;
+				// TODO: reset state?
+			} else {
+	            rfcomm_channel_close_callback(RFCOMM_CHANNEL_SPP_SERVER);
+				send_mtu = 0;
+				rfcomm_channel_id = 0;
+				send_buffer_sz = 0;
+			}
 			break;
 
 		default:
@@ -209,6 +230,8 @@ static void packet_handler (void * connection, uint8_t packet_type, uint16_t cha
 		break;
     }
 }
+
+#include "panu.c"
 
 void bluetooth_spp_initialize(void){
     hci_discoverable_control(1);
@@ -242,9 +265,22 @@ void bluetooth_spp_initialize(void){
     sdp_create_spp_service( (uint8_t*) &service_record_item->service_record, RFCOMM_SERVER_CHANNEL, "Serial Port Profile");
 //    log_info("SDP service buffer size: %u\n\r", (uint16_t) (sizeof(service_record_item_t) + de_get_len((uint8_t*) &service_record_item->service_record)));
     sdp_register_service_internal(NULL, service_record_item);
+
+    if (!(*ev3rt_bluetooth_pan_disabled)) panu_setup();
 }
 
-void bluetooth_task(intptr_t unused) {
+static const hci_uart_config_t hci_uart_config_cc256x = {
+    NULL,
+    115200,
+    1875000,
+    0
+};
+
+static void hw_err_cb() {
+    log_error("!!!!BLUETOOTH HARDWARE ERROR!!!!\n");
+}
+
+void btstack_task(intptr_t unused) {
     log_debug("[bluetooth] Start main task.");
 
     run_loop_init(RUN_LOOP_EMBEDDED);
@@ -252,9 +288,10 @@ void bluetooth_task(intptr_t unused) {
     // Initialize HCI
     bt_control_t             *control   = bt_control_cc256x_instance();
 	hci_transport_t          *transport = hci_transport_h4_dma_instance();
-	hci_uart_config_t        *config    = hci_uart_config_cc256x_instance();
+	hci_uart_config_t        *config    = &hci_uart_config_cc256x;
 	const remote_device_db_t *db        = &remote_device_db_memory;
 	hci_init(transport, config, control, db);
+    hci_set_hardware_error_callback(hw_err_cb);
 
     // Initialize SPP (Serial Port Profile)
     bluetooth_spp_initialize();

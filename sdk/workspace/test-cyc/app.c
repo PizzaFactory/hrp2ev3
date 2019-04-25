@@ -13,25 +13,11 @@ static int fontw, fonth;
 
 static int count[10];
 
-/*
- *  サービスコールのエラーのログ出力
- */
-void
-svc_perror(const char *file, int_t line, const char *expr, ER ercd)
-{
-	if (ercd < 0) {
-		t_perror(LOG_ERROR, file, line, expr, ercd);
-	}
-}
-
-#define	SVC_PERROR(expr)	svc_perror(__FILE__, __LINE__, #expr, (expr))
-
 void test_ev3_cychdr(intptr_t idx) {
     ev3_lcd_fill_rect(0, fonth * idx, EV3_LCD_WIDTH, fonth, EV3_LCD_WHITE);
     char buf[100];
     sprintf(buf, "EV3CYC %d count %d", idx, ++count[idx]);
     ev3_lcd_draw_string(buf, 0, fonth * idx);
-	SVC_PERROR(tslp_tsk(10));
 }
 
 void main_task(intptr_t unused) {

@@ -16,6 +16,7 @@
 #include "syssvc/syslog.h"
 #include "syssvc/banner.h"
 #include "target_serial.h"
+#include "target_serial_dbsio.h"
 #include "syssvc/serial.h"
 #include "syssvc/logtask.h"
 #include "dmloader.h"

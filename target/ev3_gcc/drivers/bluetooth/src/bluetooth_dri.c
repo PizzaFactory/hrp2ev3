@@ -14,23 +14,30 @@
 #include "string.h"
 #include "minIni.h"
 #include "syssvc/serial.h"
+#include "target_serial_dbsio.h"
 
 //#define DEBUG
 //#define LOG_DEBUG LOG_ERROR
 
-#define p_uart (&UART2)
+//extern void bluetooth_spp_initialize();
 
+/**
+ * BTstack HAL
+ */
 typedef void(*callback_t)();
-
-extern void bluetooth_spp_initialize();
-
-static uint8_t*   rx_ptr;       // Pointer to receive data
-static uint32_t   rx_size = 0;  // Left bytes to receive
 static callback_t rx_cb = NULL; // Callback after receiving finished
-
-static const uint8_t* tx_ptr;       // Pointer of data to send
-static uint32_t       tx_size = 0;  // Left bytes to send
-static callback_t     tx_cb = NULL; // Callback after sending finished
+static callback_t tx_cb = NULL; // Callback after sending finished
+void hal_uart_dma_set_block_received(void (*the_block_handler)(void)){
+    rx_cb = the_block_handler;
+}
+void hal_uart_dma_set_block_sent(void (*the_block_handler)(void)){
+    tx_cb = the_block_handler;
+}
+#if BT_USE_EDMA_MODE
+#include "btstack_hal_dma.c"
+#else
+#include "btstack_hal_isr.c"
+#endif
 
 // DA850_BT_SHUT_DOWN: GP4_1, DA850_BT_SHUT_DOWN_EP2: GP4_9
 #define BT_SHUTDOWN_PIN GP4_9
@@ -88,160 +95,6 @@ void initialize_bluetooth_dri(intptr_t unused) {
 	SVC_PERROR(platform_register_driver(&driver));
 }
 
-void hal_uart_dma_init() {
-//    dump_psc1();
-
-//    dump_uart();
-
-    int baud_rate = 115200;
-
-    // Set to reset state
-    p_uart->PWREMU_MGMT = 0;
-
-    // Set to 16x Over-Sampling Mode
-    p_uart->MDR = 0x0;
-
-    // Set divisor
-    uint32_t div = PLL0_SYSCLK2_HZ / 16 / baud_rate;
-    p_uart->DLL = div & 0xFF;
-//    p_uart->DLL = 0x48;
-    p_uart->DLH = (div >> 8) & 0xFF;
-
-    /* Clear, enable, and reset FIFO */
-    p_uart->IIR_FCR = 0x0;
-    p_uart->IIR_FCR = 0x1;
-    p_uart->IIR_FCR = 0x7 | (0x3 << 6);
-
-    /* 8 bits data, no parity, one stop bit and clear DLAB bit */
-    //p_uart->LCR = 0x03;
-    p_uart->LCR = 0x3;
-
-    /* Disable autoflow control */
-    //p_uart->MCR = 0x1 << 5;
-    p_uart->MCR = 0x2b;
-
-    /* Enable interrupts */
-    //p_uart->IER = 0x03;
-
-    //p_uart->IER = 0xf; // Disable interrupts
-    p_uart->IER = 0x0; // Disable interrupts
-
-    //dump_uart();
-
-    // Restart
-    p_uart->PWREMU_MGMT = (1U << 14) | (1U << 13) | 0x1;
-
-    //p_uart->LSR = 0x1;
-
-
-    // clear interrupts
-//    uint32_t t;
-//    t = p_uart->IIR_FCR;
-//    t = p_uart->LSR;
-//    t = p_uart->MSR;
-//    t = p_uart->RBR_THR;
-}
-
-int hal_uart_dma_set_baud(uint32_t baud_rate) {
-//    uart_set_baud_rate(p_uart, baud);
-    // Set to reset state
-//    p_uart->PWREMU_MGMT = 0;
-
-    // Set to 16x Over-Sampling Mode
-    p_uart->MDR = 0x0;
-
-    // Set divisor
-    uint32_t div = PLL0_SYSCLK2_HZ / 16 / baud_rate;
-    p_uart->DLL = div & 0xFF;
-    p_uart->DLH = (div >> 8) & 0xFF;
-
-    // Restart
-//    p_uart->PWREMU_MGMT = (1U << 14) | (1U << 13) | 0x1;
-    return 0;
-}
-
-void hal_uart_dma_send_block(const uint8_t *data, uint16_t len) {
-#if defined(DEBUG_BLUETOOTH)
-    assert(tx_size == 0);
-    assert(len > 0);
-    syslog(LOG_NOTICE, "[bluetooth] Prepare to send a block with %d bytes.", len);
-#endif
-    tx_ptr = data;
-    tx_size = len;
-    p_uart->IER |= 0x2;
-}
-
-void hal_uart_dma_receive_block(uint8_t *buffer, uint16_t len) {
-#if defined(DEBUG_BLUETOOTH)
-    assert(rx_size == 0);
-    assert(len > 0);
-    syslog(LOG_NOTICE, "[bluetooth] Prepare to receive a block with %d bytes.", len);
-#endif
-    rx_ptr = buffer;
-    rx_size = len;
-    p_uart->IER |= 0x1;
-	if(rx_size > 0 && (UART2.IIR_FCR & 0x4)) // TODO: dirty hack
-		AINTC.SISR = UART2_INT;
-}
-
-void hal_uart_dma_set_block_received(void (*the_block_handler)(void)){
-    rx_cb = the_block_handler;
-}
-
-void hal_uart_dma_set_block_sent(void (*the_block_handler)(void)){
-    tx_cb = the_block_handler;
-}
-
-void bluetooth_uart_isr() {
-#if defined(DEBUG_BLUETOOTH)
-    printf("[bluetooth] Enter ISR.");
-#endif
-
-#if 0
-    uint32_t iir = UART2.IIR_FCR;
-    if (iir & 0x1) {
-        syslog(LOG_NOTICE, "iir at return: 0x%08x", iir);
-    }
-#endif
-
-    // RX
-	if(rx_size > 0) {
-		while (rx_size > 0 && uart_getready(p_uart)) {
-#ifdef DEBUG
-			assert(rx_size > 0);
-			assert(rx_cb != NULL);
-#endif
-			*rx_ptr++ = p_uart->RBR_THR;
-			rx_size--;
-		}
-		if (rx_size == 0) {
-#if defined(DEBUG_BLUETOOTH)
-			syslog(LOG_NOTICE, "[bluetooth] Finished receiving a block.");
-#endif
-			rx_cb();
-		}
-	} else {
-		p_uart->IER &= ~0x1;
-	}
-
-    // TX
-    if (tx_size > 0 && uart_putready(p_uart)) {
-#if defined(DEBUG_BLUETOOTH)
-        assert(tx_cb != NULL);
-#endif
-        int tx_bytes = (tx_size < 16 /* TODO: UART_TX_FIFO_LENGTH transmitter FIFO size */ ? tx_size : 16);
-        for (int i = 0; i < tx_bytes; i++) p_uart->RBR_THR = *tx_ptr++;
-        tx_size -= tx_bytes;
-        if (tx_size == 0) {
-#if defined(DEBUG_BLUETOOTH)
-        	syslog(LOG_NOTICE, "[bluetooth] Finished sending a block.");
-#endif
-            p_uart->IER &= ~0x2;
-            tx_cb();
-        }
-    }
-}
-
 /**
  * Guarantee the QoS of Bluetooth communication by raising the priority of BT_TSK periodically
  */
@@ -287,19 +140,57 @@ inline void btstack_runloop_sleep(uint32_t time) {
     tslp_tsk(time);
 }
 
-inline void rfcomm_channel_open_callback() {
+inline void rfcomm_channel_open_callback(int channel) {
 	/**
 	 * Open Bluetooth SIO port
 	 */
-    SVC_PERROR(serial_opn_por(SIO_PORT_BT));
-    SVC_PERROR(serial_ctl_por(SIO_PORT_BT, (IOCTL_NULL)));
+    switch(channel) {
+    case RFCOMM_CHANNEL_SPP_SERVER:
+        SVC_PERROR(serial_opn_por(SIO_PORT_BT));
+        SVC_PERROR(serial_ctl_por(SIO_PORT_BT, (IOCTL_NULL)));
+        break;
+    case RFCOMM_CHANNEL_SPP_MASTER_TEST:
+        SVC_PERROR(serial_opn_por(SIO_PORT_SPP_MASTER_TEST));
+        SVC_PERROR(serial_ctl_por(SIO_PORT_SPP_MASTER_TEST, (IOCTL_NULL)));
+        break;
+    default: assert(false);
+    };
 }
 
-inline void rfcomm_channel_close_callback() {
+inline void rfcomm_channel_close_callback(int channel) {
 	/**
 	 * Close Bluetooth SIO port
 	 */
-	SVC_PERROR(serial_cls_por(SIO_PORT_BT));
+    switch(channel) {
+    case RFCOMM_CHANNEL_SPP_SERVER:
+        SVC_PERROR(serial_cls_por(SIO_PORT_BT));
+        break;
+    case RFCOMM_CHANNEL_SPP_MASTER_TEST:
+        SVC_PERROR(serial_cls_por(SIO_PORT_SPP_MASTER_TEST));
+        break;
+    default: assert(false);
+    };
+
+}
+
+inline void rfcomm_channel_receive_callback(int channel, uint8_t *packet, uint16_t size) {
+    switch(channel) {
+    case RFCOMM_CHANNEL_SPP_MASTER_TEST:
+        dbsio_recv_fill(&dbsio_spp_master_test, packet, size);
+        break;
+    default: assert(false);
+    };
+}
+
+inline void rfcomm_channel_rdysend_callback(int channel, uint8_t **buffer, uint32_t *size) {
+    switch(channel) {
+    case RFCOMM_CHANNEL_SPP_MASTER_TEST: {
+        DBSIOBF* send_buffer = dbsio_next_send_buffer(&dbsio_spp_master_test);
+        *buffer = send_buffer->buffer;
+        *size   = send_buffer->bytes;
+        break; }
+    default: assert(false);
+    };
 }
 
 inline void btstack_db_lock() {
@@ -339,3 +230,12 @@ inline void btstack_db_append(const char *addr, const char *link_key) {
 #endif
 }
 
+/**
+ * Implementation of extended service calls
+ */
+
+ER _spp_master_test_connect(const uint8_t addr[6], const char *pin) {
+    if (!spp_master_test_start_connection(addr, pin)) return E_CTX;
+    while (spp_master_test_is_connecting()) dly_tsk(10);
+    return E_OK;
+}

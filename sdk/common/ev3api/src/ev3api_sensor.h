@@ -47,6 +47,7 @@ typedef enum {
     GYRO_SENSOR,	     //!< \~English Gyroscope sensor 		 		  \~Japanese ジャイロセンサ
     TOUCH_SENSOR,	     //!< \~English Touch sensor			 		  \~Japanese タッチセンサ
     COLOR_SENSOR,	     //!< \~English Color sensor					  \~Japanese カラーセンサ
+    INFRARED_SENSOR,     //!< \~English Infra-Red sensor				  \~Japanese 
 	HT_NXT_ACCEL_SENSOR, //!< \~English HiTechnic NXT acceleration sensor \~Japanese 加速度センサ（HiTechnic社製）
 	NXT_TEMP_SENSOR,     //!< \~English NXT temperature sensor            \~Japanese NXT温度センサ
     TNUM_SENSOR_TYPE     //!< \~English Number of sensor types 			  \~Japanese センサタイプの数
@@ -84,7 +85,7 @@ typedef struct {
     uint16_t b; //!< \~English Blue value  \~Japanese 青
 } rgb_raw_t;
 
-/**
+/** 
  * \~English
  * \brief 	   Configure a sensor port.
  * \param port Sensor port to be configured
@@ -243,6 +244,70 @@ bool_t ev3_ultrasonic_sensor_listen(sensor_port_t port);
 
 /**
  * \~English
+ * \brief Structure for IR Seek values for all 4 channels
+ *
+ * \~Japanese
+ * \brief IRビーコンの方位と距離を格納する構造体
+ */ 
+typedef struct {
+    int8_t heading[4];  //!< \~English Heading  for channels 1-4 (-25 to 25)           \~Japanese 全て（４つ）のチャンネルの方位（-25～25）
+    int8_t distance[4]; //!< \~English Distance for channels 1-4 (-128 and 0 to 100)   \~Japanese 全て（４つ）のチャンネルの距離（0〜100または-128）
+} ir_seek_t; 
+
+#define IR_RED_UP_BUTTON     1
+#define IR_RED_DOWN_BUTTON   2
+#define IR_BLUE_UP_BUTTON    4
+#define IR_BLUE_DOWN_BUTTON  8
+#define IR_BEACON_BUTTON     16
+
+typedef struct {
+    uint8_t channel[4];    //!< \~English IR Remote controller data for channels 1-4   \~Japanese 全て（４つ）のチャンネルのボタン入力のパタン
+} ir_remote_t; 
+
+/**
+ * \~English
+ * \brief      Get the distance using the infrared sensor.
+ * \param port Sensor port to be inquired.
+ * \return     Distance in percentage (0-100).
+ *
+ * \~Japanese
+ * \brief      IRセンサで距離を測定する．
+ * \details    不正のセンサポート番号を指定した場合，常に0を返す（エラーログが出力される）．
+ * \param port センサポート番号
+ * \return     距離（単位はパーセント）
+ */
+int8_t ev3_infrared_sensor_get_distance(sensor_port_t port);
+
+/**
+ * \~English
+ * \brief      Gets values to seek a remote controller in beacon mode.
+ * \param port Sensor port to be inquired.
+ * \return     Struct with heading/distance for all channels.
+ *
+ * \~Japanese
+ * \brief      IRセンサでIRビーコンの方位と距離を測定する． 
+ * \details    不正のセンサポート番号を指定した場合，常に0の方位と-128の距離を返す（エラーログが出力される）．
+ * \param port センサポート番号
+ * \return     全て（４つ）のチャンネルの方位と距離
+ */
+ir_seek_t ev3_infrared_sensor_seek(sensor_port_t port);
+
+/**
+ * \~English
+ * \brief      Gets commands from IR remote controllers.
+ * \param port Sensor port to be inquired.
+ * \return     Struct with details of the IR remote buttons pressed.
+ *
+ * \~Japanese
+ * \brief      IRセンサでIRビーコンのボタン入力を検出する．
+ * \details    不正のセンサポート番号を指定した場合，常に0のパタンを返す（エラーログが出力される）．
+ * \param port センサポート番号
+ * \return     全て（４つ）のチャンネルのボタン入力のパタン
+ */
+ir_remote_t ev3_infrared_sensor_get_remote(sensor_port_t port);
+
+/**
+ * \~English
  * \brief 	   Get the status of a touch sensor.
  * \param port Sensor port to be inquired
  * \return     \a true (Touch sensor is being pressed), \a false (Touch sensor is not being pressed)
@@ -294,29 +359,3 @@ bool_t nxt_temp_sensor_measure(sensor_port_t port, float *temp);
  * @} // End of group
  */
 
-#if 0 // Legacy code
-
-/**
- * \~Japanese
- * \brief UARTセンサからshort型の値を読み出す．
- */
-short ev3_uart_sensor_get_short(sensor_port_t port);
-
-/**
- * \~English
- * \brief 		Initialize all sensor ports.
- * \param type1 Sensor type for sensor port 1
- * \param type2 Sensor type for sensor port 2
- * \param type3 Sensor type for sensor port 3
- * \param type4 Sensor type for sensor port 4
- *
- * \~Japanese
- * \brief 		全てのセンサポートの初期化
- * \param type1 センサポート1のセンサタイプ
- * \param type2 センサポート2のセンサタイプ
- * \param type3 センサポート3のセンサタイプ
- * \param type4 センサポート4のセンサタイプ
- */
-extern void ev3_sensors_init(sensor_type_t type1, sensor_type_t type2, sensor_type_t type3, sensor_type_t type4);
-
-#endif
