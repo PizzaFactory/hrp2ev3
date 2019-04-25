@@ -25,9 +25,11 @@ static void initialize(intptr_t unused) {
 #endif
 }
 
-void initialize_fatfs_dri(intptr_t unused) {
+void initialize_fatfs_dri() {
+	initialize(0);
+
 	ev3_driver_t driver;
-	driver.init_func = initialize;
+	driver.init_func = NULL;
 	driver.softreset_func = NULL;
 	SVC_PERROR(platform_register_driver(&driver));
 }

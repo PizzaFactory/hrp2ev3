@@ -240,6 +240,10 @@ ER_UINT extsvc_newlib_read_r(intptr_t ptr, intptr_t fd, intptr_t buf, intptr_t c
 
 		ER_UINT erlen = serial_rea_dat(portid, _buf, cnt);
 
+		if (erlen == E_OBJ) { // (Bluetooth) port closed
+			return 0;
+		}
+
 		assert(erlen > 0);
 
 		return erlen;
@@ -293,6 +297,10 @@ ER_UINT extsvc_newlib_write_r(intptr_t ptr, intptr_t fd, intptr_t buf, intptr_t 
 		}
 
 		ER_UINT erlen = serial_wri_dat(portid, _buf, cnt);
+
+		if (erlen == E_OBJ) { // (Bluetooth) port closed
+			return 0;
+		}
 
 		assert(erlen > 0);
 

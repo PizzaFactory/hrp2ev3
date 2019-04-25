@@ -9,7 +9,7 @@
 
 #define LCD_SPI_INT (SYS_INT_SPINT1)
 
-void initialize_lcd_dri(intptr_t unused);
+void initialize_lcd_dri();
 void lcd_spi_isr(intptr_t unused);
 void lcd_refresh_tsk(intptr_t unused);
 

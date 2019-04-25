@@ -181,5 +181,16 @@ typedef enum {
 FILE* ev3_serial_open_file(serial_port_t port);
 
 /**
+ * \~English
+ * [TODO: sync with jp version]
+ *
+ * \~Japanese
+ * \brief            Bluetooth (Serial Port Profile)が接続されているかどうかをチェックする．
+ * \retval true      接続済み．Bluetooth仮想シリアルポートで通信できる．
+ * \retval false     接続切れ．
+ */
+bool_t ev3_bluetooth_is_connected();
+
+/**
  * @} // End of group
  */

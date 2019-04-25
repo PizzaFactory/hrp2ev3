@@ -24,27 +24,45 @@
 static ev3_driver_t drivers[TMAX_DRI_NUM];
 static uint32_t tnum_drivers = 0;
 
-static bool_t is_initialized;
+static bool_t is_initialized = false;
 
-void ev3_main_task(intptr_t exinf)
-{
+void ev3_main_task(intptr_t exinf) {
     ER_UINT ercd;
 
-    is_initialized = false;
+    // Pause application at first
+    platform_pause_application(true);
 
-    SVC_PERROR(serial_opn_por(SIO_PORT_BT));
-    SVC_PERROR(serial_ctl_por(SIO_PORT_BT, (IOCTL_CRLF)));
+    /**
+     * Initialize FatFS
+     */
+    initialize_fatfs_dri();
 
-//    syslog(LOG_NOTICE, "Sample program starts (exinf = %d).", (int_t) exinf);
+    /**
+     * Load configurations
+     */
+    ev3rt_load_configuration();
 
-    ercd = serial_opn_por(TASK_PORTID);
+    /**
+     * Initialize LCD
+     */
+    initialize_lcd_dri();
+
+    /**
+     * Initialize EV3RT console and open its SIO port.
+     */
+    initialize_console_dri();
+    ercd = serial_opn_por(SIO_PORT_LCD);
     if (ercd < 0 && MERCD(ercd) != E_OBJ) {
         syslog(LOG_ERROR, "%s (%d) reported by `serial_opn_por'.",
                                     itron_strerror(ercd), SERCD(ercd));
     }
-    SVC_PERROR(serial_ctl_por(TASK_PORTID,
-                            (IOCTL_CRLF | IOCTL_FCSND | IOCTL_FCRCV)));
+    SVC_PERROR(serial_ctl_por(SIO_PORT_LCD, IOCTL_NULL));
 
+    platform_pause_application(false);
+
+    is_initialized = false;
+
+//    syslog(LOG_NOTICE, "Sample program starts (exinf = %d).", (int_t) exinf);
 
     /**
      * Initialize all drivers
@@ -54,9 +72,24 @@ void ev3_main_task(intptr_t exinf)
 
 	platform_soft_reset();
 
-	syslog(LOG_NOTICE, "Platform initialization is completed.");
+	// Banner
+	syslog(LOG_NOTICE, "");
+	syslog(LOG_NOTICE, "");
+	syslog(LOG_NOTICE, "");
+	syslog(LOG_NOTICE, "");
+	syslog(LOG_NOTICE, "   _____   ______ ___  ______");
+	syslog(LOG_NOTICE, "  / __/ | / /_  // _ \/_  __/");
+	syslog(LOG_NOTICE, " / _/ | |/ //_ </ , _/ / /");
+	syslog(LOG_NOTICE, "/___/ |___/____/_/|_| /_/");
+	syslog(LOG_NOTICE, "=============================");
+	syslog(LOG_NOTICE, "Powered by TOPPERS/HRP2 RTOS");
+	syslog(LOG_NOTICE, "Initialization is completed..");
+
+	platform_pause_application(true);
 
 	is_initialized = true;
+
+	brick_misc_command(MISCCMD_SET_LED, TA_LED_GREEN);
 
 #if 0 // Legacy code
     initialize_analog_dri();
@@ -161,14 +194,12 @@ bool_t platform_is_ready() {
 	return is_initialized;
 }
 
-void
-svc_perror(const char *file, int_t line, const char *expr, ER ercd) {
-    if (ercd < 0) {
-        t_perror(LOG_ERROR, file, line, expr, ercd);
-    }
+void platform_pause_application(bool_t pause) {
+	if (pause)
+		rsm_tsk(PLATFORM_BUSY_TASK);
+	else
+		sus_tsk(PLATFORM_BUSY_TASK);
 }
-
-#if 0 // Legacy code
 
 /**
  * This task should be activated when the platform is busy,
@@ -179,6 +210,15 @@ platform_busy_task(intptr_t exinf) {
 //	SVC_PERROR(syslog_msk_log(LOG_UPTO(LOG_DEBUG), LOG_UPTO(LOG_EMERG)));
 	while(1);
 }
+
+void
+svc_perror(const char *file, int_t line, const char *expr, ER ercd) {
+    if (ercd < 0) {
+        t_perror(LOG_ERROR, file, line, expr, ercd);
+    }
+}
+
+#if 0 // Legacy code
 
 
 #endif

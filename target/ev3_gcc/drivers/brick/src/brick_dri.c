@@ -97,12 +97,33 @@ void brick_button_cyc(intptr_t unused) {
             brick_misc_command(MISCCMD_POWER_OFF, 0);
     }
 
+    static bool_t ignore_back_click_once = false; // Quick fix
+
+	// Hold BACK button to call EV3RT console
+    static EVTTIM console_start_time;
+    if (gpio_get_value(button_pin[BRICK_BUTTON_BACK])) {
+        if (!(button_pressed[BRICK_BUTTON_BACK]))
+        	console_start_time = _kernel_current_time;
+        else if (_kernel_current_time - console_start_time >= FORCE_SHUTDOWN_TIMEOUT * 2) {
+        	if (current_button_flag != console_button_flag) {
+        		current_button_flag = console_button_flag;
+        		ignore_back_click_once = true;
+        		SVC_PERROR(iset_flg(current_button_flag, 1 << BRICK_BUTTON_BACK));
+        	}
+        }
+    }
+
 	for (int i = 0; i < TNUM_BRICK_BUTTON; ++i) {
 		bool_t pressed = gpio_get_value(button_pin[i]);
-		if (button_pressed[i] && !pressed) // Clicked
-			SVC_PERROR(iset_flg(current_button_flag, 1 << i));
+		if (button_pressed[i] && !pressed) { // Clicked
+			if (i == BRICK_BUTTON_BACK && ignore_back_click_once)
+				ignore_back_click_once = false;
+			else
+				SVC_PERROR(iset_flg(current_button_flag, 1 << i));
+		}
 		button_pressed[i] = pressed;
 	}
+
 }
 
 static void initialize(intptr_t unused) {
@@ -131,6 +152,7 @@ static void softreset(intptr_t unused) {
 	SVC_PERROR(stp_cyc(BRICK_BTN_CYC));
 	ercd = ter_tsk(BRICK_BTN_TSK);
 	assert(ercd == E_OK || ercd == E_OBJ);
+	destroy_memory_pool(appheap);
 	init_memory_pool(APP_HEAP_SIZE, appheap);
 	for (int i = 0; i < TNUM_BRICK_BUTTON; i++) {
 		button_handlers[i] = NULL;

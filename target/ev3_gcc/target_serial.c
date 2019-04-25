@@ -56,7 +56,7 @@ struct sio_port_control_block {
 static SIOPCB siopcb_table[TNUM_PORT] = {
     {(intptr_t)NULL, false, uart_opn_por, uart_cls_por, uart_snd_chr, uart_rcv_chr, uart_ena_cbr, uart_dis_cbr},
     {(intptr_t)NULL, false, bt_opn_por, bt_cls_por, bt_snd_chr, bt_rcv_chr, bt_ena_cbr, bt_dis_cbr},
-//	{(intptr_t)NULL, false, lcd_opn_por, lcd_cls_por, lcd_snd_chr, lcd_rcv_chr, lcd_ena_cbr, lcd_dis_cbr},
+	{(intptr_t)NULL, false, lcd_opn_por, lcd_cls_por, lcd_snd_chr, lcd_rcv_chr, lcd_ena_cbr, lcd_dis_cbr},
 };
 
 /* 
@@ -358,6 +358,16 @@ void uart_sio_isr(/*ID siopid*/intptr_t unused) {
  * SIO driver for Bluetooth
  */
 
+
+static SIOPCB*  bt_siopcb = &siopcb_table[INDEX_SIOP(SIO_PORT_BT)];
+static uint8_t  bt_send_buffer[2][BT_SND_BUF_SIZE]; // Double buffering
+static uint32_t bt_send_buffer_bytes[2] = {0, 0};
+static uint8_t  bt_send_buffer_idx = 0;             // Current send buffer in use
+const intptr_t *bt_siopcb_exinf_ptr = &(siopcb_table[INDEX_SIOP(SIO_PORT_BT)].exinf);
+static uint8_t  bt_recv_data_buf[2048];
+//static const uint8_t *bt_recv_data_buf;
+static uint16_t bt_recv_data_size = 0;
+
 static bool_t   bt_snd_cbr_ena = false;
 static bool_t   bt_rcv_cbr_ena = false;
 
@@ -381,6 +391,12 @@ static intptr_t bt_cls_por(intptr_t exinf) {
 //    uart_close(&UART1);
 
     p_siopcb->openflag = false;
+
+	// Reset buffer
+    bt_send_buffer_bytes[0] = 0;
+    bt_send_buffer_bytes[1] = 0;
+    bt_send_buffer_idx = 0;
+    bt_recv_data_size = 0;
 
 //    ER ercd = dis_int(UART1_INT);
 //    assert(ercd == E_OK);
@@ -419,17 +435,6 @@ static intptr_t bt_dis_cbr(intptr_t cbrtn)
 	}
     return true;
 }
-
-#if defined(BUILD_EV3_PLATFORM)
-
-static SIOPCB*  bt_siopcb = &siopcb_table[INDEX_SIOP(SIO_PORT_BT)];
-static uint8_t  bt_send_buffer[2][BT_SND_BUF_SIZE]; // Double buffering
-static uint32_t bt_send_buffer_bytes[2] = {0, 0};
-static uint8_t  bt_send_buffer_idx = 0;             // Current send buffer in use
-const intptr_t *bt_siopcb_exinf_ptr = &(siopcb_table[INDEX_SIOP(SIO_PORT_BT)].exinf);
-static uint8_t  bt_recv_data_buf[2048];
-//static const uint8_t *bt_recv_data_buf;
-static uint16_t bt_recv_data_size = 0;
 
 void bt_rcv_alm(intptr_t unused) {
 	// Consume the receive data buffer
@@ -485,10 +490,7 @@ void bt_fetch_snd_buf(uint8_t **buf, uint32_t *bytes) {
 	*bytes = bt_send_buffer_bytes[old_snd_buf_idx];
 }
 
-#endif
-
 static intptr_t bt_snd_chr(intptr_t c) {
-#if defined(BUILD_EV3_PLATFORM)
 	bool_t retval = false;
 	SIL_PRE_LOC;
 	SIL_LOC_INT();
@@ -498,16 +500,12 @@ static intptr_t bt_snd_chr(intptr_t c) {
 	}
 	SIL_UNL_INT();
 	return retval;
-#else
-    return false;
-#endif
 }
 
 /**
  * SIO driver for LCD (write only)
  */
 
-#if 0 // not used yet
 static intptr_t lcd_opn_por(intptr_t unused) {
     return true;
 }
@@ -529,8 +527,7 @@ static intptr_t lcd_dis_cbr(intptr_t cbrtn) {
 }
 
 static intptr_t lcd_snd_chr(intptr_t c) {
-	lcd_console_send_character(c);
+	ev3rt_console_log_putc(c);
 	return true;
 }
 
-#endif

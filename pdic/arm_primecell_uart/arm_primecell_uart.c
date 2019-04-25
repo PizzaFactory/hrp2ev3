@@ -6,40 +6,40 @@
  *  Copyright (C) 2006-2011 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ���(1)��(4)�ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ������
- *  �ѡ������ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
- *      �ޤ����ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���
- *      ͳ�˴�Ť����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ�
- *      ���դ��뤳�ȡ�
+ *  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
+ *  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+ *      また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
+ *      由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
+ *      免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū
- *  ���Ф���Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ���
- *  �������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤��
- *  ����Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
+ *  に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
+ *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
+ *  の責任を負わない．
  * 
  *  @(#) $Id: arm_primecell_uart.c 836 2012-12-26 15:09:00Z ertl-hiro $
  */
 
 /*
- *   ARM PrimeCell UART�� �ʰ�SIO�ɥ饤��
+ *   ARM PrimeCell UART用 簡易SIOドライバ
  */
 
 #include <sil.h>
@@ -47,37 +47,37 @@
 #include "arm_primecell_uart.h"
 
 /*
- *  ���ꥢ��I/O�ݡ��Ƚ�����֥��å������
+ *  シリアルI/Oポート初期化ブロックの定義
  */
 typedef struct sio_port_initialization_block {
-    void  *dr;    /* �ǡ����쥸���� */
-    void  *rsr;   /* �������ơ������쥸���� */
-    void  *fr;    /* �ե饰�쥸���� */
-    void  *ibrd;  /* �����ܡ��졼�ȥ쥸���� */
-    void  *fbrd;  /* ʬ���ܡ��졼�ȥ쥸���� */
-    void  *lcr_h; /* �饤�󥳥�ȥ�����쥸����(H) */
-    void  *cr;    /* ����ȥ�����쥸���� */
-    void  *imsc;  /* ����ߥޥ����쥸���� */
-    uint8_t lcr_h_def; /* �饤�󥳥�ȥ�����쥸������������ */
-    uint8_t ibrd_def;  /* �����ܡ��졼�ȥ쥸������������ */
-    uint8_t fbrd_def;  /* ʬ���ܡ��졼�ȥ쥸������������ */
-    uint8_t intno;     /* ������ֹ� */
+    void  *dr;    /* データレジスタ */
+    void  *rsr;   /* 受信ステータスレジスタ */
+    void  *fr;    /* フラグレジスタ */
+    void  *ibrd;  /* 整数ボーレートレジスタ */
+    void  *fbrd;  /* 分数ボーレートレジスタ */
+    void  *lcr_h; /* ラインコントロールレジスタ(H) */
+    void  *cr;    /* コントロールレジスタ */
+    void  *imsc;  /* 割込みマスクレジスタ */
+    uint8_t lcr_h_def; /* ラインコントロールレジスタの設定値 */
+    uint8_t ibrd_def;  /* 整数ボーレートレジスタの設定値 */
+    uint8_t fbrd_def;  /* 分数ボーレートレジスタの設定値 */
+    uint8_t intno;     /* 割込み番号 */
 } SIOPINIB;
 
 /*
- *  ���ꥢ��I/O�ݡ��ȴ����֥��å������
+ *  シリアルI/Oポート管理ブロックの定義
  */
 struct sio_port_control_block {
-    const SIOPINIB  *siopinib;  /* ���ꥢ��I/O�ݡ��Ƚ�����֥��å� */
-    intptr_t  exinf;            /* ��ĥ���� */
-    bool_t    openflag;           /* �����ץ�Ѥߥե饰 */
-    bool_t    sendflag;           /* ��������ߥ��͡��֥�ե饰 */
-    bool_t    getready;           /* ʸ��������������� */
-    bool_t    putready;           /* ʸ���������Ǥ������ */
+    const SIOPINIB  *siopinib;  /* シリアルI/Oポート初期化ブロック */
+    intptr_t  exinf;            /* 拡張情報 */
+    bool_t    openflag;           /* オープン済みフラグ */
+    bool_t    sendflag;           /* 送信割込みイネーブルフラグ */
+    bool_t    getready;           /* 文字を受信した状態 */
+    bool_t    putready;           /* 文字を送信できる状態 */
 };
 
 /*
- *  ���ꥢ��I/O�ݡ��Ƚ�����֥��å�
+ *  シリアルI/Oポート初期化ブロック
  */
 const SIOPINIB siopinib_table[TNUM_SIOP] = {
 #ifdef SIO_USE_UART0    
@@ -141,18 +141,18 @@ const SIOPINIB siopinib_table[TNUM_SIOP] = {
 
 
 /*
- *  ���ꥢ��I/O�ݡ��ȴ����֥��å��Υ��ꥢ
+ *  シリアルI/Oポート管理ブロックのエリア
  */
 SIOPCB	siopcb_table[TNUM_SIOP];
 
 /*
- *  ���ꥢ��I/O�ݡ���ID��������֥��å�����Ф�����Υޥ���
+ *  シリアルI/OポートIDから管理ブロックを取り出すためのマクロ
  */
 #define INDEX_SIOP(siopid)	((uint_t)((siopid) - 1))
 #define get_siopcb(siopid)	(&(siopcb_table[INDEX_SIOP(siopid)]))
 
 /*
- *  ʸ��������Ǥ��뤫��
+ *  文字を受信できるか？
  */
 Inline bool_t
 arm_primecell_uart_getready(SIOPCB *p_siopcb)
@@ -161,7 +161,7 @@ arm_primecell_uart_getready(SIOPCB *p_siopcb)
 }
 
 /*
- *  ʸ���������Ǥ��뤫��
+ *  文字を送信できるか？
  */
 Inline bool_t
 arm_primecell_uart_putready(SIOPCB *p_siopcb)
@@ -170,7 +170,7 @@ arm_primecell_uart_putready(SIOPCB *p_siopcb)
 }
 
 /*
- *  ��������ʸ���μ�Ф�
+ *  受信した文字の取出し
  */
 Inline char
 arm_primecell_uart_getchar(SIOPCB *p_siopcb)
@@ -179,7 +179,7 @@ arm_primecell_uart_getchar(SIOPCB *p_siopcb)
 }
 
 /*
- *  ��������ʸ���ν����
+ *  送信する文字の書込み
  */
 Inline void
 arm_primecell_uart_putchar(SIOPCB *p_siopcb, char c)
@@ -188,7 +188,7 @@ arm_primecell_uart_putchar(SIOPCB *p_siopcb, char c)
 }
 
 /*
- *  ��������ߵ���
+ *  送信割込み許可
  */
 Inline void
 arm_primecell_uart_enable_send(SIOPCB *p_siopcb)
@@ -198,7 +198,7 @@ arm_primecell_uart_enable_send(SIOPCB *p_siopcb)
 }
 
 /*
- *  ��������߶ػ�
+ *  送信割込み禁止
  */
 Inline void
 arm_primecell_uart_disable_send(SIOPCB *p_siopcb)
@@ -209,7 +209,7 @@ arm_primecell_uart_disable_send(SIOPCB *p_siopcb)
 
 
 /*
- *  ��������ߵ���
+ *  受信割込み許可
  */
 Inline void
 arm_primecell_uart_enable_rcv(SIOPCB *p_siopcb)
@@ -219,7 +219,7 @@ arm_primecell_uart_enable_rcv(SIOPCB *p_siopcb)
 }
 
 /*
- *  ��������߶ػ�
+ *  受信割込み禁止
  */
 Inline void
 arm_primecell_uart_disable_rcv(SIOPCB *p_siopcb)
@@ -229,7 +229,7 @@ arm_primecell_uart_disable_rcv(SIOPCB *p_siopcb)
 }
 
 /*
- *  SIO�ɥ饤�Фν����
+ *  SIOドライバの初期化
  */
 void
 arm_primecell_uart_initialize(void)
@@ -238,7 +238,7 @@ arm_primecell_uart_initialize(void)
 	uint_t	i;
 
 	/*
-	 *  ���ꥢ��I/O�ݡ��ȴ����֥��å��ν����
+	 *  シリアルI/Oポート管理ブロックの初期化
 	 */
     for (p_siopcb = siopcb_table, i = 0; i < TNUM_SIOP; p_siopcb++, i++) {
         p_siopcb->siopinib = &(siopinib_table[i]);
@@ -248,7 +248,7 @@ arm_primecell_uart_initialize(void)
 }
 
 /*
- *  �����ץ󤷤Ƥ���ݡ��Ȥ����뤫��
+ *  オープンしているポートがあるか？
  */
 bool_t
 arm_primecell_uart_openflag(void)
@@ -257,7 +257,7 @@ arm_primecell_uart_openflag(void)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��ȤΥ����ץ�
+ *  シリアルI/Oポートのオープン
  */
 SIOPCB *
 arm_primecell_uart_opn_por(ID siopid, intptr_t exinf)
@@ -270,26 +270,26 @@ arm_primecell_uart_opn_por(ID siopid, intptr_t exinf)
     p_siopcb = get_siopcb(siopid);
     p_siopinib = p_siopcb->siopinib;
 
-	/* UART��� */
+	/* UART停止 */
 	sil_wrw_mem(p_siopcb->siopinib->cr, 0x00);
 
-    /* ���顼�ե饰�򥯥ꥢ */
+    /* エラーフラグをクリア */
     sil_wrw_mem(p_siopcb->siopinib->rsr, 0x00);
 
-	/* FIFO����ˤ��� */
+	/* FIFOを空にする */
 	while(arm_primecell_uart_getready(p_siopcb)){
-		/* �Хåե�������ɤ߹��� */
+		/* バッファからの読み込み */
 		c = arm_primecell_uart_getchar(p_siopcb);
 	}
 
-	/* �ܡ��졼�Ȥ����� */
+	/* ボーレートを設定 */
 	sil_wrw_mem(p_siopcb->siopinib->ibrd, p_siopcb->siopinib->ibrd_def);
 	sil_wrw_mem(p_siopcb->siopinib->fbrd, p_siopcb->siopinib->fbrd_def);
 	
-	/* �ǡ����ե����ޥåȤȡ�FIFO�Υ⡼�ɤ����� */
+	/* データフォーマットと，FIFOのモードを設定 */
 	sil_wrw_mem(p_siopcb->siopinib->lcr_h, p_siopcb->siopinib->lcr_h_def);
 		
-	/* UART�Ƴ� */
+	/* UART再開 */
 	sil_wrw_mem(p_siopcb->siopinib->cr,
 				(sil_rew_mem(p_siopcb->siopinib->cr)
                  | UART_CR_RXE | UART_CR_TXE | UART_CR_UARTEN));
@@ -302,18 +302,18 @@ arm_primecell_uart_opn_por(ID siopid, intptr_t exinf)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��ȤΥ�������
+ *  シリアルI/Oポートのクローズ
  */
 void
 arm_primecell_uart_cls_por(SIOPCB *p_siopcb)
 {
-    /* UART��� */
+    /* UART停止 */
 	sil_wrw_mem(p_siopcb->siopinib->cr, 0x00);
     p_siopcb->openflag = false;
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥؤ�ʸ������
+ *  シリアルI/Oポートへの文字送信
  */
 bool_t
 arm_primecell_uart_snd_chr(SIOPCB *p_siopcb, char c)
@@ -326,7 +326,7 @@ arm_primecell_uart_snd_chr(SIOPCB *p_siopcb, char c)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ����ʸ������
+ *  シリアルI/Oポートからの文字受信
  */
 int_t
 arm_primecell_uart_rcv_chr(SIOPCB *p_siopcb)
@@ -338,7 +338,7 @@ arm_primecell_uart_rcv_chr(SIOPCB *p_siopcb)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ���Υ�����Хå��ε���
+ *  シリアルI/Oポートからのコールバックの許可
  */
 void
 arm_primecell_uart_ena_cbr(SIOPCB *p_siopcb, uint_t cbrtn)
@@ -354,7 +354,7 @@ arm_primecell_uart_ena_cbr(SIOPCB *p_siopcb, uint_t cbrtn)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ���Υ�����Хå��ζػ�
+ *  シリアルI/Oポートからのコールバックの禁止
  */
 void
 arm_primecell_uart_dis_cbr(SIOPCB *p_siopcb, uint_t cbrtn)
@@ -370,27 +370,27 @@ arm_primecell_uart_dis_cbr(SIOPCB *p_siopcb, uint_t cbrtn)
 }
 
 /*
- *  ���ꥢ��I/O�ݡ��Ȥ��Ф������߽���
+ *  シリアルI/Oポートに対する割込み処理
  */
 static void
 arm_primecell_uart_isr_siop(SIOPCB *p_siopcb)
 {
     if (arm_primecell_uart_getready(p_siopcb)) {
         /*
-         *  �������Υ�����Хå��롼�����ƤӽФ���
+         *  受信通知コールバックルーチンを呼び出す．
          */
         arm_primecell_uart_irdy_rcv(p_siopcb->exinf);
     }
     if (arm_primecell_uart_putready(p_siopcb)) {
         /*
-         *  ������ǽ������Хå��롼�����ƤӽФ���
+         *  送信可能コールバックルーチンを呼び出す．
          */
         arm_primecell_uart_irdy_snd(p_siopcb->exinf);
     }
 }
 
 /*
- *  SIO�γ���ߥ����ӥ��롼����
+ *  SIOの割込みサービスルーチン
  */
 void
 arm_primecell_uart_isr()

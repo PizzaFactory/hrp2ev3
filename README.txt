@@ -1,53 +1,53 @@
 
-	TOPPERS/HRP2 Kernel��Release 2.2.0��
+	TOPPERS/HRP2 Kernel（Release 2.2.0）
 		Toyohashi Open Platform for Embedded Real-Time Systems/
 		Advanced Standard Profile Kernel
 
-TOPPERS/HRP2�����ͥ�ʰʲ���HRP2�����ͥ�ˤϡ�TOPPERS/ASP�����ͥ���Ф�
-�ơ������ݸ�ʤɤΥ��������ݸǽ���ɲä����ꥢ�륿���५���ͥ�Ǥ���
-TOPPERS/HRP�����ͥ���Ф��ơ���ĥ�����ɤ�ä�����ΤȤ��������դ��⤢��
-�ޤ���
+TOPPERS/HRP2カーネル（以下，HRP2カーネル）は，TOPPERS/ASPカーネルに対し
+て，メモリ保護などのアクセス保護機能を追加したリアルタイムカーネルです．
+TOPPERS/HRPカーネルに対して，拡張・改良を加えたものという位置付けもあり
+ます．
 
-�ڥ���ե�����졼���ΥС������˴ؤ������ա�
+【コンフィギュレータのバージョンに関する注意】
 
-HRP2�����ͥ�Release 2.1.0�Ǥϡ�TOPPERS�����奫���ͥ��ѥ���ե�����졼
-����cfg�ˤκǿ��ǡ�1.9.0�ˤε�ǽ���Ѥ��Ƥ��롥1.8.0�����ΥС������Υ�
-��ե�����졼���Ǥ�ư��ʤ��Τ����դ��뤳�ȡ�
+HRP2カーネルRelease 2.1.0では，TOPPERS新世代カーネル用コンフィギュレー
+タ（cfg）の最新版（1.9.0）の機能を用いている．1.8.0以前のバージョンのコ
+ンフィギュレータでは動作しないので注意すること．
 
-�ںǽ���ɤ�٤��ɥ�����ȡ�
+【最初に読むべきドキュメント】
 
-HRP2�����ͥ�Υ桼�������ޥ˥奢�뤬��doc/user.txt�ˤ���ޤ���HRP2����
-�ͥ����Ѥ�����ˤϡ��ޤ��Ϥ��Υɥ�����Ȥ��餪�ɤ߲�������
+HRP2カーネルのユーザーズマニュアルが，doc/user.txtにあります．HRP2カー
+ネルを使用する場合には，まずはこのドキュメントからお読み下さい．
 
-�ڥե�����α����ˤ����äơ�
+【ファイルの閲覧にあたって】
 
-HRP2�����ͥ�Υɥ�����ȡʥץ졼��ƥ����ȥե�����ˤ���ӥ������ե�
-������ɤ�ݤˤϡ�TAB��4�����ꤷ�Ƥ���������
+HRP2カーネルのドキュメント（プレーンテキストファイル）およびソースファ
+イルを読む際には，TABを4に設定してください．
 
-�����Ѿ���
+【利用条件】
 
-HRP2�����ͥ�����Ѿ��ϡ��ƥե��������Ƭ��ɽ������Ƥ���TOPPERS�饤��
-�󥹤Ǥ���TOPPERS�饤���󥹤˴ؤ���FAQ�����ʲ��Υڡ����ˤ���ޤ���
+HRP2カーネルの利用条件は，各ファイルの先頭に表示されているTOPPERSライセ
+ンスです．TOPPERSライセンスに関するFAQが，以下のページにあります．
 
 	http://www.toppers.jp/faq/faq_ct12.html
 
-�ڼ��䡦�Х���ݡ��ȡ��ո������������
+【質問・バグレポート・意見等の送付先】
 
-HRP2�����ͥ�����ɤ���Τˤ��뤿��Τ��ո����򴿷ޤ��ޤ���HRP2������
-��˴ؤ�������Х���ݡ��ȡ����ո����ϡ�TOPPERS�ץ��������Ȥβ����
-TOPPERS��ȯ�ԥ᡼��󥰥ꥹ�ȡ�dev@toppers.jp�˰��ޤ���HRP2�����ͥ�Υ�
-���ȥ�å��󥰥����ƥ��Trac�ˤˡ�����¾������TOPPERS�桼�������᡼���
-���ꥹ�ȡ�users@toppers.jp�˰��ˤ��ꤤ���ޤ���
+HRP2カーネルをより良いものにするためのご意見等を歓迎します．HRP2カーネ
+ルに関する質問やバグレポート，ご意見等は，TOPPERSプロジェクトの会員は
+TOPPERS開発者メーリングリスト（dev@toppers.jp）宛またはHRP2カーネルのバ
+グトラッキングシステム（Trac）に，その他の方はTOPPERSユーザーズメーリン
+グリスト（users@toppers.jp）宛にお願いします．
 
-TOPPERS�桼�������᡼��󥰥ꥹ�Ȥؤ���Ͽ��ˡ�ˤĤ��Ƥϡ��ʲ��Υڡ�����
-����������ޤ���
+TOPPERSユーザーズメーリングリストへの登録方法については，以下のページに
+説明があります．
 
 	http://www.toppers.jp/community.html
 
-�ڥݡ��ƥ��󥰤ˤ����äơ�
+【ポーティングにあたって】
 
-HRP2�����ͥ��TOPPERS�ץ��������Ȥ��饪���ץ󥽡����ˤ��뤳�Ȥ�����ˡ�
-̤���ݡ��ȤΥ������åȤ˥ݡ��ƥ��󥰤������ˤϡ����餫���ᤴ���̤�
-������ȹ����Ǥ���
+HRP2カーネルを，TOPPERSプロジェクトからオープンソースにすることを前提に，
+未サポートのターゲットにポーティングされる場合には，あらかじめご相談く
+ださると幸いです．
 
-�ʾ�
+以上

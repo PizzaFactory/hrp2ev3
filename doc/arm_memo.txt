@@ -1,135 +1,135 @@
 													TOPPERS Confidential
-		TOPPERS�ץ��������� �߷ץ��
-		ARM�Υ������ƥ�����˴ؤ�����
+		TOPPERSプロジェクト 設計メモ
+		ARMのアーキテクチャに関するメモ
 
-		������: ���Ĺ��ϡ�̾�Ų���ء�
-		�ǽ�����: 2012ǯ9��19��
+		作成者: 高田広章（名古屋大学）
+		最終更新: 2012年9月19日
 
-�����ΰ��֤Ť�
+○メモの位置づけ
 
-���Υ��ϡ�ARM�Υ������ƥ�����˴ؤ��ơ�TOPPERS/HRP2�����ͥ���߷ס���
-���ˤ����ä�ɬ�פȤʤ�����ޤȤᡤ�߷����ˤ�����ˤĤ�������������
-�Ǥ��롥�ʤ���ARM��MMU�˴ؤ��Ƥϡ���ARM��MMU�˴ؤ�����פ򻲾Ȥ��뤳
-�ȡ�
+このメモは，ARMのアーキテクチャに関して，TOPPERS/HRP2カーネルを設計・実
+装にあたって必要となる事項をまとめ，設計方針や実装について説明するもの
+である．なお，ARMのMMUに関しては，「ARMのMMUに関するメモ」を参照するこ
+と．
 
-������ʸ��
+○参考文献
 
 ARM Architecture Reference Manual - ARMv7-A and ARv7-R edition Errata
 markup, Dec. 2011 (ARM DDI 0406B_errata_2011_Q3)
 DDI0406B_arm_architecture_reference_manual_errata_markup_10_0.pdf
 
-���쥸�������åȤȥץ����å��⡼��
+○レジスタセットとプロセッサモード
 
-�����ץꥱ��������٥�����ѥ쥸����
+●アプリケーションレベルの汎用レジスタ
 
-ARM�����ѥ쥸�����ϡ�r0��r15��16�ܤ��롥���������ʲ��Υ쥸�������ü���
-Ū�˻Ȥ��Ƥ��ꡤ���ѥ쥸�����Ȥ��Ƥϻ��Ѥ��ʤ���
+ARMの汎用レジスタは，r0〜r15の16本ある．ただし，以下のレジスタは特殊目
+的に使われており，汎用レジスタとしては使用しない．
 
-	r13		�����å��ݥ���	sp
-	r14		��󥯥쥸����		lr
-	r15		�ץ�����५����	pc
+	r13		スタックポインタ	sp
+	r14		リンクレジスタ		lr
+	r15		プログラムカウンタ	pc
 
-�ޤ����ʲ��Υ쥸�������ü���Ū�˻Ȥ����礬���뤬���̾�����ѥ쥸��
-���Ȥ��ƻ��Ѥ��롥
+また，以下のレジスタも特殊目的に使われる場合があるが，通常は汎用レジス
+タとして使用する．
 
 	r12		InterProcedure		ip
 
-�ü���Ū�Υ쥸�����ʳ��ǡ�������å��쥸�����ϰʲ����̤ꡥ
+特殊目的のレジスタ以外で，スクラッチレジスタは以下の通り．
 
 	r0, r1, r2, r3, r12
 
-����¾�Υ쥸������r4��r11�ˤϡ�callee saved register�Ǥ��롥
+この他のレジスタ（r4〜r11）は，callee saved registerである．
 
-�����ץꥱ��������٥�Υ��ơ������쥸����
+●アプリケーションレベルのステータスレジスタ
 
-���ץꥱ��������٥�Υ��ơ������쥸�����Ȥ��ơ�APSR��Application
-Program Status Register�ˤ����롥APSR�ι����ϰʲ����̤ꡥ
+アプリケーションレベルのステータスレジスタとして，APSR（Application
+Program Status Register）がある．APSRの構成は以下の通り．
 
-	�ӥå�31��MSB��	N�ե饰��Negative��
-		  30		Z�ե饰��Zero��
-		  29		C�ե饰��Carry��
-		  28		V�ե饰��Overflow��
-		  27		Q�ե饰��Overflow�ޤ���Saturation��DSP̿���ѡ�
-		  26��24	���0��RAZ/SBZP��
-		  23��20	ͽ��
-		  19��16	GE[3:0] Greater or Equal�ե饰��SIMD̿���ѡ�
-		  15��0		ͽ��
+	ビット31（MSB）	Nフラグ（Negative）
+		  30		Zフラグ（Zero）
+		  29		Cフラグ（Carry）
+		  28		Vフラグ（Overflow）
+		  27		Qフラグ（OverflowまたはSaturation，DSP命令用）
+		  26〜24	常に0（RAZ/SBZP）
+		  23〜20	予約
+		  19〜16	GE[3:0] Greater or Equalフラグ（SIMD命令用）
+		  15〜0		予約
 
-���ץ����å��⡼��
+●プロセッサモード
 
 	User			usr
 	FIQ				fiq
 	IRQ				irq
 	Supervisor		svc
-	Monitor			mon		Secure�⡼�ɤ�Non-secure�⡼�ɤ��ڤ괹����
+	Monitor			mon		SecureモードとNon-secureモードの切り換え用
 	Abort			abt
 	Undefined		und
 	System			sys
 
-User�⡼�ɤ����ø��⡼�ɡ�����¾���ø��⡼�ɤǤ��롥User�⡼�ɤ�System
-�⡼�ɰʳ����㳰�⡼�ɤ����Τ��롥
+Userモードは非特権モード，その他は特権モードである．UserモードとSystem
+モード以外を，例外モードと総称する．
 
-HRP2�����ͥ�ˤ����Ƥϡ��桼���ɥᥤ��ν���ñ�̡ʥ桼���������ˤ�User
-�⡼�ɤǼ¹Ԥ��������ͥ�ɥᥤ��ν���ñ�̤�Supervisor�⡼�ɤǼ¹Ԥ���.
-����¾�Υ⡼�ɤϡ����Ū�˻��Ѥ���ΤߤǤ��롥
+HRP2カーネルにおいては，ユーザドメインの処理単位（ユーザタスク）はUser
+モードで実行し，カーネルドメインの処理単位はSupervisorモードで実行する.
+その他のモードは，一時的に使用するのみである．
 
-����߽����μ¹Ԥ�IRQ�⡼�ɤ�Ȥ�ʤ��Τϡ�������ͳ�Ǥ��롥IRQ�⡼�ɤ�
-�¹���˳���ߤ�ȯ������ȡ�lr�쥸������������Ϥ���Ǽ����롥���Τ��ᡤ
-����߽�����IRQ�⡼�ɤ�¹Ԥ���ȡ�¿�ų���ߤˤ��lr�쥸���������Ƥ���
-���뤿�ᡤ¿�ų���ߤ���Ĥ��뤳�Ȥ��Ǥ��ʤ���
+割込み処理の実行にIRQモードを使わないのは，次の理由である．IRQモードで
+実行中に割込みが発生すると，lrレジスタに戻り番地が格納される．そのため，
+割込み処理をIRQモードを実行すると，多重割込みによりlrレジスタの内容が失
+われるため，多重割込みを許可することができない．
 
-�������ƥ��٥�����ѥ쥸����
+●システムレベルの汎用レジスタ
 
-���㳰�⡼�ɤϡ����Ѥ�sp��r13�ˤ�lr��r14�ˤ���ġ�FIQ�⡼�ɤϡ�����˲�
-���ơ�R8��R12�����Ѥ˻��ġ�����¾�Υ쥸�����ϡ�User�⡼�ɤȶ��Ѥ��Ƥ��롥
-System�⡼�ɤϡ����٤ƤΥ쥸������User�⡼�ɤȶ��Ѥ��Ƥ��롥
+各例外モードは，専用のsp（r13）とlr（r14）を持つ．FIQモードは，それに加
+えて，R8〜R12も専用に持つ．その他のレジスタは，Userモードと共用している．
+Systemモードは，すべてのレジスタをUserモードと共用している．
 
-����Υ⡼�ɤ�sp��lr��sp_usr��lr_usr��sp_svc��lr_svc�Τ褦��ɽ�����롥
+特定のモードのspとlrを，sp_usr，lr_usr，sp_svc，lr_svcのように表記する．
 
-�������ƥ��٥�Υ��ơ������쥸����
+●システムレベルのステータスレジスタ
 
-�����ƥ��٥�Υ��ơ������쥸�����Ȥ��ơ�CPSR��Current Program Status
-Register�ˤ����롥CPSR�ϡ�APSR�γ�ĥ�Ǥ���ʸ���������ȡ�APSR�ϡ�CPSR
-�ΰ����������Ƥ���ˡ�CPSR�ι����ϰʲ����̤ꡥ
+システムレベルのステータスレジスタとして，CPSR（Current Program Status
+Register）がある．CPSRは，APSRの拡張である（言い換えると，APSRは，CPSR
+の一部が見えている）．CPSRの構成は以下の通り．
 
-	�ӥå�31��27	N,Z,C,V,Q�ե饰 �� APSR��Ʊ��
-		  26��25	IT[1:0] ����IT�ӥåȤβ���2�ӥå�
-		  24		J�ӥåȡ�Jazelle�ӥåȡ�
-		  23��20	ͽ��
-		  19��16	GE[3:0] Greater or Equal�ե饰��SIMD̿���ѡˡ� APSR��Ʊ��
-		  15��10	IT[7:2] If-Then�¹Ծ��֥ӥåȡ�Thumb IT̿���ѡ�
-		  9			E�ʥ���ǥ�������֡�
-		  8			A�ӥåȡ���Ʊ�����ܡ��ȶػߡ�
-		  7			I�ӥåȡ�IRQ�ػߡ�
-		  6			F�ӥåȡ�FIQ�ػߡ�
-		  5			T�ӥåȡ�Thumb�ӥåȡ�J�ӥåȤȹ�碌��̿�᥻�åȤ�����
-		  4��0		M[4:0] �ץ����å��⡼��
+	ビット31〜27	N,Z,C,V,Qフラグ … APSRと同じ
+		  26〜25	IT[1:0] 下のITビットの下位2ビット
+		  24		Jビット（Jazelleビット）
+		  23〜20	予約
+		  19〜16	GE[3:0] Greater or Equalフラグ（SIMD命令用）… APSRと同じ
+		  15〜10	IT[7:2] If-Then実行状態ビット（Thumb IT命令用）
+		  9			E（エンディアン状態）
+		  8			Aビット（非同期アボート禁止）
+		  7			Iビット（IRQ禁止）
+		  6			Fビット（FIQ禁止）
+		  5			Tビット（Thumbビット，Jビットと合わせて命令セットを指定）
+		  4〜0		M[4:0] プロセッサモード
 
-CPSR�ϡ����٤ƤΥ⡼�ɤǶ��Ѥ��Ƥ���ʤĤޤꡤCPSR��1�Ĥ����ʤ��ˡ�
+CPSRは，すべてのモードで共用している（つまり，CPSRは1つしかない）．
 
-�⡼���ڴ�������CPSR����¸���뤿��Υ쥸�����Ȥ��ơ�SPSR��Saved
-Program Status Register�ˤ����롥SPSR�ϡ����㳰�⡼��������Ѥ˻��ġ�
+モード切換え前のCPSRを保存するためのレジスタとして，SPSR（Saved
+Program Status Register）がある．SPSRは，各例外モード毎に専用に持つ．
 
-���������㳰�����롼���󤫤�꥿�������CPSR
-�ä�����ϡ�ARM��¸���߷ץ��˰�ư���롥
+●タスク例外処理ルーチンからリターン時のCPSR
+｜この節は，ARM依存部設計メモに移動する．
 
-�桼�����������������㳰�����롼�����¹���ϡ��������㳰�����롼����
-�¹Գ�������CPSR�ϥ桼�������å������¸����Ƥ��뤿�ᡤ�桼����������
-��񤭴����뤳�Ȥ��Ǥ��롥���Τ��ᡤ�������ɤΤ褦�˽񤭴�����줿�Ȥ�
-�Ƥ⡤�����ͥ��¾���ݸ�ɥᥤ��˰��ƶ����ڤФʤ��褦�ˤ���ɬ�פ����롥
-���������Υ桼�����������Ȥ䤽�줬°�����ݸ�ɥᥤ��˰��ƶ����ڤ֤Τ�
-���򤨤ʤ���
+ユーザタスクがタスク例外処理ルーチンを実行中は，タスク例外処理ルーチン
+実行開始前のCPSRはユーザスタック上に保存されているため，ユーザタスクか
+ら書き換えることができる．そのため，そこがどのように書き換えられたとし
+ても，カーネルや他の保護ドメインに悪影響が及ばないようにする必要がある．
+一方，そのユーザタスク自身やそれが属する保護ドメインに悪影響が及ぶのは
+やむをえない．
 
-�����ǡ��桼�������å������¸����Ƥ���CPSR���⡤�����Υե�����ɤ϶�
-��Ū�˽񤭴����Ƥ��顤�桼�������������ɬ�פ����롥CPSR���¾�Υե���
-��ɤϡ����Τޤ�CPSR�˽��᤹������Ū�ˤϡ�����Ū�˽񤭴�����ե�����
-�ɤϰʲ����̤ꡥ
+そこで，ユーザスタック上に保存されているCPSRの内，一部のフィールドは強
+制的に書き換えてから，ユーザタスクに戻る必要がある．CPSR内の他のフィー
+ルドは，そのままCPSRに書き戻す．具体的には，強制的に書き換えるフィール
+ドは以下の通り．
 
-	A�ӥåȡ���Ʊ�����ܡ��ȶػߡ�	�� 0�ˤ���
-	I�ӥåȡ�IRQ�ػߡ�				�� 0�ˤ���
-	F�ӥåȡ�FIQ�ػߡ�				�� 0�ˤ���
-	M[4:0] �ץ����å��⡼��			�� User�⡼�ɡ�10000�ˤˤ���
+	Aビット（非同期アボート禁止）	→ 0にする
+	Iビット（IRQ禁止）				→ 0にする
+	Fビット（FIQ禁止）				→ 0にする
+	M[4:0] プロセッサモード			→ Userモード（10000）にする
 
 
 
-�ʾ�
+以上

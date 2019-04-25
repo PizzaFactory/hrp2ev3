@@ -77,6 +77,7 @@ static ER wait_file_sender() {
 
 	// Waiting for ZRQINIT
 	while(1) {
+		if (zm.cancelled) return E_TMOUT;
 		int type = zmodem_recv_header_raw(&zm, 0);
 		if(type != ZRQINIT) {
 			syslog(LOG_ERROR,"Received %d instead of ZRQINIT", type);
@@ -252,7 +253,8 @@ ER zmodem_recv_file(ID portid, void *buf, SIZE size, SIZE *filesz) {
 	T_SERIAL_RPOR rpor;
 	while (1) {
 		char buf[1];
-		serial_ref_por(portid, &rpor);
+		ER ercd = serial_ref_por(portid, &rpor);
+		if (ercd != E_OK) return ercd;
 		if (rpor.reacnt > 0)
 			serial_rea_dat(portid, (char*)&buf, sizeof(buf));
 		else

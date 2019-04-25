@@ -7,6 +7,7 @@
 #include "api_common.h"
 #include "ev3api.h"
 #include "platform_interface_layer.h"
+#include "syssvc/serial.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -146,4 +147,10 @@ ev3_sdcard_readdir(ID dirid, fileinfo_t *fileinfo) {
 ER
 ev3_sdcard_closedir(ID dirid) {
 	return filesys_closedir(dirid);
+}
+
+bool_t ev3_bluetooth_is_connected() {
+	T_SERIAL_RPOR rpor;
+	ER ercd = serial_ref_por(SIO_PORT_BT, &rpor);
+	return ercd == E_OK;
 }

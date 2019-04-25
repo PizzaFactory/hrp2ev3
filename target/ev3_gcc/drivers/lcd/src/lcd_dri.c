@@ -45,6 +45,7 @@ extern brickinfo_t global_brick_info;
  * Frame buffers
  */
 static bitmap_t lcd_screen;
+bitmap_t *on_display_fb;
 bitmap_t *lcd_screen_fb;
 bitmap_t *ev3rt_console_fb;
 
@@ -58,6 +59,8 @@ static void initialize(intptr_t unused) {
 	console_bitmap.width  = WIDTH;
 	console_bitmap.pixels = lcd_console_fb_vmem;
     ev3rt_console_fb = &console_bitmap;
+    lcd_screen_fb = &lcd_screen;
+    on_display_fb = lcd_screen_fb;
 
     initialize_lcd_font();
 
@@ -78,9 +81,12 @@ static void softreset(intptr_t unused) {
 	memset(lcd_screen.pixels, 0, BITMAP_PIXELS_SIZE(lcd_screen.width, lcd_screen.height));
 }
 
-void initialize_lcd_dri(intptr_t unused) {
+void initialize_lcd_dri() {
+	initialize(0);
+	softreset(0);
+
 	ev3_driver_t driver;
-	driver.init_func = initialize;
+	driver.init_func = NULL;
 	driver.softreset_func = softreset;
 	SVC_PERROR(platform_register_driver(&driver));
 }
@@ -88,6 +94,8 @@ void initialize_lcd_dri(intptr_t unused) {
 static void* current_video_memory;
 
 void lcd_refresh_tsk(intptr_t unused) {
+	struct st7586fb_par *par = ((struct fb_info *)(spidev.drvdata))->par;
+
 	while (1) {
 #if 0 // For test
 		struct fb_info *info = spidev.drvdata;
@@ -96,7 +104,16 @@ void lcd_refresh_tsk(intptr_t unused) {
 		vmem[i++] = 0xFF;
 		if (i == (WIDTH+2)/3*HEIGHT) i = 0;
 #endif
+		st7586_set_addr_win(par, 0, 0, WIDTH, HEIGHT);
+		st7586_write_cmd(par, ST7586_RAMWR);
+
+		/* Blast frame buffer to ST7586 internal display RAM */
+		ER ercd = st7586_write_data_buf(par, on_display_fb->pixels, (WIDTH + 2) / 3 * HEIGHT);
+		assert(ercd == E_OK);
+
+#if 0 // Legacy code
 		st7586fb_deferred_io(spidev.drvdata, NULL);
+#endif
 		tslp_tsk(1000 / (LCD_FRAME_RATE));
 	}
 }

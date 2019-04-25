@@ -98,6 +98,17 @@ $END$
 $END$
 
 $ ==================== 
+$ Handle ATA_SEC
+$ ====================
+$FOREACH sec SEC.ORDER_LIST$
+$IF !EQ(SEC.DOMAIN[sec], "") && !EQ(SEC.DOMAIN[sec], "TDOM_APP")$
+    $ERROR SEC.TEXT_LINE[sec]$E_NOSPT: 
+        $FORMAT(_("%1% `%2%\' must belong to TDOM_NONE or TDOM_APP in %3% to build a loadable module"), "section", UNESCSTR(SEC.MODULE[sec]), SEC.APINAME[sec])$
+    $END$   
+$END$
+$END$
+
+$ ==================== 
 $ Handle invalid APIs
 $ ====================
 $FOREACH inv INVALIDAPI.ORDER_LIST$

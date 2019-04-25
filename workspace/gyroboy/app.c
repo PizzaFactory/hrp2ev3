@@ -308,6 +308,7 @@ void main_task(intptr_t unused) {
 	act_tsk(IDLE_TASK);
 
     while(1) {
+        while (!ev3_bluetooth_is_connected()) tslp_tsk(100);
     	uint8_t c = fgetc(bt);
     	sus_tsk(IDLE_TASK);
     	switch(c) {

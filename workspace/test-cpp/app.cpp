@@ -15,6 +15,8 @@
 #include "kernel_cfg.h"
 #endif
 
+#include "libcpp-test.h"
+
 #define DEBUG
 
 #ifdef DEBUG
@@ -26,9 +28,9 @@
 class TestClass {
 public:
     TestClass() {
-        static char buf[256];
-        sprintf(buf, "Object has been created.");
-        ev3_lcd_draw_string(buf, 0, 16);
+        //static char buf[256];
+        //sprintf(buf, "Object has been created.");
+        //ev3_lcd_draw_string(buf, 0, 16);
         member = 0x12345678;
     }
 
@@ -41,7 +43,18 @@ private:
     int member;
 };
 
+auto obj2 = new TestClass();
+
 void main_task(intptr_t unused) {
-    auto obj = new TestClass();
-    obj->testMethod();
+    // Test global constructor
+    obj2->testMethod();
+
+    // Test function in static library
+    libcpp_test_c_echo_function(777);
+
+    // Test class in static library
+    LibSampleClass a;
+    a.draw();
+
+    //auto obj = new TestClass();
 }

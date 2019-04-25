@@ -12,11 +12,10 @@
 # $(COPTS)
 #
 
-all: $(OBJFILE)
-
 #
 # Tools
 #
+AR := $(GCC_TARGET)-ar
 CFG := $(KERNELDIR)/cfg/cfg/cfg
 CFGLINK := $(GCC_TARGET)-gcc -nostartfiles
 NM := $(GCC_TARGET)-nm
@@ -118,8 +117,8 @@ vpath %.cpp $(SRCDIRS)
 #
 ALL_OBJS += module_cfg.o $(MODOBJS)
 ALL_CXXOBJS += $(APPL_CXXOBJS)
-ALL_LIBS += $(LIBS)
-$(OBJFILE): $(CFG_OUT_SRCS) $(ALL_OBJS) $(ALL_CXXOBJS)
+ALL_LIBS += $(LIBS) $(APPL_LIBS)
+$(OBJFILE): $(CFG_OUT_SRCS) $(ALL_OBJS) $(ALL_CXXOBJS) $(WORKSPACE_LIB_TO_BUILD)
 	$(call print_cmd, "LD", $@)
 	@$(LINK) $(LDFLAGS) -o $(OBJFILE) $(ALL_OBJS) $(ALL_CXXOBJS) $(ALL_LIBS) -lm -lc -lgcc
 #arm-none-eabi-strip -K _module_cfg_entry_num -K _module_cfg_tab -K _module_pil_version --strip-all app

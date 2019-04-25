@@ -6,54 +6,35 @@
 #include "driver_common.h"
 #include "platform.h"
 
+static bool_t app_loaded = false;
+
 ER load_application(const void *mod_data, SIZE mod_data_sz) {
 	ER ercd;
 
-//	ev3_led_set_color(LED_GREEN);
-//	chg_status(STATUS_RUNNING);
-
-#if 0
-	// Wait for pressing center button
-    SYSTIM time = 0;
-    uint32_t ledcolor = 0;
-	syslog(LOG_NOTICE, "Press center button to run the application.");
-	while(!global_brick_info.button_pressed[BRICK_BUTTON_ENTER]) {
-		SYSTIM newtime;
-		get_tim(&newtime);
-		if (newtime - time > 500) { // Blink LED
-			brick_misc_command(MISCCMD_SET_LED, ledcolor);
-			ledcolor ^= TA_LED_RED | TA_LED_GREEN;
-			time = newtime;
-		}
-	}
-	while(global_brick_info.button_pressed[BRICK_BUTTON_ENTER]) {
-		SYSTIM newtime;
-		get_tim(&newtime);
-		if (newtime - time > 500) { // Blink LED
-			brick_misc_command(MISCCMD_SET_LED, ledcolor);
-			ledcolor ^= TA_LED_RED | TA_LED_GREEN;
-			time = newtime;
-		}
-	}
-#endif
-
-	brick_misc_command(MISCCMD_SET_LED, TA_LED_GREEN);
 	platform_soft_reset();
 	ercd = dmloader_ins_ldm(mod_data, mod_data_sz, 1);
-	if (ercd != E_OK) {
-		syslog(LOG_ERROR, "Failed to load application, ercd: %d", ercd);
-	} else {
-		SVC_PERROR(sta_alm(APP_TER_BTN_ALM, 0));
-		SVC_PERROR(wai_sem(APP_TER_SEM));
-		syslog(LOG_NOTICE, "Terminate application.");
-		SVC_PERROR(dmloader_rmv_ldm(1));
+
+
+	if (ercd == E_OK) {
 		brick_misc_command(MISCCMD_SET_LED, TA_LED_GREEN);
+		app_loaded = true;
+	} else {
+		syslog(LOG_ERROR, "Failed to load application, ercd: %d", ercd);
 	}
-//	chg_status(STATUS_IDLE);
-	platform_soft_reset();
-	tslp_tsk(500);
 
 	return ercd;
+}
+
+void application_unload() {
+	ER ercd;
+	if (app_loaded) {
+		syslog(LOG_NOTICE, "Terminate application.");
+		ercd = dmloader_rmv_ldm(1);
+		assert(ercd == E_OK);
+		app_loaded = false;
+		platform_soft_reset();
+		brick_misc_command(MISCCMD_SET_LED, TA_LED_GREEN);
+	}
 }
 
 typedef ulong_t	EVTTIM;
@@ -161,7 +142,58 @@ void ldr_data_abort_handler(void *p_excinf) {
 	syslog(LOG_EMERG, "==========================================================");
 }
 
+#if 0 // legacy code
+
+ER load_application(const void *mod_data, SIZE mod_data_sz) {
+	ER ercd;
+
+//	ev3_led_set_color(LED_GREEN);
+//	chg_status(STATUS_RUNNING);
+
 #if 0
+	// Wait for pressing center button
+    SYSTIM time = 0;
+    uint32_t ledcolor = 0;
+	syslog(LOG_NOTICE, "Press center button to run the application.");
+	while(!global_brick_info.button_pressed[BRICK_BUTTON_ENTER]) {
+		SYSTIM newtime;
+		get_tim(&newtime);
+		if (newtime - time > 500) { // Blink LED
+			brick_misc_command(MISCCMD_SET_LED, ledcolor);
+			ledcolor ^= TA_LED_RED | TA_LED_GREEN;
+			time = newtime;
+		}
+	}
+	while(global_brick_info.button_pressed[BRICK_BUTTON_ENTER]) {
+		SYSTIM newtime;
+		get_tim(&newtime);
+		if (newtime - time > 500) { // Blink LED
+			brick_misc_command(MISCCMD_SET_LED, ledcolor);
+			ledcolor ^= TA_LED_RED | TA_LED_GREEN;
+			time = newtime;
+		}
+	}
+#endif
+
+	brick_misc_command(MISCCMD_SET_LED, TA_LED_GREEN);
+	platform_soft_reset();
+	ercd = dmloader_ins_ldm(mod_data, mod_data_sz, 1);
+	if (ercd != E_OK) {
+		syslog(LOG_ERROR, "Failed to load application, ercd: %d", ercd);
+	} else {
+		app_loaded = true;
+		SVC_PERROR(sta_alm(APP_TER_BTN_ALM, 0));
+		SVC_PERROR(wai_sem(APP_TER_SEM));
+		syslog(LOG_NOTICE, "Terminate application.");
+		SVC_PERROR(dmloader_rmv_ldm(1));
+		brick_misc_command(MISCCMD_SET_LED, TA_LED_GREEN);
+	}
+//	chg_status(STATUS_IDLE);
+	platform_soft_reset();
+	tslp_tsk(500);
+
+	return ercd;
+}
 
 void log_tex_enter(int p_runtsk, int texptn) {
 	syslog(LOG_EMERG, "%s(): p_runtsk: 0x%08x, texptn: 0x%08x", __FUNCTION__, p_runtsk, texptn);

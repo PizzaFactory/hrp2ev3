@@ -9,6 +9,7 @@
 #include "ev3.h"
 #include "driver_common.h"
 #include "brick_dri.h"
+#include "console_dri.h"
 #include "soc.h"
 #include "fatfs_dri.h"
 #include "gpio_dri.h"

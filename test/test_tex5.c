@@ -5,86 +5,86 @@
  *  Copyright (C) 2012-2013 by Embedded and Real-Time Systems Laboratory
  *              Graduate School of Information Science, Nagoya Univ., JAPAN
  * 
- *  �嵭����Ԥϡ��ʲ���(1)��(4)�ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ������
- *  �ѡ������ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
- *      �ޤ����ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���
- *      ͳ�˴�Ť����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ�
- *      ���դ��뤳�ȡ�
+ *  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
+ *  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+ *      また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
+ *      由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
+ *      免責すること．
  * 
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū
- *  ���Ф���Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ���
- *  �������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤��
- *  ����Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
+ *  に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
+ *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
+ *  の責任を負わない．
  * 
  *  $Id: test_tex5.c 940 2013-10-13 12:49:45Z ertl-hiro $
  */
 
 /* 
- *		�������㳰�����˴ؤ���ƥ���(5)
+ *		タスク例外処理に関するテスト(5)
  *
- * �ڥƥ��Ȥ���Ū��
+ * 【テストの目的】
  *
- *  �����ͥ�ɥᥤ���°���륿�������Ф��ơ�CPU���å����֤β����unl_cpu��
- *  �ȳ�ĥ�����ӥ�������롼���󤫤�Υ꥿����ˤ�륿�����㳰�����롼
- *  ����μ¹Գ��Ͻ���������Ū�˥ƥ��Ȥ��롥
+ *  カーネルドメインに属するタスクに対して，CPUロック状態の解除（unl_cpu）
+ *  と拡張サービスコールルーチンからのリターンによるタスク例外処理ルー
+ *  チンの実行開始処理を網羅的にテストする．
  *
- * �ڥƥ��ȹ��ܡ�
+ * 【テスト項目】
  *
- *	(A) CPU���å����֤β���ˤ�륿�����㳰�����롼����μ¹Գ���
- *		(A-1) 7��郎·�äơ��������㳰�����롼���󤬼¹Գ���
- *	(B) CPU���å����֤β��������·��ʤ���郎���ꡤ�������㳰�����롼
- *		���󤬼¹Գ��Ϥ���ʤ�
- *		(B-1) �оݥ��������������㳰�����ػ߾���
- *		(B-2) �оݥ���������α�㳰�װ���0
- *		(B-3) �оݥ��������¹Ծ��֤Ǥʤ�
- *		(B-4) �����ͥ���٥ޥ�����������֤Ǥʤ�
- *		(B-5) �оݥ��������������㳰�����ޥ������֡ʳ�ĥ�����ӥ�������
- *			  ��¹Ԥ��Ƥ���֡�
- *	(C) ��ĥ�����ӥ�������롼���󤫤�Υ꥿����ˤ�륿�����㳰�����롼
- *		����μ¹Գ���
- *		(C-1) 7��郎·�äơ��������㳰�����롼���󤬼¹Գ���
- *	(D) ��ĥ�����ӥ�������롼���󤫤�Υ꥿���������·��ʤ���郎��
- *		�ꡤ�������㳰�����롼���󤬼¹Գ��Ϥ���ʤ�
- *		(D-1) �оݥ��������������㳰�����ػ߾���
- *		(D-2) �оݥ���������α�㳰�װ���0
- *		(D-3) �оݥ��������¹Ծ��֤Ǥʤ�
- *		(D-4) �󥿥�������ƥ����Ȥ��¹Ԥ���Ƥ���
- *		(D-5) �����ͥ���٥ޥ�����������֤Ǥʤ�
- *		(D-6) CPU���å����֤Ǥ���
- *		(D-7) �оݥ��������������㳰�����ޥ������֡ʳ�ĥ�����ӥ�������
- *			  ��¹Ԥ��Ƥ���֡�
+ *	(A) CPUロック状態の解除によるタスク例外処理ルーチンの実行開始
+ *		(A-1) 7条件が揃って，タスク例外処理ルーチンが実行開始
+ *	(B) CPUロック状態の解除時点で揃わない条件があり，タスク例外処理ルー
+ *		チンが実行開始されない
+ *		(B-1) 対象タスクがタスク例外処理禁止状態
+ *		(B-2) 対象タスクの保留例外要因が0
+ *		(B-3) 対象タスクが実行状態でない
+ *		(B-4) 割込み優先度マスク全解除状態でない
+ *		(B-5) 対象タスクがタスク例外処理マスク状態（拡張サービスコール
+ *			  を実行している間）
+ *	(C) 拡張サービスコールルーチンからのリターンによるタスク例外処理ルー
+ *		チンの実行開始
+ *		(C-1) 7条件が揃って，タスク例外処理ルーチンが実行開始
+ *	(D) 拡張サービスコールルーチンからのリターン時点で揃わない条件があ
+ *		り，タスク例外処理ルーチンが実行開始されない
+ *		(D-1) 対象タスクがタスク例外処理禁止状態
+ *		(D-2) 対象タスクの保留例外要因が0
+ *		(D-3) 対象タスクが実行状態でない
+ *		(D-4) 非タスクコンテキストが実行されている
+ *		(D-5) 割込み優先度マスク全解除状態でない
+ *		(D-6) CPUロック状態である
+ *		(D-7) 対象タスクがタスク例外処理マスク状態（拡張サービスコール
+ *			  を実行している間）
  *
- * �ڻ��ѥ꥽������
+ * 【使用リソース】
  *
- *	TASK1: �ᥤ��Υ�������CPU���å����֤β����Ԥ�������
- *	TASK2: �оݥ��������¹Ծ��֤Ǥʤ�����ƥ��Ȥ��뤿��Υ�����
- *	CPUEXC: CPU�㳰�ϥ�ɥ�
- *	EXTSVC1: ��ĥ�����ӥ�������1
- *	EXTSVC2: ��ĥ�����ӥ�������2
+ *	TASK1: メインのタスク．CPUロック状態の解除を行うタスク
+ *	TASK2: 対象タスクが実行状態でない条件をテストするためのタスク
+ *	CPUEXC: CPU例外ハンドラ
+ *	EXTSVC1: 拡張サービスコール1
+ *	EXTSVC2: 拡張サービスコール2
  *
- * �ڥƥ��ȥ������󥹡�
+ * 【テストシーケンス】
  *
- *	== TASK1��ͥ���١�10��==
+ *	== TASK1（優先度：10）==
  *	1:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-1��1���ܡ�==
+ *	== EXTSVC1-1（1回目）==
  *	2:	ena_tex()
  *		ras_tex(TSK_SELF, 0x0001)
  *		chg_ipm(TIPM_ENAALL)
@@ -92,115 +92,115 @@
  *	3:	unl_cpu()								... (B-5)
  *	4:	loc_cpu()
  *	5:	RETURN(E_OK)							... (D-6)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	6:	unl_cpu()								... (A-1)
- *	== TASK1-TEX-1��1���ܡ�==
+ *	== TASK1-TEX-1（1回目）==
  *	7:	assert(texptn == 0x0001)
  *		state(false, false, TIPM_ENAALL, false, false, true)
  *		RETURN
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	8:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-2��2���ܡ�==
+ *	== EXTSVC1-2（2回目）==
  *	9:	ena_tex()
  *		chg_ipm(TIPM_ENAALL)
  *		loc_cpu()
  *		RETURN(E_OK)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	10:	unl_cpu()								... (B-2)
  *	11:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-3��3���ܡ�==
+ *	== EXTSVC1-3（3回目）==
  *	12:	dis_tex()
  *		ras_tex(TSK_SELF, 0x0002)
  *		chg_ipm(TIPM_ENAALL)
  *		loc_cpu()
  *		RETURN(E_OK)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	13:	unl_cpu()								... (B-1)
  *	14:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-4��4���ܡ�==
+ *	== EXTSVC1-4（4回目）==
  *	15:	ena_tex()
  *		ras_tex(TSK_SELF, 0x0004)
  *		chg_ipm(TMAX_INTPRI)
  *		loc_cpu()
  *		RETURN(E_OK)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	16:	unl_cpu()								... (B-4)
  *		chg_ipm(TIPM_ENAALL)
- *	== TASK1-TEX-2��2���ܡ�==
+ *	== TASK1-TEX-2（2回目）==
  *	17:	assert(texptn == 0x0006)
  *		state(false, false, TIPM_ENAALL, false, false, true)
  *		RETURN
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	18:	act_tsk(TASK2)
  *		slp_tsk()
- *	== TASK2��ͥ���١�11��==
+ *	== TASK2（優先度：11）==
  *	19:	ena_tex()
  *		wup_tsk(TASK1)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	20:	ras_tex(TASK2, 0x0008)
  *		loc_cpu()
  *	21:	unl_cpu()								... (B-3)
  *	22:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-5��5���ܡ�==
+ *	== EXTSVC1-5（5回目）==
  *	23:	RETURN(E_OK)							... (D-3)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	24:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-6��6���ܡ�==
+ *	== EXTSVC1-6（6回目）==
  *	25:	ena_tex()
  *		ras_tex(TSK_SELF, 0x0010)
  *		chg_ipm(TIPM_ENAALL)
  *	26:	RETURN(E_OK)							... (C-1)(D-3)
- *	== TASK1-TEX-3��3���ܡ�==
+ *	== TASK1-TEX-3（3回目）==
  *	27:	assert(texptn == 0x0010)
  *		state(false, false, TIPM_ENAALL, false, false, true)
  *		RETURN
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	28:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-7��7���ܡ�==
+ *	== EXTSVC1-7（7回目）==
  *	29:	ena_tex()
  *		chg_ipm(TIPM_ENAALL)
  *	30:	RETURN(E_OK)							... (D-2)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	31:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-8��8���ܡ�==
+ *	== EXTSVC1-8（8回目）==
  *	32:	dis_tex()
  *		ras_tex(TSK_SELF, 0x0020)
  *		chg_ipm(TIPM_ENAALL)
  *	33:	RETURN(E_OK)							... (D-1)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	34:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-9��9���ܡ�==
+ *	== EXTSVC1-9（9回目）==
  *	35:	ena_tex()
  *		ras_tex(TSK_SELF, 0x0040)
  *		chg_ipm(TMAX_INTPRI)
  *	36:	RETURN(E_OK)							... (D-5)
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	37:	cal_svc(TFN_EXTSVC2, 0, 0, 0, 0, 0)
- *	== EXTSVC2-1��1���ܡ�==
+ *	== EXTSVC2-1（1回目）==
  *	38:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-10��10���ܡ�==
+ *	== EXTSVC1-10（10回目）==
  *	39:	ena_tex()
  *		ras_tex(TSK_SELF, 0x0080)
  *		chg_ipm(TIPM_ENAALL)
  *	40:	RETURN(E_OK)							... (D-7)
- *	== EXTSVC2-1��³����==
+ *	== EXTSVC2-1（続き）==
  *	41:	RETURN(E_OK)
- *	== TASK1-TEX-4��4���ܡ�==
+ *	== TASK1-TEX-4（4回目）==
  *	42:	assert(texptn == 0x00e0)
  *		state(false, false, TIPM_ENAALL, false, false, true)
  *		RETURN
- *	== TASK1��³����==
+ *	== TASK1（続き）==
  *	43:	ena_tex()
  *		chg_ipm(TIPM_ENAALL)
  *		DO(RAISE_CPU_EXCEPTION)
  *	== CPUEXC ==
  *	44:	cal_svc(TFN_EXTSVC1, 0, 0, 0, 0, 0)
- *	== EXTSVC1-11��11���ܡ�==
+ *	== EXTSVC1-11（11回目）==
  *	45:	iras_tex(TASK1, 0x0100)
  *	46:	RETURN(E_OK)							... (D-4)
- *	== CPUEXC��³����==
+ *	== CPUEXC（続き）==
  *	47:	RETURN
- *	== TASK1-TEX-5��5���ܡ�==
+ *	== TASK1-TEX-5（5回目）==
  *	48:	assert(texptn == 0x0100)
  *		state(false, false, TIPM_ENAALL, false, false, true)
  *	49:	ext_tsk()

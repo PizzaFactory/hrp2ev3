@@ -22,6 +22,7 @@ include $(TARGETDIR)/kernel_mod/Makefile
 include $(TARGETDIR)/drivers/common/Makefile
 include $(TARGETDIR)/drivers/bluetooth/Makefile
 include $(TARGETDIR)/drivers/brick/Makefile
+include $(TARGETDIR)/drivers/console/Makefile
 include $(TARGETDIR)/drivers/fatfs/Makefile
 include $(TARGETDIR)/drivers/gpio/Makefile
 include $(TARGETDIR)/drivers/lcd/Makefile
