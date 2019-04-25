@@ -103,19 +103,19 @@ void *const _kernel_memtop_table[86] = {
 	&__start_bss_kernel__ffffffff_ffffffff_ffffffff /* c0108000 */,
 	&__start_data_kernel__std /* c020a000 */,
 	&__start_bss_kernel__std /* c020a074 */,
-	&__start_prsv_kernel__std /* c0478840 */,
-	&__start_ustack_BRICK_BTN_TSK /* c0487000 */,
-	&__start_data_shared__0_ffffffff_0 /* c0488000 */,
-	&__start_bss_shared__0_ffffffff_0 /* c0488600 */,
-	&__start_prsv_shared__0_ffffffff_0 /* c058cc98 */,
-	&__start_data_kernel__0_ffffffff_0 /* c058d000 */,
-	&__start_bss_kernel__0_ffffffff_0 /* c0590914 */,
-	&__start_prsv_kernel__0_ffffffff_0 /* c05b2c20 */,
-	&__start_data_shared__std /* c05b3000 */,
-	&__start_bss_shared__0 /* c05b3604 */,
-	&__start_bss_shared__std /* c06b3608 */,
-	&__start_prsv_shared__std /* c072cabc */,
-	&__limit_prsv_shared__std /* c072d000 */,
+	&__start_prsv_kernel__std /* c0478a80 */,
+	&__start_ustack_BRICK_BTN_TSK /* c0488000 */,
+	&__start_data_shared__0_ffffffff_0 /* c0489000 */,
+	&__start_bss_shared__0_ffffffff_0 /* c0489600 */,
+	&__start_prsv_shared__0_ffffffff_0 /* c058dc98 */,
+	&__start_data_kernel__0_ffffffff_0 /* c058e000 */,
+	&__start_bss_kernel__0_ffffffff_0 /* c0591914 */,
+	&__start_prsv_kernel__0_ffffffff_0 /* c05b3c20 */,
+	&__start_data_shared__std /* c05b4000 */,
+	&__start_bss_shared__0 /* c05b4604 */,
+	&__start_bss_shared__std /* c06b4608 */,
+	&__start_prsv_shared__std /* c072dac0 */,
+	&__limit_prsv_shared__std /* c072e000 */,
 	(void *)(0xFFFEE000) /* fffee000 */,
 	(void *)(0xFFFF0000) /* ffff0000 */,
 	(void *)(((char *)(0xFFFF0000)) + (0x00002000)) /* ffff2000 */
@@ -6559,8 +6559,8 @@ const uint32_t _kernel_page_table[TNUM_DOMID * ARM_PAGE_TABLE_NUM][ARM_PAGE_TABL
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP01|ARMV5_MMU_DSCR2_CB11|0xc0484000U, /* 0xc0484000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP01|ARMV5_MMU_DSCR2_CB11|0xc0485000U, /* 0xc0485000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP01|ARMV5_MMU_DSCR2_CB11|0xc0486000U, /* 0xc0486000 */
-		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc0487000U, /* 0xc0487000 */
-		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP10|ARMV5_MMU_DSCR2_CB11|0xc0488000U, /* 0xc0488000 */
+		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP01|ARMV5_MMU_DSCR2_CB11|0xc0487000U, /* 0xc0487000 */
+		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc0488000U, /* 0xc0488000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP10|ARMV5_MMU_DSCR2_CB11|0xc0489000U, /* 0xc0489000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP10|ARMV5_MMU_DSCR2_CB11|0xc048a000U, /* 0xc048a000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP10|ARMV5_MMU_DSCR2_CB11|0xc048b000U, /* 0xc048b000 */
@@ -6861,7 +6861,7 @@ const uint32_t _kernel_page_table[TNUM_DOMID * ARM_PAGE_TABLE_NUM][ARM_PAGE_TABL
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP10|ARMV5_MMU_DSCR2_CB11|0xc05b0000U, /* 0xc05b0000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP10|ARMV5_MMU_DSCR2_CB11|0xc05b1000U, /* 0xc05b1000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP10|ARMV5_MMU_DSCR2_CB11|0xc05b2000U, /* 0xc05b2000 */
-		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc05b3000U, /* 0xc05b3000 */
+		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP10|ARMV5_MMU_DSCR2_CB11|0xc05b3000U, /* 0xc05b3000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc05b4000U, /* 0xc05b4000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc05b5000U, /* 0xc05b5000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc05b6000U, /* 0xc05b6000 */
@@ -6985,7 +6985,7 @@ const uint32_t _kernel_page_table[TNUM_DOMID * ARM_PAGE_TABLE_NUM][ARM_PAGE_TABL
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc072a000U, /* 0xc072a000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc072b000U, /* 0xc072b000 */
 		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc072c000U, /* 0xc072c000 */
-		ARMV5_MMU_DSCR2_FAULT, /* 0xc072d000 */
+		ARMV5_MMU_DSCR2_SMALL|ARMV5_MMU_DSCR2_AP11|ARMV5_MMU_DSCR2_CB11|0xc072d000U, /* 0xc072d000 */
 		ARMV5_MMU_DSCR2_FAULT, /* 0xc072e000 */
 		ARMV5_MMU_DSCR2_FAULT, /* 0xc072f000 */
 		ARMV5_MMU_DSCR2_FAULT, /* 0xc0730000 */
@@ -7460,13 +7460,13 @@ const uint32_t _kernel_page_table[TNUM_DOMID * ARM_PAGE_TABLE_NUM][ARM_PAGE_TABL
 const uint32_t _kernel_nonglobal_pages_num = 1;
 
 const uint32_t _kernel_nonglobal_pages[130] = {
-	0xc0487000, 
+	0xc0488000, 
 };
 void tlb_flush(void) __attribute__ ((naked));
 void tlb_flush(void) {
 	asm volatile("mov r0, #0xc0000000");
 	asm volatile("orr r0, #0x00480000");
-	asm volatile("orr r0, #0x00007000");
+	asm volatile("orr r0, #0x00008000");
 	asm volatile("mcr p15, 0, r0, c8, c7, 1");
 	asm volatile("bx lr");
 	asm volatile("nop");

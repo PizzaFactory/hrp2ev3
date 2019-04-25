@@ -36,7 +36,7 @@ const DOMINIB _kernel_dominib_table[TNUM_DOMID] = {
  *  Task Management Functions
  */
 
-#define TNUM_STSKID	11
+#define TNUM_STSKID	12
 
 const ID _kernel_tmax_tskid = (TMIN_TSKID + TNUM_TSKID - 1);
 const ID _kernel_tmax_stskid = (TMIN_TSKID + TNUM_STSKID - 1);
@@ -50,6 +50,7 @@ static STK_T _kernel_sstack_BT_QOS_TSK[COUNT_STK_T(STACK_SIZE)] __attribute__((s
 static STK_T _kernel_sstack_USBMSC_TSK[COUNT_STK_T(STACK_SIZE)] __attribute__((section(".prsv_kernel"),nocommon));
 static STK_T _kernel_sstack_EV3_INIT_TASK[COUNT_STK_T(STACK_SIZE)] __attribute__((section(".prsv_kernel"),nocommon));
 static STK_T _kernel_sstack_PLATFORM_BUSY_TASK[COUNT_STK_T(STACK_SIZE)] __attribute__((section(".prsv_kernel"),nocommon));
+static STK_T _kernel_sstack_EV3RT_LOGTASK[COUNT_STK_T(LOGTASK_STACK_SIZE)] __attribute__((section(".prsv_kernel"),nocommon));
 static STK_T _kernel_sstack_APP_TERM_TASK[COUNT_STK_T(STACK_SIZE)] __attribute__((section(".prsv_kernel"),nocommon));
 static STK_T _kernel_sstack_ZMODEM_RECV_TASK[COUNT_STK_T(STACK_SIZE)] __attribute__((section(".prsv_kernel"),nocommon));
 
@@ -65,6 +66,7 @@ const TINIB _kernel_tinib_table[TNUM_STSKID] = {
 	{ &_kernel_dominib_kernel, (TA_ACT), (intptr_t)(0), ((TASK)(usbmsc_task)), INT_PRIORITY(TPRI_USBMSC), ROUND_STK_T(STACK_SIZE), _kernel_sstack_USBMSC_TSK, 0, NULL, (TA_NULL), (NULL), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
 	{ &_kernel_dominib_kernel, (TA_ACT), (intptr_t)(0), ((TASK)(ev3_main_task)), INT_PRIORITY(TPRI_INIT_TASK), ROUND_STK_T(STACK_SIZE), _kernel_sstack_EV3_INIT_TASK, 0, NULL, (TA_NULL), (NULL), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
 	{ &_kernel_dominib_kernel, (TA_ACT), (intptr_t)(0), ((TASK)(platform_busy_task)), INT_PRIORITY(TPRI_PLATFORM_BUSY), ROUND_STK_T(STACK_SIZE), _kernel_sstack_PLATFORM_BUSY_TASK, 0, NULL, (TA_NULL), (NULL), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
+	{ &_kernel_dominib_kernel, (TA_NULL), (intptr_t)(0), ((TASK)(ev3rt_logtask)), INT_PRIORITY(LOGTASK_PRIORITY), ROUND_STK_T(LOGTASK_STACK_SIZE), _kernel_sstack_EV3RT_LOGTASK, 0, NULL, (TA_NULL), (NULL), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
 	{ &_kernel_dominib_kernel, (TA_NULL), (intptr_t)(0), ((TASK)(application_terminate_task)), INT_PRIORITY(TPRI_APP_TERM_TASK), ROUND_STK_T(STACK_SIZE), _kernel_sstack_APP_TERM_TASK, 0, NULL, (TA_NULL), (NULL), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }},
 	{ &_kernel_dominib_kernel, (TA_NULL), (intptr_t)(0), ((TASK)(zmodem_recv_task)), INT_PRIORITY(TMIN_APP_TPRI), ROUND_STK_T(STACK_SIZE), _kernel_sstack_ZMODEM_RECV_TASK, 0, NULL, (TA_NULL), (NULL), { TACP_KERNEL, TACP_KERNEL, TACP_KERNEL, TACP_KERNEL }}
 };
@@ -74,7 +76,7 @@ TINIB _kernel_atinib_table[48];
 TCB _kernel_tcb_table[TNUM_TSKID];
 
 const ID _kernel_torder_table[TNUM_STSKID] = {
-	LOGTASK, BRICK_BTN_TSK, LCD_REFRESH_TSK, CONSOLE_BTN_TSK, BT_TSK, BT_QOS_TSK, USBMSC_TSK, EV3_INIT_TASK, PLATFORM_BUSY_TASK, APP_TERM_TASK, ZMODEM_RECV_TASK
+	LOGTASK, BRICK_BTN_TSK, LCD_REFRESH_TSK, CONSOLE_BTN_TSK, BT_TSK, BT_QOS_TSK, USBMSC_TSK, EV3_INIT_TASK, PLATFORM_BUSY_TASK, EV3RT_LOGTASK, APP_TERM_TASK, ZMODEM_RECV_TASK
 };
 
 /*
@@ -616,7 +618,6 @@ _kernel_call_inirtn(void)
 	((INIRTN)(target_timer_initialize))((intptr_t)(0));
 	((INIRTN)(syslog_initialize))((intptr_t)(0));
 	((INIRTN)(print_banner))((intptr_t)(0));
-	((INIRTN)(sio_initialize))((intptr_t)(NULL));
 	((INIRTN)(serial_initialize))((intptr_t)(0));
 	((INIRTN)(initialize_brick_dri))((intptr_t)(NULL));
 	((INIRTN)(initialize_analog_dri))((intptr_t)(0));

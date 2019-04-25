@@ -846,35 +846,32 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_51 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 9 "../../target/ev3_gcc/target_serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_51 = 51;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_51 = ( unsigned_t )( TA_NULL ); 
+
 #if defined(BUILD_EV3_PLATFORM)
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_52 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 12 "../../target/ev3_gcc/target_serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_52 = 52;
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_51 = ( unsigned_t ) ( TDOM_KERNEL );
+#line 10 "../../target/ev3_gcc/target_serial.cfg"
+const unsigned_t TOPPERS_cfg_static_api_51 = 51;
 #define BT_SIO_CYC	(<>)
 
-#line 12 "../../target/ev3_gcc/target_serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_cycatr_52 = ( unsigned_t )( TA_STA ); const unsigned_t TOPPERS_cfg_valueof_cyctim_52 = ( unsigned_t )( 5 ); const unsigned_t TOPPERS_cfg_valueof_cycphs_52 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_53 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 13 "../../target/ev3_gcc/target_serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_53 = 53;
+#line 10 "../../target/ev3_gcc/target_serial.cfg"
+const unsigned_t TOPPERS_cfg_valueof_cycatr_51 = ( unsigned_t )( TA_STA ); const unsigned_t TOPPERS_cfg_valueof_cyctim_51 = ( unsigned_t )( 5 ); const unsigned_t TOPPERS_cfg_valueof_cycphs_51 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_52 = ( unsigned_t ) ( TDOM_KERNEL );
+#line 11 "../../target/ev3_gcc/target_serial.cfg"
+const unsigned_t TOPPERS_cfg_static_api_52 = 52;
 #define BT_RCV_ALM	(<>)
 
-#line 13 "../../target/ev3_gcc/target_serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_almatr_53 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_54 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 14 "../../target/ev3_gcc/target_serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_54 = 54;
+#line 11 "../../target/ev3_gcc/target_serial.cfg"
+const unsigned_t TOPPERS_cfg_valueof_almatr_52 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_53 = ( unsigned_t ) ( TDOM_KERNEL );
+#line 12 "../../target/ev3_gcc/target_serial.cfg"
+const unsigned_t TOPPERS_cfg_static_api_53 = 53;
 #define BT_SND_BUF_SEM	(<>)
 
-#line 14 "../../target/ev3_gcc/target_serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_54 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_54 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_54 = ( unsigned_t )( 1 ); 
+#line 12 "../../target/ev3_gcc/target_serial.cfg"
+const unsigned_t TOPPERS_cfg_valueof_sematr_53 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_53 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_53 = ( unsigned_t )( 1 ); 
 #endif
 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
-#line 17 "../../target/ev3_gcc/target_serial.cfg"
+#line 15 "../../target/ev3_gcc/target_serial.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_KERNEL
@@ -889,89 +886,89 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_55 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_54 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_55 = 55;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_55 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_56 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_54 = 54;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_54 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_55 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 15 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_56 = 56;
-const char TOPPERS_cfg_valueof_module_56[] = "serial.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_57 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_55 = 55;
+const char TOPPERS_cfg_valueof_module_55[] = "serial.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_56 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_57 = 57;
-const unsigned_t TOPPERS_cfg_valueof_fncd_57 = ( unsigned_t )( TFN_SERIAL_OPN_POR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_57 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_57 = ( unsigned_t )( SSZ_SERIAL_OPN_POR ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_58 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_56 = 56;
+const unsigned_t TOPPERS_cfg_valueof_fncd_56 = ( unsigned_t )( TFN_SERIAL_OPN_POR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_56 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_56 = ( unsigned_t )( SSZ_SERIAL_OPN_POR ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_57 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 19 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_58 = 58;
-const unsigned_t TOPPERS_cfg_valueof_fncd_58 = ( unsigned_t )( TFN_SERIAL_CLS_POR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_58 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_58 = ( unsigned_t )( SSZ_SERIAL_CLS_POR ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_59 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_57 = 57;
+const unsigned_t TOPPERS_cfg_valueof_fncd_57 = ( unsigned_t )( TFN_SERIAL_CLS_POR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_57 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_57 = ( unsigned_t )( SSZ_SERIAL_CLS_POR ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_58 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 21 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_59 = 59;
-const unsigned_t TOPPERS_cfg_valueof_fncd_59 = ( unsigned_t )( TFN_SERIAL_REA_DAT ); const unsigned_t TOPPERS_cfg_valueof_svcatr_59 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_59 = ( unsigned_t )( SSZ_SERIAL_REA_DAT ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_60 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_58 = 58;
+const unsigned_t TOPPERS_cfg_valueof_fncd_58 = ( unsigned_t )( TFN_SERIAL_REA_DAT ); const unsigned_t TOPPERS_cfg_valueof_svcatr_58 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_58 = ( unsigned_t )( SSZ_SERIAL_REA_DAT ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_59 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 23 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_60 = 60;
-const unsigned_t TOPPERS_cfg_valueof_fncd_60 = ( unsigned_t )( TFN_SERIAL_WRI_DAT ); const unsigned_t TOPPERS_cfg_valueof_svcatr_60 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_60 = ( unsigned_t )( SSZ_SERIAL_WRI_DAT ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_61 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_59 = 59;
+const unsigned_t TOPPERS_cfg_valueof_fncd_59 = ( unsigned_t )( TFN_SERIAL_WRI_DAT ); const unsigned_t TOPPERS_cfg_valueof_svcatr_59 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_59 = ( unsigned_t )( SSZ_SERIAL_WRI_DAT ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_60 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 25 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_61 = 61;
-const unsigned_t TOPPERS_cfg_valueof_fncd_61 = ( unsigned_t )( TFN_SERIAL_CTL_POR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_61 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_61 = ( unsigned_t )( SSZ_SERIAL_CTL_POR ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_62 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_60 = 60;
+const unsigned_t TOPPERS_cfg_valueof_fncd_60 = ( unsigned_t )( TFN_SERIAL_CTL_POR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_60 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_60 = ( unsigned_t )( SSZ_SERIAL_CTL_POR ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_61 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 27 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_62 = 62;
-const unsigned_t TOPPERS_cfg_valueof_fncd_62 = ( unsigned_t )( TFN_SERIAL_REF_POR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_62 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_62 = ( unsigned_t )( SSZ_SERIAL_REF_POR ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_63 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_61 = 61;
+const unsigned_t TOPPERS_cfg_valueof_fncd_61 = ( unsigned_t )( TFN_SERIAL_REF_POR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_61 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_61 = ( unsigned_t )( SSZ_SERIAL_REF_POR ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_62 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 30 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_63 = 63;
+const unsigned_t TOPPERS_cfg_static_api_62 = 62;
 #define SERIAL_RCV_SEM1	(<>)
 
 #line 30 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_63 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_63 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_63 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_64 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_62 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_62 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_62 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_63 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 31 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_64 = 64;
+const unsigned_t TOPPERS_cfg_static_api_63 = 63;
 #define SERIAL_SND_SEM1	(<>)
 
 #line 31 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_64 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_64 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_64 = ( unsigned_t )( 1 ); 
+const unsigned_t TOPPERS_cfg_valueof_sematr_63 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_63 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_63 = ( unsigned_t )( 1 ); 
 #if TNUM_PORT >= 2
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_65 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_64 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 33 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_65 = 65;
+const unsigned_t TOPPERS_cfg_static_api_64 = 64;
 #define SERIAL_RCV_SEM2	(<>)
 
 #line 33 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_65 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_65 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_65 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_66 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_64 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_64 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_64 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_65 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 34 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_66 = 66;
+const unsigned_t TOPPERS_cfg_static_api_65 = 65;
 #define SERIAL_SND_SEM2	(<>)
 
 #line 34 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_66 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_66 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_66 = ( unsigned_t )( 1 ); 
+const unsigned_t TOPPERS_cfg_valueof_sematr_65 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_65 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_65 = ( unsigned_t )( 1 ); 
 #endif 
 
 #if TNUM_PORT >= 3
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_67 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_66 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 37 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_67 = 67;
+const unsigned_t TOPPERS_cfg_static_api_66 = 66;
 #define SERIAL_RCV_SEM3	(<>)
 
 #line 37 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_67 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_67 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_67 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_68 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_66 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_66 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_66 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_67 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 38 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_68 = 68;
+const unsigned_t TOPPERS_cfg_static_api_67 = 67;
 #define SERIAL_SND_SEM3	(<>)
 
 #line 38 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_68 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_68 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_68 = ( unsigned_t )( 1 ); 
+const unsigned_t TOPPERS_cfg_valueof_sematr_67 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_67 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_67 = ( unsigned_t )( 1 ); 
 #endif 
 
 #if TNUM_PORT >= 4
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_69 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_68 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 41 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_69 = 69;
+const unsigned_t TOPPERS_cfg_static_api_68 = 68;
 #define SERIAL_RCV_SEM4	(<>)
 
 #line 41 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_69 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_69 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_69 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_70 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_68 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_68 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_68 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_69 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 42 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_static_api_70 = 70;
+const unsigned_t TOPPERS_cfg_static_api_69 = 69;
 #define SERIAL_SND_SEM4	(<>)
 
 #line 42 "../../syssvc/serial.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_70 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_70 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_70 = ( unsigned_t )( 1 ); 
+const unsigned_t TOPPERS_cfg_valueof_sematr_69 = ( unsigned_t )( TA_TPRI ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_69 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_69 = ( unsigned_t )( 1 ); 
 #endif 
 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
@@ -991,22 +988,22 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_71 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_70 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 12 "../../syssvc/logtask.cfg"
-const unsigned_t TOPPERS_cfg_static_api_71 = 71;
+const unsigned_t TOPPERS_cfg_static_api_70 = 70;
 #define LOGTASK	(<>)
 
 #line 12 "../../syssvc/logtask.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_71 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_71 = ( signed_t )( LOGTASK_PRIORITY ); const unsigned_t TOPPERS_cfg_valueof_stksz_71 = ( unsigned_t )( LOGTASK_STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_72 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_tskatr_70 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_70 = ( signed_t )( LOGTASK_PRIORITY ); const unsigned_t TOPPERS_cfg_valueof_stksz_70 = ( unsigned_t )( LOGTASK_STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_71 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../syssvc/logtask.cfg"
-const unsigned_t TOPPERS_cfg_static_api_72 = 72;
-const unsigned_t TOPPERS_cfg_valueof_teratr_72 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_73 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_71 = 71;
+const unsigned_t TOPPERS_cfg_valueof_teratr_71 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_72 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 15 "../../syssvc/logtask.cfg"
-const unsigned_t TOPPERS_cfg_static_api_73 = 73;
-const char TOPPERS_cfg_valueof_module_73[] = "logtask.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_74 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_72 = 72;
+const char TOPPERS_cfg_valueof_module_72[] = "logtask.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_73 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../syssvc/logtask.cfg"
-const unsigned_t TOPPERS_cfg_static_api_74 = 74;
-const unsigned_t TOPPERS_cfg_valueof_fncd_74 = ( unsigned_t )( TFN_LOGTASK_FLUSH ); const unsigned_t TOPPERS_cfg_valueof_svcatr_74 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_74 = ( unsigned_t )( SSZ_LOGTASK_FLUSH ); 
+const unsigned_t TOPPERS_cfg_static_api_73 = 73;
+const unsigned_t TOPPERS_cfg_valueof_fncd_73 = ( unsigned_t )( TFN_LOGTASK_FLUSH ); const unsigned_t TOPPERS_cfg_valueof_svcatr_73 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_73 = ( unsigned_t )( SSZ_LOGTASK_FLUSH ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 19 "../../syssvc/logtask.cfg"
@@ -1023,13 +1020,13 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_75 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_74 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/drivers/common/driver_common.cfg"
-const unsigned_t TOPPERS_cfg_static_api_75 = 75;
-const unsigned_t TOPPERS_cfg_valueof_isratr_75 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_75 = ( unsigned_t )( INTNO_TIMER ); const signed_t TOPPERS_cfg_valueof_isrpri_75 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_76 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_74 = 74;
+const unsigned_t TOPPERS_cfg_valueof_isratr_74 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_74 = ( unsigned_t )( INTNO_TIMER ); const signed_t TOPPERS_cfg_valueof_isrpri_74 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_75 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/common/driver_common.cfg"
-const unsigned_t TOPPERS_cfg_static_api_76 = 76;
-const unsigned_t TOPPERS_cfg_valueof_isratr_76 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_76 = ( unsigned_t )( INTNO_TIMER ); const signed_t TOPPERS_cfg_valueof_isrpri_76 = ( signed_t )( TMIN_ISRPRI ); 
+const unsigned_t TOPPERS_cfg_static_api_75 = 75;
+const unsigned_t TOPPERS_cfg_valueof_isratr_75 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_75 = ( unsigned_t )( INTNO_TIMER ); const signed_t TOPPERS_cfg_valueof_isrpri_75 = ( signed_t )( TMIN_ISRPRI ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 13 "../../target/ev3_gcc/drivers/common/driver_common.cfg"
@@ -1041,20 +1038,20 @@ const unsigned_t TOPPERS_cfg_valueof_isratr_76 = ( unsigned_t )( TA_NULL ); cons
 #if 0 
 
 #line 16 "../../target/ev3_gcc/drivers/common/driver_common.cfg"
-const unsigned_t TOPPERS_cfg_static_api_77 = 77;
-const unsigned_t TOPPERS_cfg_valueof_fncd_77 = ( unsigned_t )( TFN_DRIVER_DATA_POINTER ); const unsigned_t TOPPERS_cfg_valueof_svcatr_77 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_77 = ( unsigned_t )( 1024 ); 
+const unsigned_t TOPPERS_cfg_static_api_76 = 76;
+const unsigned_t TOPPERS_cfg_valueof_fncd_76 = ( unsigned_t )( TFN_DRIVER_DATA_POINTER ); const unsigned_t TOPPERS_cfg_valueof_svcatr_76 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_76 = ( unsigned_t )( 1024 ); 
 #line 17 "../../target/ev3_gcc/drivers/common/driver_common.cfg"
-const unsigned_t TOPPERS_cfg_static_api_78 = 78;
-const unsigned_t TOPPERS_cfg_valueof_fncd_78 = ( unsigned_t )( TFN_HEAP_FOR_DOMAIN ); const unsigned_t TOPPERS_cfg_valueof_svcatr_78 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_78 = ( unsigned_t )( 1024 ); 
+const unsigned_t TOPPERS_cfg_static_api_77 = 77;
+const unsigned_t TOPPERS_cfg_valueof_fncd_77 = ( unsigned_t )( TFN_HEAP_FOR_DOMAIN ); const unsigned_t TOPPERS_cfg_valueof_svcatr_77 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_77 = ( unsigned_t )( 1024 ); 
 #line 19 "../../target/ev3_gcc/drivers/common/driver_common.cfg"
-const unsigned_t TOPPERS_cfg_static_api_79 = 79;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_79 = ( unsigned_t )( TA_NULL ); 
+const unsigned_t TOPPERS_cfg_static_api_78 = 78;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_78 = ( unsigned_t )( TA_NULL ); 
 #line 21 "../../target/ev3_gcc/drivers/common/driver_common.cfg"
-const unsigned_t TOPPERS_cfg_static_api_80 = 80;
-const char TOPPERS_cfg_valueof_module_80[] = "driver_common.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_80 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_80 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_80 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_80 = ( unsigned_t )( TACP_KERNEL ); 
+const unsigned_t TOPPERS_cfg_static_api_79 = 79;
+const char TOPPERS_cfg_valueof_module_79[] = "driver_common.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_79 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_79 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_79 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_79 = ( unsigned_t )( TACP_KERNEL ); 
 #line 23 "../../target/ev3_gcc/drivers/common/driver_common.cfg"
-const unsigned_t TOPPERS_cfg_static_api_81 = 81;
-const char TOPPERS_cfg_valueof_section_81[] = ".appheap"; const unsigned_t TOPPERS_cfg_valueof_mematr_81 = ( unsigned_t )( TA_NULL ); const char TOPPERS_cfg_valueof_memreg_81[] = "RAM"; const unsigned_t TOPPERS_cfg_valueof_acptn1_81 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn2_81 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_81 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn4_81 = ( unsigned_t )( TACP_SHARED ); 
+const unsigned_t TOPPERS_cfg_static_api_80 = 80;
+const char TOPPERS_cfg_valueof_section_80[] = ".appheap"; const unsigned_t TOPPERS_cfg_valueof_mematr_80 = ( unsigned_t )( TA_NULL ); const char TOPPERS_cfg_valueof_memreg_80[] = "RAM"; const unsigned_t TOPPERS_cfg_valueof_acptn1_80 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn2_80 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_80 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn4_80 = ( unsigned_t )( TACP_SHARED ); 
 #endif
 
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
@@ -1065,16 +1062,16 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_82 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_81 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 6 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_82 = 82;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_82 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_83 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_81 = 81;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_81 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_82 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_83 = 83;
-const char TOPPERS_cfg_valueof_module_83[] = "brick_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_83 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_83 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_83 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_83 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_84 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_82 = 82;
+const char TOPPERS_cfg_valueof_module_82[] = "brick_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_82 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_82 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_82 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_82 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_83 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_84 = 84;
-const char TOPPERS_cfg_valueof_section_84[] = ".appheap"; const unsigned_t TOPPERS_cfg_valueof_mematr_84 = ( unsigned_t )( TA_NULL ); const char TOPPERS_cfg_valueof_memreg_84[] = "RAM"; const unsigned_t TOPPERS_cfg_valueof_acptn1_84 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn2_84 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_84 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn4_84 = ( unsigned_t )( TACP_SHARED ); 
+const unsigned_t TOPPERS_cfg_static_api_83 = 83;
+const char TOPPERS_cfg_valueof_section_83[] = ".appheap"; const unsigned_t TOPPERS_cfg_valueof_mematr_83 = ( unsigned_t )( TA_NULL ); const char TOPPERS_cfg_valueof_memreg_83[] = "RAM"; const unsigned_t TOPPERS_cfg_valueof_acptn1_83 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn2_83 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_83 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn4_83 = ( unsigned_t )( TACP_SHARED ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 12 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
@@ -1084,14 +1081,14 @@ const char TOPPERS_cfg_valueof_section_84[] = ".appheap"; const unsigned_t TOPPE
 
 
 #line 17 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_85 = 85;
+const unsigned_t TOPPERS_cfg_static_api_84 = 84;
 #define BTN_CLICK_FLG	(<>)
 
 #line 17 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_flgatr_85 = ( unsigned_t )( TA_CLR ); const unsigned_t TOPPERS_cfg_valueof_iflgptn_85 = ( unsigned_t )( 0 ); 
+const unsigned_t TOPPERS_cfg_valueof_flgatr_84 = ( unsigned_t )( TA_CLR ); const unsigned_t TOPPERS_cfg_valueof_iflgptn_84 = ( unsigned_t )( 0 ); 
 #line 18 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_86 = 86;
-const unsigned_t TOPPERS_cfg_valueof_acptn1_86 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_86 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_86 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_86 = ( unsigned_t )( TACP_KERNEL ); 
+const unsigned_t TOPPERS_cfg_static_api_85 = 85;
+const unsigned_t TOPPERS_cfg_valueof_acptn1_85 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_85 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_85 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_85 = ( unsigned_t )( TACP_KERNEL ); 
 #ifndef TOPPERS_cfg_valueof_TDOM_APP_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_APP_DEFINED 1
 
@@ -1100,13 +1097,13 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_APP = TDOM_APP;
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_APP
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_87 = ( unsigned_t ) ( TDOM_APP );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_86 = ( unsigned_t ) ( TDOM_APP );
 #line 20 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_87 = 87;
+const unsigned_t TOPPERS_cfg_static_api_86 = 86;
 #define BRICK_BTN_TSK	(<>)
 
 #line 20 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_87 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_87 = ( signed_t )( TMIN_APP_TPRI ); const unsigned_t TOPPERS_cfg_valueof_stksz_87 = ( unsigned_t )( STACK_SIZE ); 
+const unsigned_t TOPPERS_cfg_valueof_tskatr_86 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_86 = ( signed_t )( TMIN_APP_TPRI ); const unsigned_t TOPPERS_cfg_valueof_stksz_86 = ( unsigned_t )( STACK_SIZE ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_APP
 
 #line 21 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
@@ -1123,19 +1120,19 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_88 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_87 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 23 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_88 = 88;
+const unsigned_t TOPPERS_cfg_static_api_87 = 87;
 #define BRICK_BTN_CYC	(<>)
 
 #line 23 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_cycatr_88 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_cyctim_88 = ( unsigned_t )( 10 ); const unsigned_t TOPPERS_cfg_valueof_cycphs_88 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_89 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_cycatr_87 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_cyctim_87 = ( unsigned_t )( 10 ); const unsigned_t TOPPERS_cfg_valueof_cycphs_87 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_88 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 24 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_89 = 89;
+const unsigned_t TOPPERS_cfg_static_api_88 = 88;
 #define CONSOLE_BTN_CLICK_FLG	(<>)
 
 #line 24 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_flgatr_89 = ( unsigned_t )( TA_CLR ); const unsigned_t TOPPERS_cfg_valueof_iflgptn_89 = ( unsigned_t )( 0 ); 
+const unsigned_t TOPPERS_cfg_valueof_flgatr_88 = ( unsigned_t )( TA_CLR ); const unsigned_t TOPPERS_cfg_valueof_iflgptn_88 = ( unsigned_t )( 0 ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 25 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
@@ -1147,11 +1144,11 @@ const unsigned_t TOPPERS_cfg_valueof_flgatr_89 = ( unsigned_t )( TA_CLR ); const
 #if 0 
 
 #line 28 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_90 = 90;
-const unsigned_t TOPPERS_cfg_valueof_fncd_90 = ( unsigned_t )( TFN_DRIVER_DATA_POINTER ); const unsigned_t TOPPERS_cfg_valueof_svcatr_90 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_90 = ( unsigned_t )( 1024 ); 
+const unsigned_t TOPPERS_cfg_static_api_89 = 89;
+const unsigned_t TOPPERS_cfg_valueof_fncd_89 = ( unsigned_t )( TFN_DRIVER_DATA_POINTER ); const unsigned_t TOPPERS_cfg_valueof_svcatr_89 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_89 = ( unsigned_t )( 1024 ); 
 #line 29 "../../target/ev3_gcc/drivers/brick/brick_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_91 = 91;
-const unsigned_t TOPPERS_cfg_valueof_fncd_91 = ( unsigned_t )( TFN_HEAP_FOR_DOMAIN ); const unsigned_t TOPPERS_cfg_valueof_svcatr_91 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_91 = ( unsigned_t )( 1024 ); 
+const unsigned_t TOPPERS_cfg_static_api_90 = 90;
+const unsigned_t TOPPERS_cfg_valueof_fncd_90 = ( unsigned_t )( TFN_HEAP_FOR_DOMAIN ); const unsigned_t TOPPERS_cfg_valueof_svcatr_90 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_90 = ( unsigned_t )( 1024 ); 
 #endif
 
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
@@ -1162,52 +1159,52 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_92 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_91 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_92 = 92;
+const unsigned_t TOPPERS_cfg_static_api_91 = 91;
 #define MMCSD_MOD_SEM	(<>)
 
 #line 11 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_92 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_92 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_92 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_93 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_91 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_91 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_91 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_92 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_93 = 93;
+const unsigned_t TOPPERS_cfg_static_api_92 = 92;
 #define FATFS_SEM	(<>)
 
 #line 16 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_93 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_93 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_93 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_94 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_92 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_92 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_92 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_93 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_94 = 94;
+const unsigned_t TOPPERS_cfg_static_api_93 = 93;
 #define DISKIO_MTX	(<>)
 
 #line 17 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_valueof_mtxatr_94 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_ceilpri_94 = ( signed_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_95 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_mtxatr_93 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_ceilpri_93 = ( signed_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_94 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 22 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_95 = 95;
-const char TOPPERS_cfg_valueof_module_95[] = "fatfs_dri.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_96 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_94 = 94;
+const char TOPPERS_cfg_valueof_module_94[] = "fatfs_dri.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_95 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 23 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_96 = 96;
-const char TOPPERS_cfg_valueof_module_96[] = "fatfs_syscall.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_97 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_95 = 95;
+const char TOPPERS_cfg_valueof_module_95[] = "fatfs_syscall.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_96 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 24 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_97 = 97;
-const char TOPPERS_cfg_valueof_module_97[] = "diskio.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_98 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_96 = 96;
+const char TOPPERS_cfg_valueof_module_96[] = "diskio.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_97 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 25 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_98 = 98;
-const char TOPPERS_cfg_valueof_module_98[] = "ff.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_99 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_97 = 97;
+const char TOPPERS_cfg_valueof_module_97[] = "ff.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_98 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 26 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_99 = 99;
-const char TOPPERS_cfg_valueof_module_99[] = "mmcsd.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_100 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_98 = 98;
+const char TOPPERS_cfg_valueof_module_98[] = "mmcsd.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_99 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 27 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_100 = 100;
-const char TOPPERS_cfg_valueof_module_100[] = "mmcsdlib.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_101 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_99 = 99;
+const char TOPPERS_cfg_valueof_module_99[] = "mmcsdlib.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_100 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 28 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_101 = 101;
-const char TOPPERS_cfg_valueof_module_101[] = "mmcsd_dri.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_102 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_100 = 100;
+const char TOPPERS_cfg_valueof_module_100[] = "mmcsd_dri.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_101 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 29 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_102 = 102;
-const char TOPPERS_cfg_valueof_module_102[] = "mmcsd_proto.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_103 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_101 = 101;
+const char TOPPERS_cfg_valueof_module_101[] = "mmcsd_proto.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_102 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 30 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
-const unsigned_t TOPPERS_cfg_static_api_103 = 103;
-const char TOPPERS_cfg_valueof_module_103[] = "mmcsd_rw.o"; 
+const unsigned_t TOPPERS_cfg_static_api_102 = 102;
+const char TOPPERS_cfg_valueof_module_102[] = "mmcsd_rw.o"; 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 32 "../../target/ev3_gcc/drivers/fatfs/fatfs.cfg"
@@ -1224,61 +1221,61 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_104 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_103 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_104 = 104;
-const unsigned_t TOPPERS_cfg_valueof_intno_104 = ( unsigned_t )( GPIO_B0INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_104 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_104 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_105 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_103 = 103;
+const unsigned_t TOPPERS_cfg_valueof_intno_103 = ( unsigned_t )( GPIO_B0INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_103 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_103 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_104 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 9 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_105 = 105;
-const unsigned_t TOPPERS_cfg_valueof_intno_105 = ( unsigned_t )( GPIO_B1INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_105 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_105 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_106 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_104 = 104;
+const unsigned_t TOPPERS_cfg_valueof_intno_104 = ( unsigned_t )( GPIO_B1INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_104 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_104 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_105 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_106 = 106;
-const unsigned_t TOPPERS_cfg_valueof_intno_106 = ( unsigned_t )( GPIO_B2INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_106 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_106 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_107 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_105 = 105;
+const unsigned_t TOPPERS_cfg_valueof_intno_105 = ( unsigned_t )( GPIO_B2INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_105 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_105 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_106 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_107 = 107;
-const unsigned_t TOPPERS_cfg_valueof_intno_107 = ( unsigned_t )( GPIO_B3INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_107 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_107 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_108 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_106 = 106;
+const unsigned_t TOPPERS_cfg_valueof_intno_106 = ( unsigned_t )( GPIO_B3INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_106 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_106 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_107 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 12 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_108 = 108;
-const unsigned_t TOPPERS_cfg_valueof_intno_108 = ( unsigned_t )( GPIO_B4INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_108 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_108 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_109 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_107 = 107;
+const unsigned_t TOPPERS_cfg_valueof_intno_107 = ( unsigned_t )( GPIO_B4INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_107 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_107 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_108 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 13 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_109 = 109;
-const unsigned_t TOPPERS_cfg_valueof_intno_109 = ( unsigned_t )( GPIO_B5INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_109 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_109 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_110 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_108 = 108;
+const unsigned_t TOPPERS_cfg_valueof_intno_108 = ( unsigned_t )( GPIO_B5INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_108 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_108 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_109 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_110 = 110;
-const unsigned_t TOPPERS_cfg_valueof_intno_110 = ( unsigned_t )( GPIO_B6INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_110 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_110 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_111 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_109 = 109;
+const unsigned_t TOPPERS_cfg_valueof_intno_109 = ( unsigned_t )( GPIO_B6INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_109 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_109 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_110 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 15 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_111 = 111;
-const unsigned_t TOPPERS_cfg_valueof_intno_111 = ( unsigned_t )( GPIO_B7INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_111 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_111 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_112 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_110 = 110;
+const unsigned_t TOPPERS_cfg_valueof_intno_110 = ( unsigned_t )( GPIO_B7INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_110 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_110 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_111 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_112 = 112;
-const unsigned_t TOPPERS_cfg_valueof_intno_112 = ( unsigned_t )( GPIO_B8INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_112 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_112 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_113 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_111 = 111;
+const unsigned_t TOPPERS_cfg_valueof_intno_111 = ( unsigned_t )( GPIO_B8INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_111 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_111 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_112 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_113 = 113;
-const unsigned_t TOPPERS_cfg_valueof_isratr_113 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_113 = ( unsigned_t )( GPIO_B0INT ); const signed_t TOPPERS_cfg_valueof_isrpri_113 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_114 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_112 = 112;
+const unsigned_t TOPPERS_cfg_valueof_isratr_112 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_112 = ( unsigned_t )( GPIO_B0INT ); const signed_t TOPPERS_cfg_valueof_isrpri_112 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_113 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 18 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_114 = 114;
-const unsigned_t TOPPERS_cfg_valueof_isratr_114 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_114 = ( unsigned_t )( GPIO_B1INT ); const signed_t TOPPERS_cfg_valueof_isrpri_114 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_115 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_113 = 113;
+const unsigned_t TOPPERS_cfg_valueof_isratr_113 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_113 = ( unsigned_t )( GPIO_B1INT ); const signed_t TOPPERS_cfg_valueof_isrpri_113 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_114 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 19 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_115 = 115;
-const unsigned_t TOPPERS_cfg_valueof_isratr_115 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_115 = ( unsigned_t )( GPIO_B2INT ); const signed_t TOPPERS_cfg_valueof_isrpri_115 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_116 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_114 = 114;
+const unsigned_t TOPPERS_cfg_valueof_isratr_114 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_114 = ( unsigned_t )( GPIO_B2INT ); const signed_t TOPPERS_cfg_valueof_isrpri_114 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_115 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 20 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_116 = 116;
-const unsigned_t TOPPERS_cfg_valueof_isratr_116 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_116 = ( unsigned_t )( GPIO_B3INT ); const signed_t TOPPERS_cfg_valueof_isrpri_116 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_117 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_115 = 115;
+const unsigned_t TOPPERS_cfg_valueof_isratr_115 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_115 = ( unsigned_t )( GPIO_B3INT ); const signed_t TOPPERS_cfg_valueof_isrpri_115 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_116 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 21 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_117 = 117;
-const unsigned_t TOPPERS_cfg_valueof_isratr_117 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_117 = ( unsigned_t )( GPIO_B4INT ); const signed_t TOPPERS_cfg_valueof_isrpri_117 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_118 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_116 = 116;
+const unsigned_t TOPPERS_cfg_valueof_isratr_116 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_116 = ( unsigned_t )( GPIO_B4INT ); const signed_t TOPPERS_cfg_valueof_isrpri_116 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_117 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 22 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_118 = 118;
-const unsigned_t TOPPERS_cfg_valueof_isratr_118 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_118 = ( unsigned_t )( GPIO_B5INT ); const signed_t TOPPERS_cfg_valueof_isrpri_118 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_119 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_117 = 117;
+const unsigned_t TOPPERS_cfg_valueof_isratr_117 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_117 = ( unsigned_t )( GPIO_B5INT ); const signed_t TOPPERS_cfg_valueof_isrpri_117 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_118 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 23 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_119 = 119;
-const unsigned_t TOPPERS_cfg_valueof_isratr_119 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_119 = ( unsigned_t )( GPIO_B6INT ); const signed_t TOPPERS_cfg_valueof_isrpri_119 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_120 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_118 = 118;
+const unsigned_t TOPPERS_cfg_valueof_isratr_118 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_118 = ( unsigned_t )( GPIO_B6INT ); const signed_t TOPPERS_cfg_valueof_isrpri_118 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_119 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 24 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_120 = 120;
-const unsigned_t TOPPERS_cfg_valueof_isratr_120 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_120 = ( unsigned_t )( GPIO_B7INT ); const signed_t TOPPERS_cfg_valueof_isrpri_120 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_121 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_119 = 119;
+const unsigned_t TOPPERS_cfg_valueof_isratr_119 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_119 = ( unsigned_t )( GPIO_B7INT ); const signed_t TOPPERS_cfg_valueof_isrpri_119 = ( signed_t )( TMAX_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_120 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 25 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_121 = 121;
-const unsigned_t TOPPERS_cfg_valueof_isratr_121 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_121 = ( unsigned_t )( GPIO_B8INT ); const signed_t TOPPERS_cfg_valueof_isrpri_121 = ( signed_t )( TMAX_ISRPRI ); 
+const unsigned_t TOPPERS_cfg_static_api_120 = 120;
+const unsigned_t TOPPERS_cfg_valueof_isratr_120 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_120 = ( unsigned_t )( GPIO_B8INT ); const signed_t TOPPERS_cfg_valueof_isrpri_120 = ( signed_t )( TMAX_ISRPRI ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 28 "../../target/ev3_gcc/drivers/gpio/gpio_dri.cfg"
@@ -1295,13 +1292,13 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_122 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_121 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 5 "../../target/ev3_gcc/drivers/sensor/analog/analog_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_122 = 122;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_122 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_123 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_121 = 121;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_121 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_122 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 6 "../../target/ev3_gcc/drivers/sensor/analog/analog_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_123 = 123;
-const char TOPPERS_cfg_valueof_module_123[] = "analog_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_123 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_123 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_123 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_123 = ( unsigned_t )( TACP_KERNEL ); 
+const unsigned_t TOPPERS_cfg_static_api_122 = 122;
+const char TOPPERS_cfg_valueof_module_122[] = "analog_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_122 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_122 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_122 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_122 = ( unsigned_t )( TACP_KERNEL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 7 "../../target/ev3_gcc/drivers/sensor/analog/analog_dri.cfg"
@@ -1318,40 +1315,40 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_124 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_123 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_124 = 124;
-const unsigned_t TOPPERS_cfg_valueof_intno_124 = ( unsigned_t )( LCD_SPI_INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_124 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_124 = ( signed_t )( INTPRI_LCD_SPI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_125 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_123 = 123;
+const unsigned_t TOPPERS_cfg_valueof_intno_123 = ( unsigned_t )( LCD_SPI_INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_123 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_123 = ( signed_t )( INTPRI_LCD_SPI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_124 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 9 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_125 = 125;
-const unsigned_t TOPPERS_cfg_valueof_isratr_125 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_125 = ( unsigned_t )( LCD_SPI_INT ); const signed_t TOPPERS_cfg_valueof_isrpri_125 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_126 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_124 = 124;
+const unsigned_t TOPPERS_cfg_valueof_isratr_124 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_124 = ( unsigned_t )( LCD_SPI_INT ); const signed_t TOPPERS_cfg_valueof_isrpri_124 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_125 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_126 = 126;
+const unsigned_t TOPPERS_cfg_static_api_125 = 125;
 #define LCD_DMA_DONE_SEM	(<>)
 
 #line 11 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_126 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_126 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_126 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_127 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_125 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_125 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_125 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_126 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 12 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_127 = 127;
+const unsigned_t TOPPERS_cfg_static_api_126 = 126;
 #define LCD_REFRESH_TSK	(<>)
 
 #line 12 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_127 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_127 = ( signed_t )( TPRI_EV3_LCD_TASK ); const unsigned_t TOPPERS_cfg_valueof_stksz_127 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_128 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_tskatr_126 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_126 = ( signed_t )( TPRI_EV3_LCD_TASK ); const unsigned_t TOPPERS_cfg_valueof_stksz_126 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_127 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_128 = 128;
-const char TOPPERS_cfg_valueof_section_128[] = ".lcd_vmem"; const unsigned_t TOPPERS_cfg_valueof_mematr_128 = ( unsigned_t )( TA_NULL ); const char TOPPERS_cfg_valueof_memreg_128[] = "RAM"; const unsigned_t TOPPERS_cfg_valueof_acptn1_128 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn2_128 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_128 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn4_128 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_129 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_127 = 127;
+const char TOPPERS_cfg_valueof_section_127[] = ".lcd_vmem"; const unsigned_t TOPPERS_cfg_valueof_mematr_127 = ( unsigned_t )( TA_NULL ); const char TOPPERS_cfg_valueof_memreg_127[] = "RAM"; const unsigned_t TOPPERS_cfg_valueof_acptn1_127 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn2_127 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_127 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn4_127 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_128 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_129 = 129;
-const char TOPPERS_cfg_valueof_module_129[] = "lcd_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_129 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_129 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_129 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_129 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_130 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_128 = 128;
+const char TOPPERS_cfg_valueof_module_128[] = "lcd_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_128 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_128 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_128 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_128 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_129 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_130 = 130;
-const char TOPPERS_cfg_valueof_module_130[] = "lcd_font.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_130 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_130 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_130 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_130 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_131 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_129 = 129;
+const char TOPPERS_cfg_valueof_module_129[] = "lcd_font.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_129 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_129 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_129 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_129 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_130 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 22 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_131 = 131;
+const unsigned_t TOPPERS_cfg_static_api_130 = 130;
 #define EV3RT_CONSOLE_MTX	(<>)
 
 #line 22 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_mtxatr_131 = ( unsigned_t )( TA_NULL ); 
+const unsigned_t TOPPERS_cfg_valueof_mtxatr_130 = ( unsigned_t )( TA_NULL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 24 "../../target/ev3_gcc/drivers/lcd/lcd_dri.cfg"
@@ -1368,19 +1365,19 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_132 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_131 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/drivers/console/console_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_132 = 132;
+const unsigned_t TOPPERS_cfg_static_api_131 = 131;
 #define CONSOLE_BTN_TSK	(<>)
 
 #line 10 "../../target/ev3_gcc/drivers/console/console_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_132 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_132 = ( signed_t )( TPRI_EV3_MONITOR ); const unsigned_t TOPPERS_cfg_valueof_stksz_132 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_133 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_tskatr_131 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_131 = ( signed_t )( TPRI_EV3_MONITOR ); const unsigned_t TOPPERS_cfg_valueof_stksz_131 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_132 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/drivers/console/console_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_133 = 133;
+const unsigned_t TOPPERS_cfg_static_api_132 = 132;
 #define EV3RT_CONSOLE_LOG_MTX	(<>)
 
 #line 14 "../../target/ev3_gcc/drivers/console/console_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_mtxatr_133 = ( unsigned_t )( TA_NULL ); 
+const unsigned_t TOPPERS_cfg_valueof_mtxatr_132 = ( unsigned_t )( TA_NULL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 16 "../../target/ev3_gcc/drivers/console/console_dri.cfg"
@@ -1397,16 +1394,16 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_134 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_133 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 6 "../../target/ev3_gcc/drivers/motor/motor_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_134 = 134;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_134 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_135 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_133 = 133;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_133 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_134 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/motor/motor_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_135 = 135;
-const char TOPPERS_cfg_valueof_module_135[] = "motor_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_135 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_135 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_135 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_135 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_136 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_134 = 134;
+const char TOPPERS_cfg_valueof_module_134[] = "motor_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_134 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_134 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_134 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_134 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_135 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/drivers/motor/motor_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_136 = 136;
-const unsigned_t TOPPERS_cfg_valueof_fncd_136 = ( unsigned_t )( TFN_MOTOR_COMMAND ); const unsigned_t TOPPERS_cfg_valueof_svcatr_136 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_136 = ( unsigned_t )( 1024 ); 
+const unsigned_t TOPPERS_cfg_static_api_135 = 135;
+const unsigned_t TOPPERS_cfg_valueof_fncd_135 = ( unsigned_t )( TFN_MOTOR_COMMAND ); const unsigned_t TOPPERS_cfg_valueof_svcatr_135 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_135 = ( unsigned_t )( 1024 ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 12 "../../target/ev3_gcc/drivers/motor/motor_dri.cfg"
@@ -1423,25 +1420,25 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_137 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_136 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 6 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_137 = 137;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_137 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_138 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_136 = 136;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_136 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_137 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_138 = 138;
-const unsigned_t TOPPERS_cfg_valueof_fncd_138 = ( unsigned_t )( TFN_NEWLIB_OPEN_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_138 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_138 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_139 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_137 = 137;
+const unsigned_t TOPPERS_cfg_valueof_fncd_137 = ( unsigned_t )( TFN_NEWLIB_OPEN_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_137 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_137 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_138 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 9 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_139 = 139;
-const unsigned_t TOPPERS_cfg_valueof_fncd_139 = ( unsigned_t )( TFN_NEWLIB_READ_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_139 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_139 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_140 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_138 = 138;
+const unsigned_t TOPPERS_cfg_valueof_fncd_138 = ( unsigned_t )( TFN_NEWLIB_READ_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_138 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_138 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_139 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_140 = 140;
-const unsigned_t TOPPERS_cfg_valueof_fncd_140 = ( unsigned_t )( TFN_NEWLIB_WRITE_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_140 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_140 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_141 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_139 = 139;
+const unsigned_t TOPPERS_cfg_valueof_fncd_139 = ( unsigned_t )( TFN_NEWLIB_WRITE_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_139 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_139 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_140 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_141 = 141;
-const unsigned_t TOPPERS_cfg_valueof_fncd_141 = ( unsigned_t )( TFN_NEWLIB_CLOSE_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_141 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_141 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_142 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_140 = 140;
+const unsigned_t TOPPERS_cfg_valueof_fncd_140 = ( unsigned_t )( TFN_NEWLIB_CLOSE_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_140 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_140 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_141 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 12 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_142 = 142;
-const unsigned_t TOPPERS_cfg_valueof_fncd_142 = ( unsigned_t )( TFN_NEWLIB_LSEEK_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_142 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_142 = ( unsigned_t )( 1024 ); 
+const unsigned_t TOPPERS_cfg_static_api_141 = 141;
+const unsigned_t TOPPERS_cfg_valueof_fncd_141 = ( unsigned_t )( TFN_NEWLIB_LSEEK_R ); const unsigned_t TOPPERS_cfg_valueof_svcatr_141 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_141 = ( unsigned_t )( 1024 ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 19 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
@@ -1451,14 +1448,14 @@ const unsigned_t TOPPERS_cfg_valueof_fncd_142 = ( unsigned_t )( TFN_NEWLIB_LSEEK
 
 
 #line 25 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_143 = 143;
-const char TOPPERS_cfg_valueof_section_143[] = ".text.*"; const unsigned_t TOPPERS_cfg_valueof_mematr_143 = ( unsigned_t )( TA_NOWRITE ); const char TOPPERS_cfg_valueof_memreg_143[] = "ROM"; 
+const unsigned_t TOPPERS_cfg_static_api_142 = 142;
+const char TOPPERS_cfg_valueof_section_142[] = ".text.*"; const unsigned_t TOPPERS_cfg_valueof_mematr_142 = ( unsigned_t )( TA_NOWRITE ); const char TOPPERS_cfg_valueof_memreg_142[] = "ROM"; 
 #line 26 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_144 = 144;
-const char TOPPERS_cfg_valueof_section_144[] = ".data.*"; const unsigned_t TOPPERS_cfg_valueof_mematr_144 = ( unsigned_t )( TA_MEMINI ); const char TOPPERS_cfg_valueof_memreg_144[] = "RAM"; 
+const unsigned_t TOPPERS_cfg_static_api_143 = 143;
+const char TOPPERS_cfg_valueof_section_143[] = ".data.*"; const unsigned_t TOPPERS_cfg_valueof_mematr_143 = ( unsigned_t )( TA_MEMINI ); const char TOPPERS_cfg_valueof_memreg_143[] = "RAM"; 
 #line 27 "../../target/ev3_gcc/drivers/newlib/newlib_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_145 = 145;
-const char TOPPERS_cfg_valueof_section_145[] = ".rodata.*"; const unsigned_t TOPPERS_cfg_valueof_mematr_145 = ( unsigned_t )( TA_NOWRITE ); const char TOPPERS_cfg_valueof_memreg_145[] = "ROM"; 
+const unsigned_t TOPPERS_cfg_static_api_144 = 144;
+const char TOPPERS_cfg_valueof_section_144[] = ".rodata.*"; const unsigned_t TOPPERS_cfg_valueof_mematr_144 = ( unsigned_t )( TA_NOWRITE ); const char TOPPERS_cfg_valueof_memreg_144[] = "ROM"; 
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
 
@@ -1467,22 +1464,22 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_146 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_145 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 6 "../../target/ev3_gcc/drivers/sensor/i2c/i2c_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_146 = 146;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_146 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_147 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_145 = 145;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_145 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_146 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/sensor/i2c/i2c_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_147 = 147;
-const unsigned_t TOPPERS_cfg_valueof_intno_147 = ( unsigned_t )( INTNO_I2C_TIMER ); const unsigned_t TOPPERS_cfg_valueof_intatr_147 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_147 = ( signed_t )( INTPRI_I2C_TIMER ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_148 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_146 = 146;
+const unsigned_t TOPPERS_cfg_valueof_intno_146 = ( unsigned_t )( INTNO_I2C_TIMER ); const unsigned_t TOPPERS_cfg_valueof_intatr_146 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_146 = ( signed_t )( INTPRI_I2C_TIMER ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_147 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 9 "../../target/ev3_gcc/drivers/sensor/i2c/i2c_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_148 = 148;
-const unsigned_t TOPPERS_cfg_valueof_inhno_148 = ( unsigned_t )( INTNO_I2C_TIMER ); const unsigned_t TOPPERS_cfg_valueof_inhatr_148 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_149 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_147 = 147;
+const unsigned_t TOPPERS_cfg_valueof_inhno_147 = ( unsigned_t )( INTNO_I2C_TIMER ); const unsigned_t TOPPERS_cfg_valueof_inhatr_147 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_148 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/sensor/i2c/i2c_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_149 = 149;
-const char TOPPERS_cfg_valueof_module_149[] = "i2c_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_149 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_149 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_149 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_149 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_150 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_148 = 148;
+const char TOPPERS_cfg_valueof_module_148[] = "i2c_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_148 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_148 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_148 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_148 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_149 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 12 "../../target/ev3_gcc/drivers/sensor/i2c/i2c_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_150 = 150;
-const char TOPPERS_cfg_valueof_module_150[] = "davinci_iic_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_150 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_150 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_150 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_150 = ( unsigned_t )( TACP_KERNEL ); 
+const unsigned_t TOPPERS_cfg_static_api_149 = 149;
+const char TOPPERS_cfg_valueof_module_149[] = "davinci_iic_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_149 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_149 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_149 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_149 = ( unsigned_t )( TACP_KERNEL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 14 "../../target/ev3_gcc/drivers/sensor/i2c/i2c_dri.cfg"
@@ -1499,61 +1496,61 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_151 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_150 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 6 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_151 = 151;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_151 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_152 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_150 = 150;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_150 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_151 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_152 = 152;
-const unsigned_t TOPPERS_cfg_valueof_intno_152 = ( unsigned_t )( INTNO_UART_PORT1 ); const unsigned_t TOPPERS_cfg_valueof_intatr_152 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_intpri_152 = ( signed_t )( INTPRI_UART_PORT1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_153 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_151 = 151;
+const unsigned_t TOPPERS_cfg_valueof_intno_151 = ( unsigned_t )( INTNO_UART_PORT1 ); const unsigned_t TOPPERS_cfg_valueof_intatr_151 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_intpri_151 = ( signed_t )( INTPRI_UART_PORT1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_152 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 9 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_153 = 153;
-const unsigned_t TOPPERS_cfg_valueof_intno_153 = ( unsigned_t )( INTNO_UART_PORT2 ); const unsigned_t TOPPERS_cfg_valueof_intatr_153 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_intpri_153 = ( signed_t )( INTPRI_UART_PORT2 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_154 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_152 = 152;
+const unsigned_t TOPPERS_cfg_valueof_intno_152 = ( unsigned_t )( INTNO_UART_PORT2 ); const unsigned_t TOPPERS_cfg_valueof_intatr_152 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_intpri_152 = ( signed_t )( INTPRI_UART_PORT2 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_153 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_154 = 154;
-const unsigned_t TOPPERS_cfg_valueof_intno_154 = ( unsigned_t )( INTNO_UART_PORT3 ); const unsigned_t TOPPERS_cfg_valueof_intatr_154 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_intpri_154 = ( signed_t )( INTPRI_UART_PORT3 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_155 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_153 = 153;
+const unsigned_t TOPPERS_cfg_valueof_intno_153 = ( unsigned_t )( INTNO_UART_PORT3 ); const unsigned_t TOPPERS_cfg_valueof_intatr_153 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_intpri_153 = ( signed_t )( INTPRI_UART_PORT3 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_154 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_155 = 155;
-const unsigned_t TOPPERS_cfg_valueof_intno_155 = ( unsigned_t )( INTNO_UART_PORT4 ); const unsigned_t TOPPERS_cfg_valueof_intatr_155 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_intpri_155 = ( signed_t )( INTPRI_UART_PORT4 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_156 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_154 = 154;
+const unsigned_t TOPPERS_cfg_valueof_intno_154 = ( unsigned_t )( INTNO_UART_PORT4 ); const unsigned_t TOPPERS_cfg_valueof_intatr_154 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_intpri_154 = ( signed_t )( INTPRI_UART_PORT4 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_155 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 13 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_156 = 156;
-const unsigned_t TOPPERS_cfg_valueof_isratr_156 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_156 = ( unsigned_t )( INTNO_UART_PORT2 ); const signed_t TOPPERS_cfg_valueof_isrpri_156 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_157 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_155 = 155;
+const unsigned_t TOPPERS_cfg_valueof_isratr_155 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_155 = ( unsigned_t )( INTNO_UART_PORT2 ); const signed_t TOPPERS_cfg_valueof_isrpri_155 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_156 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_157 = 157;
-const unsigned_t TOPPERS_cfg_valueof_isratr_157 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_157 = ( unsigned_t )( INTNO_UART_PORT3 ); const signed_t TOPPERS_cfg_valueof_isrpri_157 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_158 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_156 = 156;
+const unsigned_t TOPPERS_cfg_valueof_isratr_156 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_156 = ( unsigned_t )( INTNO_UART_PORT3 ); const signed_t TOPPERS_cfg_valueof_isrpri_156 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_157 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 15 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_158 = 158;
-const unsigned_t TOPPERS_cfg_valueof_isratr_158 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_158 = ( unsigned_t )( INTNO_UART_PORT4 ); const signed_t TOPPERS_cfg_valueof_isrpri_158 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_159 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_157 = 157;
+const unsigned_t TOPPERS_cfg_valueof_isratr_157 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_157 = ( unsigned_t )( INTNO_UART_PORT4 ); const signed_t TOPPERS_cfg_valueof_isrpri_157 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_158 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_159 = 159;
+const unsigned_t TOPPERS_cfg_static_api_158 = 158;
 #define SUART1_SEM	(<>)
 
 #line 17 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_159 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_159 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_159 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_160 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_158 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_158 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_158 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_159 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 18 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_160 = 160;
+const unsigned_t TOPPERS_cfg_static_api_159 = 159;
 #define SUART2_SEM	(<>)
 
 #line 18 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_160 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_160 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_160 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_161 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_159 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_159 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_159 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_160 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 20 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_161 = 161;
-const char TOPPERS_cfg_valueof_module_161[] = "uart_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_161 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_161 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_161 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_161 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_162 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_160 = 160;
+const char TOPPERS_cfg_valueof_module_160[] = "uart_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_160 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_160 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_160 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_160 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_161 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 21 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_162 = 162;
-const char TOPPERS_cfg_valueof_module_162[] = "pru.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_162 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_162 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_162 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_162 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_163 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_161 = 161;
+const char TOPPERS_cfg_valueof_module_161[] = "pru.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_161 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_161 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_161 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_161 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_162 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 22 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_163 = 163;
-const char TOPPERS_cfg_valueof_module_163[] = "suart_utils.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_163 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_163 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_163 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_163 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_164 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_162 = 162;
+const char TOPPERS_cfg_valueof_module_162[] = "suart_utils.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_162 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_162 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_162 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_162 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_163 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 23 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_164 = 164;
-const char TOPPERS_cfg_valueof_module_164[] = "suart_api.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_164 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_164 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_164 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_164 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_165 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_163 = 163;
+const char TOPPERS_cfg_valueof_module_163[] = "suart_api.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_163 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_163 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_163 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_163 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_164 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 24 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_165 = 165;
-const char TOPPERS_cfg_valueof_module_165[] = "pru_suart.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_165 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_165 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_165 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_165 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_166 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_164 = 164;
+const char TOPPERS_cfg_valueof_module_164[] = "pru_suart.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_164 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_164 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_164 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_164 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_165 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 26 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_166 = 166;
-const unsigned_t TOPPERS_cfg_valueof_fncd_166 = ( unsigned_t )( TFN_UART_SENSOR_CONFIG ); const unsigned_t TOPPERS_cfg_valueof_svcatr_166 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_166 = ( unsigned_t )( 1024 ); 
+const unsigned_t TOPPERS_cfg_static_api_165 = 165;
+const unsigned_t TOPPERS_cfg_valueof_fncd_165 = ( unsigned_t )( TFN_UART_SENSOR_CONFIG ); const unsigned_t TOPPERS_cfg_valueof_svcatr_165 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_165 = ( unsigned_t )( 1024 ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 28 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
@@ -1563,8 +1560,8 @@ const unsigned_t TOPPERS_cfg_valueof_fncd_166 = ( unsigned_t )( TFN_UART_SENSOR_
 
 
 #line 30 "../../target/ev3_gcc/drivers/sensor/uart/uart_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_167 = 167;
-const unsigned_t TOPPERS_cfg_valueof_noisr_167 = ( unsigned_t )( 1 ); 
+const unsigned_t TOPPERS_cfg_static_api_166 = 166;
+const unsigned_t TOPPERS_cfg_valueof_noisr_166 = ( unsigned_t )( 1 ); 
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
 
@@ -1573,49 +1570,49 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_168 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_167 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 13 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_168 = 168;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_168 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_169 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_167 = 167;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_167 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_168 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_169 = 169;
-const unsigned_t TOPPERS_cfg_valueof_intno_169 = ( unsigned_t )( SYS_INT_CCINT0 ); const unsigned_t TOPPERS_cfg_valueof_intatr_169 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_169 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_170 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_168 = 168;
+const unsigned_t TOPPERS_cfg_valueof_intno_168 = ( unsigned_t )( SYS_INT_CCINT0 ); const unsigned_t TOPPERS_cfg_valueof_intatr_168 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_168 = ( signed_t )( TMIN_INTPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_169 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_170 = 170;
-const unsigned_t TOPPERS_cfg_valueof_isratr_170 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_170 = ( unsigned_t )( SYS_INT_CCINT0 ); const signed_t TOPPERS_cfg_valueof_isrpri_170 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_171 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_169 = 169;
+const unsigned_t TOPPERS_cfg_valueof_isratr_169 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_intno_169 = ( unsigned_t )( SYS_INT_CCINT0 ); const signed_t TOPPERS_cfg_valueof_isrpri_169 = ( signed_t )( TMIN_ISRPRI ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_170 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 22 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_171 = 171;
-const char TOPPERS_cfg_valueof_module_171[] = "soc_cache.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_172 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_170 = 170;
+const char TOPPERS_cfg_valueof_module_170[] = "soc_cache.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_171 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 23 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_172 = 172;
-const char TOPPERS_cfg_valueof_module_172[] = "soc_edma.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_173 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_171 = 171;
+const char TOPPERS_cfg_valueof_module_171[] = "soc_edma.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_172 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 24 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_173 = 173;
-const char TOPPERS_cfg_valueof_module_173[] = "edma.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_174 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_172 = 172;
+const char TOPPERS_cfg_valueof_module_172[] = "edma.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_173 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 25 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_174 = 174;
-const char TOPPERS_cfg_valueof_module_174[] = "uart.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_175 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_173 = 173;
+const char TOPPERS_cfg_valueof_module_173[] = "uart.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_174 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 26 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_175 = 175;
-const char TOPPERS_cfg_valueof_module_175[] = "cp15.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_176 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_174 = 174;
+const char TOPPERS_cfg_valueof_module_174[] = "cp15.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_175 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 27 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_176 = 176;
-const char TOPPERS_cfg_valueof_module_176[] = "psc.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_177 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_175 = 175;
+const char TOPPERS_cfg_valueof_module_175[] = "psc.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_176 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 28 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_177 = 177;
-const char TOPPERS_cfg_valueof_module_177[] = "usb.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_178 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_176 = 176;
+const char TOPPERS_cfg_valueof_module_176[] = "usb.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_177 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 29 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_178 = 178;
-const char TOPPERS_cfg_valueof_module_178[] = "usbphyGS60.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_179 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_177 = 177;
+const char TOPPERS_cfg_valueof_module_177[] = "usbphyGS60.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_178 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 30 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_179 = 179;
-const char TOPPERS_cfg_valueof_module_179[] = "cppi41dma.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_180 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_178 = 178;
+const char TOPPERS_cfg_valueof_module_178[] = "cppi41dma.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_179 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 31 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_180 = 180;
-const char TOPPERS_cfg_valueof_module_180[] = "evmAM1808_usb.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_181 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_179 = 179;
+const char TOPPERS_cfg_valueof_module_179[] = "evmAM1808_usb.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_180 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 32 "../../target/ev3_gcc/drivers/soc/soc.cfg"
-const unsigned_t TOPPERS_cfg_static_api_181 = 181;
-const char TOPPERS_cfg_valueof_module_181[] = "soc_interrupt.o"; 
+const unsigned_t TOPPERS_cfg_static_api_180 = 180;
+const char TOPPERS_cfg_valueof_module_180[] = "soc_interrupt.o"; 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 34 "../../target/ev3_gcc/drivers/soc/soc.cfg"
@@ -1632,25 +1629,25 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_182 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_181 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 5 "../../target/ev3_gcc/drivers/sound/sound_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_182 = 182;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_182 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_183 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_181 = 181;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_181 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_182 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 6 "../../target/ev3_gcc/drivers/sound/sound_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_183 = 183;
+const unsigned_t TOPPERS_cfg_static_api_182 = 182;
 #define SND_STOP_ALM	(<>)
 
 #line 6 "../../target/ev3_gcc/drivers/sound/sound_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_almatr_183 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_184 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_almatr_182 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_183 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 7 "../../target/ev3_gcc/drivers/sound/sound_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_184 = 184;
+const unsigned_t TOPPERS_cfg_static_api_183 = 183;
 #define SND_DEV_SEM	(<>)
 
 #line 7 "../../target/ev3_gcc/drivers/sound/sound_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_sematr_184 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_184 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_184 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_185 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_sematr_183 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_isemcnt_183 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_maxsem_183 = ( unsigned_t )( 1 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_184 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/sound/sound_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_185 = 185;
-const char TOPPERS_cfg_valueof_module_185[] = "sound_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_185 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_185 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_185 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_185 = ( unsigned_t )( TACP_KERNEL ); 
+const unsigned_t TOPPERS_cfg_static_api_184 = 184;
+const char TOPPERS_cfg_valueof_module_184[] = "sound_dri.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_184 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_184 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_184 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_184 = ( unsigned_t )( TACP_KERNEL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 9 "../../target/ev3_gcc/drivers/sound/sound_dri.cfg"
@@ -1667,53 +1664,53 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_186 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_185 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 7 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_186 = 186;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_186 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_187 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_185 = 185;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_185 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_186 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_187 = 187;
+const unsigned_t TOPPERS_cfg_static_api_186 = 186;
 #define BT_TSK	(<>)
 
 #line 8 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_187 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_187 = ( signed_t )( TPRI_BLUETOOTH_HIGH ); const unsigned_t TOPPERS_cfg_valueof_stksz_187 = ( unsigned_t )( STACK_SIZE ); 
+const unsigned_t TOPPERS_cfg_valueof_tskatr_186 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_186 = ( signed_t )( TPRI_BLUETOOTH_HIGH ); const unsigned_t TOPPERS_cfg_valueof_stksz_186 = ( unsigned_t )( STACK_SIZE ); 
 #if !BT_USE_EDMA_MODE
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_188 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_187 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_188 = 188;
-const unsigned_t TOPPERS_cfg_valueof_intno_188 = ( unsigned_t )( UART2_INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_188 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_188 = ( signed_t )( INTPRI_BLUETOOTH ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_189 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_187 = 187;
+const unsigned_t TOPPERS_cfg_valueof_intno_187 = ( unsigned_t )( UART2_INT ); const unsigned_t TOPPERS_cfg_valueof_intatr_187 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_187 = ( signed_t )( INTPRI_BLUETOOTH ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_188 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 12 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_189 = 189;
-const unsigned_t TOPPERS_cfg_valueof_inhno_189 = ( unsigned_t )( UART2_INT ); const unsigned_t TOPPERS_cfg_valueof_inhatr_189 = ( unsigned_t )( TA_NULL ); 
+const unsigned_t TOPPERS_cfg_static_api_188 = 188;
+const unsigned_t TOPPERS_cfg_valueof_inhno_188 = ( unsigned_t )( UART2_INT ); const unsigned_t TOPPERS_cfg_valueof_inhatr_188 = ( unsigned_t )( TA_NULL ); 
 #endif
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_190 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_189 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_190 = 190;
+const unsigned_t TOPPERS_cfg_static_api_189 = 189;
 #define BT_QOS_TSK	(<>)
 
 #line 16 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_190 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_190 = ( signed_t )( TPRI_BLUETOOTH_QOS ); const unsigned_t TOPPERS_cfg_valueof_stksz_190 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_191 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_tskatr_189 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_189 = ( signed_t )( TPRI_BLUETOOTH_QOS ); const unsigned_t TOPPERS_cfg_valueof_stksz_189 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_190 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 18 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_191 = 191;
+const unsigned_t TOPPERS_cfg_static_api_190 = 190;
 #define BT_DB_MTX	(<>)
 
 #line 18 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_mtxatr_191 = ( unsigned_t )( TA_NULL ); 
+const unsigned_t TOPPERS_cfg_valueof_mtxatr_190 = ( unsigned_t )( TA_NULL ); 
 #if BT_USE_EDMA_MODE
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_192 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_191 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 24 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_192 = 192;
-const char TOPPERS_cfg_valueof_module_192[] = "bluetooth_dri_dma.o"; 
+const unsigned_t TOPPERS_cfg_static_api_191 = 191;
+const char TOPPERS_cfg_valueof_module_191[] = "bluetooth_dri_dma.o"; 
 #else
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_193 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_192 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 26 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_193 = 193;
-const char TOPPERS_cfg_valueof_module_193[] = "bluetooth_dri.o"; 
+const unsigned_t TOPPERS_cfg_static_api_192 = 192;
+const char TOPPERS_cfg_valueof_module_192[] = "bluetooth_dri.o"; 
 #endif
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_194 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_193 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 28 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_194 = 194;
-const char TOPPERS_cfg_valueof_module_194[] = "libBTstack.a"; 
+const unsigned_t TOPPERS_cfg_static_api_193 = 193;
+const char TOPPERS_cfg_valueof_module_193[] = "libBTstack.a"; 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 30 "../../target/ev3_gcc/drivers/bluetooth/bluetooth_dri.cfg"
@@ -1730,46 +1727,46 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_195 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_194 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 6 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_195 = 195;
-const unsigned_t TOPPERS_cfg_valueof_iniatr_195 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_196 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_194 = 194;
+const unsigned_t TOPPERS_cfg_valueof_iniatr_194 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_195 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 8 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_196 = 196;
-const unsigned_t TOPPERS_cfg_valueof_intno_196 = ( unsigned_t )( SYS_INT_USB0 ); const unsigned_t TOPPERS_cfg_valueof_intatr_196 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_196 = ( signed_t )( INTPRI_USBMSC ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_197 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_195 = 195;
+const unsigned_t TOPPERS_cfg_valueof_intno_195 = ( unsigned_t )( SYS_INT_USB0 ); const unsigned_t TOPPERS_cfg_valueof_intatr_195 = ( unsigned_t )( TA_ENAINT ); const signed_t TOPPERS_cfg_valueof_intpri_195 = ( signed_t )( INTPRI_USBMSC ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_196 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 9 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_197 = 197;
-const unsigned_t TOPPERS_cfg_valueof_inhno_197 = ( unsigned_t )( SYS_INT_USB0 ); const unsigned_t TOPPERS_cfg_valueof_inhatr_197 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_198 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_196 = 196;
+const unsigned_t TOPPERS_cfg_valueof_inhno_196 = ( unsigned_t )( SYS_INT_USB0 ); const unsigned_t TOPPERS_cfg_valueof_inhatr_196 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_197 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 11 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_198 = 198;
+const unsigned_t TOPPERS_cfg_static_api_197 = 197;
 #define USBMSC_TSK	(<>)
 
 #line 11 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_198 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_198 = ( signed_t )( TPRI_USBMSC ); const unsigned_t TOPPERS_cfg_valueof_stksz_198 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_199 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_tskatr_197 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_197 = ( signed_t )( TPRI_USBMSC ); const unsigned_t TOPPERS_cfg_valueof_stksz_197 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_198 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 12 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_199 = 199;
+const unsigned_t TOPPERS_cfg_static_api_198 = 198;
 #define USBMSC_EVT_FLG	(<>)
 
 #line 12 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_valueof_flgatr_199 = ( unsigned_t )( TA_CLR ); const unsigned_t TOPPERS_cfg_valueof_iflgptn_199 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_200 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_flgatr_198 = ( unsigned_t )( TA_CLR ); const unsigned_t TOPPERS_cfg_valueof_iflgptn_198 = ( unsigned_t )( 0 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_199 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_200 = 200;
-const char TOPPERS_cfg_valueof_module_200[] = "usbmsc_dri.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_201 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_199 = 199;
+const char TOPPERS_cfg_valueof_module_199[] = "usbmsc_dri.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_200 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 15 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_201 = 201;
-const char TOPPERS_cfg_valueof_module_201[] = "usbmsc_media_functions.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_202 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_200 = 200;
+const char TOPPERS_cfg_valueof_module_200[] = "usbmsc_media_functions.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_201 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_202 = 202;
-const char TOPPERS_cfg_valueof_module_202[] = "usb_dev_msc.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_203 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_201 = 201;
+const char TOPPERS_cfg_valueof_module_201[] = "usb_dev_msc.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_202 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_203 = 203;
-const char TOPPERS_cfg_valueof_module_203[] = "usb_msc_structs.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_204 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_202 = 202;
+const char TOPPERS_cfg_valueof_module_202[] = "usb_msc_structs.o"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_203 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 18 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_204 = 204;
-const char TOPPERS_cfg_valueof_module_204[] = "libusblib.a"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_205 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_203 = 203;
+const char TOPPERS_cfg_valueof_module_203[] = "libusblib.a"; const unsigned_t TOPPERS_cfg_valueof_DOMAIN_204 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 26 "../../target/ev3_gcc/drivers/usbmsc/usbmsc_dri.cfg"
-const unsigned_t TOPPERS_cfg_static_api_205 = 205;
-const char TOPPERS_cfg_valueof_section_205[] = ".bss.g_bytesWritten .bss.intStatus .bss.g_bytesRead .bss.gDMAflag .bss.g_sSCSICSW .bss.ulSOFDivide.* .bss.g_eUSBMode .bss.g_pucDataBufferIn .bss.g_bUSBTimerInitialized .bss.g_ulCurrentUSBTick .bss.g_ulUSBSOFCount .bss._PathLocale .bss.__nlocale_changed .bss.__mlocale_changed"; const unsigned_t TOPPERS_cfg_valueof_mematr_205 = ( unsigned_t )( TA_NULL ); const char TOPPERS_cfg_valueof_memreg_205[] = "RAM"; 
+const unsigned_t TOPPERS_cfg_static_api_204 = 204;
+const char TOPPERS_cfg_valueof_section_204[] = ".bss.g_bytesWritten .bss.intStatus .bss.g_bytesRead .bss.gDMAflag .bss.g_sSCSICSW .bss.ulSOFDivide.* .bss.g_eUSBMode .bss.g_pucDataBufferIn .bss.g_bUSBTimerInitialized .bss.g_ulCurrentUSBTick .bss.g_ulUSBSOFCount .bss._PathLocale .bss.__nlocale_changed .bss.__mlocale_changed"; const unsigned_t TOPPERS_cfg_valueof_mematr_204 = ( unsigned_t )( TA_NULL ); const char TOPPERS_cfg_valueof_memreg_204[] = "RAM"; 
 #if defined(DEBUG_USBMSC_USBLIB) || 1
 
 #endif
@@ -1790,16 +1787,16 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_206 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_205 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 41 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_206 = 206;
-const unsigned_t TOPPERS_cfg_valueof_acptn1_206 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_206 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn3_206 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_206 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_207 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_205 = 205;
+const unsigned_t TOPPERS_cfg_valueof_acptn1_205 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_205 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn3_205 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_205 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_206 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 43 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_207 = 207;
-const unsigned_t TOPPERS_cfg_valueof_kmmsz_207 = ( unsigned_t )( KERNEL_HEAP_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_208 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_206 = 206;
+const unsigned_t TOPPERS_cfg_valueof_kmmsz_206 = ( unsigned_t )( KERNEL_HEAP_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_207 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 45 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_208 = 208;
-const char TOPPERS_cfg_valueof_module_208[] = "ev3main.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_208 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_208 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_208 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_208 = ( unsigned_t )( TACP_KERNEL ); 
+const unsigned_t TOPPERS_cfg_static_api_207 = 207;
+const char TOPPERS_cfg_valueof_module_207[] = "ev3main.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_207 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_207 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_207 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_207 = ( unsigned_t )( TACP_KERNEL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 47 "../../target/ev3_gcc/ev3.cfg"
@@ -1809,29 +1806,29 @@ const char TOPPERS_cfg_valueof_module_208[] = "ev3main.o"; const unsigned_t TOPP
 
 
 #line 49 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_209 = 209;
-const unsigned_t TOPPERS_cfg_valueof_nocyc_209 = ( unsigned_t )( TMAX_EV3_CYC_NUM ); 
+const unsigned_t TOPPERS_cfg_static_api_208 = 208;
+const unsigned_t TOPPERS_cfg_valueof_nocyc_208 = ( unsigned_t )( TMAX_EV3_CYC_NUM ); 
 #line 50 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_210 = 210;
-const unsigned_t TOPPERS_cfg_valueof_notsk_210 = ( unsigned_t )( TMAX_EV3_CYC_NUM ); 
+const unsigned_t TOPPERS_cfg_static_api_209 = 209;
+const unsigned_t TOPPERS_cfg_valueof_notsk_209 = ( unsigned_t )( TMAX_EV3_CYC_NUM ); 
 #line 51 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_211 = 211;
-const unsigned_t TOPPERS_cfg_valueof_notsk_211 = ( unsigned_t )( TMAX_APP_TSK_NUM ); 
+const unsigned_t TOPPERS_cfg_static_api_210 = 210;
+const unsigned_t TOPPERS_cfg_valueof_notsk_210 = ( unsigned_t )( TMAX_APP_TSK_NUM ); 
 #line 52 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_212 = 212;
-const unsigned_t TOPPERS_cfg_valueof_nosem_212 = ( unsigned_t )( TMAX_APP_SEM_NUM ); 
+const unsigned_t TOPPERS_cfg_static_api_211 = 211;
+const unsigned_t TOPPERS_cfg_valueof_nosem_211 = ( unsigned_t )( TMAX_APP_SEM_NUM ); 
 #line 53 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_213 = 213;
-const unsigned_t TOPPERS_cfg_valueof_noflg_213 = ( unsigned_t )( TMAX_APP_FLG_NUM ); 
+const unsigned_t TOPPERS_cfg_static_api_212 = 212;
+const unsigned_t TOPPERS_cfg_valueof_noflg_212 = ( unsigned_t )( TMAX_APP_FLG_NUM ); 
 #line 54 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_214 = 214;
-const unsigned_t TOPPERS_cfg_valueof_nodtq_214 = ( unsigned_t )( TMAX_APP_DTQ_NUM ); 
+const unsigned_t TOPPERS_cfg_static_api_213 = 213;
+const unsigned_t TOPPERS_cfg_valueof_nodtq_213 = ( unsigned_t )( TMAX_APP_DTQ_NUM ); 
 #line 55 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_215 = 215;
-const unsigned_t TOPPERS_cfg_valueof_nopdq_215 = ( unsigned_t )( TMAX_APP_PDQ_NUM ); 
+const unsigned_t TOPPERS_cfg_static_api_214 = 214;
+const unsigned_t TOPPERS_cfg_valueof_nopdq_214 = ( unsigned_t )( TMAX_APP_PDQ_NUM ); 
 #line 56 "../../target/ev3_gcc/ev3.cfg"
-const unsigned_t TOPPERS_cfg_static_api_216 = 216;
-const unsigned_t TOPPERS_cfg_valueof_nomtx_216 = ( unsigned_t )( TMAX_APP_MTX_NUM ); 
+const unsigned_t TOPPERS_cfg_static_api_215 = 215;
+const unsigned_t TOPPERS_cfg_valueof_nomtx_215 = ( unsigned_t )( TMAX_APP_MTX_NUM ); 
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
 
@@ -1840,55 +1837,55 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_217 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_216 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 13 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_217 = 217;
-const unsigned_t TOPPERS_cfg_valueof_fncd_217 = ( unsigned_t )( TFN_FETCH_BRICK_INFO ); const unsigned_t TOPPERS_cfg_valueof_svcatr_217 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_217 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_218 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_216 = 216;
+const unsigned_t TOPPERS_cfg_valueof_fncd_216 = ( unsigned_t )( TFN_FETCH_BRICK_INFO ); const unsigned_t TOPPERS_cfg_valueof_svcatr_216 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_216 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_217 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 14 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_218 = 218;
-const unsigned_t TOPPERS_cfg_valueof_fncd_218 = ( unsigned_t )( TFN_BTN_SET_ON_CLICKED ); const unsigned_t TOPPERS_cfg_valueof_svcatr_218 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_218 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_219 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_217 = 217;
+const unsigned_t TOPPERS_cfg_valueof_fncd_217 = ( unsigned_t )( TFN_BTN_SET_ON_CLICKED ); const unsigned_t TOPPERS_cfg_valueof_svcatr_217 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_217 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_218 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 15 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_219 = 219;
-const unsigned_t TOPPERS_cfg_valueof_fncd_219 = ( unsigned_t )( TFN_EV3_MISC_COMMAND ); const unsigned_t TOPPERS_cfg_valueof_svcatr_219 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_219 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_220 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_218 = 218;
+const unsigned_t TOPPERS_cfg_valueof_fncd_218 = ( unsigned_t )( TFN_EV3_MISC_COMMAND ); const unsigned_t TOPPERS_cfg_valueof_svcatr_218 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_218 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_219 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 16 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_220 = 220;
-const unsigned_t TOPPERS_cfg_valueof_fncd_220 = ( unsigned_t )( TFN_EV3_ACRE_CYC ); const unsigned_t TOPPERS_cfg_valueof_svcatr_220 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_220 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_221 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_219 = 219;
+const unsigned_t TOPPERS_cfg_valueof_fncd_219 = ( unsigned_t )( TFN_EV3_ACRE_CYC ); const unsigned_t TOPPERS_cfg_valueof_svcatr_219 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_219 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_220 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 17 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_221 = 221;
-const unsigned_t TOPPERS_cfg_valueof_fncd_221 = ( unsigned_t )( TFN_EV3_STA_CYC ); const unsigned_t TOPPERS_cfg_valueof_svcatr_221 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_221 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_222 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_220 = 220;
+const unsigned_t TOPPERS_cfg_valueof_fncd_220 = ( unsigned_t )( TFN_EV3_STA_CYC ); const unsigned_t TOPPERS_cfg_valueof_svcatr_220 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_220 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_221 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 18 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_222 = 222;
-const unsigned_t TOPPERS_cfg_valueof_fncd_222 = ( unsigned_t )( TFN_EV3_STP_CYC ); const unsigned_t TOPPERS_cfg_valueof_svcatr_222 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_222 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_223 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_221 = 221;
+const unsigned_t TOPPERS_cfg_valueof_fncd_221 = ( unsigned_t )( TFN_EV3_STP_CYC ); const unsigned_t TOPPERS_cfg_valueof_svcatr_221 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_221 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_222 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 19 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_223 = 223;
-const unsigned_t TOPPERS_cfg_valueof_fncd_223 = ( unsigned_t )( TFN_START_I2C_TRANS ); const unsigned_t TOPPERS_cfg_valueof_svcatr_223 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_223 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_224 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_222 = 222;
+const unsigned_t TOPPERS_cfg_valueof_fncd_222 = ( unsigned_t )( TFN_START_I2C_TRANS ); const unsigned_t TOPPERS_cfg_valueof_svcatr_222 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_222 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_223 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 20 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_224 = 224;
-const char TOPPERS_cfg_valueof_module_224[] = "driver_interface_brick.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_224 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_224 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_224 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_224 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_225 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_223 = 223;
+const char TOPPERS_cfg_valueof_module_223[] = "driver_interface_brick.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_223 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_223 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_223 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_223 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_224 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 25 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_225 = 225;
-const unsigned_t TOPPERS_cfg_valueof_fncd_225 = ( unsigned_t )( TFN_SOUND_SET_VOL ); const unsigned_t TOPPERS_cfg_valueof_svcatr_225 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_225 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_226 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_224 = 224;
+const unsigned_t TOPPERS_cfg_valueof_fncd_224 = ( unsigned_t )( TFN_SOUND_SET_VOL ); const unsigned_t TOPPERS_cfg_valueof_svcatr_224 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_224 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_225 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 26 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_226 = 226;
-const unsigned_t TOPPERS_cfg_valueof_fncd_226 = ( unsigned_t )( TFN_SOUND_PLAY_TONE ); const unsigned_t TOPPERS_cfg_valueof_svcatr_226 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_226 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_227 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_225 = 225;
+const unsigned_t TOPPERS_cfg_valueof_fncd_225 = ( unsigned_t )( TFN_SOUND_PLAY_TONE ); const unsigned_t TOPPERS_cfg_valueof_svcatr_225 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_225 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_226 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 27 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_227 = 227;
-const unsigned_t TOPPERS_cfg_valueof_fncd_227 = ( unsigned_t )( TFN_SOUND_PLAY_WAV ); const unsigned_t TOPPERS_cfg_valueof_svcatr_227 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_227 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_228 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_226 = 226;
+const unsigned_t TOPPERS_cfg_valueof_fncd_226 = ( unsigned_t )( TFN_SOUND_PLAY_WAV ); const unsigned_t TOPPERS_cfg_valueof_svcatr_226 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_226 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_227 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 28 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_228 = 228;
-const char TOPPERS_cfg_valueof_module_228[] = "driver_interface_sound.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_228 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_228 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_228 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_228 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_229 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_227 = 227;
+const char TOPPERS_cfg_valueof_module_227[] = "driver_interface_sound.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_227 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_227 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_227 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_227 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_228 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 33 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_229 = 229;
-const unsigned_t TOPPERS_cfg_valueof_fncd_229 = ( unsigned_t )( TFN_FILESYS_OPENDIR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_229 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_229 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_230 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_228 = 228;
+const unsigned_t TOPPERS_cfg_valueof_fncd_228 = ( unsigned_t )( TFN_FILESYS_OPENDIR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_228 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_228 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_229 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 34 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_230 = 230;
-const unsigned_t TOPPERS_cfg_valueof_fncd_230 = ( unsigned_t )( TFN_FILESYS_READDIR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_230 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_230 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_231 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_229 = 229;
+const unsigned_t TOPPERS_cfg_valueof_fncd_229 = ( unsigned_t )( TFN_FILESYS_READDIR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_229 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_229 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_230 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 35 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_231 = 231;
-const unsigned_t TOPPERS_cfg_valueof_fncd_231 = ( unsigned_t )( TFN_FILESYS_CLOSEDIR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_231 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_231 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_232 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_static_api_230 = 230;
+const unsigned_t TOPPERS_cfg_valueof_fncd_230 = ( unsigned_t )( TFN_FILESYS_CLOSEDIR ); const unsigned_t TOPPERS_cfg_valueof_svcatr_230 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_230 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_231 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 36 "../../target/ev3_gcc/pil/pil.cfg"
-const unsigned_t TOPPERS_cfg_static_api_232 = 232;
-const char TOPPERS_cfg_valueof_module_232[] = "driver_interface_filesys.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_232 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_232 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_232 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_232 = ( unsigned_t )( TACP_KERNEL ); 
+const unsigned_t TOPPERS_cfg_static_api_231 = 231;
+const char TOPPERS_cfg_valueof_module_231[] = "driver_interface_filesys.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_231 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_231 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_231 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_231 = ( unsigned_t )( TACP_KERNEL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
 #line 38 "../../target/ev3_gcc/pil/pil.cfg"
@@ -1905,22 +1902,28 @@ const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
-const unsigned_t TOPPERS_cfg_valueof_DOMAIN_233 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_DOMAIN_232 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 9 "../../target/ev3_gcc/platform/platform.cfg"
-const unsigned_t TOPPERS_cfg_static_api_233 = 233;
+const unsigned_t TOPPERS_cfg_static_api_232 = 232;
 #define EV3_INIT_TASK	(<>)
 
 #line 9 "../../target/ev3_gcc/platform/platform.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_233 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_233 = ( signed_t )( TPRI_INIT_TASK ); const unsigned_t TOPPERS_cfg_valueof_stksz_233 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_234 = ( unsigned_t ) ( TDOM_KERNEL );
+const unsigned_t TOPPERS_cfg_valueof_tskatr_232 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_232 = ( signed_t )( TPRI_INIT_TASK ); const unsigned_t TOPPERS_cfg_valueof_stksz_232 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_233 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 10 "../../target/ev3_gcc/platform/platform.cfg"
-const unsigned_t TOPPERS_cfg_static_api_234 = 234;
+const unsigned_t TOPPERS_cfg_static_api_233 = 233;
 #define PLATFORM_BUSY_TASK	(<>)
 
 #line 10 "../../target/ev3_gcc/platform/platform.cfg"
-const unsigned_t TOPPERS_cfg_valueof_tskatr_234 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_234 = ( signed_t )( TPRI_PLATFORM_BUSY ); const unsigned_t TOPPERS_cfg_valueof_stksz_234 = ( unsigned_t )( STACK_SIZE ); 
-#ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
+const unsigned_t TOPPERS_cfg_valueof_tskatr_233 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_233 = ( signed_t )( TPRI_PLATFORM_BUSY ); const unsigned_t TOPPERS_cfg_valueof_stksz_233 = ( unsigned_t )( STACK_SIZE ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_234 = ( unsigned_t ) ( TDOM_KERNEL );
+#line 11 "../../target/ev3_gcc/platform/platform.cfg"
+const unsigned_t TOPPERS_cfg_static_api_234 = 234;
+#define EV3RT_LOGTASK	(<>)
 
 #line 11 "../../target/ev3_gcc/platform/platform.cfg"
+const unsigned_t TOPPERS_cfg_valueof_tskatr_234 = ( unsigned_t )( TA_NULL ); const signed_t TOPPERS_cfg_valueof_itskpri_234 = ( signed_t )( LOGTASK_PRIORITY ); const unsigned_t TOPPERS_cfg_valueof_stksz_234 = ( unsigned_t )( LOGTASK_STACK_SIZE ); 
+#ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
+
+#line 12 "../../target/ev3_gcc/platform/platform.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_KERNEL
@@ -1931,21 +1934,21 @@ const unsigned_t TOPPERS_cfg_valueof_tskatr_234 = ( unsigned_t )( TA_ACT ); cons
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
 
-#line 17 "../../target/ev3_gcc/platform/platform.cfg"
+#line 18 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
 const unsigned_t TOPPERS_cfg_valueof_DOMAIN_235 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 18 "../../target/ev3_gcc/platform/platform.cfg"
+#line 19 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_235 = 235;
 const unsigned_t TOPPERS_cfg_valueof_excno_235 = ( unsigned_t )( EXCH_NO_PABORT ); const unsigned_t TOPPERS_cfg_valueof_excatr_235 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_236 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 19 "../../target/ev3_gcc/platform/platform.cfg"
+#line 20 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_236 = 236;
 const unsigned_t TOPPERS_cfg_valueof_excno_236 = ( unsigned_t )( EXCH_NO_DABORT ); const unsigned_t TOPPERS_cfg_valueof_excatr_236 = ( unsigned_t )( TA_NULL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
-#line 20 "../../target/ev3_gcc/platform/platform.cfg"
+#line 21 "../../target/ev3_gcc/platform/platform.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_KERNEL
@@ -1958,36 +1961,36 @@ const unsigned_t TOPPERS_cfg_valueof_excno_236 = ( unsigned_t )( EXCH_NO_DABORT 
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
 
-#line 28 "../../target/ev3_gcc/platform/platform.cfg"
+#line 29 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
 const unsigned_t TOPPERS_cfg_valueof_DOMAIN_237 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 29 "../../target/ev3_gcc/platform/platform.cfg"
+#line 30 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_237 = 237;
 #define EVTD_DTQ_APP	(<>)
 
-#line 29 "../../target/ev3_gcc/platform/platform.cfg"
-const unsigned_t TOPPERS_cfg_valueof_dtqatr_237 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_dtqcnt_237 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_238 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 30 "../../target/ev3_gcc/platform/platform.cfg"
+const unsigned_t TOPPERS_cfg_valueof_dtqatr_237 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_dtqcnt_237 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_238 = ( unsigned_t ) ( TDOM_KERNEL );
+#line 31 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_238 = 238;
 const unsigned_t TOPPERS_cfg_valueof_acptn1_238 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_238 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_238 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_238 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_239 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 31 "../../target/ev3_gcc/platform/platform.cfg"
+#line 32 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_239 = 239;
 #define EVTD_DTQ_KERNEL	(<>)
 
-#line 31 "../../target/ev3_gcc/platform/platform.cfg"
-const unsigned_t TOPPERS_cfg_valueof_dtqatr_239 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_dtqcnt_239 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_240 = ( unsigned_t ) ( TDOM_KERNEL );
 #line 32 "../../target/ev3_gcc/platform/platform.cfg"
+const unsigned_t TOPPERS_cfg_valueof_dtqatr_239 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_dtqcnt_239 = ( unsigned_t )( 1024 ); const unsigned_t TOPPERS_cfg_valueof_DOMAIN_240 = ( unsigned_t ) ( TDOM_KERNEL );
+#line 33 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_240 = 240;
 #define EVTD_TSK_KERNEL	(<>)
 
-#line 32 "../../target/ev3_gcc/platform/platform.cfg"
+#line 33 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_valueof_tskatr_240 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_240 = ( signed_t )( TPRI_EV3_MONITOR ); const unsigned_t TOPPERS_cfg_valueof_stksz_240 = ( unsigned_t )( STACK_SIZE ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
-#line 33 "../../target/ev3_gcc/platform/platform.cfg"
+#line 34 "../../target/ev3_gcc/platform/platform.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_KERNEL
@@ -1996,44 +1999,44 @@ const unsigned_t TOPPERS_cfg_valueof_tskatr_240 = ( unsigned_t )( TA_ACT ); cons
 #ifndef TOPPERS_cfg_valueof_TDOM_APP_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_APP_DEFINED 1
 
-#line 34 "../../target/ev3_gcc/platform/platform.cfg"
+#line 35 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_valueof_TDOM_APP = TDOM_APP;
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_APP
 const unsigned_t TOPPERS_cfg_valueof_DOMAIN_241 = ( unsigned_t ) ( TDOM_APP );
-#line 35 "../../target/ev3_gcc/platform/platform.cfg"
+#line 36 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_241 = 241;
 #define EVTD_TSK_APP	(<>)
 
-#line 35 "../../target/ev3_gcc/platform/platform.cfg"
+#line 36 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_valueof_tskatr_241 = ( unsigned_t )( TA_ACT ); const signed_t TOPPERS_cfg_valueof_itskpri_241 = ( signed_t )( TMIN_APP_TPRI ); const unsigned_t TOPPERS_cfg_valueof_stksz_241 = ( unsigned_t )( STACK_SIZE ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_APP
 
-#line 36 "../../target/ev3_gcc/platform/platform.cfg"
+#line 37 "../../target/ev3_gcc/platform/platform.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_APP
 
 
-#line 37 "../../target/ev3_gcc/platform/platform.cfg"
+#line 38 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_242 = 242;
 const char TOPPERS_cfg_valueof_module_242[] = "event_manager.o"; const unsigned_t TOPPERS_cfg_valueof_acptn1_242 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn2_242 = ( unsigned_t )( TACP_SHARED ); const unsigned_t TOPPERS_cfg_valueof_acptn3_242 = ( unsigned_t )( TACP_KERNEL ); const unsigned_t TOPPERS_cfg_valueof_acptn4_242 = ( unsigned_t )( TACP_KERNEL ); 
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
 
-#line 42 "../../target/ev3_gcc/platform/platform.cfg"
+#line 43 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
 const unsigned_t TOPPERS_cfg_valueof_DOMAIN_243 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 43 "../../target/ev3_gcc/platform/platform.cfg"
+#line 44 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_243 = 243;
 const unsigned_t TOPPERS_cfg_valueof_iniatr_243 = ( unsigned_t )( TA_NULL ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
-#line 44 "../../target/ev3_gcc/platform/platform.cfg"
+#line 45 "../../target/ev3_gcc/platform/platform.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_KERNEL
@@ -2042,18 +2045,18 @@ const unsigned_t TOPPERS_cfg_valueof_iniatr_243 = ( unsigned_t )( TA_NULL );
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
 
-#line 52 "../../target/ev3_gcc/platform/platform.cfg"
+#line 53 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
 const unsigned_t TOPPERS_cfg_valueof_DOMAIN_244 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 53 "../../target/ev3_gcc/platform/platform.cfg"
+#line 54 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_244 = 244;
 const unsigned_t TOPPERS_cfg_valueof_fncd_244 = ( unsigned_t )( TFN_SET_EVENT_HANDLER ); const unsigned_t TOPPERS_cfg_valueof_svcatr_244 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_244 = ( unsigned_t )( 128 ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
-#line 54 "../../target/ev3_gcc/platform/platform.cfg"
+#line 55 "../../target/ev3_gcc/platform/platform.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_KERNEL
@@ -2062,18 +2065,18 @@ const unsigned_t TOPPERS_cfg_valueof_fncd_244 = ( unsigned_t )( TFN_SET_EVENT_HA
 #ifndef TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED
 #define TOPPERS_cfg_valueof_TDOM_KERNEL_DEFINED 1
 
-#line 61 "../../target/ev3_gcc/platform/platform.cfg"
+#line 62 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_valueof_TDOM_KERNEL = ( unsigned_t ) (-1);
 
 #endif
 #define TOPPERS_cfg_inside_of_TDOM_KERNEL
 const unsigned_t TOPPERS_cfg_valueof_DOMAIN_245 = ( unsigned_t ) ( TDOM_KERNEL );
-#line 62 "../../target/ev3_gcc/platform/platform.cfg"
+#line 63 "../../target/ev3_gcc/platform/platform.cfg"
 const unsigned_t TOPPERS_cfg_static_api_245 = 245;
 const unsigned_t TOPPERS_cfg_valueof_fncd_245 = ( unsigned_t )( TFN_EV3_MISC_COMMAND ); const unsigned_t TOPPERS_cfg_valueof_svcatr_245 = ( unsigned_t )( TA_NULL ); const unsigned_t TOPPERS_cfg_valueof_stksz_245 = ( unsigned_t )( 128 ); 
 #ifndef TOPPERS_cfg_inside_of_TDOM_KERNEL
 
-#line 63 "../../target/ev3_gcc/platform/platform.cfg"
+#line 64 "../../target/ev3_gcc/platform/platform.cfg"
 #error syntax error
 #endif
 #undef TOPPERS_cfg_inside_of_TDOM_KERNEL

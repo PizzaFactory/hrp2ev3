@@ -3,7 +3,7 @@
 #define TOPPERS_KERNEL_CFG_H
 
 #define TNUM_DOMID	1
-#define TNUM_TSKID	59
+#define TNUM_TSKID	60
 #define TNUM_SEMID	29
 #define TNUM_FLGID	20
 #define TNUM_DTQID	16
@@ -26,8 +26,9 @@
 #define USBMSC_TSK	7
 #define EV3_INIT_TASK	8
 #define PLATFORM_BUSY_TASK	9
-#define APP_TERM_TASK	10
-#define ZMODEM_RECV_TASK	11
+#define EV3RT_LOGTASK	10
+#define APP_TERM_TASK	11
+#define ZMODEM_RECV_TASK	12
 #define BT_SND_BUF_SEM	1
 #define SERIAL_RCV_SEM1	2
 #define SERIAL_SND_SEM1	3
